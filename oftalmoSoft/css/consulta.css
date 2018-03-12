@@ -1,0 +1,147 @@
+
+
+.content h4:last-child{
+     	display: none;
+}
+
+/*.content .line {
+	width: 100%;
+	height: 2px;
+	background: rgb(150,150,150);
+}
+*/
+.pasos-responsive {
+	width: 100%;
+	padding:5%;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	display: none;
+}
+
+.pasos-responsive div {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: #e5e5e5;
+	margin-left: 10px;
+}
+
+.pasos-responsive div:first-child{
+	margin-left: 0;
+}
+
+.pasos-responsive div.slc {
+	background: #ffa013;
+}
+
+.pasos {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	width: 100%;
+	padding:2%  5%;
+}
+
+.pasos div{
+	background: linear-gradient(to right , #2398e5 , #3ab2ed);
+	color: white;
+	border-radius: 40px;
+	padding: 0.8% ;
+	width: 100%;
+	margin-left: -3%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 0.7em;
+	cursor: pointer;
+}
+
+.pasos div:first-child{
+	margin-left: 0%;
+}
+
+.pasos div.select {
+	background: linear-gradient(to bottom ,#ff9900,#ffa826);
+	color: white;
+}
+
+.pasos div:first-child {
+	z-index: 6;
+}
+
+.pasos div:first-child + div {
+	z-index: 5;
+}
+
+.pasos div:first-child + div + div{
+	z-index: 4;
+}
+
+.pasos div:first-child + div + div + div{
+	z-index: 3;
+}
+
+.pasos div:first-child + div + div + div + div{
+	z-index: 2;
+}
+
+.pasos div:first-child + div + div + div + div + div{
+	z-index: 1;
+}
+
+
+
+.consulta {
+	padding: 1% 3%;
+}
+
+
+
+
+@media screen and (max-width: 600px){
+
+	.content{
+		font-size: 10px;
+	}
+
+	.pasos div{
+		padding: 2% ;
+		width: 130px;
+		font-size: 0.8em;
+	}
+}
+
+@media screen and (max-width: 400px){
+
+	.pasos {
+		display: none;
+	}
+
+	.content {
+		padding-bottom: 30px;
+	}
+
+	.content h4{
+     	text-align: center;
+     	font-size: 1.7em;
+     	padding: 3%;
+     }
+
+     .content h4:last-child{
+     	display: block;
+     }
+
+     .pasos-responsive{
+     	display: flex;
+     }
+
+     .consulta {
+     	display: flex;
+     	justify-content: center;
+     	align-items: center;
+     	flex-direction: column;
+     }
+	
+}

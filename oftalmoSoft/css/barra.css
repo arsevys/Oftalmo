@@ -1,0 +1,142 @@
+
+
+.barra {
+	width: 100%;
+	padding: 1% 2.5%;
+	max-height: 70px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	z-index: 10;
+}
+
+.opciones ul{
+    text-decoration: none;
+}
+
+.opciones ul li {
+	display: inline-block;
+	font-size: 0.8em;
+	margin-left: 10px;
+}
+
+.opciones ul li a {
+	color: rgb(150,150,150);
+	text-decoration: none;
+}
+
+.opcionesDos{
+	width: 60%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.opcionesDos a{
+	text-decoration: none;
+	color:#606d6c;
+	margin-right: 5%;
+	font-size: 0.9em;	
+}
+
+.opcionesDos a i{
+  font-size: 1.3em;
+  margin-right: 2px;
+}
+
+.opcionesDos a i.fa-envelope-o,.opcionesDos a i.fa-question-circle,.opcionesDos a i.fa-user {
+	font-size: 1.5em;
+}
+
+.opcionesDos a i.fa-user{
+  margin-right: 10px;
+}
+
+.opcionesDos a i.fa-sort-desc{
+  margin-left:5px;
+  transform: translateY(-3%);
+}
+
+input[type="button"] {
+	display: inline-block;
+	min-width: 60px;
+	padding: 1% 2%;
+	background: #3ab2ed;
+	color: white;
+	border: none;
+	border-radius:20px;
+}
+
+input[type="button"].button:hover {
+	cursor: pointer;
+}
+
+input[type="button"].button:focus {
+	outline: none;
+	background: linear-gradient(to bottom ,#048ddc,#3e00ed);
+} 
+
+.barra-responsive {
+	display: none;
+	transform: translateX(100%);
+	position: fixed;
+	width: 40%;
+	background: linear-gradient(to bottom ,#00aeed,#048ddc);
+	height: calc(100% - 60px);
+    bottom: 0;
+    right: 0;
+    overflow: auto;padding: 5%;
+    z-index: 20;
+    transition: transform ease 0.4s;
+}
+
+
+.barra-responsive ul{
+	list-style: none;
+}
+
+.barra-responsive ul li {
+	display: flex;justify-content: flex-start;
+	align-items: center;
+	margin-bottom: 12px;
+}
+
+.barra-responsive ul li a {
+	text-decoration: none;
+	color :white;
+}
+
+.barra-responsive ul li a i{
+	margin-right: 10px;
+}
+
+
+.barra-responsive ul li input {
+	color :#0298e1;
+	border-radius: 5px;
+	border : none;
+	padding:2% 3%;
+	cursor: pointer;
+	background: white;
+}
+
+.barra-responsive ul li input:focus {
+	outline: none;
+}
+
+
+@media screen and (max-width: 600px){
+
+	#barra {
+		display: block;
+	}
+
+	.panel .barra {
+		display: none;
+	}
+
+	.barra-responsive {
+	   display: block;
+    }
+
+}

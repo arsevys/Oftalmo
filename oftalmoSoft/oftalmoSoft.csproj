@@ -1,0 +1,330 @@
+﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9A2DF8E2-7DE4-4007-90CB-AC4B75FFEAF0}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>oftalmoSoft</RootNamespace>
+    <AssemblyName>oftalmoSoft</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\antecedentes.css" />
+    <Content Include="css\barra.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\cld.css" />
+    <Content Include="css\consulta.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\general.css" />
+    <Content Include="css\index.css" />
+    <Content Include="css\ojos.css" />
+    <Content Include="css\pasos.css" />
+    <Content Include="css\registros.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="imagenes\093-chevron-5.png" />
+    <Content Include="imagenes\093-chevron-6.png" />
+    <Content Include="imagenes\093-up-arrow-6.png" />
+    <Content Include="imagenes\1.jpg" />
+    <Content Include="imagenes\1.png" />
+    <Content Include="imagenes\10.jpg" />
+    <Content Include="imagenes\10.png" />
+    <Content Include="imagenes\10BLANCO.png" />
+    <Content Include="imagenes\11.jpg" />
+    <Content Include="imagenes\11.png" />
+    <Content Include="imagenes\11BLANCO.png" />
+    <Content Include="imagenes\1BLANCO.png" />
+    <Content Include="imagenes\2.jpg" />
+    <Content Include="imagenes\2.png" />
+    <Content Include="imagenes\2BLANCO.png" />
+    <Content Include="imagenes\3.jpg" />
+    <Content Include="imagenes\3.png" />
+    <Content Include="imagenes\3BLANCO.png" />
+    <Content Include="imagenes\4.jpg" />
+    <Content Include="imagenes\4.png" />
+    <Content Include="imagenes\4BLANCO.png" />
+    <Content Include="imagenes\5.jpg" />
+    <Content Include="imagenes\5.png" />
+    <Content Include="imagenes\5BLANCO.png" />
+    <Content Include="imagenes\6.jpg" />
+    <Content Include="imagenes\6.png" />
+    <Content Include="imagenes\6BLANCO.png" />
+    <Content Include="imagenes\7.jpg" />
+    <Content Include="imagenes\7.png" />
+    <Content Include="imagenes\7BLANCO.png" />
+    <Content Include="imagenes\8.jpg" />
+    <Content Include="imagenes\8.png" />
+    <Content Include="imagenes\8BLANCO.png" />
+    <Content Include="imagenes\9.jpg" />
+    <Content Include="imagenes\9.png" />
+    <Content Include="imagenes\9BLANCO.png" />
+    <Content Include="imagenes\aliminar.png" />
+    <Content Include="imagenes\BACKGROUND.jpg" />
+    <Content Include="imagenes\Captura.PNG" />
+    <Content Include="imagenes\CHECK-BLANCO-CIRCULO-ON.png" />
+    <Content Include="imagenes\CHECK-CIRCULO-OFF.png" />
+    <Content Include="imagenes\CHECK-CUADRADO-OFF.png" />
+    <Content Include="imagenes\CHECK-CUADRADO-ON.png" />
+    <Content Include="imagenes\CHECK2-ACTIVADO.png" />
+    <Content Include="imagenes\CHECK2-DESACTIVADO.png" />
+    <Content Include="imagenes\editar.png" />
+    <Content Include="imagenes\FONDOMENU.jpg" />
+    <Content Include="imagenes\Imagen1.png" />
+    <Content Include="imagenes\Imagen10.png" />
+    <Content Include="imagenes\Imagen11.png" />
+    <Content Include="imagenes\Imagen2.png" />
+    <Content Include="imagenes\Imagen3.png" />
+    <Content Include="imagenes\Imagen4.png" />
+    <Content Include="imagenes\Imagen5.png" />
+    <Content Include="imagenes\Imagen6.png" />
+    <Content Include="imagenes\Imagen7.png" />
+    <Content Include="imagenes\Imagen8.png" />
+    <Content Include="imagenes\Imagen9.png" />
+    <Content Include="imagenes\LOGO-OFTALMOSALUD.png" />
+    <Content Include="imagenes\RELOJ.png" />
+    <Content Include="imagenes\switch-NO-rojo.png" />
+    <Content Include="imagenes\switch-NO.png" />
+    <Content Include="imagenes\switch-SI-rojo.png" />
+    <Content Include="imagenes\switch-SI.png" />
+    <Content Include="imagenes\USER.png" />
+    <Content Include="js\cld.js" />
+    <Content Include="js\editar.js" />
+    <Content Include="js\index.js" />
+    <Content Include="js\ojos.js" />
+    <Content Include="js\validacion.js" />
+    <Content Include="Views\Oftalmo\imagenes\093-chevron-5.png" />
+    <Content Include="Views\Oftalmo\imagenes\093-chevron-6.png" />
+    <Content Include="Views\Oftalmo\imagenes\093-up-arrow-6.png" />
+    <Content Include="Views\Oftalmo\imagenes\1.jpg" />
+    <Content Include="Views\Oftalmo\imagenes\1.png" />
+    <Content Include="Views\Oftalmo\imagenes\10.jpg" />
+    <Content Include="Views\Oftalmo\imagenes\10.png" />
+    <Content Include="Views\Oftalmo\imagenes\10BLANCO.png" />
+    <Content Include="Views\Oftalmo\imagenes\11.jpg" />
+    <Content Include="Views\Oftalmo\imagenes\11.png" />
+    <Content Include="Views\Oftalmo\imagenes\11BLANCO.png" />
+    <Content Include="Views\Oftalmo\imagenes\1BLANCO.png" />
+    <Content Include="Views\Oftalmo\imagenes\2.jpg" />
+    <Content Include="Views\Oftalmo\imagenes\2.png" />
+    <Content Include="Views\Oftalmo\imagenes\2BLANCO.png" />
+    <Content Include="Views\Oftalmo\imagenes\3.jpg" />
+    <Content Include="Views\Oftalmo\imagenes\3.png" />
+    <Content Include="Views\Oftalmo\imagenes\3BLANCO.png" />
+    <Content Include="Views\Oftalmo\imagenes\4.jpg" />
+    <Content Include="Views\Oftalmo\imagenes\4.png" />
+    <Content Include="Views\Oftalmo\imagenes\4BLANCO.png" />
+    <Content Include="Views\Oftalmo\imagenes\5.jpg" />
+    <Content Include="Views\Oftalmo\imagenes\5.png" />
+    <Content Include="Views\Oftalmo\imagenes\5BLANCO.png" />
+    <Content Include="Views\Oftalmo\imagenes\6.jpg" />
+    <Content Include="Views\Oftalmo\imagenes\6.png" />
+    <Content Include="Views\Oftalmo\imagenes\6BLANCO.png" />
+    <Content Include="Views\Oftalmo\imagenes\7.jpg" />
+    <Content Include="Views\Oftalmo\imagenes\7.png" />
+    <Content Include="Views\Oftalmo\imagenes\7BLANCO.png" />
+    <Content Include="Views\Oftalmo\imagenes\8.jpg" />
+    <Content Include="Views\Oftalmo\imagenes\8.png" />
+    <Content Include="Views\Oftalmo\imagenes\8BLANCO.png" />
+    <Content Include="Views\Oftalmo\imagenes\9.jpg" />
+    <Content Include="Views\Oftalmo\imagenes\9.png" />
+    <Content Include="Views\Oftalmo\imagenes\9BLANCO.png" />
+    <Content Include="Views\Oftalmo\imagenes\aliminar.png" />
+    <Content Include="Views\Oftalmo\imagenes\BACKGROUND.jpg" />
+    <Content Include="Views\Oftalmo\imagenes\Captura.PNG" />
+    <Content Include="Views\Oftalmo\imagenes\CHECK-BLANCO-CIRCULO-ON.png" />
+    <Content Include="Views\Oftalmo\imagenes\CHECK-CIRCULO-OFF.png" />
+    <Content Include="Views\Oftalmo\imagenes\CHECK-CUADRADO-OFF.png" />
+    <Content Include="Views\Oftalmo\imagenes\CHECK-CUADRADO-ON.png" />
+    <Content Include="Views\Oftalmo\imagenes\CHECK2-ACTIVADO.png" />
+    <Content Include="Views\Oftalmo\imagenes\CHECK2-DESACTIVADO.png" />
+    <Content Include="Views\Oftalmo\imagenes\editar.png" />
+    <Content Include="Views\Oftalmo\imagenes\FONDOMENU.jpg" />
+    <Content Include="Views\Oftalmo\imagenes\Imagen1.png" />
+    <Content Include="Views\Oftalmo\imagenes\Imagen10.png" />
+    <Content Include="Views\Oftalmo\imagenes\Imagen11.png" />
+    <Content Include="Views\Oftalmo\imagenes\Imagen2.png" />
+    <Content Include="Views\Oftalmo\imagenes\Imagen3.png" />
+    <Content Include="Views\Oftalmo\imagenes\Imagen4.png" />
+    <Content Include="Views\Oftalmo\imagenes\Imagen5.png" />
+    <Content Include="Views\Oftalmo\imagenes\Imagen6.png" />
+    <Content Include="Views\Oftalmo\imagenes\Imagen7.png" />
+    <Content Include="Views\Oftalmo\imagenes\Imagen8.png" />
+    <Content Include="Views\Oftalmo\imagenes\Imagen9.png" />
+    <Content Include="Views\Oftalmo\imagenes\LOGO-OFTALMOSALUD.png" />
+    <Content Include="Views\Oftalmo\imagenes\RELOJ.png" />
+    <Content Include="Views\Oftalmo\imagenes\switch-NO-rojo.png" />
+    <Content Include="Views\Oftalmo\imagenes\switch-NO.png" />
+    <Content Include="Views\Oftalmo\imagenes\switch-SI-rojo.png" />
+    <Content Include="Views\Oftalmo\imagenes\switch-SI.png" />
+    <Content Include="Views\Oftalmo\imagenes\USER.png" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\OftalmoController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\MyriadPro-Bold.otf" />
+    <Content Include="fonts\MyriadPro-Cond.otf" />
+    <Content Include="fonts\MyriadPro-It.otf" />
+    <Content Include="fonts\MyriadPro-Regular.otf" />
+    <None Include="packages.config" />
+    <Content Include="Views\Oftalmo\index.cshtml" />
+    <Content Include="Views\Oftalmo\registrar.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OftalmoBussines\OftalmoBussines.csproj">
+      <Project>{4fc7a739-ff6a-435f-91c5-e6c50a984731}</Project>
+      <Name>OftalmoBussines</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OftalmoModel\OftalmoModel.csproj">
+      <Project>{ad2ab12c-4b87-4209-9581-c77858d7ecf8}</Project>
+      <Name>OftalmoModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>62342</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:62342/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

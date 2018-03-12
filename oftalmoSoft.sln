@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "oftalmoSoft", "oftalmoSoft\oftalmoSoft.csproj", "{9A2DF8E2-7DE4-4007-90CB-AC4B75FFEAF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OftalmoModel", "OftalmoModel\OftalmoModel.csproj", "{AD2AB12C-4B87-4209-9581-C77858D7ECF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OftalmoBussines", "OftalmoBussines\OftalmoBussines.csproj", "{4FC7A739-FF6A-435F-91C5-E6C50A984731}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OftalmoData", "OftalmoData\OftalmoData.csproj", "{FEEEF4D9-9A0C-4C1E-86A2-E42282A80362}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9A2DF8E2-7DE4-4007-90CB-AC4B75FFEAF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A2DF8E2-7DE4-4007-90CB-AC4B75FFEAF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A2DF8E2-7DE4-4007-90CB-AC4B75FFEAF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A2DF8E2-7DE4-4007-90CB-AC4B75FFEAF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD2AB12C-4B87-4209-9581-C77858D7ECF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD2AB12C-4B87-4209-9581-C77858D7ECF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD2AB12C-4B87-4209-9581-C77858D7ECF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD2AB12C-4B87-4209-9581-C77858D7ECF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FC7A739-FF6A-435F-91C5-E6C50A984731}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FC7A739-FF6A-435F-91C5-E6C50A984731}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FC7A739-FF6A-435F-91C5-E6C50A984731}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FC7A739-FF6A-435F-91C5-E6C50A984731}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEEEF4D9-9A0C-4C1E-86A2-E42282A80362}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEEEF4D9-9A0C-4C1E-86A2-E42282A80362}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEEEF4D9-9A0C-4C1E-86A2-E42282A80362}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEEEF4D9-9A0C-4C1E-86A2-E42282A80362}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FB208B9B-8FA2-4424-82EB-25258548F441}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,8 @@
+C:\Oftalmo\oftalmoSoft\OftalmoData\obj\Debug\OftalmoData.csprojResolveAssemblyReference.cache
+C:\Oftalmo\oftalmoSoft\OftalmoData\obj\Debug\OftalmoData.csproj.CoreCompileInputs.cache
+C:\Oftalmo\oftalmoSoft\OftalmoData\bin\Debug\OftalmoData.dll
+C:\Oftalmo\oftalmoSoft\OftalmoData\bin\Debug\OftalmoData.pdb
+C:\Oftalmo\oftalmoSoft\OftalmoData\bin\Debug\OftalmoModel.dll
+C:\Oftalmo\oftalmoSoft\OftalmoData\bin\Debug\OftalmoModel.pdb
+C:\Oftalmo\oftalmoSoft\OftalmoData\obj\Debug\OftalmoData.dll
+C:\Oftalmo\oftalmoSoft\OftalmoData\obj\Debug\OftalmoData.pdb

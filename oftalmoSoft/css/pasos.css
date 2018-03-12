@@ -1,0 +1,1834 @@
+
+.hidden {
+	display: none;
+}
+
+input[type="text"],textarea,select,input[type="date"]{
+	background:white;
+	border:none;
+	width: 100%;
+	border-radius: 5px;
+	height: 25px;
+	color: #7c888c;
+	padding: 1% 3%;
+	color: #a19fa0;
+	box-shadow: 0px 0px 5px 1px #a7a7c8;
+	/*border:solid 1px #018ede;*/
+	font-size: 0.8em;
+}
+
+input[type="text"]:focus {
+	outline: none;
+	/*border:solid 1px #ff9b05;*/
+}
+
+input[type="date"]:focus {
+	outline: none;
+}
+
+textarea:focus{
+	outline:none;
+}
+
+input[type="radio"]{
+	width: 15px;
+	height: 15px;
+}
+
+select:focus {
+	outline: none;
+}
+
+@media screen and (max-width: 600px){
+	input[type="text"],select,input[type="date"]{
+		height: 30px;
+	}
+
+	/*.input-control {
+		font-size: 14px;
+	}*/
+}
+
+
+/*@media screen and (max-width: 400px){
+
+	.input-control {
+		font-size: 20px;
+	}
+}*/
+
+
+/*****************PASO 1*********************/
+
+.paso1 .form {
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	padding: 1% 5%;
+	width: 100%;
+	font-size: 16px;
+}
+
+.paso1 .input-control {
+	display: inline-flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	width: 25%;
+	padding: 1% 2%;
+	font-size: 1em;
+}
+
+.paso1 .input-control label img {
+	width: 20px;
+	height: 20px;
+	margin-right: 5px;
+}
+
+.paso1 .input-control label {
+	font-size: 1em;
+	color: #797f84;
+}
+
+.paso1 .input-control input ,.paso1 .input-control select{
+	font-size: 0.9em;
+	background:white;
+	color: #a19fa0;
+	box-shadow: 0px 0px 5px 1px #a7a7c8;
+}
+
+.paso1 .input-control div {
+	width: 100%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+
+
+.paso1 .input-control div label {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 5px;
+}
+
+.paso1 .input-control div label input {
+	margin-left: 6px;
+}
+
+@media screen and (max-width: 840px){
+	.paso1 .input-control {
+		width: 33.333%;
+	}
+	.paso1 .content-next .btn-next {
+		padding: 2% 3%;
+	}
+}
+
+
+@media screen and (max-width: 600px){
+
+	.paso1 .input-control {
+		width: 50%;
+		font-size: 1em;
+	}
+
+/*	.input-control {
+		font-size: 14px;
+		width: 49%;
+		margin: 0% 0% 2% 0%;
+	}
+	.input-control:nth-child(n+2){
+		margin: 0% 0% 0% 0%;
+	}
+	.input-control input[type="text"],.input-control select,.input-control input[type="date"]{
+		height: 30px;
+		padding: 1% 3%;
+		font-size: 0.8em;
+	}
+	.input-control div label {
+		padding-left: 3%;
+	}
+
+	.input-control div label input {
+		margin-left: 10px;
+    }
+*/
+    .content-next {
+    	margin-top: 10px;
+    	font-size: 20px;
+    }
+
+    .content-next .btn-next {
+    	padding: 2% 3%;
+    }
+}
+
+@media screen and (max-width: 400px){
+
+	.paso1 .input-control {
+		margin-bottom: 15px;
+		width: 100%;
+		font-size: 0.9em;
+	}
+
+}
+
+
+
+
+/*****************PASO 2*********************/
+
+.btn-next{
+   min-width: 100px;
+   text-align: center; 
+}
+
+.content-next {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.content-next .btn-next {
+	color: white;
+	background: linear-gradient(to bottom ,#00aeed,#048ddc);
+	padding: 1% 3%;
+	border-radius: 5px;
+	font-size: 0.8em;
+	margin-right: 10%;
+	cursor: pointer;
+}
+
+
+
+.paso2 .group-input {
+	width: 100%;
+	padding: 0% 4%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	font-size: 1em;
+}
+
+.paso2 .input-control {
+	font-size: 1em;
+	flex-direction: column;
+	padding: 2%;
+}
+
+.paso2 .input-control > h5{
+	margin-bottom: 10px;
+	font-size: 0.8em;
+	font-family: "bold";
+  	color: #606d6c;
+}
+
+.paso2 .input-control div {
+	font-size: 1em;
+}
+
+
+.paso2 .input-control label img {
+	width: 20px;
+	margin-right: 5px;
+	height: 20px;
+}
+
+.paso2 .input-control label{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	font-size: 0.9em;
+	color: #74818b;
+}
+
+.paso2 .content-next {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.paso2 #conj {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 0px;
+}
+
+
+.paso2 #conj > label{
+	margin-right: 10px;
+}
+
+.paso2 .input-control label input {
+	margin-right: 10px;
+	margin-left: 0px;
+	font-size: 1em;
+	background:white;
+	color: #a19fa0;
+	box-shadow: 0px 0px 5px 1px #a7a7c8;
+}
+
+
+
+
+.paso2 .content-next .btn-next {
+	color: white;
+	background: linear-gradient(to bottom ,#00aeed,#048ddc);
+	padding: 1% 3%;
+	border-radius: 5px;
+	font-size: 0.8em;
+	margin-right: 10%;
+	cursor: pointer;
+}
+
+.paso2 .input-control input[type="text"],.paso2 .input-control select,.paso2 .input-control input[type="date"]{
+  width: 100px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.paso2 .group-input .input-control:first-child{
+	width: 20%;
+}
+
+.paso2 .group-input .input-control:nth-child(2){
+	width: 40%;
+}
+
+.paso2 .group-input .input-control:last-child{
+	width: 40%;
+}
+
+
+
+
+.paso2 .grupo .input-control:first-child{
+	width: 20%;
+}
+
+.paso2 .grupo .input-control:nth-child(2){
+	width: 80%;
+}
+
+
+.paso2 .grupo .input-control:nth-child(2) div {
+	display: flex ;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.paso2 .grupo .input-control:nth-child(2) div label {
+	margin-right: 4%;
+}
+
+						        
+.paso2 .content-next .back {
+	background: linear-gradient(to bottom ,tomato,#d24525);
+	margin-right: 2%;
+}
+
+
+
+@media screen and (max-width: 800px){
+
+	.paso2 .content-next {
+		margin-top: 10px;
+		font-size: 20px;
+	}
+
+	.paso2 .content-next .btn-next {
+		padding: 2% 3%;
+	}
+
+	.paso2 .group-input{
+		flex-wrap: wrap;
+		justify-content: 
+	}
+	.paso2 .group-input .input-control:first-child h5 {
+		font-size: 1.1em;
+		text-align: center;
+	}
+
+	.paso2 .group-input .input-control{
+		margin-bottom: 15px;
+	}
+
+	.paso2 .group-input .input-control:first-child{
+		width: 100%;
+	}
+
+	.paso2 .group-input .input-control:nth-child(2){
+		width: 100%;
+	}
+
+	.paso2 .group-input .input-control:last-child{
+		width: 100%;
+	}
+
+	.paso2 .group-input .input-control div label{
+		padding-left: 0px;
+	}
+
+}
+
+@media screen and (max-width: 400px){
+
+	.paso2 .input-control {
+		margin-bottom: 15px;
+		font-size: 20px;
+		width: 100%;
+	}
+
+	.paso2 .input-control input {
+		width: auto;
+	}
+
+}
+
+
+
+
+/*****************PASO 3*********************/
+.paso3 {
+	width: 100%;
+}
+.paso3 .group-form {
+	display: flex;
+	width: 100%;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.paso3 .lf{
+	width: 50%;
+	padding: 2%;
+	margin-right: 0.5%;
+	background: #3ab2ed;
+	border-radius: 5px;
+	position: relative;
+	font-size: 15px;
+	margin-bottom: 20px;
+}
+
+.paso3 .rg{
+	width: 50%;
+	margin-left: 0.5%;
+	padding: 2%;
+	background: #ff9900;
+	border-radius: 5px;
+	position: relative;
+	font-size: 15px;
+	margin-bottom: 20px;
+}
+
+
+.paso3 .rigth{
+  color: white;
+  font-family: "bold";
+  background:#ff9900;
+  text-align: center;
+  font-size: 0.9em;
+  padding: 4px 10px;
+  position: absolute;
+  top: 0;
+  left: 10%;
+  border-radius: 30px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.paso3 .left {
+  color: white;
+  font-family: "bold";
+  background:#3ab2ed;
+  text-align: center;
+  font-size: 0.9em;
+  padding: 4px 10px;
+  position: absolute;
+  top: 0;
+  left: 10%;
+  border-radius: 30px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.paso3 .item-form > h5{
+  font-size: 1em;
+  font-weight: 60;
+  color:white;
+  display: none;
+}
+
+.paso3 .input-control{
+	width: 100%;
+	display: none;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 3% 0%;
+	padding-left: 2%;
+	font-size: 1em;
+}
+
+.paso3 .input-control .inputs {
+	width: 100%;
+	font-size: 1em;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;	
+}
+
+.paso3 .input-control .inputs label {
+	display: flex;
+	font-size: 0.9em;
+	color: white;
+	justify-content: center;
+	align-items: center;
+	margin-right: 4%;
+	cursor: pointer;
+}
+
+.paso3 .input-control .inputs label img {
+	width: 20px;
+	height: 20px;
+	margin-right: 5px;
+}
+
+.paso3 .input-control .inputs label input {
+	font-size: 0.9em;
+	margin-right: 5px;
+}
+
+.paso3 .input-control h5 {
+	font-size: 1.1em;
+	color: white;
+	font-weight: 60;
+}
+.paso3 .line {
+	margin-bottom: 3%;
+	display: none;
+}
+
+
+.paso3 .cbo-content{
+	width: 100%;
+	justify-content: flex-start;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+
+.paso3 .cbo {
+  width: 100%;
+  font-size: 1em;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-left: 2%;
+}
+
+.paso3 .input-control .span{
+	display:flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.lado {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.paso3 .cbo:focus {
+	outline: none;
+}
+
+.paso3 .cbo label {
+	margin: 2% 0%;
+	margin-right: 2%;
+	display: flex;
+	font-size: 0.9em;
+	color: white;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.paso3 .cbo select {
+	color: #747170;
+}
+
+.paso3 .cbo select ,.paso3 .cbo input[type="text"]{
+	display: block;
+	font-size: 1em;
+	background: white;
+	width: 100px;
+	margin: 2% 2% 0% 2% ;
+}
+
+.paso3 input[type="text"].medidor{
+	border:none;
+	background: #008cdc;
+	color: white;
+	text-align: center;
+}
+
+.paso3 .sig{
+	justify-content: space-between;
+}
+
+.paso3 .sig label{
+	font-size: 0.9em;
+	color: white;	
+}
+
+.paso3 .input-control .radio-group{
+	margin-left: 2%;
+	width: 65%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+
+
+.paso3 .input-control .radio-group label {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-right: 10px;
+	width: 80px;
+	margin: 1%;
+}
+
+.paso3 .input-control .radio-group img {
+	margin-right: 5px;
+	width: 20px;
+	height: 20px;
+}
+
+.paso3 .input-control .radio-group label input {
+	margin-left: 5px;
+}
+
+.paso3 .combo h5 {
+	color: white;
+	font-size: 0.9em;
+	font-weight: 10;
+	margin-right: 10px
+}
+
+.paso3 .combo #select {
+	font-size: 0.9em;
+	font-weight: 10;
+	background: white;
+}
+
+.paso3 .combo #select2 {
+	font-size: 0.9em;
+	font-weight: 10;
+	background: white;
+}
+
+
+.paso3 .form-content{
+	width: 100%;
+}
+
+.paso3 .content-next .back {
+	background: linear-gradient(to bottom ,tomato,#d24525);
+	margin-right: 2%;
+}
+
+.paso3 h5 {
+	font-size: 1em;
+}
+
+.paso3 .item-form > h5{
+  font-size: 20px ;
+}
+
+.final {
+	font-size: 20px;
+}
+
+@media screen and (max-width: 600px){
+
+	.paso3 .group-form {
+		flex-wrap: wrap;
+	}
+
+	.paso3 .item-form{
+		width: 100%;
+	}
+	.paso3 .content-next .btn-next {
+		padding: 2% 3%;
+	}
+
+	.paso3 .group-form {
+		margin-top: 20px;
+	}
+}
+
+/*****************PASO 4********************/
+.paso4 .rigth{
+  color: white;
+  font-family: "bold";
+  background:tomato;
+  width: 200px;
+  text-align: center;
+  margin-bottom: 4%;
+}
+
+.paso4 .left {
+  color: white;
+  font-family: "bold";
+  background:#4c87be;
+  width: 200px;
+  text-align: center;
+  margin-bottom: 4%;
+}
+
+.paso4 .content-detalles {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.paso4 .item-detalle {
+	width: 50%;
+}
+
+.paso4 .item-detalle .detalle div:last-child{
+	width: 50%;
+	display: flex;
+	justify-content: flex-start;
+}
+
+.paso4 .detalle {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 3%;
+}
+
+.paso4 .detalle h5 {
+	color: #0075c8;
+	font-size: 1.1em;
+}
+
+.paso4 .detalle p {
+	color: tomato;
+	font-size: 1.1em;
+}
+
+.paso4 .lista {
+	flex-direction:column;
+	font-size: 1em;
+}
+
+.paso4 .lista p {
+	font-size: 1em;
+	cursor: pointer;
+	padding: 2%;
+}
+
+.paso4 .lista p:hover {
+	color: #93040f;
+}
+.paso4 .agregar {
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+
+.paso4 .agregar select{
+	width: 50%;
+	font-size: 1em;
+	background-color: white;
+	color: #a19fa0;
+	padding: 0% 2%;
+	box-shadow: 0px 0px 5px 1px #a7a7c8;
+}
+
+.paso4 .agregar div{
+	min-width: 100px;
+	height: 30px;
+	background-color: #008cdc;
+	color: white;
+	border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 1% 3%;
+	cursor: pointer;
+	margin-left: 10px;
+}
+
+.paso4 .agregar div:focus{
+	background-color: #004167;
+	outline: none;
+}
+
+.paso4 .coment{
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+.paso4 .content-next .back {
+	background: linear-gradient(to bottom ,tomato,#d24525);
+	margin-right: 2%;
+}
+
+.paso4 .input-group textarea{
+	background:#f1f1f1;
+	border:none;
+	width: 100%;
+	margin-top: 1%;
+	max-width: 100%;
+	min-width: 100%;
+	border-radius: 5px;
+	height: 25px;
+	color: #7c888c;
+	padding: 1% 3%;
+	height: 200px;
+	font-size: 1.1em;
+}
+
+@media screen and (max-width: 600px){
+  .paso4 .detalle{
+  	font-size: 1.3em;
+  }
+
+	.paso4 .lista {
+		font-size: 1.3em;
+	}
+
+	.paso4 .item-detalle {
+		width: 100%;
+		margin-bottom: 3%;
+	}
+
+	.paso4 .input-group{
+	font-size: 1.4em;
+	}
+	.paso4 .content-next .btn-next {
+		padding: 2% 3%;
+	}
+}
+
+
+/************* PASO 5 *****************/
+
+.paso5 {
+	width: 100%;
+}
+
+.paso5 .group-form {
+	display: flex;
+	width: 100%;
+	font-size: 1em;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.paso5 .lf{
+	width: 50%;
+	padding: 2%;
+	margin-right: 0.5%;
+	background: #3ab2ed;
+	border-radius: 5px;
+	position: relative;
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+
+.paso5 .rg{
+	width: 50%;
+	margin-left: 0.5%;
+	padding: 2%;
+	background: #ff9900;
+	border-radius: 5px;
+	position: relative;
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+
+
+.paso5 .rigth{
+  color: white;
+  font-family: "bold";
+  background:#ff9900;
+  text-align: center;
+  font-size: 0.9em;
+  padding: 4px 10px;
+  position: absolute;
+  top: 0;
+  left: 10%;
+  border-radius: 30px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.paso5 .left {
+  color: white;
+  font-family: "bold";
+  background:#3ab2ed;
+  text-align: center;
+  font-size: 0.9em;
+  padding: 4px 10px;
+  position: absolute;
+  top: 0;
+  left: 10%;
+  border-radius: 30px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.paso5 .item-form > h5{
+  font-size: 1.1em;
+  font-weight: 60;
+  color:white;
+}
+
+
+/*.paso5 h5 {
+	font-size: 1.3em;
+	color: #7e7e7e;
+}
+
+.group-input h5 {
+	font-size: 1.1em;
+}
+*/
+/*.paso5 .rigth{
+  color: white;
+  font-family: "bold";
+  background:tomato;
+  width: 200px;
+  text-align: center;
+  margin-bottom: 4%;
+  font-size: 1em;
+}
+
+.paso5 .left {
+  color: white;
+  font-family: "bold";
+  background:#4c87be;
+  width: 200px;
+  text-align: center;
+  margin-bottom: 4%;
+  font-size: 1em;
+}*/
+
+.paso5 .group-input{
+	padding-left: 2%;
+	width: 100%;
+}
+
+.paso5 .group-input > h5 {
+	font-size: 0.9em;
+	color: white;
+	font-weight: 10;
+}
+
+.paso5 .input{
+	font-size: 1em;
+	margin: 2% 0%;
+	width: 100%;
+}
+
+/*.paso5 .input div {
+	margin-bottom: 4%;
+}*/
+
+.paso5 .trata {
+	font-size: 0.9em;
+}
+
+.paso5 .trata select {
+	font-size: 0.9em;
+	width: 200px;
+	margin-left: 10px;
+}
+
+.paso5 .input h5 {
+	font-size: 0.9em;
+	color: white;
+	font-weight: 10;
+}
+
+.paso5 .trata{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	margin-bottom: 15px;
+}
+
+.paso5 .fecha_cl{
+	font-size: 20px;
+	color: #7e7e7e;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.paso5 .fecha_cl h5 {
+	font-size: 0.8em;
+	align-self: flex-start;
+}
+
+.paso5 .encima.input-control {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-wrap: wrap;
+	font-size: 1em;
+	padding-left:2%;
+}
+
+.paso5 .encima.input-control label {
+	margin: 3% 0px;
+	margin-right:  10px;
+	font-size: 0.8em;
+	color: white;
+}
+
+.paso5 .encima.input-control label select {
+	font-size: 0.9em;
+}
+
+.paso5 .largo.input-control {
+	font-size: 1em;
+	padding-left:2%;
+	margin-bottom:15px;
+}
+
+.paso5 .largo.input-control label {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	font-size: 0.8em;
+	color: white;
+}
+
+.paso5 .encima.input-control label input,.paso5 .encima.input-control label select{
+	display: block;
+	margin-right: 10px;
+	width: 100px;
+	font-size: 0.9em;
+}
+
+
+.paso5 .radio{
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding-left: 2%;
+	font-size: 0.9em;
+}
+
+.paso5 .input-control.radio > h5{
+	width: 130px;
+}
+
+.paso5 .input-control.radio .radio-group{
+	width: calc(100% - 130px);
+	display: flex;
+	justify-content: flex-start;
+}
+
+.paso5 .input-control.radio .radio-group label {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	font-size: 0.8em;
+	color: white;
+	margin-left: 10px;
+}
+
+.paso5 .input-control.radio .radio-group label img {
+	margin-left: 5px;
+	margin-right: 4px;
+	width: 20px;
+	height: 20px;
+}
+
+
+
+
+
+
+
+.paso5 .input-control > div{
+   margin-bottom: 4%;
+}
+
+
+
+
+
+.paso5 .largo.input-control label input{
+	margin-left: 10px;
+	width: 100px;
+}
+
+.paso5 .largo.input-control label select {
+	width: 50%;
+	margin-left: 10px;
+}
+
+.paso5 .largo.input-control label input {
+	width: 30%;
+	margin-left: 10px;
+}
+
+
+.paso5 .item-form {
+	width: 50%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-direction: column;
+}
+
+
+.paso5 .input-control  {
+	width: 100%;
+}
+
+/*.paso5 .input-control .radio-group {
+	font-size: 1.2em;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.paso5 .input-control .radio-group label {
+	margin-right: 3%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.paso5 .input-control .radio-group label input {
+	margin-left: 10px;
+}*/
+.paso5 .group-form {
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+}
+
+
+
+.paso5 .sig{
+	flex-direction: column;
+	width: 100%;
+}
+
+.paso5 .coment{
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+
+.paso5 .input-group textarea{
+	background:#f1f1f1;
+	border:none;
+	width: 100%;
+	margin-top: 1%;
+	max-width: 100%;
+	min-width: 100%;
+	border-radius: 5px;
+	height: 25px;
+	color: #7c888c;
+	padding: 1% 3%;
+	height: 200px;
+	font-size: 1.1em;
+}
+
+.paso5 .content-next .back {
+	background: linear-gradient(to bottom ,tomato,#d24525);
+	margin-right: 2%;
+}
+
+@media screen and (max-width: 600px){
+	.paso5 .content-next .btn-next {
+		padding: 2% 3%;
+	}
+
+	.paso5 .group-form {
+		flex-wrap: wrap;
+	}
+
+	.paso2 .grupo .input-control:nth-child(2) div{
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.paso5 .item-form {
+		width: 100%;
+	}
+
+	.paso5 .item-form h5{
+	}
+
+	.paso5 .input-group{
+	}
+}
+
+@media screen and (max-width: 600px){
+
+	.paso5 .group-form {
+		flex-wrap: wrap;
+	}
+
+	.paso5 .item-form{
+		width: 100%;
+	}
+	.paso5 .content-next .btn-next {
+		padding: 2% 3%;
+	}
+
+	.paso5 .group-form {
+		margin-top: 20px;
+	}
+
+	.paso5 .item-form{
+		padding-top: 20px;
+	}
+
+	.paso5 .fecha_cl iframe{
+		width: 100%;
+	}
+}
+
+
+
+
+.paso5 .content-detalles {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.paso5 .item-detalle {
+	width: 50%;
+}
+
+.paso5 .item-detalle .detalle div:last-child{
+	width: 50%;
+	display: flex;
+	justify-content: flex-start;
+}
+
+.paso5 .detalle {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 3%;
+}
+
+.paso5 .detalle h5 {
+	color: #0075c8;
+	font-size: 1.1em;
+}
+
+.paso5 .detalle p {
+	color: tomato;
+	font-size: 1.1em;
+}
+
+.paso5 .lista {
+	flex-direction:column;
+	font-size: 1em;
+}
+
+.paso5 .lista p {
+	font-size: 1em;
+	cursor: pointer;
+	padding: 2%;
+}
+
+.paso5 .lista p:hover {
+	color: #93040f;
+}
+.paso5 .agregar {
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+
+.paso5 .agregar select{
+	width: 50%;
+	font-size: 1em;
+	background-color: white;
+	color: #a19fa0;
+	padding: 0% 2%;
+	box-shadow: 0px 0px 5px 1px #a7a7c8;
+}
+
+.paso5 .agregar div{
+	min-width: 100px;
+	height: 30px;
+	background-color: #008cdc;
+	color: white;
+	border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 1% 3%;
+	cursor: pointer;
+	margin-left: 10px;
+}
+
+.paso5 .agregar div:focus{
+	background-color: #004167;
+	outline: none;
+}
+
+.paso5 .coment{
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+.paso5 .content-next .back {
+	background: linear-gradient(to bottom ,tomato,#d24525);
+	margin-right: 2%;
+}
+
+.paso5 .input-group textarea{
+	background:#f1f1f1;
+	border:none;
+	width: 100%;
+	margin-top: 1%;
+	max-width: 100%;
+	min-width: 100%;
+	border-radius: 5px;
+	height: 25px;
+	color: #7c888c;
+	padding: 1% 3%;
+	height: 200px;
+	font-size: 1.1em;
+}
+
+@media screen and (max-width: 600px){
+  .paso5 .detalle{
+  	font-size: 1.3em;
+  }
+
+	.paso5 .lista {
+		font-size: 1.3em;
+	}
+
+	.paso5 .item-detalle {
+		width: 100%;
+		margin-bottom: 3%;
+	}
+
+	.paso5 .input-group{
+	font-size: 1.4em;
+	}
+	.paso5 .content-next .btn-next {
+		padding: 2% 3%;
+	}
+}
+
+
+/*************** paso 6 **************************/
+
+.paso6 {
+	width: 100%;
+}
+
+.paso6 .group-form {
+	display: flex;
+	width: 100%;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.paso6 .lf{
+	width: 50%;
+	padding: 2%;
+	margin-right: 0.5%;
+	background: #3ab2ed;
+	border-radius: 5px;
+	position: relative;
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+
+.paso6 .rg{
+	width: 50%;
+	margin-left: 0.5%;
+	padding: 2%;
+	background: #ff9900;
+	border-radius: 5px;
+	position: relative;
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+
+
+.paso6 .rigth{
+  color: white;
+  font-family: "bold";
+  background:#ff9900;
+  text-align: center;
+  font-size: 0.9em;
+  padding: 4px 10px;
+  position: absolute;
+  top: 0;
+  left: 10%;
+  border-radius: 30px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.paso6 .left {
+  color: white;
+  font-family: "bold";
+  background:#3ab2ed;
+  text-align: center;
+  font-size: 0.9em;
+  padding: 4px 10px;
+  position: absolute;
+  top: 0;
+  left: 10%;
+  border-radius: 30px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.paso6 .item-form > h5{
+  font-size: 1.1em;
+  font-weight: 60;
+  color:white;
+}
+.paso6 .input-control{
+	font-size: 1em;
+	margin: 2% 0%;
+	padding-left: 2%;
+} 
+
+.rds{
+	font-size: 1em;
+	display: flex;
+	padding-left: 2%;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.rds label{
+	display: flex;
+	font-size: 0.8em;
+	color: white;
+	justify-content: center;
+	align-items: center;
+	margin-right: 10px;
+}
+
+.rds label img {
+	width: 20px;
+	height: 20px;
+	margin-right: 4px;
+}
+
+.rds label input[type="radio"]{
+	margin-right: 10px;	
+}
+
+.paso6 .group-form {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	width: 100%;
+}
+
+.paso6 .item-form {
+	width: 50%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-direction: column;
+}
+
+.paso6 .input{
+	font-size: 1em;
+	margin: 2% 0%;
+	padding-left: 2%;
+	width: 100%;
+}
+
+.paso6 .input div {
+	margin-bottom: 4%;
+}
+
+.paso6 .input .input-control:focus{
+	outline: none;
+}
+
+.paso6 .input h5 {
+	font-size: 0.9em;
+	color: white;
+	font-weight: 10;
+}
+
+.paso6 input[type="text"].medidor{
+	border:none;
+	background: #008cdc;
+	color: white;
+	text-align: center;
+}
+
+.alert{
+	animation: anima;
+	animation-duration: 6s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes anima {
+	0%{background: #008cdc;}
+	5%{background: #ff4529;}
+	10%{background: #008cdc;}
+	15%{background: #ff4529;}
+	20%{background: #008cdc;}
+	25%{background: #ff4529;}
+	30%{background: #008cdc;}
+	35%{background: #ff4529;}
+	40%{background: #008cdc;}
+	45%{background: #ff4529;}
+	50%{background: #008cdc;}
+	55%{background: #ff4529;}
+	60%{background: #008cdc;}
+	65%{background: #ff4529;}
+	70%{background: #008cdc;}
+	75%{background: #ff4529;}
+	80%{background: #008cdc;}
+	85%{background: #ff4529;}
+	90%{background: #008cdc;}
+	100%{background: #ff4529;}
+}
+
+
+
+.paso6 .encima.input-control {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+
+.paso6 .encima.input-control {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-wrap: wrap;
+	font-size: 1em;
+	padding-left:2%;
+}
+
+.paso6 .encima.input-control label {
+	margin: 3% 0px;
+	margin-right:  10px;
+	font-size: 0.8em;
+	color: white;
+}
+
+.paso6 .encima.input-control label select {
+	font-size: 0.9em;
+}
+
+.paso6 .largo.input-control {
+	font-size: 1em;
+	padding-left:2%;
+}
+
+.paso6 .largo.input-control label {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	font-size: 0.8em;
+	color: white;
+}
+
+.paso6 .encima.input-control label input,.paso6 .encima.input-control label select{
+	display: block;
+	margin-right: 10px;
+	width: 100px;
+	font-size: 0.9em;
+}
+
+/*.paso6 .input-control{
+	width: 100%;
+	padding: 3% 0%;
+}
+*/
+/*.paso6 .item-form h5{
+  font-size: 0.9em;
+  color:#7e7e7e;
+  font-weight: normal;
+}
+*/
+.paso6 .cbo-content{
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+
+.paso6 .cbo {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.paso6 .cbo label {
+	margin-right: 2%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.paso6 .cbo select {
+	display: block;
+	width: 100px;
+	margin: 2% 2% 0% 2% ;
+}
+
+
+
+
+
+.paso6 .sig{
+	justify-content: space-between;
+}
+
+.paso6 .input-control .radio-group{
+	margin-left: 2%;
+	width: 60%;
+}
+
+
+
+.paso6 .input-control .span label {
+	margin-right: 10px;
+}
+
+.paso6 .line {
+	margin-bottom: 3%;
+}
+
+
+
+.paso6 .form-content{
+	width: 100%;
+}
+
+.paso6 .content-next .back {
+	background: linear-gradient(to bottom ,tomato,#d24525);
+	margin-right: 2%;
+}
+
+/*.paso6 h5 {
+	font-size: 1em;
+}
+
+.paso6 .item-form > h5{
+  font-size: 20px ;
+}*/
+
+.paso6 .seguir{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-top: 10px;
+}
+
+.paso6 .seguir span {
+	margin-left: 5px;
+}
+
+}
+
+.paso6 .coment{
+	margin-top: 2%;
+	margin-bottom: 2%;
+	
+}
+
+.paso6 .coment label {
+	color: #7c888c;
+	font-size: 1em;
+}
+
+.paso6 .input-group textarea{
+	background:#f1f1f1;
+	border:none;
+	width: 100%;
+	margin-top: 1%;
+	max-width: 100%;
+	min-width: 100%;
+	border-radius: 5px;
+	height: 25px;
+	color: #7c888c;
+	padding: 1% 3%;
+	height: 200px;
+	font-size: 1.1em;
+}
+
+.paso6 .head {
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   width: 100%;
+   color: #828d91
+}
+.extra {
+	width: 49%;
+	display: inline-block;
+	padding: 2%;
+	font-size: 1em:;
+}
+
+.extra h5 {
+	font-size: 0.9em;
+	color: #606d6c;
+}
+
+.extra .input .largo label {
+	width: 340px;
+	display: flex;
+	margin-top: 4px;
+	font-size: 1em;
+	color: #606d6c;
+	justify-content: space-between;
+}
+
+.extra select{
+	font-size: 1em;
+	width: 180px;
+}
+
+.extra input{
+	font-size: 1em;
+	width: 180px;
+}
+
+.com {
+	width: 100%;
+}
+
+.com textarea {
+	width: 100%;
+	min-width: 100%;
+	max-width: 100%;
+	height: 200px;
+}
+
+#uno {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+#uno label {
+	justify-content: flex-start;
+	margin-right: 3%;
+}
+
+#uno2 {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+#uno2 label {
+	justify-content: flex-start;
+	margin-right: 3%;
+}
+
+@media screen and (max-width: 700px){
+	.extra {
+		width: 100%;
+		display: inline-block;
+	}
+}
+
+@media screen and (max-width: 600px){
+	.paso6 .group-form {
+		flex-wrap: wrap;
+	}
+
+	.paso6 .item-form{
+		width: 100%;
+	}
+
+	.paso6 .content-next .btn-next {
+		padding: 2% 3%;
+	}
+
+}
+	
+@media screen and (max-width: 500px){
+	.extra h5 {
+		font-size: 1.3em;
+	}
+	.extra .input .largo label {
+		font-size: 1.3em;
+		flex-wrap: wrap;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+	/*.paso6 .input-control{
+			width: 100%;
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			padding: 3% 0%;
+		}*/
+}
+
+
+@media screen and (max-width: 600px){
+
+	.paso6 .group-form {
+		flex-wrap: wrap;
+	}
+
+	.paso6 .item-form{
+		width: 100%;
+	}
+	.paso6 .content-next .btn-next {
+		padding: 2% 3%;
+	}
+
+	.paso6 .group-form {
+		margin-top: 20px;
+	}
+
+	.paso6 .item-form{
+		padding-top: 20px;
+	}
+}

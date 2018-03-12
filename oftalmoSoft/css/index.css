@@ -1,0 +1,290 @@
+ 
+body {
+	overflow-x: hidden;
+}
+
+@font-face {
+  font-family: regular;
+  src:url("../fonts/MyriadPro-Regular.otf");
+}
+
+@font-face {
+  font-family: "bold";
+  src:url("../fonts/MyriadPro-Bold.otf");
+}
+
+@font-face {
+  font-family: "italic";
+  src:url("../fonts/MyriadPro-It.otf");
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  font-family: "regular";
+}
+
+body {
+	/*background-color: #f9f9f9;*/
+	background-image: url(./../imagenes/BACKGROUND.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover cover;
+}
+
+.menu {
+	background-image: url(./../imagenes/FONDOMENU.jpg);
+	background-attachment: fixed;
+	background-size: 180px 100%;
+	background-repeat: no-repeat;
+	position: fixed;
+	top: 0;
+	left:0;
+	height: 100%;
+	padding: 0px;
+	padding-bottom: 5%;
+	width: 180px;
+	overflow-y:auto;
+	z-index: 20;
+	transition: transform ease 0.4s;
+	box-shadow: 0px 0px 5px 3px #d0d2d4;
+}
+
+.logo-menu {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding: 10% 0%;
+}
+
+.logo-menu img {
+  height: 35px
+}
+
+.imagen-perfil {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 8%;
+	margin-bottom: 8%;
+}
+
+.imagen-perfil > div {
+	padding: 3% 0%;
+}
+
+.imagen-perfil > div figure {
+	height:80px;
+	width: 80px;
+	border-radius: 50%;
+	overflow: hidden;
+	background-color: #c4ccdf;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.imagen-perfil > div figure img {
+	max-height: 100%;
+	max-width: 100%;
+}
+
+.imagen-perfil div p {
+	color: #7e939b;
+	font-size: 0.9em;
+    margin: 8px 0px;
+}
+
+.imagen-perfil div div {
+   font-size: 0.7em;
+   width: 70px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 20px;
+}
+
+.clock {
+	background: #ff9900;
+	border-radius: 10px;
+}
+
+.clock i {
+	color: white;
+	margin-right: 4px;
+}
+
+.clock span {
+	color: white;
+	font-size: 0.9em;
+}
+
+.problemas {
+	width: 100%;
+	margin-bottom: 6%;
+}
+
+.problemas ul {
+	width: 100%;
+	list-style: none;
+	padding: 0px;
+}
+
+.problemas ul li {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 4%;
+	color: #7e939b;
+	font-size: 0.8em;
+}
+
+.problemas ul li:hover {
+	background: #3ab2ed;
+	color: white;
+	cursor: pointer;
+}
+
+
+.agenda h4 {
+	text-align: center;
+	padding: 4%;
+	width: 100%;
+	font-size: 0.9em;
+	font-weight: normal;
+	background: rgba(250,250,250,0.2);
+	color: #7e939b;
+}
+
+.agenda ul{
+	list-style: none;
+	padding: 0px;
+	padding-top:2%; 
+}
+
+.agenda ul li {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-style: 0.9em;
+	padding:3% 10%;
+
+}
+
+.agenda ul li div:first-child{
+	color: white;
+	font-size: 0.8em;
+}
+
+.agenda ul li div.clock{
+	font-size: 0.8em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0% 1%;
+}
+
+.menu-responsive {
+	background: linear-gradient(to bottom ,#048ddc,#089bd3);
+	display: none;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2% 5%;
+	height: 60px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 20;
+}
+
+.menu-responsive div img {
+	height: 30px;
+}
+
+.menu-responsive div {
+	color: white;
+	font-size: 1.1em;
+	cursor: pointer;
+}
+
+#barra{
+	display: none;
+}
+
+.panel {
+	padding: 0.8% 0%;
+	margin-left: 180px;
+	width: calc(100%-180px);
+}
+
+.content-panel {
+	width: 100%;
+	padding: 0% 1%;
+}
+
+.content {
+	overflow: hidden;
+	border-radius: 5px;
+	background: transparent;
+	margin-bottom: 20px;
+	width: 100%;
+	padding: 0% 0% 2% 0%;
+	box-shadow: 0px 0px 5px 3px #d0d2d4;
+}
+
+.content  > h4 {
+	background-color: transparent;
+	font-family: "bold";
+}
+
+.content  h4 {
+	color:#606d6c;
+	padding: 1.5% 4%;
+    font-size: 1.4em;
+    font-weight:normal;
+	text-align: left;
+}
+
+
+@media screen and (max-width: 850px){
+	
+	.panel {
+		margin: 0px;
+		margin-top: 60px;
+		width: 100%;
+	}
+
+	.menu-responsive {
+		display: flex;
+	}
+
+	.menu {
+		background-size: 100% 100%;
+		width: 60%;
+		top: 60px;
+		height:calc(100% - 60px);
+		transform: translateX(-100%);
+    }
+
+
+}
+
+
+@media screen and (max-width: 400px){
+	.menu {
+		font-size: 12px;
+	}
+
+	.logo-menu img {
+        height: 30px;
+     }
+
+     .barra-responsive {
+     	font-size: 12px;
+     }
+
+}

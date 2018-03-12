@@ -1,0 +1,259 @@
+.content  > h4 {
+	background-color: transparent;
+	font-family: "bold";
+}
+
+.content  h4 {
+	color:#606d6c;
+	padding: 2.5% 5%;
+    font-size: 1.15em;
+    font-weight:normal;
+	text-align: left;
+}
+
+/*
+.content .line {
+	width: 100%;
+	height: 2px;
+	background: #ececec;
+}*/
+
+.tabla-panel {
+	width: 100%;
+	padding: 3% 4%;
+}
+
+.option-table {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.paginado {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.paginado > div select{
+    color:#606d6c;
+    background: #f1f1f1;
+    border-radius: 5px;
+    height: 30px;
+    font-size: 1em;
+    border: none;
+}
+
+.paginado > div select:focus {
+	outline: none;
+}
+
+.paginado ul {
+	list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+}
+
+.paginado ul li {
+	cursor: pointer;
+	margin-left: 2px;
+	color:#606d6c;
+    background: #f1f1f1;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+}
+
+.paginado ul li:first-child{
+	transform: rotate(90deg) ;
+}
+
+.paginado ul li:last-child{
+	transform: rotate(-90deg) ;
+}
+
+.buscador {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.buscador > input {
+	height: 30px;
+	font-size: 1em;
+	font-weight: 1;
+	background: #ff9900;
+} 
+
+.search{
+   width: 180px;
+   height: 30px;
+   border-radius: 5px;
+   margin-right: 10px;
+   position: relative;
+   overflow: hidden;
+}
+
+.search input{
+   position: absolute;
+   width: 70%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   color:#849593;
+   padding:2% 3% 2% 4%;
+   font-size: 1em;
+   font-family: "italic";
+   border-radius: 5px 0px 0px 5px;
+   border: none;
+   background: #f1f1f1;
+}
+
+.search input:focus{
+	border: solid 1px #00aeed;
+}
+
+.search div	{
+	position: absolute;
+	width: 30%;
+	background: linear-gradient(to bottom ,#00aeed,#048ddc);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	top: 0;
+	right: 0;
+	height: 100%;
+}
+
+
+
+
+table {
+	width: 100%;
+	overflow: auto;
+	border-spacing : 0 0;color: #7c888c;
+}
+
+table tr:first-child {
+	padding: 8% 1%;
+	height: 30px;
+	color: white;
+	font-size: 0.8em;
+	background: #009fe7;
+}
+
+table tr:first-child th:first-child {
+	border-radius: 5px 0px 0px 5px;
+}
+
+table tr:first-child th:last-child {
+	border-radius: 0px 5px 5px 0px;
+}
+
+table tr td {
+	font-size: 0.8em
+}
+
+table tr td:first-child {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 2% 0;
+}
+
+table tr:not(:first-child) td{
+	height: 30px;
+	border-bottom:solid 2px #ededed;
+}
+
+table tr td:first-child i:first-child{
+	background: #00d633;
+	border-radius: 50%;
+	padding: 4px;
+	color: white;
+	cursor: pointer;
+}
+
+table tr td:first-child i:last-child{
+	background: #ff9900;
+	border-radius: 50%;
+	padding: 4px;
+	color: white;
+	margin-left: 2px;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 1000px){
+	table tr th:nth-child(3) + th  {
+		display: none;
+	}
+	table tr th:nth-child(3) + th + th {
+		display: none;
+	}
+	table tr th:nth-child(3) + th + th + th {
+		display: none;
+	}
+
+	table tr td:nth-child(3) + td {
+		display: none;
+	}
+
+	table tr td:nth-child(3) + td + td  {
+		display: none;
+	}
+
+	table tr td:nth-child(3) + td + td + td {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 600px){
+	.content{
+		font-size: 10px;
+	}
+
+	.option-table {
+	   flex-wrap: wrap;
+     }
+
+     .option-table > div {
+     	width: 100%;
+     	display: flex;
+     	justify-content: center;
+     	align-items: center;
+     	margin-bottom: 10px;
+     }
+
+     .content h4{
+     	text-align: center;
+     	font-size: 1.7em;
+     	padding: 3%;
+     }
+
+     table tr td:first-child {
+		flex-wrap: wrap;
+	}
+
+	 table tr td:first-child i{
+		font-size: 1.1em;
+	}
+	table tr th:nth-child(3) + th + th + th +th{
+		display: none;
+	}
+	table tr td:nth-child(3) + td + td + td + td{
+		display: none;
+	}
+
+	.paginado ,.buscador  {
+		font-size: 10px;
+	}
+}

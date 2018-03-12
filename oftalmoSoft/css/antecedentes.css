@@ -1,0 +1,199 @@
+/*
+
+.group-input {
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+}
+
+.content-next {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.input-control {
+	flex-direction: column;
+}
+
+
+
+.input-control label{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+#conj {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 0px;
+}
+
+#conj > label{
+ margin-right: 10px;
+}
+
+.input-control label input {
+  margin-right: 10px;
+}
+
+.input-control h5{
+  margin-bottom: 10px;
+  color: #2b2a29;
+}
+
+.content-next .btn-next {
+	color: white;
+	background: linear-gradient(to bottom ,#00aeed,#048ddc);
+	padding: 1% 3%;
+	border-radius: 5px;
+	font-size: 0.8em;
+	margin-right: 10%;
+	cursor: pointer;
+}
+
+.input-control input[type="text"],.input-control select,.input-control input[type="date"]{
+  width: 100px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.group-input .input-control:first-child{
+	width: 20%;
+}
+
+.group-input .input-control:nth-child(2){
+	width: 40%;
+}
+
+.group-input .input-control:last-child{
+	width: 40%;
+}
+
+
+
+@media screen and (max-width: 800px){
+
+    .content-next {
+    	margin-top: 10px;
+    	font-size: 20px;
+    }
+
+    .content-next .btn-next {
+    	padding: 2% 3%;
+    }
+   .group-input{
+   	flex-wrap: wrap;
+   	justify-content: 
+   }
+   .group-input .input-control:first-child h5 {
+     font-size: 1.1em;
+     text-align: center;
+   }
+
+   .group-input .input-control{
+   	margin-bottom: 15px;
+   }
+    .group-input .input-control:first-child{
+	width: 100%;
+	}
+
+	.group-input .input-control:nth-child(2){
+		width: 100%;
+	}
+
+	.group-input .input-control:last-child{
+		width: 100%;
+	}
+
+}
+
+*/
+
+
+.group-form {
+	display: flex;
+	justify-content: flex-start;
+}
+
+.item-form{
+	width: 50%;
+}
+
+.item-form h5{
+  font-size: 1em;
+  color:#7e7e7e
+}
+
+.input-control{
+	width: 100%;
+	padding: 2% 0%;
+}
+
+.sig{
+	justify-content: space-between;
+}
+
+.input-control .radio-group{
+	margin-left: 2%;
+	width: 60%;
+}
+
+.input-control .span{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.input-control .span label {
+	margin-right: 10px;
+}
+
+.line {
+	margin-bottom: 3%;
+}
+
+.cbo-content{
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+
+.cbo {
+  width: 100%;
+}
+
+.cbo label {
+	margin-right: 2%
+}
+
+.cbo select {
+	display: block;
+	width: 100px;
+	margin: 2% 2% 0% 2% ;
+}
+
+.form-content{
+	width: 100%;
+}
+
+.content-next .back {
+			background: linear-gradient(to bottom ,tomato,#d24525);
+			margin-right: 2%;
+		}
+
+@media screen and (max-width: 600px){
+		.group-form {
+		flex-wrap: wrap;
+		}
+
+		.item-form{
+			width: 100%;
+		}
+}

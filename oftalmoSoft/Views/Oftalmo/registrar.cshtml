@@ -1,0 +1,2559 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Index</title>
+    <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"> -->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="~/css/cld.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="~/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="~/css/index.css">
+    <link rel="stylesheet" type="text/css" href="~/css/barra.css">
+    <link rel="stylesheet" type="text/css" href="~/css/general.css">
+    <script async type="text/javascript" src="~/js/index.js">
+    </script>
+    <script async type="text/javascript" src="~/js/ojos.js">
+    </script>
+    <script async type="text/javascript" src="~/js/editar.js">
+    </script>
+    <script type="text/javascript" src="~/js/cld.js"></script>
+    <script type="text/javascript" src="~/js/validacion.js"></script>
+</head>
+
+<body>
+
+    <div class="menu">
+        <div class="logo-menu">
+            <img src="~/imagenes/LOGO-OFTALMOSALUD.png" ">
+        </div>
+        <div class="imagen-perfil">
+            <div>
+                <center>
+                    <figure>
+                        <img src="https://img.gawkerassets.com/img/18bdx92z3gkiqjpg/ku-medium.jpg">
+                    </figure>
+                    <p>Dr. Javier Reyes</p>
+                    <div class="clock"><i class="fa fa-clock-o" aria-hidden="true"></i><span>10:10:10</span></div>
+                </center>
+            </div>
+        </div>
+        <div class="problemas">
+            <ul>
+                <li>QUERATOCONO</li>
+                <li>OTROS</li>
+            </ul>
+        </div>
+        <!-- <div class="agenda">
+            <h4>Agenda de Pacientes</h4>
+            <ul>
+                <li><div>Javier Reyes</div><div class="clock"><i class="fa fa-clock-o" aria-hidden="true"></i><span>10:10:10</span></div></li>
+                <li><div>Dionicio Santos</div><div class="clock"><i class="fa fa-clock-o" aria-hidden="true"></i><span>10:10:10</span></div></li>
+                <li><div>Javier Reyes</div><div class="clock"><i class="fa fa-clock-o" aria-hidden="true"></i><span>10:10:10</span></div></li>
+                <li><div>Dionicio Santos</div><div class="clock"><i class="fa fa-clock-o" aria-hidden="true"></i><span>10:10:10</span></div></li>
+            </ul>
+        </div> -->
+    </div>
+
+    <div class="menu-responsive">
+        <div><i class="fa fa-plus" aria-hidden="true" id="menu"></i></div>
+        <div>
+            <img src="https://oftalmosalud.pe/wp-content/uploads/2013/12/logo_oftalmosalud_blanco.png">
+        </div>
+        <div>
+            <i class="fa fa-bars" aria-hidden="true" id="barra"></i>
+        </div>
+    </div>
+
+    <div class="barra-responsive">
+        <ul>
+            <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i><span>Nuñez</span></a></li>
+            <li><a href="http://localhost/Oftalmo/?q=edita">Consultas</a></li>
+            <li><a href="http://localhost/Oftalmo/?q=edita">Reportes</a></li>
+            <li><a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i>Mensajes</a></li>
+            <li><a href="#"><i class="fa fa-question-circle" aria-hidden="true"></i>Preguntas</a></li>
+            <li><a href="#"><i class="fa fa-flag" aria-hidden="true"></i>EN</a></li>
+            <li><a href="#"><i class="fa fa-flag" aria-hidden="true"></i>ES</a></li>
+            <li><input type="button" name="" value="Cerrar"></li>
+        </ul>
+    </div>
+
+    <div class="panel">
+        <div class="barra">
+            <div class="opciones">
+                <ul>
+                    <li><a href="http://localhost/Oftalmo/?q=edita">Consultas</a></li>
+                    <li><a href="#">Reportes</a></li>
+                </ul>
+            </div>
+            <div class="opcionesDos">
+                <a href="#"><i class="fa fa-flag" aria-hidden="true"></i>EN</a>
+                <a href="#"><i class="fa fa-flag" aria-hidden="true"></i>ES</a>
+                <!-- <a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-question-circle" aria-hidden="true"></i></a> -->
+                <a href="#"><i class="fa fa-user" aria-hidden="true"></i><span>Nuñez</span><i class="fa fa-sort-desc" aria-hidden="true"></i></a>
+                <input type="button" name="" class="button" value="Cerrar">
+            </div>
+        </div>
+
+        <div class="content-panel">
+            <div class="content" id="ps">
+                <link rel="stylesheet" type="text/css" href="~/css/consulta.css">
+                <link rel="stylesheet" type="text/css" href="~/css/pasos.css">
+                <link rel="stylesheet" type="text/css" href="~/css/ojos.css">
+                <h4>EDITAR CONSULTA</h4>
+                <div class="line"></div>
+                <div class="consulta-panel">
+                    <div class="pasos">
+                        <div class="select" onclick="eventsplit(0)">1 Datos Generales</div>
+                        <div onclick="eventsplit(1)">2 Antecedentes</div>
+                        <div onclick="eventsplit(2)">3 Evaluación</div>
+                        <div onclick="eventsplit(3)">4 Graduación</div>
+                        <div onclick="eventsplit(4)">5 Manejo</div>
+                        <div onclick="eventsplit(5)">6 Evolución</div>
+                    </div>
+                    <div class="pasos-responsive">
+                        <div class="slc" onclick="eventsplit(0)"></div>
+                        <div onclick="eventsplit(1)"></div>
+                        <div onclick="eventsplit(2)"></div>
+                        <div onclick="eventsplit(3)"></div>
+                        <div onclick="eventsplit(4)"></div>
+                        <div onclick="eventsplit(5)"></div>
+                    </div>
+                    <div class="consulta" id="baseconsulta">
+
+
+
+                        <div class="paso1 paso">
+                            <form class="form">
+                                <div class="input-control">
+                                    <label>Número de Historia Clínica</label>
+                                    <input type="text" id="numHC-DG">
+                                </div>
+                                <div class="input-control">
+                                    <label>Nombres</label>
+                                    <input type="text" id="nom-DG">
+                                </div>
+                                <div class="input-control">
+                                    <label>Apellido Paterno</label>
+                                    <input type="text" id="apeP-DG">
+                                </div>
+                                <div class="input-control">
+                                    <label>Apellido Materno</label>
+                                    <input type="text" id="apeM-DG">
+                                </div>
+                                <div class="input-control">
+                                    <label>Tipo Documento</label>
+                                    <select id="td-DG">
+                                        <option value="d">dni</option>
+                                        <option value="lc">Licencia de conducir</option>
+                                        <option value="p">Pasaporte</option>
+                                        <option value="ce">Carné de extranjería</option>
+                                    </select>
+                                </div>
+                                <div class="input-control">
+                                    <label>Número de Documento</label>
+                                    <input type="text" id="nd-DG">
+                                </div>
+                                <div class="input-control">
+                                    <label>Fecha Nacimiento</label>
+                                    <input type="date" id="fn-DG">
+                                </div>
+                                <div class="input-control">
+                                    <label>Género</label>
+                                    <div id="SexoPaso1">
+                                        <label><input type="radio" data-v="H" name="SexoPaso1" class="hidden genSex" onclick="checkradio2('SexoPaso1')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">Hombre</label>
+                                        <label><input type="radio" data-v="M" name="SexoPaso1" class="hidden genSex" onclick="checkradio2('SexoPaso1')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">Mujer</label>
+                                    </div>
+                                </div>
+                                <div class="input-control">
+                                    <label>País</label>
+                                    <select id="pais-DG" onclick="lugares(this)">
+                                        <option value="p">Perú</option>
+                                        <option value="e">Extranjero</option>
+                                    </select>
+                                </div>
+                                <div class="input-control" id="region">
+                                    <label>Región</label>
+                                    <select id="region-DG" onclick="region(this)">
+                                        <option>Junin</option>
+                                        <option>Lima</option>
+                                    </select>
+                                </div>
+                                <div class="input-control" id="provincia">
+                                    <label>Provincia</label>
+                                    <select id="provincia-DG" onclick="provincia(this)">
+                                        <option>Huancayo</option>
+                                        <option>Lima</option>
+                                    </select>
+                                </div>
+                                <div class="input-control" id="distrito" style="display: none;">
+                                    <label>Distrito</label>
+                                    <select id="distrito-DG">
+                                        <option>Surco</option>
+                                        <option>Barranco</option>
+                                    </select>
+                                </div>
+                            </form>
+                            <div class="content-next">
+                                <div class="btn-next" onclick="datosGenerales()">Siguiente</div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+                        <div class="paso2 paso">
+                            <div class="group-input grupo">
+                                <div class="input-control">
+                                    <h5>Habitos</h5>
+                                </div>
+                                <div class="input-control">
+                                    <h5>Rasgado de Ojos</h5>
+                                    <div id="RasgadoPaso2">
+                                        <label>
+                                            <input type="radio" name="RasgadoPaso2" class="hidden  rasgadoO-A " data-v="N" onclick="checkradio2('RasgadoPaso2')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">Nunca
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="RasgadoPaso2" class="O hidden rasgadoO-A " data-v="O" onclick="checkradio2('RasgadoPaso2')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">Ocasionalmente
+                                        </label>
+                                        <label><input type="radio" name="RasgadoPaso2" data-v="S" class="hidden rasgadoO-A " onclick="checkradio2('RasgadoPaso2')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">Siempre</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="group-input">
+                                <div class="input-control">
+                                    <h5>Antecedentes</h5>
+                                </div>
+                                <div class="input-control" id="AHFPaso2">
+                                    <h5>AHF de Queratocono</h5>
+                                    <img onclick="switchs('AHFPaso2')" src="~/imagenes/switch-NO-rojo.png" class="switch">
+                                    <input type="radio" data-v="no" name="AHFPaso2" class="hidden ahf-A" checked="true">
+                                    <input type="radio" data-v="si" name="AHFPaso2" class="hidden ahf-A">
+                                </div>
+                                <div class="input-control" id="APPPaso3p">
+                                    <h5>APP Enfermedades atopicas</h5>
+                                    <label>
+                                        <input type="radio" name="RasgadoPaso2" class="hidden" data-ch="no" onclick="checkUno('APPPaso3p','APPcheakPaso2')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">NO
+                                    </label>
+                                    <div id="APPcheakPaso2">
+                                        <label>
+                                            <img src="~/imagenes/CHECK-CUADRADO-OFF.png">
+                                            <input type="checkbox" data-dat="Asma" name="" onclick="checkqueare('APPcheakPaso2')" class="hidden"> Asma
+                                        </label>
+                                        <label>
+                                            <img src="~/imagenes/CHECK-CUADRADO-OFF.png">
+                                            <input type="checkbox" data-dat="Rinitis" name="" onclick="checkqueare('APPcheakPaso2')" class="hidden"> Rinitis
+                                        </label>
+                                        <label>
+                                            <img src="~/imagenes/CHECK-CUADRADO-OFF.png">
+                                            <input type="checkbox" data-dat="Dematitis" name="" onclick="checkqueare('APPcheakPaso2')" class="hidden"> Dematitis
+                                        </label>
+                                        <label>
+                                            <img src="~/imagenes/CHECK-CUADRADO-OFF.png">
+                                            <input type="checkbox"  data-dat="Conjuntivitis" name="" onclick="checkqueare('APPcheakPaso2')" class="hidden"> Conjuntivitis
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="group-input">
+                                <div class="input-control">
+                                    <h5>Refracción</h5>
+                                </div>
+                                <div class="input-control" id="RefraccionPaso2">
+                                    <h5>Cambio de Refracción en el Ultimo Año</h5>
+                                    <img onclick="switchs('RefraccionPaso2')" src="~/imagenes/switch-NO-rojo.png" class="switch">
+                                    <input type="radio" name="RefraccionPaso2" class="hidden refraccion-A" data-v="no" checked="true">
+                                    <input type="radio" name="RefraccionPaso2" class="hidden refraccion-A" data-v="si">
+                                </div>
+                                <div class="input-control" id="RefraPaso2">
+                                    <h5>Uso de lentes de contacto RGP</h5>
+                                    <label><input type="radio" name="RefraPaso2" class="hidden" onclick="checkradio2('RefraPaso2')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">NO</label>
+                                    <div id="conj">
+                                        <label>
+                                            <label><input type="radio" name="RefraPaso2" class="hidden" onclick="checkradio2('RefraPaso2')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">SI</label>
+                                        </label>
+                                        <span>
+                                            <label>
+                                                Evolucion
+                                                <input type="text" name="" id="anios-A">
+                                                Años
+                                            </label>
+                                        </span>
+                                    </div>
+                                    <label><input type="radio" name="RefraPaso2" class="hidden" onclick="checkradio2('RefraPaso2')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">No Necesariamente se relaciona</label>
+                                </div>
+                            </div>
+                            <div class="group-input">
+                                <div class="input-control">
+                                    <h5>Lateridad de los Sintomas</h5>
+                                </div>
+                                <div class="input-control" id="BilateralPaso2">
+                                    <h5>Bilateral</h5>
+                                    <label>
+                                        <input type="radio" name="BilateralPaso2" class="hidden" id="bilateral-A" data-ch="no" onclick="checkOne('BilateralPaso2')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">SI
+                                    </label>
+                                </div>
+                                <div class="input-control" id="UnilateralPaso2">
+                                    <h5>Unilateral</h5>
+                                    <label><input type="radio" name="UnilateralPaso2" data-v="D" class="hidden unilateral-A" onclick="checkradio2('UnilateralPaso2')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">O.D</label>
+                                    <label><input type="radio" name="UnilateralPaso2" data-v="I" class="hidden unilateral-A" onclick="checkradio2('UnilateralPaso2')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">O.I</label>
+                                </div>
+                            </div>
+                            <div class="content-next">
+                                <div class="btn-next back" onclick="eventnext(-1)">Atras</div>
+                                <div class="btn-next" onclick="antecedentes()">Siguiente</div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+                        <div class="paso3 paso">
+                            <form class="group-form">
+                                <div class="item-form lf" id="paso3lf">
+
+                                    <h4 class="left" onclick="extend('paso3lf')">OJO IZQUIERDO</h4>
+                                    <h5>Estudios</h5>
+                                    <div class="input-control">
+                                        <div class="inputs" id="EstudioPaso3">
+                                            <label>
+                                                <input type="radio" name="EstudioPaso3" class="hidden estudios-OI" data-v="P" onclick="checkradio('EstudioPaso3')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">Pentacam
+                                            </label>
+                                            <label><input type="radio" name="EstudioPaso3" class="hidden estudios-OI" data-v="G" onclick="checkradio('EstudioPaso3')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">Galilei</label>
+                                            <label><input type="radio" data-v="S" name="EstudioPaso3" class="hidden estudios-OI" onclick="checkradio('EstudioPaso3')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">Sirius</label>
+                                        </div>
+
+                                    </div>
+                                    <div class="line"></div>
+                                    <h5>Topografia</h5>
+                                    <div class="input-control cbo-content">
+                                        <h5>Agudeza visual</h5>
+                                        <div class="cbo">
+                                            <label>
+                                                <p>SC</p>
+                                                <select id="sc-OI">
+                                                    <option>20/15</option>
+                                                    <option>20/20</option>
+                                                    <option>20/25</option>
+                                                    <option>20/30</option>
+                                                    <option>20/40</option>
+                                                    <option>20/50</option>
+                                                    <option>20/60</option>
+                                                    <option>20/70</option>
+                                                    <option>20/80</option>
+                                                    <option>20/100</option>
+                                                    <option>20/125</option>
+                                                    <option>20/150</option>
+                                                    <option>20/150</option>
+                                                    <option>20/160</option>
+                                                    <option>20/200</option>
+                                                    <option>20/400</option>
+                                                    <option>CD</option>
+                                                    <option>MM</option>
+                                                    <option>NPL</option>
+                                                </select>
+                                            </label>
+                                            <label>
+                                                CC
+                                                <select id="cc-OI">
+                                                    <option>20/15</option>
+                                                    <option>20/20</option>
+                                                    <option>20/25</option>
+                                                    <option>20/30</option>
+                                                    <option>20/40</option>
+                                                    <option>20/50</option>
+                                                    <option>20/60</option>
+                                                    <option>20/70</option>
+                                                    <option>20/80</option>
+                                                    <option>20/100</option>
+                                                    <option>20/125</option>
+                                                    <option>20/150</option>
+                                                    <option>20/150</option>
+                                                    <option>20/160</option>
+                                                    <option>20/200</option>
+                                                    <option>20/400</option>
+                                                    <option>CD</option>
+                                                    <option>MM</option>
+                                                    <option>NPL</option>
+                                                </select>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="input-control cbo-content">
+                                        <h5>Refracción</h5>
+                                        <div class="cbo">
+                                            <label>
+                                                Esf
+                                                <input type="text" name="" id="esf-OI">
+                                            </label>
+                                            <label>
+                                                Cilindro
+                                                <input type="text" name="" id="cilindro-OI">
+                                            </label>
+                                            <label>
+                                                Eje
+                                                <input type="text" name="" id="eje-OI">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="line"></div>
+                                    <h5>Queratometría</h5>
+                                    <div class="input-control cbo-content">
+                                        <h5>Queratometría Anterior</h5>
+                                        <div class="cbo">
+                                            <label>
+                                                K1(D)
+                                                <input type="text" name="" id="k1A-OI">
+                                            </label>
+                                            <label>
+                                                EjeK1
+                                                <input type="text" name="" id="ejek1A-OI">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="input-control cbo-content">
+                                        <div class="cbo">
+                                            <label>
+                                                K2(D)
+                                                <input type="text" name="" id="k2A-OI">
+                                            </label>
+                                            <label>
+                                                EjeK2
+                                                <input type="text" name="" id="ejek2A-OI">
+                                            </label>
+                                            <label>
+                                                Cilindro topografico
+                                                <input type="text" name="" id="citoA-OI">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="input-control cbo-content">
+                                        <h5>Queratometría posterior</h5>
+                                        <div class="cbo">
+                                            <label>
+                                                K1(D)
+                                                <input type="text" name="" id="k1P-OI">
+                                            </label>
+                                            <label>
+                                                EjeK1
+                                                <input type="text" name="" id="ejek1P-OI">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="input-control cbo-content">
+                                        <div class="cbo">
+                                            <label>
+                                                K2(D)
+                                                <input type="text" name="" id="k2P-OI">
+                                            </label>
+                                            <label>
+                                                EjeK2
+                                                <input type="text" name="" id="ejek2P-OI">
+                                            </label>
+                                            <label>
+                                                Cilindro topografico
+                                                <input type="text" name="" id="citoP-OI">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="input-control cbo-content">
+                                        <div class="cbo">
+                                            <label>
+                                                KMax
+                                                <input type="text" name="" id="kmax-OI" onkeyup="quera(this,0)">
+                                            </label>
+                                            <label>
+                                                IT
+                                                <input type="text" name="" id="it-OI">
+                                            </label>
+                                            <label>
+                                                Q
+                                                <input type="text" name="" id="q-OI">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="input-control cbo-content">
+                                        <div class="cbo" tabindex="1" onkeyup="eventkey(this)">
+                                            <label>
+                                                Kmax superior
+                                                <input type="text" name="" id="kmaxSuperior-OI" class="nr">
+                                            </label>
+                                            <label>
+                                                Kmax inferior
+                                                <input type="text" name="" id="kmaxInferior-OI" class="nr">
+                                            </label>
+                                            <label>
+                                                <input type="text" class="medidor" name="" id="medidorSI-OI" disabled value="0">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="input-control cbo-content">
+                                        <div class="cbo" tabindex="1" onkeyup="eventkey(this)">
+                                            <label>
+                                                Kmax derecha
+                                                <input type="text" name="" id="kmaxDerecha-OI" class="nr">
+                                            </label>
+                                            <label>
+                                                Kmax izquierda
+                                                <input type="text" name="" id="kmaxIzquierda-OI" class="nr">
+                                            </label>
+                                            <label>
+                                                <input type="text" class="medidor" id="medidorDI-OI" value="0" name="" disabled>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <h5>Paquimetría</h5>
+                                    <div class="input-control cbo-content">
+                                        <div class="cbo">
+                                            <label>
+                                                Punto más fino
+                                                <input type="text" name="" id="pFino-OI">
+                                            </label>
+                                            <label>
+                                                Apex
+                                                <input type="text" name="" id="apex-OI">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="input-control cbo-content">
+                                        <div class="cbo" tabindex="1" onkeyup="eventkeytwo(this,17)">
+                                            <label>
+                                                Elevación BFS anterior
+                                                <input type="text" name="" id="bfsA-OI" class="nr">
+                                            </label>
+                                            <label>
+                                                <input type="text" class="medidor" value="Normal" name="" disabled>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="input-control cbo-content">
+                                        <div class="cbo" tabindex="1" onkeyup="eventkeytwo(this,22)">
+                                            <label>
+                                                Elevación BFS  posterior
+                                                <input type="text" name="" id="bfsP-OI" class="nr">
+                                            </label>
+                                            <label>
+                                                <input type="text" class="medidor" value="Normal" name="" disabled>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <h5>Signos</h5>
+                                    <div class="input-control sig">
+                                        <label>Anillo Fleischer</label>
+                                        <div class="radio-group" id="SignosPaso3">
+                                            <label>
+                                                <input type="radio" name="SignosPaso3" class="hidden anilloFlei-OI" data-v="si" onclick="checkradio('SignosPaso3')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">
+                                                SI
+                                            </label>
+                                            <label><input type="radio" name="SignosPaso3" class="hidden anilloFlei-OI" data-v="no" onclick="checkradio('SignosPaso3')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">NO</label>
+                                        </div>
+                                    </div>
+                                    <div class="input-control sig">
+                                        <label>Estrias de Vogt</label>
+                                        <div class="radio-group" id="EstriasPaso3">
+                                            <label>
+                                                <input type="radio" name="EstriasPaso3" class="hidden estriasvogt-OI" data-v="si" onclick="checkradio('EstriasPaso3')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">
+                                                SI
+                                            </label>
+                                            <label><input type="radio" name="EstriasPaso3" data-v="no" class="hidden estriasvogt-OI" onclick="checkradio('EstriasPaso3')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">NO</label>
+                                        </div>
+                                    </div>
+                                    <div class="input-control sig">
+                                        <label>Nervios</label>
+                                        <div class="radio-group" id="NerviosPaso3">
+                                            <label>
+                                                <input type="radio" name="NerviosPaso3" data-v="si" class="hidden nervios-OI" onclick="checkradio('NerviosPaso3')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">
+                                                SI
+                                            </label>
+                                            <label><input type="radio" name="NerviosPaso3" data-v="si" class="hidden nervios-OI" onclick="checkradio('NerviosPaso3')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">NO</label>
+                                        </div>
+                                    </div>
+                                    <div class="input-control sig">
+                                        <label>Leucoma</label>
+                                        <div class="radio-group" id="LeucomaPaso3">
+                                            <label><input type="radio" name="LeucomaPaso3" data-v="no" class="hidden leucoma-OI" onclick="checkradio('LeucomaPaso3')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">NO</label>
+                                            <label><input type="radio" name="LeucomaPaso3" data-v="perif" class="hidden leucoma-OI" onclick="checkradio('LeucomaPaso3')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">PERIF</label>
+                                            <label><input type="radio" name="LeucomaPaso3" class="hidden leucoma-OI" data-v="central" onclick="checkradio('LeucomaPaso3')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">CENTRAL</label>
+                                        </div>
+                                    </div>
+                                    <div class="input-control sig">
+                                        <label>Hidrops</label>
+                                        <div class="radio-group" id="HidropsPaso3">
+                                            <label><input type="radio" data-v="si" name="HidropsPaso3" class="hidden hidrops-OI" onclick="checkradio('HidropsPaso3')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">SI</label>
+                                            <label><input type="radio" data-v="no" name="HidropsPaso3" class="hidden hidrops-OI" onclick="checkradio('HidropsPaso3')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">NO</label>
+                                        </div>
+                                    </div>
+                                    <div class="input-control sig">
+                                        <label>Izquierdo Manis</label>
+                                        <div class="radio-group" id="ManisPaso3">
+                                            <label><input type="radio" name="ManisPaso3" data-v="si" class="hidden manis-OI" onclick="checkradio('ManisPaso3')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">SI</label>
+                                            <label><input type="radio" name="ManisPaso3" data-v="no" class="hidden manis-OI" onclick="checkradio('ManisPaso3')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">NO</label>
+                                        </div>
+                                    </div>
+                                    <div class="line">
+                                    </div>
+                                    <h5>Tipo de cono</h5>
+                                    <div class="input-control form-conjunto">
+                                        <div class="form-content">
+                                            <div class="tipe-eyes">
+                                                <img onclick="presion(0)" src="~/imagenes/1.jpg" style="opacity: 1">
+                                                <img onclick="presion(1)" src="~/imagenes/2.jpg">
+                                                <img onclick="presion(2)" src="~/imagenes/3.jpg">
+                                                <img onclick="presion(3)" src="~/imagenes/4.jpg">
+                                                <img onclick="presion(4)" src="~/imagenes/5.jpg">
+                                                <img onclick="presion(5)" src="~/imagenes/6.jpg">
+                                                <img onclick="presion(6)" src="~/imagenes/7.jpg">
+                                                <img onclick="presion(7)" src="~/imagenes/8.jpg">
+                                                <img onclick="presion(8)" src="~/imagenes/9.jpg">
+                                                <img onclick="presion(9)" src="~/imagenes/10.jpg">
+                                                <img onclick="presion(10)" src="~/imagenes/11.jpg">
+                                            </div>
+                                            <div class="combo">
+                                                <h5>Tipo de queratono</h5>
+                                                <select id="select" class="tipcono-OI">
+                                                    <option value="1000">Round</option>
+                                                    <option value="1001">Oval</option>
+                                                    <option value="1002">Superior steep</option>
+                                                    <option value="1003">Inferior steep</option>
+                                                    <option value="1004">Irregular</option>
+                                                    <option value="1005">Symmetric bowtie</option>
+                                                    <option value="1006">SB/SRAX</option>
+                                                    <option value="1007">Asymmetric bowtie</option>
+                                                    <option value="1008">AB/SS</option>
+                                                    <option value="1009">AB/SRAX</option>
+                                                    <option value="1010">Butterfly</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="line">
+                                    </div>
+                                </div>
+
+
+
+                                <div class="item-form rg" id="paso3rg">
+                                    <h4 class="rigth" onclick="extend('paso3rg')">OJO DERECHO</h4>
+                                    <h5>Estudios</h5>
+                                    <div class="input-control">
+                                        <div class="inputs" id="EstudioPaso30">
+                                            <label>
+                                                <input type="radio" name="EstudioPaso30" class="hidden estudios-OD" data-v="P" onclick="checkradio('EstudioPaso30')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">Pentacam
+                                            </label>
+                                            <label><input type="radio" name="EstudioPaso30" class="hidden estudios-OD" data-v="G" onclick="checkradio('EstudioPaso30')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">Galilei</label>
+                                            <label><input type="radio" data-v="S" name="EstudioPaso30" class="hidden estudios-OD" onclick="checkradio('EstudioPaso30')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">Sirius</label>
+                                        </div>
+
+                                    </div>
+                                    <div class="line"></div>
+                                    <h5>Topografia</h5>
+                                    <div class="input-control cbo-content">
+                                        <h5>Agudeza visual</h5>
+                                        <div class="cbo">
+                                            <label>
+                                                <p>SC</p>
+                                                <select id="sc-OD">
+                                                    <option>20/15</option>
+                                                    <option>20/20</option>
+                                                    <option>20/25</option>
+                                                    <option>20/30</option>
+                                                    <option>20/40</option>
+                                                    <option>20/50</option>
+                                                    <option>20/60</option>
+                                                    <option>20/70</option>
+                                                    <option>20/80</option>
+                                                    <option>20/100</option>
+                                                    <option>20/125</option>
+                                                    <option>20/150</option>
+                                                    <option>20/150</option>
+                                                    <option>20/160</option>
+                                                    <option>20/200</option>
+                                                    <option>20/400</option>
+                                                    <option>CD</option>
+                                                    <option>MM</option>
+                                                    <option>NPL</option>
+                                                </select>
+                                            </label>
+                                            <label>
+                                                CC
+                                                <select id="cc-OD">
+                                                    <option>20/15</option>
+                                                    <option>20/20</option>
+                                                    <option>20/25</option>
+                                                    <option>20/30</option>
+                                                    <option>20/40</option>
+                                                    <option>20/50</option>
+                                                    <option>20/60</option>
+                                                    <option>20/70</option>
+                                                    <option>20/80</option>
+                                                    <option>20/100</option>
+                                                    <option>20/125</option>
+                                                    <option>20/150</option>
+                                                    <option>20/150</option>
+                                                    <option>20/160</option>
+                                                    <option>20/200</option>
+                                                    <option>20/400</option>
+                                                    <option>CD</option>
+                                                    <option>MM</option>
+                                                    <option>NPL</option>
+                                                </select>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="input-control cbo-content">
+                                        <h5>Refracción</h5>
+                                        <div class="cbo">
+                                            <label>
+                                                Esf
+                                                <input type="text" name="" id="esf-OD">
+                                            </label>
+                                            <label>
+                                                Cilindro
+                                                <input type="text" name="" id="cilindro-OD">
+                                            </label>
+                                            <label>
+                                                Eje
+                                                <input type="text" name="" id="eje-OD">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="line"></div>
+                                    <h5>Queratometría</h5>
+                                    <div class="input-control cbo-content">
+                                        <h5>Queratometría Anterior</h5>
+                                        <div class="cbo">
+                                            <label>
+                                                K1(D)
+                                                <input type="text" name="" id="k1A-OD">
+                                            </label>
+                                            <label>
+                                                EjeK1
+                                                <input type="text" name="" id="ejek1A-OD">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="input-control cbo-content">
+                                        <div class="cbo">
+                                            <label>
+                                                K2(D)
+                                                <input type="text" name="" id="k2A-OD">
+                                            </label>
+                                            <label>
+                                                EjeK2
+                                                <input type="text" name="" id="ejek2A-OD">
+                                            </label>
+                                            <label>
+                                                Cilindro topografico
+                                                <input type="text" name="" id="citoA-OD">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="input-control cbo-content">
+                                        <h5>Queratometría posterior</h5>
+                                        <div class="cbo">
+                                            <label>
+                                                K1(D)
+                                                <input type="text" name="" id="k1P-OD">
+                                            </label>
+                                            <label>
+                                                EjeK1
+                                                <input type="text" name="" id="ejek1P-OD">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="input-control cbo-content">
+                                        <div class="cbo">
+                                            <label>
+                                                K2(D)
+                                                <input type="text" name="" id="k2P-OD">
+                                            </label>
+                                            <label>
+                                                EjeK2
+                                                <input type="text" name="" id="ejek2P-OD">
+                                            </label>
+                                            <label>
+                                                Cilindro topografico
+                                                <input type="text" name="" id="citoP-OD">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="input-control cbo-content">
+                                        <div class="cbo">
+                                            <label>
+                                                KMax
+                                                <input type="text" name="" id="kmax-OD" onkeyup="quera(this,0)">
+                                            </label>
+                                            <label>
+                                                IT
+                                                <input type="text" name="" id="it-OD">
+                                            </label>
+                                            <label>
+                                                Q
+                                                <input type="text" name="" id="q-OD">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="input-control cbo-content">
+                                        <div class="cbo" tabindex="1" onkeyup="eventkey(this)">
+                                            <label>
+                                                Kmax superior
+                                                <input type="text" name="" id="kmaxSuperior-OD" class="nr">
+                                            </label>
+                                            <label>
+                                                Kmax inferior
+                                                <input type="text" name="" id="kmaxInferior-OD" class="nr">
+                                            </label>
+                                            <label>
+                                                <input type="text" class="medidor" name="" id="medidorSI-OD" disabled value="0">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="input-control cbo-content">
+                                        <div class="cbo" tabindex="1" onkeyup="eventkey(this)">
+                                            <label>
+                                                Kmax derecha
+                                                <input type="text" name="" id="kmaxDerecha-OD" class="nr">
+                                            </label>
+                                            <label>
+                                                Kmax izquierda
+                                                <input type="text" name="" id="kmaxIzquierda-OD" class="nr">
+                                            </label>
+                                            <label>
+                                                <input type="text" class="medidor" id="medidorDI-OD" value="0" name="" disabled>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <h5>Paquimetría</h5>
+                                    <div class="input-control cbo-content">
+                                        <div class="cbo">
+                                            <label>
+                                                Punto más fino
+                                                <input type="text" name="" id="pFino-OD">
+                                            </label>
+                                            <label>
+                                                Apex
+                                                <input type="text" name="" id="apex-OD">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="input-control cbo-content">
+                                        <div class="cbo" tabindex="1" onkeyup="eventkeytwo(this,17)">
+                                            <label>
+                                                Elevación BFS anterior
+                                                <input type="text" name="" id="bfsA-OD" class="nr">
+                                            </label>
+                                            <label>
+                                                <input type="text" class="medidor" value="Normal" name="" disabled>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="input-control cbo-content">
+                                        <div class="cbo" tabindex="1" onkeyup="eventkeytwo(this,22)">
+                                            <label>
+                                                Elevación BFS  posterior
+                                                <input type="text" name="" id="bfsP-OD" class="nr">
+                                            </label>
+                                            <label>
+                                                <input type="text" class="medidor" value="Normal" name="" disabled>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <h5>Signos</h5>
+                                    <div class="input-control sig">
+                                        <label>Anillo Fleischer</label>
+                                        <div class="radio-group" id="SignosPaso30">
+                                            <label>
+                                                <input type="radio" name="SignosPaso30" class="hidden anilloFlei-OD" data-v="si" onclick="checkradio('SignosPaso30')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">
+                                                SI
+                                            </label>
+                                            <label><input type="radio" name="SignosPaso30" class="hidden anilloFlei-OD" data-v="no" onclick="checkradio('SignosPaso30')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">NO</label>
+                                        </div>
+                                    </div>
+                                    <div class="input-control sig">
+                                        <label>Estrias de Vogt</label>
+                                        <div class="radio-group" id="EstriasPaso30">
+                                            <label>
+                                                <input type="radio" name="EstriasPaso30" class="hidden estriasvogt-OD" data-v="si" onclick="checkradio('EstriasPaso30')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">
+                                                SI
+                                            </label>
+                                            <label><input type="radio" name="EstriasPaso30" data-v="no" class="hidden estriasvogt-OD" onclick="checkradio('EstriasPaso30')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">NO</label>
+                                        </div>
+                                    </div>
+                                    <div class="input-control sig">
+                                        <label>Nervios</label>
+                                        <div class="radio-group" id="NerviosPaso30">
+                                            <label>
+                                                <input type="radio" name="NerviosPaso3" data-v="si" class="hidden nervios-OD" onclick="checkradio('NerviosPaso30')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">
+                                                SI
+                                            </label>
+                                            <label><input type="radio" name="NerviosPaso30" data-v="si" class="hidden nervios-OD" onclick="checkradio('NerviosPaso30')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">NO</label>
+                                        </div>
+                                    </div>
+                                    <div class="input-control sig">
+                                        <label>Leucoma</label>
+                                        <div class="radio-group" id="LeucomaPaso30">
+                                            <label><input type="radio" name="LeucomaPaso30" data-v="no" class="hidden leucoma-OD" onclick="checkradio('LeucomaPaso30')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">NO</label>
+                                            <label><input type="radio" name="LeucomaPaso30" data-v="perif" class="hidden leucoma-OD" onclick="checkradio('LeucomaPaso30')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">PERIF</label>
+                                            <label><input type="radio" name="LeucomaPaso30" class="hidden leucoma-OD" data-v="central" onclick="checkradio('LeucomaPaso30')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">CENTRAL</label>
+                                        </div>
+                                    </div>
+                                    <div class="input-control sig">
+                                        <label>Hidrops</label>
+                                        <div class="radio-group" id="HidropsPaso30">
+                                            <label><input type="radio" data-v="si" name="HidropsPaso30" class="hidden hidrops-OD" onclick="checkradio('HidropsPaso30')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">SI</label>
+                                            <label><input type="radio" data-v="no" name="HidropsPaso30" class="hidden hidrops-OD" onclick="checkradio('HidropsPaso30')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">NO</label>
+                                        </div>
+                                    </div>
+                                    <div class="input-control sig">
+                                        <label>Izquierdo Manis</label>
+                                        <div class="radio-group" id="ManisPaso30">
+                                            <label><input type="radio" name="ManisPaso30" data-v="si" class="hidden manis-OD" onclick="checkradio('ManisPaso30')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">SI</label>
+                                            <label><input type="radio" name="ManisPaso30" data-v="no" class="hidden manis-OD" onclick="checkradio('ManisPaso30')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">NO</label>
+                                        </div>
+                                    </div>
+                                    <div class="line">
+                                    </div>
+                                    <h5>Tipo de cono</h5>
+                                    <div class="input-control form-conjunto">
+                                        <div class="form-content">
+                                            <div class="tipe-eyes">
+                                                <img onclick="presion(0)" src="~/imagenes/1.jpg" style="opacity: 1">
+                                                <img onclick="presion(1)" src="~/imagenes/2.jpg">
+                                                <img onclick="presion(2)" src="~/imagenes/3.jpg">
+                                                <img onclick="presion(3)" src="~/imagenes/4.jpg">
+                                                <img onclick="presion(4)" src="~/imagenes/5.jpg">
+                                                <img onclick="presion(5)" src="~/imagenes/6.jpg">
+                                                <img onclick="presion(6)" src="~/imagenes/7.jpg">
+                                                <img onclick="presion(7)" src="~/imagenes/8.jpg">
+                                                <img onclick="presion(8)" src="~/imagenes/9.jpg">
+                                                <img onclick="presion(9)" src="~/imagenes/10.jpg">
+                                                <img onclick="presion(10)" src="~/imagenes/11.jpg">
+                                            </div>
+                                            <div class="combo">
+                                                <h5>Tipo de queratono</h5>
+                                                <select id="select" class="tipcono-OD">
+                                                    <option value="1000">Round</option>
+                                                    <option value="1001">Oval</option>
+                                                    <option value="1002">Superior steep</option>
+                                                    <option value="1003">Inferior steep</option>
+                                                    <option value="1004">Irregular</option>
+                                                    <option value="1005">Symmetric bowtie</option>
+                                                    <option value="1006">SB/SRAX</option>
+                                                    <option value="1007">Asymmetric bowtie</option>
+                                                    <option value="1008">AB/SS</option>
+                                                    <option value="1009">AB/SRAX</option>
+                                                    <option value="1010">Butterfly</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="line">
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="content-next">
+                                <div class="btn-next back" onclick="eventnext(-1)">Atras</div>
+                                <div class="btn-next" onclick="evaluacion()">Siguiente</div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+                        <div class="paso4 paso">
+                            <div class="content-detalles">
+
+                                <div class="item-detalle">
+                                    <h4 class="left">Ojo Izquierdo</h4>
+                                    <div class="detalle">
+                                        <div>
+                                            <h5>Grado Queratocono es de nivel</h5>
+                                        </div>
+                                        <div><p class="grado">No Ingresado</p></div>
+                                    </div>
+
+                                    <div class="detalle">
+                                        <div>
+                                            <h5>Manejo Sugerido</h5>
+                                        </div>
+                                        <div class="lista">
+                                        </div>
+                                    </div>
+
+                                    <div class="detalle agregar">
+                                        <select>
+                                            <option  value="1">Observación</option>
+                                            <option  value="2">Lentes de contacto</option>
+                                            <option  value="3">Crosslinking</option>
+                                            <option  value="4">Anillos corneales</option>
+                                            <option  value="5">Trasplante</option>
+                                        </select>
+                                        <div tabindex="1" onclick="addrc(0)">
+                                            Agregar
+                                        </div>
+                                        <div style="display: none;"></div>
+                                    </div>
+                                </div>
+
+                                <div class="item-detalle">
+                                    <h4 class="rigth">Ojo Derecho</h4>
+                                    <div class="detalle">
+                                        <div>
+                                            <h5>Grado Queratocono es de nivel</h5>
+                                        </div>
+                                        <div><p class="grado">No Ingresado</p></div>
+                                    </div>
+
+                                    <div class="detalle">
+                                        <div>
+                                            <h5>Manejo Sugerido</h5>
+                                        </div>
+                                        <div class="lista">
+                                        </div>
+                                    </div>
+
+                                    <div class="detalle agregar">
+                                        <select>
+                                            <option value="10">Observación</option>
+                                            <option value="20">Lentes de contacto</option>
+                                            <option value="30">Crosslinking</option>
+                                            <option value="40">Anillos corneales</option>
+                                            <option value="50">Trasplante</option>
+                                            
+                                        </select>
+                                        <div tabindex="1" onclick="addrc(1)">
+                                            Agregar
+                                        </div>
+                                        <div style="display: none;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-group coment">
+                                <!-- <label>
+                                    Observacion / Comentario
+                                    <textarea>
+
+                                    </textarea>
+                                </label> -->
+                            </div>
+                            <div class="content-next">
+                                <div class="btn-next back" onclick="eventnext(-1)">Atras</div>
+                                <div class="btn-next" onclick="graduacion()">Siguiente</div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+                        <div class="paso5 paso">
+                            <!-- <form class="group-form">
+                                <div class="item-form lf" id="paso3lf"> -->
+                            <div class="group-form">
+                                <div class="item-form lf">
+                                    <h4 class="left">Ojo Izquierdo</h4>
+                                    <h5 class="Observacion2" style="display: none;">Observación</h5>
+                                    <div class="group-input Observacion2" style="display: none;">
+                                        <div class="input">
+                                            <div class="trata">
+                                                <h5>Tratamiento Medido</h5>
+                                                <label>
+                                                    <select id="tMedico-MOI">
+                                                        <option>Lubricantes</option>
+                                                        <option>Antialergicos</option>
+                                                        <option>Prohibición de frotamiento ocular</option>
+                                                    </select>
+                                                </label>
+                                            </div>
+                                            <div class="fecha_cl">
+                                                <h5>Proxima fecha Consulta</h5>
+                                                <div class="calendario" data-name="cld2" data-body="body" data-class="selectclr2" id="cld2">
+
+                                                    <div class="header" style="background: #128bc6">
+                                                        <div class="fls">
+                                                            <img src="~/imagenes/093-chevron-5.png" onclick="backmonth('cld2')">
+                                                        </div>
+                                                        <div class="dtl">
+                                                            <strong>Marzo</strong>
+                                                            <span>2019</span>
+                                                        </div>
+                                                        <div class="fls">
+                                                            <img src="~/imagenes/093-chevron-6.png" onclick="nextmonth('cld2')">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="body">
+                                                        <table>
+                                                            <tr>
+                                                                <th><span>L</span></th>
+                                                                <th><span>M</span></th>
+                                                                <th><span>X</span></th>
+                                                                <th><span>J</span></th>
+                                                                <th><span>V</span></th>
+                                                                <th><span>S</span></th>
+                                                                <th><span>D</span></th>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><div><span>1</span></div></td>
+                                                                <td><div><span>2</span></div></td>
+                                                                <td><div><span>3</span></div></td>
+                                                                <td><div><span>4</span></div></td>
+                                                                <td><div><span>5</span></div></td>
+                                                                <td><div><span>6</span></div></td>
+                                                                <td><div><span>7</span></div></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><div><span>8</span></div></td>
+                                                                <td><div><span>9</span></div></td>
+                                                                <td><div><span>10</span></div></td>
+                                                                <td><div><span>11</span></div></td>
+                                                                <td><div><span>12</span></div></td>
+                                                                <td><div><span>13</span></div></td>
+                                                                <td><div><span>14</span></div></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><div><span>15</span></div></td>
+                                                                <td><div><span>16</span></div></td>
+                                                                <td><div><span>17</span></div></td>
+                                                                <td><div><span>18</span></div></td>
+                                                                <td><div><span>19</span></div></td>
+                                                                <td><div><span>20</span></div></td>
+                                                                <td><div><span>21</span></div></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><div><span>22</span></div></td>
+                                                                <td><div><span>23</span></div></td>
+                                                                <td><div><span>24</span></div></td>
+                                                                <td><div><span>25</span></div></td>
+                                                                <td><div><span>26</span></div></td>
+                                                                <td><div><span>27</span></div></td>
+                                                                <td><div><span>28</span></div></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><div><span>29</span></div></td>
+                                                                <td><div><span>30</span></div></td>
+                                                                <td><div><span>31</span></div></td>
+                                                                <td><div><span></span></div></td>
+                                                                <td><div><span></span></div></td>
+                                                                <td><div><span></span></div></td>
+                                                                <td><div><span></span></div></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><div><span></span></div></td>
+                                                                <td><div><span></span></div></td>
+                                                                <td><div><span></span></div></td>
+                                                                <td><div><span></span></div></td>
+                                                                <td><div><span></span></div></td>
+                                                                <td><div><span></span></div></td>
+                                                                <td><div><span></span></div></td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h5 class="Lentes2" style="display: none">Lentes de Contacto</h5>
+                                    <div class="group-input Lentes2" style="display: none">
+                                        <div class="input">
+                                            <h5>Refraccion</h5>
+                                            <div class="encima input-control">
+                                                <label>
+                                                    SC
+                                                    <select id="sc-MOI">
+                                                        <
+                                                        <option>20/15</option>
+                                                        <option>20/20</option>
+                                                        <option>20/25</option>
+                                                        <option>20/30</option>
+                                                        <option>20/40</option>
+                                                        <option>20/50</option>
+                                                        <option>20/60</option>
+                                                        <option>20/70</option>
+                                                        <option>20/80</option>
+                                                        <option>20/100</option>
+                                                        <option>20/125</option>
+                                                        <option>20/150</option>
+                                                        <option>20/150</option>
+                                                        <option>20/160</option>
+                                                        <option>20/200</option>
+                                                        <option>20/400</option>
+                                                        <option>CD</option>
+                                                        <option>MM</option>
+                                                        <option>NPL</option>
+                                                    </select>
+                                                </label>
+                                                <label>
+                                                    CC
+                                                    <select id="cc-MOI">
+                                                        <option>20/15</option>
+                                                        <option>20/20</option>
+                                                        <option>20/25</option>
+                                                        <option>20/30</option>
+                                                        <option>20/40</option>
+                                                        <option>20/50</option>
+                                                        <option>20/60</option>
+                                                        <option>20/70</option>
+                                                        <option>20/80</option>
+                                                        <option>20/100</option>
+                                                        <option>20/125</option>
+                                                        <option>20/150</option>
+                                                        <option>20/150</option>
+                                                        <option>20/160</option>
+                                                        <option>20/200</option>
+                                                        <option>20/400</option>
+                                                        <option>CD</option>
+                                                        <option>MM</option>
+                                                        <option>NPL</option>
+                                                    </select>
+                                                </label>
+                                            </div>
+                                            <div class="encima input-control">
+                                                <label>Esf <input type="text" id="esf-MOI" name=""></label>
+                                                <label>Cilindro <input type="text" id="cilindro-MOI" name=""></label>
+                                                <label>Eje <input type="text" name="" id="eje-MOI"></label>
+                                            </div>
+                                            <div class="largo input-control">
+                                                <label>Tiempo de Uso <input type="text" id="tp-MOI" name=""></label>
+                                            </div>
+                                            <div class="largo input-control">
+                                                <label>
+                                                    Modelo
+                                                    <select id="modelo-MOI">
+                                                        <option>LCRGP</option>
+                                                        <option>Piggy Back</option>
+                                                        <option>Lentes Híbridas</option>
+                                                        <option>RGP Semi-Esclerales</option>
+                                                        <option>Esclerales</option>
+                                                    </select>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h5 class="Crosslinking2" style="display: none">Crosslinking</h5>
+                                    <div class="group-input Crosslinking2" style="display: none">
+                                        <div class="input">
+                                            <div class="input-control largo">
+                                                <label>
+                                                    Tiempo de Uv
+                                                    <select id="tuv-MOI">
+                                                        <option>5 min</option>
+                                                        <option>10 min</option>
+                                                        <option>15 min</option>
+                                                        <option>20 min</option>
+                                                        <option>25 min</option>
+                                                        <option>30 min</option>
+                                                    </select>
+                                                </label>
+                                            </div>
+                                            <div class="input-control radio">
+                                                <h5>Epi Off</h5>
+                                                <div class="radio-group" id="EpiPaso5">
+                                                    <label><input type="radio" name="EpiPaso5" data-v="si" class="hidden epiof-moi" onclick="checkradio('EpiPaso5')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">SI</label>
+                                                    <label><input type="radio" name="EpiPaso5" data-v="no" class="hidden epiof-moi" onclick="checkradio('EpiPaso5')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">NO</label>
+                                                </div>
+                                            </div>
+                                            <div class="input-control radio">
+                                                <h5>Epi On</h5>
+                                                <div class="radio-group" id="EpiPasoOn5">
+                                                    <label><input type="radio" name="EpiPasoOn5" class="hidden epion-MOI" data-v="si" onclick="checkradio('EpiPasoOn5')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">SI</label>
+                                                    <label><input type="radio" name="EpiPasoOn5" class="hidden epion-MOI" data-v="no" onclick="checkradio('EpiPasoOn5')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">NO</label>
+                                                </div>
+                                            </div>
+                                            <div class="input-control radio">
+                                                <h5>Customizado</h5>
+                                                <div class="radio-group" id="CustoPaso5">
+                                                    <label><input type="radio" name="CustoPaso5" class="hidden cust-MOI" data-v="si" onclick="checkradio('CustoPaso5')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">SI</label>
+                                                    <label><input type="radio" name="CustoPaso5" class="hidden cust-MOI" data-v="no" onclick="checkradio('CustoPaso5')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">NO</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h5 class="Anillos2" style="display: none">Anillos Corneales</h5>
+                                    <div class="group-input Anillos2" style="display: none">
+                                        <div class="input">
+                                            <div class="encima input-control">
+                                                <label>
+                                                    Micra
+                                                    <input type="text" name="" id="micra-MOI">
+                                                </label>
+                                                <label>
+                                                    Eje de insersión
+                                                    <input type="text" name="" id="ejeInser-MOI">
+                                                </label>
+                                            </div>
+                                            <div class="encima input-control">
+                                                <label>
+                                                    Profundidad
+                                                    <input type="text" name="" id="prof-MOI">
+                                                </label>
+                                                <label>
+                                                    Modelo de Anillo
+                                                    <select id="modeAni-MOI">
+                                                        <option>Ferrara</option>
+                                                        <option>Myoring</option>
+                                                        <option>Keraring</option>
+                                                        <option>AJL</option>
+                                                    </select>
+                                                </label>
+                                            </div>
+                                            <div class="input-control radio">
+                                                <h5>Segmento</h5>
+                                                <div class="radio-group" id="SegmentoPaso5">
+                                                    <label><input type="radio" name="SegmentoPaso5" class="hidden segmento-MOI" data-v="si" onclick="checkradio('SegmentoPaso5')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">SI</label>
+                                                    <label><input type="radio" name="SegmentoPaso5" class="hidden segmento-MOI" data-v="no" onclick="checkradio('SegmentoPaso5')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">NO</label>
+                                                </div>
+                                            </div>
+                                            <div class="input-control largo">
+                                                <label>
+                                                    Cuantos
+                                                    <input type="text"  id="cuantos-MOI" name="">
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h5 class="Trasplante2" style="display: none">Trasplante</h5>
+                                    <div class="group-input Trasplante2" style="display: none">
+                                        <h5>Intraoperatorio</h5>
+                                        <div class="input">
+                                            <div class="encima input-control">
+                                                <label>
+                                                    Trasplante de alto Riesgo
+                                                    <select id="transAR-MOI">
+                                                        <option value="s">SI</option>
+                                                        <option value="n" selected="selected">NO</option>
+                                                    </select>
+                                                </label>
+                                            </div>
+                                            <div class="encima input-control">
+                                                <label>
+                                                    Fecha de Cirugia
+                                                    <input type="date" id="fechCirugia-MOI">
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <h5>Microscopía Especular</h5>
+                                        <div class="input">
+                                            <div class="encima input-control">
+                                                <label>
+                                                    Conteo de células endoteliales
+                                                    <input type="text" id="cceendoMicroEs-MOI" name="">
+                                                </label>
+                                            </div>
+                                            <div class="encima input-control">
+                                                <label>
+                                                    Grosor corneal
+                                                    <input type="text" id="grosorCorneal-MOI" name="">
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <h5>Donante</h5>
+                                        <div class="input">
+                                            <div class="encima input-control">
+                                                <label>
+                                                    Diámetro corneal
+                                                    <select id="diaCor-MOI">
+
+                                                        <option value="_none">- Ninguno -</option>
+                                                        <option value="7" selected="selected">7</option>
+                                                        <option value="725">7.25</option>
+                                                        <option value="750">7.50</option>
+                                                        <option value="775">7.75</option>
+                                                        <option value="8">8</option>
+                                                        <option value="825">8.25</option>
+                                                        <option value="850">8.50</option>
+                                                        <option value="875">8.75</option>
+                                                        <option value="9">9</option>
+
+                                                    </select>
+                                                </label>
+                                                <label>
+                                                    Edad
+                                                    <input type="text" id="edad-MOI" name="">
+                                                </label>
+                                            </div>
+                                            <div class="encima input-control">
+                                                <label>
+                                                    Fecha de Enucleación
+                                                    <input type="date" name="" id="transAR-MOI">
+                                                </label>
+                                            </div>
+                                            <div class="encima input-control">
+                                                <label>
+                                                    Conteo de células endoteliales
+                                                    <input type="text" id="ccendoDon-MOI" name="">
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <h5>Postoperatorio</h5>
+                                        <div class="input">
+                                            <div class="encima input-control">
+                                                <label>
+                                                    Imagen postoperatorio
+                                                    <input name="uploadedfile" type="file" style="width: 100%;"  />
+
+                                                </label>
+                                            </div>
+                                            <div class="encima input-control">
+                                                <label>
+                                                    Fecha de Control
+                                                    <input type="date" id="fechCon-MOI" name="">
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+                                <div class="item-form rg">
+                                    <h4 class="rigth">Ojo Derecho</h4>
+                                    <h5 class="Observacion3" style="display: none;">Observación</h5>
+                                    <div class="group-input Observacion3" style="display: none;">
+                                        <div class="input">
+                                            <div class="trata">
+                                                <h5>Tratamiento Medido</h5>
+                                                <label>
+                                                    <select>
+                                                        <option>Lubricantes</option>
+                                                        <option>Antialergicos</option>
+                                                        <option>Prohibición de frotamiento ocular</option>
+                                                    </select>
+                                                </label>
+                                            </div>
+                                            <div class="fecha_cl">
+                                                <h5>Proxima fecha Consulta</h5>
+                                                <div class="calendario" data-name="cld" data-class="selectclr" data-body="body" id="cld">
+
+                                                    <div class="header" style="background: #ff6418">
+                                                        <div class="fls">
+                                                            <img src="~/imagenes/093-chevron-5.png" onclick="backmonth('cld')">
+                                                        </div>
+                                                        <div class="dtl">
+                                                            <strong>Marzo</strong>
+                                                            <span>2019</span>
+                                                        </div>
+                                                        <div class="fls">
+                                                            <img src="~/imagenes/093-chevron-6.png" onclick="nextmonth('cld')">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="body">
+                                                        <table>
+                                                            <tr>
+                                                                <th><span>L</span></th>
+                                                                <th><span>M</span></th>
+                                                                <th><span>X</span></th>
+                                                                <th><span>J</span></th>
+                                                                <th><span>V</span></th>
+                                                                <th><span>S</span></th>
+                                                                <th><span>D</span></th>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><div><span>1</span></div></td>
+                                                                <td><div><span>2</span></div></td>
+                                                                <td><div><span>3</span></div></td>
+                                                                <td><div><span>4</span></div></td>
+                                                                <td><div><span>5</span></div></td>
+                                                                <td><div><span>6</span></div></td>
+                                                                <td><div><span>7</span></div></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><div><span>8</span></div></td>
+                                                                <td><div><span>9</span></div></td>
+                                                                <td><div><span>10</span></div></td>
+                                                                <td><div><span>11</span></div></td>
+                                                                <td><div><span>12</span></div></td>
+                                                                <td><div><span>13</span></div></td>
+                                                                <td><div><span>14</span></div></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><div><span>15</span></div></td>
+                                                                <td><div><span>16</span></div></td>
+                                                                <td><div><span>17</span></div></td>
+                                                                <td><div><span>18</span></div></td>
+                                                                <td><div><span>19</span></div></td>
+                                                                <td><div><span>20</span></div></td>
+                                                                <td><div><span>21</span></div></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><div><span>22</span></div></td>
+                                                                <td><div><span>23</span></div></td>
+                                                                <td><div><span>24</span></div></td>
+                                                                <td><div><span>25</span></div></td>
+                                                                <td><div><span>26</span></div></td>
+                                                                <td><div><span>27</span></div></td>
+                                                                <td><div><span>28</span></div></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><div><span>29</span></div></td>
+                                                                <td><div><span>30</span></div></td>
+                                                                <td><div><span>31</span></div></td>
+                                                                <td><div><span></span></div></td>
+                                                                <td><div><span></span></div></td>
+                                                                <td><div><span></span></div></td>
+                                                                <td><div><span></span></div></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><div><span></span></div></td>
+                                                                <td><div><span></span></div></td>
+                                                                <td><div><span></span></div></td>
+                                                                <td><div><span></span></div></td>
+                                                                <td><div><span></span></div></td>
+                                                                <td><div><span></span></div></td>
+                                                                <td><div><span></span></div></td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h5 class="Lentes3" style="display: none">Lentes de Contacto</h5>
+                                    <div class="group-input Lentes3" style="display: none">
+                                        <div class="input">
+                                            <h5>Refraccion</h5>
+                                            <div class="encima input-control">
+                                                <label>
+                                                    SC
+                                                    <select>
+                                                        <
+                                                        <option>20/15</option>
+                                                        <option>20/20</option>
+                                                        <option>20/25</option>
+                                                        <option>20/30</option>
+                                                        <option>20/40</option>
+                                                        <option>20/50</option>
+                                                        <option>20/60</option>
+                                                        <option>20/70</option>
+                                                        <option>20/80</option>
+                                                        <option>20/100</option>
+                                                        <option>20/125</option>
+                                                        <option>20/150</option>
+                                                        <option>20/150</option>
+                                                        <option>20/160</option>
+                                                        <option>20/200</option>
+                                                        <option>20/400</option>
+                                                        <option>CD</option>
+                                                        <option>MM</option>
+                                                        <option>NPL</option>
+                                                    </select>
+                                                </label>
+                                                <label>
+                                                    CC
+                                                    <select>
+                                                        <option>20/15</option>
+                                                        <option>20/20</option>
+                                                        <option>20/25</option>
+                                                        <option>20/30</option>
+                                                        <option>20/40</option>
+                                                        <option>20/50</option>
+                                                        <option>20/60</option>
+                                                        <option>20/70</option>
+                                                        <option>20/80</option>
+                                                        <option>20/100</option>
+                                                        <option>20/125</option>
+                                                        <option>20/150</option>
+                                                        <option>20/150</option>
+                                                        <option>20/160</option>
+                                                        <option>20/200</option>
+                                                        <option>20/400</option>
+                                                        <option>CD</option>
+                                                        <option>MM</option>
+                                                        <option>NPL</option>
+                                                    </select>
+                                                </label>
+                                            </div>
+                                            <div class="encima input-control">
+                                                <label>Esf <input type="text" name=""></label>
+                                                <label>Cilindro <input type="text" name=""></label>
+                                                <label>Eje <input type="text" name=""></label>
+                                            </div>
+                                            <div class="largo input-control">
+                                                <label>Tiempo de Uso <input type="text" name=""></label>
+                                            </div>
+                                            <div class="largo input-control">
+                                                <label>
+                                                    Modelo
+                                                    <select>
+                                                        <option>LCRGP</option>
+                                                        <option>Piggy Back</option>
+                                                        <option>Lentes Híbridas</option>
+                                                        <option>RGP Semi-Esclerales</option>
+                                                        <option>Esclerales</option>
+                                                    </select>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h5 class="Crosslinking3" style="display: none">Crosslinking</h5>
+                                    <div class="group-input Crosslinking3" style="display: none">
+                                        <div class="input">
+                                            <div class="input-control largo">
+                                                <label>
+                                                    Tiempo de Uv
+                                                    <select>
+                                                        <option>5 min</option>
+                                                        <option>10 min</option>
+                                                        <option>15 min</option>
+                                                        <option>20 min</option>
+                                                        <option>25 min</option>
+                                                        <option>30 min</option>
+                                                    </select>
+                                                </label>
+                                            </div>
+                                            <div class="input-control radio">
+                                                <h5>Epi Off</h5>
+                                                <div class="radio-group" id="EpiPaso5">
+                                                    <label><input type="radio" name="EpiPaso5" class="hidden" onclick="checkradio('EpiPaso5')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">SI</label>
+                                                    <label><input type="radio" name="EpiPaso5" class="hidden" onclick="checkradio('EpiPaso5')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">NO</label>
+                                                </div>
+                                            </div>
+                                            <div class="input-control radio">
+                                                <h5>Epi On</h5>
+                                                <div class="radio-group" id="EpiPasoOn5">
+                                                    <label><input type="radio" name="EpiPasoOn5" class="hidden" onclick="checkradio('EpiPasoOn5')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">SI</label>
+                                                    <label><input type="radio" name="EpiPasoOn5" class="hidden" onclick="checkradio('EpiPasoOn5')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">NO</label>
+                                                </div>
+                                            </div>
+                                            <div class="input-control radio">
+                                                <h5>Customizado</h5>
+                                                <div class="radio-group" id="CustoPaso5">
+                                                    <label><input type="radio" name="CustoPaso5" class="hidden" onclick="checkradio('CustoPaso5')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">SI</label>
+                                                    <label><input type="radio" name="CustoPaso5" class="hidden" onclick="checkradio('CustoPaso5')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">NO</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h5 class="Anillos3" style="display: none">Anillos Corneales</h5>
+                                    <div class="group-input Anillos3" style="display: none">
+                                        <div class="input">
+                                            <div class="encima input-control">
+                                                <label>
+                                                    Micra
+                                                    <input type="text" name="">
+                                                </label>
+                                                <label>
+                                                    Eje de insersión
+                                                    <input type="text" name="">
+                                                </label>
+                                            </div>
+                                            <div class="encima input-control">
+                                                <label>
+                                                    Profundidad
+                                                    <input type="text" name="">
+                                                </label>
+                                                <label>
+                                                    Modelo de Anillo
+                                                    <select>
+                                                        <option>Ferrara</option>
+                                                        <option>Myoring</option>
+                                                        <option>Keraring</option>
+                                                        <option>AJL</option>
+                                                    </select>
+                                                </label>
+                                            </div>
+                                            <div class="input-control radio">
+                                                <h5>Segmento</h5>
+                                                <div class="radio-group" id="SegmentoPaso5">
+                                                    <label><input type="radio" name="SegmentoPaso5" class="hidden" onclick="checkradio('SegmentoPaso5')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">SI</label>
+                                                    <label><input type="radio" name="SegmentoPaso5" class="hidden" onclick="checkradio('SegmentoPaso5')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">NO</label>
+                                                </div>
+                                            </div>
+                                            <div class="input-control largo">
+                                                <label>
+                                                    Cuantos
+                                                    <input type="text" name="">
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h5 class="Trasplante3" style="display: none">Trasplante</h5>
+                                    <div class="group-input Trasplante3" style="display: none">
+                                        <h5>Intraoperatorio</h5>
+                                        <div class="input">
+                                            <div class="encima input-control">
+                                                <label>
+                                                    Trasplante de alto Riesgo
+                                                    <select>
+                                                        <option value="s">SI</option>
+                                                        <option value="n" selected="selected">NO</option>
+                                                    </select>
+                                                </label>
+                                            </div>
+                                            <div class="encima input-control">
+                                                <label>
+                                                    Fecha de Cirugia
+                                                    <input type="date">
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <h5>Microscopía Especular</h5>
+                                        <div class="input">
+                                            <div class="encima input-control">
+                                                <label>
+                                                    Conteo de células endoteliales
+                                                    <input type="text" name="">
+                                                </label>
+                                            </div>
+                                            <div class="encima input-control">
+                                                <label>
+                                                    Grosor corneal
+                                                    <input type="text" name="">
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <h5>Donante</h5>
+                                        <div class="input">
+                                            <div class="encima input-control">
+                                                <label>
+                                                    Diámetro corneal
+                                                    <select>
+
+                                                        <option value="_none">- Ninguno -</option>
+                                                        <option value="7" selected="selected">7</option>
+                                                        <option value="725">7.25</option>
+                                                        <option value="750">7.50</option>
+                                                        <option value="775">7.75</option>
+                                                        <option value="8">8</option>
+                                                        <option value="825">8.25</option>
+                                                        <option value="850">8.50</option>
+                                                        <option value="875">8.75</option>
+                                                        <option value="9">9</option>
+
+                                                    </select>
+                                                </label>
+                                                <label>
+                                                    Edad
+                                                    <input type="text" name="">
+                                                </label>
+                                            </div>
+                                            <div class="encima input-control">
+                                                <label>
+                                                    Fecha de Enucleación
+                                                    <input type="date" name="">
+                                                </label>
+                                            </div>
+                                            <div class="encima input-control">
+                                                <label>
+                                                    Conteo de células endoteliales
+                                                    <input type="text" name="">
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <h5>Postoperatorio</h5>
+                                        <div class="input">
+                                            <div class="encima input-control">
+                                                <label>
+                                                    Imagen postoperatorio
+                                                    <input name="uploadedfile" type="file" style="width: 100%;" />
+
+                                                </label>
+                                            </div>
+                                            <div class="encima input-control">
+                                                <label>
+                                                    Fecha de Control
+                                                    <input type="date" name="">
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="content-detalles">
+
+                                <div class="item-detalle">
+
+                                    <div class="detalle">
+                                        <div>
+                                            <h5>Manejo Realizado</h5>
+                                        </div>
+                                        <div class="lista">
+                                        </div>
+                                    </div>
+
+                                    <div class="detalle agregar">
+                                        <select>
+                                            <option>Observación</option>
+                                            <option>Lentes de contacto</option>
+                                            <option>Crosslinking</option>
+                                            <option>Anillos corneales</option>
+                                            <option>Trasplante</option>
+                                        </select>
+                                        <div tabindex="1" onclick="addrc(2)">
+                                            Agregar
+                                        </div>
+                                        <div style="display: none;"></div>
+                                    </div>
+                                </div>
+
+                                <div class="item-detalle">
+                                    <div class="detalle">
+                                        <div>
+                                            <h5>Manejo Realizado</h5>
+                                        </div>
+                                        <div class="lista">
+                                        </div>
+                                    </div>
+
+                                    <div class="detalle agregar">
+                                        <select>
+                                            <option>Observación</option>
+                                            <option>Lentes de contacto</option>
+                                            <option>Crosslinking</option>
+                                            <option>Anillos corneales</option>
+                                            <option>Trasplante</option>
+                                        </select>
+                                        <div tabindex="1" onclick="addrc(3)">
+                                            Agregar
+                                        </div>
+                                        <div style="display: none;"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="content-next">
+                                <div class="btn-next back" onclick="eventnext(-1)">Atras</div>
+                                <div class="btn-next" onclick="manejo()">Siguiente</div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <div class="paso6 paso">
+                            <div class="extra com">
+                                <div class="input">
+                                    <div id="uno2" class="largo input-control">
+                                        <label>
+                                            Fecha de Intervención
+                                            <input type="Date" name="">
+                                        </label>
+                                        <label>
+                                            Tiempo Transcurrido
+                                            <input type="text" name="">
+                                        </label>
+                                    </div>
+
+                                    <div id="uno2" class="largo input-control">
+
+                                        <label>
+                                            Fecha de consulta
+                                            <input type="Date" name="">
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="group-form">
+                                <div class="item-form lf" id="paso6lf">
+                                    <h4 class="left" onclick="extend2('paso6lf')">Ojo Izquierdo</h4>
+                                    <h5>Estudios</h5>
+                                    <div class="input-control rds" id="EstudioPaso6">
+                                        <label><input type="radio" name="EstudioPaso6" class="hidden" onclick="checkradio('EstudioPaso6')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">Pentacam</label>
+                                        <label><input type="radio" name="EstudioPaso6" class="hidden" onclick="checkradio('EstudioPaso6')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">Galilei</label>
+                                        <label><input type="radio" name="EstudioPaso6" class="hidden" onclick="checkradio('EstudioPaso6')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">Sirius</label>
+                                    </div>
+                                    <div class="line"></div>
+                                    <h5>Topografia</h5>
+                                    <div class="input">
+                                        <h5>Agudeza visual</h5>
+                                        <div class="encima input-control">
+                                            <label>
+                                                SC
+                                                <select>
+                                                    <
+                                                    <option>20/15</option>
+                                                    <option>20/20</option>
+                                                    <option>20/25</option>
+                                                    <option>20/30</option>
+                                                    <option>20/40</option>
+                                                    <option>20/50</option>
+                                                    <option>20/60</option>
+                                                    <option>20/70</option>
+                                                    <option>20/80</option>
+                                                    <option>20/100</option>
+                                                    <option>20/125</option>
+                                                    <option>20/150</option>
+                                                    <option>20/150</option>
+                                                    <option>20/160</option>
+                                                    <option>20/200</option>
+                                                    <option>20/400</option>
+                                                    <option>CD</option>
+                                                    <option>MM</option>
+                                                    <option>NPL</option>
+                                                </select>
+                                            </label>
+                                            <label>
+                                                CC
+                                                <select>
+                                                    <option>20/15</option>
+                                                    <option>20/20</option>
+                                                    <option>20/25</option>
+                                                    <option>20/30</option>
+                                                    <option>20/40</option>
+                                                    <option>20/50</option>
+                                                    <option>20/60</option>
+                                                    <option>20/70</option>
+                                                    <option>20/80</option>
+                                                    <option>20/100</option>
+                                                    <option>20/125</option>
+                                                    <option>20/150</option>
+                                                    <option>20/150</option>
+                                                    <option>20/160</option>
+                                                    <option>20/200</option>
+                                                    <option>20/400</option>
+                                                    <option>CD</option>
+                                                    <option>MM</option>
+                                                    <option>NPL</option>
+                                                </select>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="input">
+                                        <h5>Refracción</h5>
+                                        <div class="encima input-control">
+                                            <label>
+                                                Esf
+                                                <select>
+                                                    <option>0.00</option>
+                                                    <option>0.25</option>
+                                                    <option>0.50</option>
+                                                    <option>0.75</option>
+                                                    <option>1.00</option>
+                                                    <option>1.25</option>
+                                                    <option>1.50</option>
+                                                    <option>1.75</option>
+                                                    <option>2.00</option>
+                                                    <option>2.25</option>
+                                                    <option>2.50</option>
+                                                    <option>2.75</option>
+                                                    <option>3.00</option>
+                                                    <option>3.25</option>
+                                                    <option>3.50</option>
+                                                    <option>3.75</option>
+                                                    <option>4.00</option>
+                                                    <option>4.25</option>
+                                                    <option>4.50</option>
+                                                </select>
+
+                                            </label>
+                                            <label>
+                                                Cilindro
+                                                <select>
+                                                    <option>-0.00</option>
+                                                    <option>-0.25</option>
+                                                    <option>-0.50</option>
+                                                    <option>-0.75</option>
+                                                    <option>-1.00</option>
+                                                    <option>-1.25</option>
+                                                    <option>-1.50</option>
+                                                    <option>-1.75</option>
+                                                    <option>-2.00</option>
+                                                    <option>-2.25</option>
+                                                    <option>-2.50</option>
+                                                    <option>-2.75</option>
+                                                    <option>-3.00</option>
+                                                    <option>-3.25</option>
+                                                    <option>-3.50</option>
+                                                    <option>-3.75</option>
+                                                    <option>-4.00</option>
+                                                    <option>-4.25</option>
+                                                    <option>-4.50</option>
+                                                </select>
+
+                                            </label>
+                                            <label>
+                                                Eje
+                                                <select>
+                                                    <option>0</option>
+                                                    <option>5</option>
+                                                    <option>10</option>
+                                                    <option>15</option>
+                                                    <option>20</option>
+                                                    <option>25</option>
+                                                    <option>30</option>
+                                                    <option>35</option>
+                                                    <option>40</option>
+                                                    <option>45</option>
+                                                    <option>50</option>
+                                                    <option>55</option>
+                                                    <option>60</option>
+                                                    <option>65</option>
+                                                    <option>70</option>
+                                                    <option>75</option>
+                                                    <option>80</option>
+                                                    <option>85</option>
+                                                    <option>90</option>
+                                                    <option>95</option>
+                                                    <option>100</option>
+                                                    <option>105</option>
+                                                    <option>110</option>
+                                                    <option>115</option>
+                                                    <option>120</option>
+                                                    <option>125</option>
+                                                    <option>130</option>
+                                                    <option>135</option>
+                                                    <option>140</option>
+                                                    <option>145</option>
+                                                    <option>150</option>
+                                                    <option>155</option>
+                                                    <option>160</option>
+                                                    <option>165</option>
+                                                    <option>170</option>
+                                                    <option>175</option>
+                                                    <option>180</option>
+
+                                                </select>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="line"></div>
+                                    <h5>Queratometría</h5>
+                                    <div class="input">
+                                        <h5>Queratometría anterior</h5>
+                                        <div class="encima input-control">
+                                            <label>
+                                                K1(D)
+                                                <input type="text" name="">
+                                            </label>
+                                            <label>
+                                                EjeK1
+                                                <input type="text" name="">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="input">
+                                        <div class="encima input-control">
+                                            <label>
+                                                K2(D)
+                                                <input type="text" name="">
+                                            </label>
+                                            <label>
+                                                EjeK2
+                                                <input type="text" name="">
+                                            </label>
+                                            <label>
+                                                Cilindro topografico
+                                                <input type="text" name="">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="input">
+                                        <h5>Queratometría posterior</h5>
+                                        <div class="encima input-control">
+                                            <label>
+                                                K1(D)
+                                                <input type="text" name="">
+                                            </label>
+                                            <label>
+                                                EjeK1
+                                                <input type="text" name="">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="input">
+                                        <div class="encima input-control">
+                                            <label>
+                                                K2(D)
+                                                <input type="text" name="">
+                                            </label>
+                                            <label>
+                                                EjeK2
+                                                <input type="text" name="">
+                                            </label>
+                                            <label>
+                                                Cilindro topografico
+                                                <input type="text" name="">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="input">
+                                        <div class="encima input-control">
+                                            <label>
+                                                KMax
+                                                <input type="text" name="" onkeyup="quera(this,1)">
+                                            </label>
+                                            <label>
+                                                IT
+                                                <input type="text" name="">
+                                            </label>
+                                            <label>
+                                                Q
+                                                <input type="text" name="">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="input">
+                                        <div class="encima input-control" tabindex="1" onkeyup="eventkey(this)">
+                                            <label>
+                                                Kmax superior
+                                                <input type="text" name="" class="nr">
+                                            </label>
+                                            <label>
+                                                Kmax inferior
+                                                <input type="text" name="" class="nr">
+                                            </label>
+                                            <label>
+                                                <input type="text" class="medidor" name="" disabled value="0">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="input">
+                                        <div class="encima input-control" tabindex="1" onkeyup="eventkey(this)">
+                                            <label>
+                                                Kmax derecha
+                                                <input type="text" name="" class="nr">
+                                            </label>
+                                            <label>
+                                                Kmax izquierda
+                                                <input type="text" name="" class="nr">
+                                            </label>
+                                            <label>
+                                                <input type="text" class="medidor" value="0" name="" disabled>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="line"></div>
+                                    <h5>Paquimetría</h5>
+                                    <div class="input">
+                                        <div class="encima input-control">
+                                            <label>
+                                                Punto más fino
+                                                <input type="text" name="">
+                                            </label>
+                                            <label>
+                                                Apex
+                                                <input type="text" name="">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="input">
+                                        <div class="encima input-control" tabindex="1" onkeyup="eventkeytwo(this,17)">
+                                            <label>
+                                                Elevación BFS anterior
+                                                <input type="text" name="" class="nr">
+                                            </label>
+                                            <label>
+                                                <input type="text" class="medidor" value="Normal" name="" disabled>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="input">
+                                        <div class="encima input-control" tabindex="1" onkeyup="eventkeytwo(this,22)">
+                                            <label>
+                                                Elevación BFS  posterior
+                                                <input type="text" name="" class="nr">
+                                            </label>
+                                            <label>
+                                                <input type="text" class="medidor" value="Normal" name="" disabled>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-form rg" id="paso6rg">
+                                    <h4 class="rigth" onclick="extend2('paso6rg')">Ojo Derecho</h4>
+                                    <h5>Estudios</h5>
+                                    <div class="input-control rds" id="EstudioPaso6rg">
+                                        <label><input type="radio" name="EstudioPaso6rg" class="hidden" onclick="checkradio('EstudioPaso6rg')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">Pentacam</label>
+                                        <label><input type="radio" name="EstudioPaso6rg" class="hidden" onclick="checkradio('EstudioPaso6rg')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">Galilei</label>
+                                        <label><input type="radio" name="EstudioPaso6rg" class="hidden" onclick="checkradio('EstudioPaso6rg')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">Sirius</label>
+                                    </div>
+                                    <div class="line"></div>
+                                    <h5>Topografia</h5>
+                                    <div class="input">
+                                        <h5>Agudeza visual</h5>
+                                        <div class="encima input-control">
+                                            <label>
+                                                SC
+                                                <select>
+                                                    <
+                                                    <option>20/15</option>
+                                                    <option>20/20</option>
+                                                    <option>20/25</option>
+                                                    <option>20/30</option>
+                                                    <option>20/40</option>
+                                                    <option>20/50</option>
+                                                    <option>20/60</option>
+                                                    <option>20/70</option>
+                                                    <option>20/80</option>
+                                                    <option>20/100</option>
+                                                    <option>20/125</option>
+                                                    <option>20/150</option>
+                                                    <option>20/150</option>
+                                                    <option>20/160</option>
+                                                    <option>20/200</option>
+                                                    <option>20/400</option>
+                                                    <option>CD</option>
+                                                    <option>MM</option>
+                                                    <option>NPL</option>
+                                                </select>
+                                            </label>
+                                            <label>
+                                                CC
+                                                <select>
+                                                    <option>20/15</option>
+                                                    <option>20/20</option>
+                                                    <option>20/25</option>
+                                                    <option>20/30</option>
+                                                    <option>20/40</option>
+                                                    <option>20/50</option>
+                                                    <option>20/60</option>
+                                                    <option>20/70</option>
+                                                    <option>20/80</option>
+                                                    <option>20/100</option>
+                                                    <option>20/125</option>
+                                                    <option>20/150</option>
+                                                    <option>20/150</option>
+                                                    <option>20/160</option>
+                                                    <option>20/200</option>
+                                                    <option>20/400</option>
+                                                    <option>CD</option>
+                                                    <option>MM</option>
+                                                    <option>NPL</option>
+                                                </select>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="input">
+                                        <h5>Refracción</h5>
+                                        <div class="encima input-control">
+                                            <label>
+                                                Esf
+                                                <select>
+                                                    <option>0.00</option>
+                                                    <option>0.25</option>
+                                                    <option>0.50</option>
+                                                    <option>0.75</option>
+                                                    <option>1.00</option>
+                                                    <option>1.25</option>
+                                                    <option>1.50</option>
+                                                    <option>1.75</option>
+                                                    <option>2.00</option>
+                                                    <option>2.25</option>
+                                                    <option>2.50</option>
+                                                    <option>2.75</option>
+                                                    <option>3.00</option>
+                                                    <option>3.25</option>
+                                                    <option>3.50</option>
+                                                    <option>3.75</option>
+                                                    <option>4.00</option>
+                                                    <option>4.25</option>
+                                                    <option>4.50</option>
+                                                </select>
+                                            </label>
+                                            <label>
+                                                Cilindro
+
+
+                                                <select>
+                                                    <option>-0.00</option>
+                                                    <option>-0.25</option>
+                                                    <option>-0.50</option>
+                                                    <option>-0.75</option>
+                                                    <option>-1.00</option>
+                                                    <option>-1.25</option>
+                                                    <option>-1.50</option>
+                                                    <option>-1.75</option>
+                                                    <option>-2.00</option>
+                                                    <option>-2.25</option>
+                                                    <option>-2.50</option>
+                                                    <option>-2.75</option>
+                                                    <option>-3.00</option>
+                                                    <option>-3.25</option>
+                                                    <option>-3.50</option>
+                                                    <option>-3.75</option>
+                                                    <option>-4.00</option>
+                                                    <option>-4.25</option>
+                                                    <option>-4.50</option>
+                                                </select>
+
+                                            </label>
+                                            <label>
+                                                Eje
+                                                <select>
+                                                    <option>0</option>
+                                                    <option>5</option>
+                                                    <option>10</option>
+                                                    <option>15</option>
+                                                    <option>20</option>
+                                                    <option>25</option>
+                                                    <option>30</option>
+                                                    <option>35</option>
+                                                    <option>40</option>
+                                                    <option>45</option>
+                                                    <option>50</option>
+                                                    <option>55</option>
+                                                    <option>60</option>
+                                                    <option>65</option>
+                                                    <option>70</option>
+                                                    <option>75</option>
+                                                    <option>80</option>
+                                                    <option>85</option>
+                                                    <option>90</option>
+                                                    <option>95</option>
+                                                    <option>100</option>
+                                                    <option>105</option>
+                                                    <option>110</option>
+                                                    <option>115</option>
+                                                    <option>120</option>
+                                                    <option>125</option>
+                                                    <option>130</option>
+                                                    <option>135</option>
+                                                    <option>140</option>
+                                                    <option>145</option>
+                                                    <option>150</option>
+                                                    <option>155</option>
+                                                    <option>160</option>
+                                                    <option>165</option>
+                                                    <option>170</option>
+                                                    <option>175</option>
+                                                    <option>180</option>
+
+                                                </select>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="line"></div>
+                                    <h5>Queratometría</h5>
+                                    <div class="input">
+                                        <h5>Queratometría anterior</h5>
+                                        <div class="encima input-control">
+                                            <label>
+                                                K1(D)
+                                                <input type="text" name="">
+                                            </label>
+                                            <label>
+                                                EjeK1
+                                                <input type="text" name="">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="input">
+                                        <div class="encima input-control">
+                                            <label>
+                                                K2(D)
+                                                <input type="text" name="">
+                                            </label>
+                                            <label>
+                                                EjeK2
+                                                <input type="text" name="">
+                                            </label>
+                                            <label>
+                                                Cilindro topografico
+                                                <input type="text" name="">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="input">
+                                        <h5>Queratometría posterior</h5>
+                                        <div class="encima input-control">
+                                            <label>
+                                                K1(D)
+                                                <input type="text" name="">
+                                            </label>
+                                            <label>
+                                                EjeK1
+                                                <input type="text" name="">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="input">
+                                        <div class="encima input-control">
+                                            <label>
+                                                K2(D)
+                                                <input type="text" name="">
+                                            </label>
+                                            <label>
+                                                EjeK2
+                                                <input type="text" name="">
+                                            </label>
+                                            <label>
+                                                Cilindro topografico
+                                                <input type="text" name="">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="input">
+                                        <div class="encima input-control">
+                                            <label>
+                                                KMax
+                                                <input type="text" name="" onkeyup="quera(this,1)">
+                                            </label>
+                                            <label>
+                                                IT
+                                                <input type="text" name="">
+                                            </label>
+                                            <label>
+                                                Q
+                                                <input type="text" name="">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="input">
+                                        <div class="encima input-control" tabindex="1" onkeyup="eventkey(this)">
+                                            <label>
+                                                Kmax superior
+                                                <input type="text" name="" class="nr">
+                                            </label>
+                                            <label>
+                                                Kmax inferior
+                                                <input type="text" name="" class="nr">
+                                            </label>
+                                            <label>
+                                                <input type="text" class="medidor" name="" disabled value="0">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="input">
+                                        <div class="encima input-control" tabindex="1" onkeyup="eventkey(this)">
+                                            <label>
+                                                Kmax derecha
+                                                <input type="text" name="" class="nr">
+                                            </label>
+                                            <label>
+                                                Kmax izquierda
+                                                <input type="text" name="" class="nr">
+                                            </label>
+                                            <label>
+                                                <input type="text" class="medidor" value="0" name="" disabled>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="line"></div>
+                                    <h5>Paquimetría</h5>
+                                    <div class="input">
+                                        <div class="encima input-control">
+                                            <label>
+                                                Punto más fino
+                                                <input type="text" name="">
+                                            </label>
+                                            <label>
+                                                Apex
+                                                <input type="text" name="">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="input">
+                                        <div class="encima input-control" tabindex="1" onkeyup="eventkeytwo(this,17)">
+                                            <label>
+                                                Elevación BFS anterior
+                                                <input type="text" name="" class="nr">
+                                            </label>
+                                            <label>
+                                                <input type="text" class="medidor" value="Normal" name="" disabled>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="input">
+                                        <div class="encima input-control" tabindex="1" onkeyup="eventkeytwo(this,22)">
+                                            <label>
+                                                Elevación BFS  posterior
+                                                <input type="text" name="" class="nr">
+                                            </label>
+                                            <label>
+                                                <input type="text" class="medidor" value="Normal" name="" disabled>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="extra">
+                                <h5>Tipo de Intervecion</h5>
+                                <div class="input">
+                                    <div class="largo input-control">
+                                        <label>
+                                            <select onclick="fncbo(this)" onchange="fncbo(this)">
+                                                <option>Lentes de Contacto</option>
+                                                <option>Crosslinking</option>
+                                                <option>Anillos Corneales</option>
+                                                <option>Trasplante PKP</option>
+                                                <option>Trasplante DALK</option>
+                                            </select>
+                                        </label>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="extra">
+                                <h5>Complicaciones</h5>
+                                <div class="input">
+                                    <div class="largo input-control">
+                                        <label>
+                                            <select id="llenado" onclick="fncbom(this)" onchange="fncbo(this)">
+                                                <option>Queratitis Bacteriana</option>
+                                                <option>Queratitis Fúngica</option>
+                                                <option>Ulceración</option>
+                                                <option>Conjuntivitis</option>
+                                                <option>Alergia</option>
+                                                <option>Edema Corneal</option>
+                                                <option>Vascularización Corneal</option>
+                                                <option>Infiltrados Corneales</option>
+                                                <option>Ojo Rojo</option>
+                                                <option>Estrías Corneales</option>
+                                                <option>Neovascularización Corneal</option>
+                                                <option>Microquistes Corneales</option>
+                                                <option>Erosión Corneal</option>
+                                                <option>Abrasión Corneal</option>
+                                                <option>Otro</option>
+                                            </select>
+                                        </label>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="extra" id="detalle" style="display: none;">
+                                <h5>Detalle</h5>
+                                <div class="input">
+                                    <div class="largo input-control">
+                                        <label>
+                                            <input type="text" name="">
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-next">
+                                <div class="btn-next back" onclick="eventnext(-1)">Atras</div>
+                                <div class="btn-next" onclick="eventnext(10)">Guardar</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            </div>
+        
+        </div>
+        </body>
+</html>
