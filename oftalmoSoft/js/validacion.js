@@ -27,16 +27,16 @@ valC("genSex");
 console.log(d);
 
 
-$.ajax({
-  url:"/Oftalmo/GrabarCliente",
-  data:{jsonX:JSON.stringify(d)},
-  type:"POST",
-  success:function(e){
-     console.log(e);
- eventnext(1);
-  }
+// $.ajax({
+//   url:"/Oftalmo/GrabarCliente",
+//   data:{jsonX:JSON.stringify(d)},
+//   type:"POST",
+//   success:function(e){
+//      console.log(e);
+//  eventnext(1);
+//   }
 
-})
+// })
 }
 
 
@@ -113,10 +113,19 @@ function manejo(){
         "micraManejo":valD("micra-MOI"),
         "eInsertManejo":valD("ejeInser-MOI"),
         "profManejo":valD("prof-MOI"),
-         "modeAniManejo":valD("modeAni-MOI"),
-        "segmentoManejo":valD("segmento-MOI"),
-        "cuantoManejo":valC("cuanto-MOI"),
-
+         "modeAniManejo":valC("modeAni-MOI"),
+        "segmentoManejo":vaD("segmento-MOI"),
+        "cuantoManejo":valD("cuantos-MOI"),
+        "trasAltoRiesgoManejo":valD("trasAR-MOI"),
+        "fechaCirugiaManejo":valD("fechCirugia-MOI"),
+         "ccelulaendoManejo":valD("cceendoMicroEs-MOI"),
+         "grosorCornealManejo":valD("grosorCorneal-MOI"),
+        "diametroCornealManejo":valD("diaCor-MOI"),
+        "edadManejo":valD("edad-MOI"),
+        "fechaEnucleaManejo":valD("fechEnu-MOI"),
+        "conCeluEndoManejo":valD("ccendoDon-MOI"),
+        
+        "fechaControlManejo":valD("fechCon-MOI")
     }
     console.log(man);
 }

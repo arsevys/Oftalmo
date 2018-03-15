@@ -4,3 +4,9 @@ C:\Oftalmo\oftalmoSoft\OftalmoModel\obj\Debug\OftalmoModel.csprojResolveAssembly
 C:\Oftalmo\oftalmoSoft\OftalmoModel\obj\Debug\OftalmoModel.csproj.CoreCompileInputs.cache
 C:\Oftalmo\oftalmoSoft\OftalmoModel\obj\Debug\OftalmoModel.dll
 C:\Oftalmo\oftalmoSoft\OftalmoModel\obj\Debug\OftalmoModel.pdb
+C:\Users\usuario\Desktop\Oftalmo\OftalmoModel\bin\Debug\OftalmoModel.dll
+C:\Users\usuario\Desktop\Oftalmo\OftalmoModel\bin\Debug\OftalmoModel.pdb
+C:\Users\usuario\Desktop\Oftalmo\OftalmoModel\obj\Debug\OftalmoModel.csprojResolveAssemblyReference.cache
+C:\Users\usuario\Desktop\Oftalmo\OftalmoModel\obj\Debug\OftalmoModel.csproj.CoreCompileInputs.cache
+C:\Users\usuario\Desktop\Oftalmo\OftalmoModel\obj\Debug\OftalmoModel.dll
+C:\Users\usuario\Desktop\Oftalmo\OftalmoModel\obj\Debug\OftalmoModel.pdb
