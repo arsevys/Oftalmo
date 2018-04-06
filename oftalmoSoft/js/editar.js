@@ -56,9 +56,9 @@ function eventnext(x){
 function pasos(){
    var normal = document.getElementsByClassName("pasos").item(0).getElementsByTagName("div");
    var responsi = document.getElementsByClassName("pasos-responsive").item(0).getElementsByTagName("div");
-   console.log(normal);
+
    for(var i = 0;normal.length > i;i++){
-    console.log(normal.item(i));
+  
     normal.item(i).classList.remove("select");
    }
     normal.item(index).classList.add("select");

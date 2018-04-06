@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 namespace OftalmoModel.Queratocono
 {
    public  class DatosGenerales
-    {
+    {   
+        public int id { set; get; }
         public string numHisCli { set; get; }
         public string nombres { set; get; }
         public string apaterno { set; get; }
@@ -15,10 +16,10 @@ namespace OftalmoModel.Queratocono
         public string tipo_doc { set; get; }
         public string n_doc { set; get; }
         public string f_nac { set; get; }
-        public string pais { set; get; }
-        public string region { set; get; }
-        public string provincia { set; get; }
-        public string distrito { set; get; }
+        public int id_pais { set; get; }
+        public int id_region { set; get; }
+        public int id_provincia { set; get; }
+        public int id_distrito { set; get; }
         public string genero { set; get; }
     }
 }

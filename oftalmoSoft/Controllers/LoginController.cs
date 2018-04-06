@@ -2,65 +2,31 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using OftalmoBussines.Bussines;
 using System.Web.Mvc;
 
-namespace prjOftalmo.Controllers
+namespace oftalmoSoft.Controllers
 {
-    public class OftalmoController : Controller
+    public class LoginController : Controller
     {
-        // GET: Oftalmo
+        // GET: Login
         public ActionResult Index()
         {
             return View();
         }
 
-
-
-        [HttpPost]
-        public bool GrabarCliente(string jsonX)
-        {
-
-
-            return new OftalmoBL().GrabarDatosGenerales(jsonX);
-        }
-
-        [HttpPost]
-        public bool Logear(string user,string pwd)
-        {
-            if (user == "admin" && pwd == "admin")
-            {
-
-                Session["nombre"] = "Andy Robers Javier";
-                return true;
-
-            }
-            else
-            {
-                return false;
-
-            }
-
-         
-        }
-
-        public ActionResult registrar()
-        {
-            return View();
-        }
-        // GET: Oftalmo/Details/5
+        // GET: Login/Details/5
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        // GET: Oftalmo/Create
+        // GET: Login/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Oftalmo/Create
+        // POST: Login/Create
         [HttpPost]
         public ActionResult Create(FormCollection collection)
         {
@@ -76,13 +42,13 @@ namespace prjOftalmo.Controllers
             }
         }
 
-        // GET: Oftalmo/Edit/5
+        // GET: Login/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: Oftalmo/Edit/5
+        // POST: Login/Edit/5
         [HttpPost]
         public ActionResult Edit(int id, FormCollection collection)
         {
@@ -98,13 +64,13 @@ namespace prjOftalmo.Controllers
             }
         }
 
-        // GET: Oftalmo/Delete/5
+        // GET: Login/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: Oftalmo/Delete/5
+        // POST: Login/Delete/5
         [HttpPost]
         public ActionResult Delete(int id, FormCollection collection)
         {

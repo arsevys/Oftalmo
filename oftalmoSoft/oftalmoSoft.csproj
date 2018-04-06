@@ -170,6 +170,7 @@
     <Content Include="imagenes\USER.png" />
     <Content Include="js\cld.js" />
     <Content Include="js\editar.js" />
+    <Content Include="js\grilla.js" />
     <Content Include="js\index.js" />
     <Content Include="js\ojos.js" />
     <Content Include="js\validacion.js" />
@@ -244,6 +245,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\OftalmoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -267,6 +269,8 @@
     <None Include="packages.config" />
     <Content Include="Views\Oftalmo\index.cshtml" />
     <Content Include="Views\Oftalmo\registrar.cshtml" />
+    <Content Include="Views\Oftalmo\login.cshtml" />
+    <Content Include="Views\Login\index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

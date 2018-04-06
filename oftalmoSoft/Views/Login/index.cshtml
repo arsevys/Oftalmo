@@ -1,0 +1,39 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <div><form>
+    Nombre <input type="text" id="usu" placeholder="ingrese usuario" />
+    Comtraseña <input type="password" id="pwd" placeholder="ingrese Comtraseña" />
+
+
+
+        
+
+</form>
+    <button onclick="log()">Logear</button>
+    </div>
+    <script>
+        function log() {
+            $.ajax({
+                url: "Oftalmmo\Logeo",
+                type: "POST",
+                data: JSON.stringify({user:$("#usu").val(),pwd:$("#pwd").val()}),
+                success: function (e) {
+                    console.log(e);
+                }
+
+            })
+        }
+    </script>
+</body>
+</html>

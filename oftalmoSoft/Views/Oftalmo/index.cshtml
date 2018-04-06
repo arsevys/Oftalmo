@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Index</title>
+    <title>Index7</title>
     <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"> -->
 
     <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0">
@@ -18,190 +18,147 @@
     </script>
     <script async type="text/javascript" src="~/js/ojos.js">
     </script>
+
     <script async type="text/javascript" src="~/js/editar.js">
     </script>
     <script type="text/javascript" src="~/cld.js"></script>
-</head>
-<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script async type="text/javascript" src="~/js/grilla.js"></script>
+</head >
 
-    <div class="menu">
-        <div class="logo-menu">
-            <img src="imagenes/LOGO-OFTALMOSALUD.png" ">
-        </div>
-        <div class="imagen-perfil">
-            <div>
-                <center>
-                    <figure>
-                        <img src="https://img.gawkerassets.com/img/18bdx92z3gkiqjpg/ku-medium.jpg">
-                    </figure>
-                    <p>Dr. Javier Reyes</p>
-                    <div class="clock"><i class="fa fa-clock-o" aria-hidden="true"></i><span>10:10:10</span></div>
-                </center>
-            </div>
-        </div>
-        <div class="problemas">
-            <ul>
-                <li>QUERATOCONO</li>
-                <li>OTROS</li>
-            </ul>
-        </div>
-        <!-- <div class="agenda">
-            <h4>Agenda de Pacientes</h4>
-            <ul>
-                <li><div>Javier Reyes</div><div class="clock"><i class="fa fa-clock-o" aria-hidden="true"></i><span>10:10:10</span></div></li>
-                <li><div>Dionicio Santos</div><div class="clock"><i class="fa fa-clock-o" aria-hidden="true"></i><span>10:10:10</span></div></li>
-                <li><div>Javier Reyes</div><div class="clock"><i class="fa fa-clock-o" aria-hidden="true"></i><span>10:10:10</span></div></li>
-                <li><div>Dionicio Santos</div><div class="clock"><i class="fa fa-clock-o" aria-hidden="true"></i><span>10:10:10</span></div></li>
-            </ul>
-        </div> -->
-    </div>
 
-    <div class="menu-responsive">
-        <div><i class="fa fa-plus" aria-hidden="true" id="menu"></i></div>
-        <div>
-            <img src="https://oftalmosalud.pe/wp-content/uploads/2013/12/logo_oftalmosalud_blanco.png">
-        </div>
-        <div>
-            <i class="fa fa-bars" aria-hidden="true" id="barra"></i>
-        </div>
-    </div>
+                <body>
 
-    <div class="barra-responsive">
-        <ul>
-            <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i><span>Nuñez</span></a></li>
-            <li><a href="http://localhost/Oftalmo/?q=edita">Consultas</a></li>
-            <li><a href="http://localhost/Oftalmo/?q=edita">Reportes</a></li>
-            <li><a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i>Mensajes</a></li>
-            <li><a href="#"><i class="fa fa-question-circle" aria-hidden="true"></i>Preguntas</a></li>
-            <li><a href="#"><i class="fa fa-flag" aria-hidden="true"></i>EN</a></li>
-            <li><a href="#"><i class="fa fa-flag" aria-hidden="true"></i>ES</a></li>
-            <li><input type="button" name="" value="Cerrar"></li>
-        </ul>
-    </div>
-
-    <div class="panel">
-        <div class="barra">
-            <div class="opciones">
-                <ul>
-                    <li><a href="http://localhost/Oftalmo/?q=edita">Consultas</a></li>
-                    <li><a href="#">Reportes</a></li>
-                </ul>
-            </div>
-            <div class="opcionesDos">
-                <a href="#"><i class="fa fa-flag" aria-hidden="true"></i>EN</a>
-                <a href="#"><i class="fa fa-flag" aria-hidden="true"></i>ES</a>
-                <!-- <a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-question-circle" aria-hidden="true"></i></a> -->
-                <a href="#"><i class="fa fa-user" aria-hidden="true"></i><span>Nuñez</span><i class="fa fa-sort-desc" aria-hidden="true"></i></a>
-                <input type="button" name="" class="button" value="Cerrar">
-            </div>
-        </div>
-
-        <div class="content-panel">
-
-            <div class="content">
-                <link rel="stylesheet" type="text/css" href="~/css/registros.css">
-                <h4>CONSULTAS</h4>
-                <!-- <div class="line"></div> -->
-                <div class="tabla-panel">
-                    <div class="option-table">
-                        <div class="paginado">
-                            <div>
-                                <select>
-                                    <option>15 Reg</option>
-                                    <option>15 Reg</option>
-                                </select>
-                            </div>
-                            <ul>
-                                <li><i class="fa fa-sort-desc" aria-hidden="true"></i></li>
-                                <li>11</li>
-                                <li>22</li>
-                                <li>33</li>
-                                <li><i class="fa fa-sort-desc" aria-hidden="true"></i></li>
-                            </ul>
+                    <div class="menu">
+                        <div class="logo-menu">
+                            <img src="imagenes/LOGO-OFTALMOSALUD.png" ">
                         </div>
-                        <div class="buscador">
-                            <div class="search">
-                                <input type="text" placeholder="Buscar">
+                        <div class="imagen-perfil">
+                            <div>
+                                <center>
+                                    <figure>
+                                        <img src="https://img.gawkerassets.com/img/18bdx92z3gkiqjpg/ku-medium.jpg">
+                            </figure>
+                                        <p>Dr. Javier Reyes</p>
+                                        <div class="clock"><i class="fa fa-clock-o" aria-hidden="true"></i><span>10:10:10</span></div>
+                        </center>
+                    </div>
+                            </div>
+                            <div class="problemas">
+                                <ul>
+                                    <li>QUERATOCONO</li>
+                                    <li>OTROS</li>
+                                </ul>
+                            </div>
+                            <!-- <div class="agenda">
+                                <h4>Agenda de Pacientes</h4>
+                                <ul>
+                                    <li><div>Javier Reyes</div><div class="clock"><i class="fa fa-clock-o" aria-hidden="true"></i><span>10:10:10</span></div></li>
+                                    <li><div>Dionicio Santos</div><div class="clock"><i class="fa fa-clock-o" aria-hidden="true"></i><span>10:10:10</span></div></li>
+                                    <li><div>Javier Reyes</div><div class="clock"><i class="fa fa-clock-o" aria-hidden="true"></i><span>10:10:10</span></div></li>
+                                    <li><div>Dionicio Santos</div><div class="clock"><i class="fa fa-clock-o" aria-hidden="true"></i><span>10:10:10</span></div></li>
+                                </ul>
+                            </div> -->
+            </div>
+
+                        <div class="menu-responsive">
+                            <div><i class="fa fa-plus" aria-hidden="true" id="menu"></i></div>
+                            <div>
+                                <img src="https://oftalmosalud.pe/wp-content/uploads/2013/12/logo_oftalmosalud_blanco.png">
+                </div>
                                 <div>
-                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                    <i class="fa fa-bars" aria-hidden="true" id="barra"></i>
                                 </div>
                             </div>
-                            <input type="button" name="" class="button" value="Agregar" onclick="location.href ='http://54.233.82.3/oftalmo/?q=editar'">
-                        </div>
-                    </div>
-                    <table>
-                        <tr>
-                            <th>Editar</th>
-                            <th>Nro. de Historia</th>
-                            <th>Nombre</th>
-                            <th>Apellidos</th>
-                            <th>Nro. de documento</th>
-                            <th>Sexo</th>
-                            <th>Fecha de Nacimiento</th>
-                            <th>Usuario</th>
-                            <th>Fecha Consulta</th>
-                        </tr>
-                        <tr>
-                            <td>
-                                <i class="fa fa-pencil" aria-hidden="true" onclick="location.href ='http://54.233.82.3/oftalmo/?q=editar'"></i>
-                                <i class="fa fa-times" aria-hidden="true"></i>
-                            </td>
-                            <td>47856845</td>
-                            <td>Yesenia</td>
-                            <td>Campos Macha</td>
-                            <td>4566786</td>
-                            <td>Femenino</td>
-                            <td>08 / 08 / 1989</td>
-                            <td>Anunez</td>
-                            <td>2014-09-18 12:41 2:25</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <i class="fa fa-pencil" aria-hidden="true" onclick="location.href ='http://54.233.82.3/oftalmo/?q=editar'"></i>
-                                <i class="fa fa-times" aria-hidden="true"></i>
-                            </td>
-                            <td>47856845</td>
-                            <td>Yesenia</td>
-                            <td>Campos Macha</td>
-                            <td>4566786</td>
-                            <td>Femenino</td>
-                            <td>08 / 08 / 1989</td>
-                            <td>Anunez</td>
-                            <td>2014-09-18 12:41 2:25</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <i class="fa fa-pencil" aria-hidden="true" onclick="location.href ='http://54.233.82.3/oftalmo/?q=editar'"></i>
-                                <i class="fa fa-times" aria-hidden="true"></i>
-                            </td>
-                            <td>47856845</td>
-                            <td>Yesenia</td>
-                            <td>Campos Macha</td>
-                            <td>4566786</td>
-                            <td>Femenino</td>
-                            <td>08 / 08 / 1989</td>
-                            <td>Anunez</td>
-                            <td>2014-09-18 12:41 2:25</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <i class="fa fa-pencil" aria-hidden="true" onclick="location.href ='http://54.233.82.3/oftalmo/?q=editar'"></i>
-                                <i class="fa fa-times" aria-hidden="true"></i>
-                            </td>
-                            <td>47856845</td>
-                            <td>Yesenia</td>
-                            <td>Campos Macha</td>
-                            <td>4566786</td>
-                            <td>Femenino</td>
-                            <td>08 / 08 / 1989</td>
-                            <td>Anunez</td>
-                            <td>2014-09-18 12:41 2:25</td>
-                        </tr>
-                    </table>
-                </div>
+
+                            <div class="barra-responsive">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i><span>Nuñez</span></a></li>
+                                    <li><a href="http://localhost/Oftalmo/?q=edita">Consultas</a></li>
+                                    <li><a href="http://localhost/Oftalmo/?q=edita">Reportes</a></li>
+                                    <li><a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i>Mensajes</a></li>
+                                    <li><a href="#"><i class="fa fa-question-circle" aria-hidden="true"></i>Preguntas</a></li>
+                                    <li><a href="#"><i class="fa fa-flag" aria-hidden="true"></i>EN</a></li>
+                                    <li><a href="#"><i class="fa fa-flag" aria-hidden="true"></i>ES</a></li>
+                                    <li><input type="button" name="" value="Cerrar"></li>
+                </ul>
             </div>
 
+                                <div class="panel">
+                                    <div class="barra">
+                                        <div class="opciones">
+                                            <ul>
+                                                <li><a href="http://localhost/Oftalmo/?q=edita">Consultas</a></li>
+                                                <li><a href="#">Reportes</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="opcionesDos">
+                                            <a href="#"><i class="fa fa-flag" aria-hidden="true"></i>EN</a>
+                                            <a href="#"><i class="fa fa-flag" aria-hidden="true"></i>ES</a>
+                                            <!-- <a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+                                            <a href="#"><i class="fa fa-question-circle" aria-hidden="true"></i></a> -->
+                        <a href="#"><i class="fa fa-user" aria-hidden="true"></i><span>Nuñez</span><i class="fa fa-sort-desc" aria-hidden="true"></i></a>
+                                            <input type="button" name="" class="button" value="Cerrar">
+                    </div>
+                                        </div>
+
+                                        <div class="content-panel">
+
+                                            <div class="content">
+                                                <link rel="stylesheet" type="text/css" href="~/css/registros.css">
+                                                    <h4>CONSULTAS</h4>
+                                                    <!-- <div class="line"></div> -->
+                        <div class="tabla-panel">
+                                                        <div class="option-table">
+                                                            <div class="paginado">
+                                                                <div>
+                                                                    <select id="cboPagina" onchange="$(this).grilla('cambioPaginado')">
+                                                                        <option value="0">Eligir</option>
+                                                                        <option value="15">15 Reg</option>
+                                                                        <option value="5">5 Reg</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div id="paginadoLista">
+                                                                    <ul>
+                                                                        <li><i class="fa fa-sort-desc" aria-hidden="true"></i></li>
+                                                                        <li>11</li>
+                                                                        <li>22</li>
+                                                                        <li>33</li>
+                                                                        <li><i class="fa fa-sort-desc" aria-hidden="true"></i></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <div class="buscador">
+                                                                <div class="search">
+                                                                    <input type="text" placeholder="Buscar">
+                                                                        <div>
+                                                                            <i class="fa fa-search" aria-hidden="true"></i>
+                                                                        </div>
+                                    </div>
+                                                                    <input type="button" name="" class="button" value="Agregar" onclick="location.href ='http://54.233.82.3/oftalmo/?q=editar'">
+                                </div>
+                                                                </div>
+                                                                <table id="grillaOF">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Editar</th>
+                                                                            <th>Nro. de Historia</th>
+                                                                            <th>Nombre</th>
+                                                                            <th>Apellidos</th>
+                                                                            <th>Nro. de documento</th>
+                                                                            <th>Sexo</th>
+                                                                            <th>Fecha de Nacimiento</th>
+                                                                            <th>Usuario</th>
+                                                                            <th>Fecha Consulta</th>
+                                                                        </tr>
+                                                                    </thead>
+
+                                                                    <tbody id="grillaOFBody">
+                                                                     
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
 
 
 
@@ -217,9 +174,10 @@
 
 
 
-        </div>
 
-    </div>
+                                                    </div>
+
+            </div>
 
 </body>
 </html>
