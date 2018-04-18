@@ -56,6 +56,7 @@
         </div> -->
     </div>
 
+
     <div class="menu-responsive">
         <div><i class="fa fa-plus" aria-hidden="true" id="menu"></i></div>
         <div>
@@ -65,6 +66,7 @@
             <i class="fa fa-bars" aria-hidden="true" id="barra"></i>
         </div>
     </div>
+
 
     <div class="barra-responsive">
         <ul>
@@ -78,6 +80,8 @@
             <li><input type="button" name="" value="Cerrar"></li>
         </ul>
     </div>
+
+
 
     <div class="panel">
         <div class="barra">
@@ -138,7 +142,7 @@
                                 <div class="input-control">
                                     <label>Apellido Paterno</label>
                                     <input type="text" id="apeP-DG">
-                                </div>
+                                </div>rh 
                                 <div class="input-control">
                                     <label>Apellido Materno</label>
                                     <input type="text" id="apeM-DG">
@@ -321,17 +325,14 @@
                                 <div class="item-form lf" id="paso3lf">
 
                                     <h4 class="left" onclick="extend('paso3lf')">OJO IZQUIERDO</h4>
-                                    <h5>Estudios</h5>
-                                    <div class="input-control">
-                                        <div class="inputs" id="EstudioPaso3">
-                                            <label>
-                                                <input type="radio" name="EstudioPaso3" class="hidden estudios-OI" data-v="P" onclick="checkradio('EstudioPaso3')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">Pentacam
-                                            </label>
-                                            <label><input type="radio" name="EstudioPaso3" class="hidden estudios-OI" data-v="G" onclick="checkradio('EstudioPaso3')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">Galilei</label>
-                                            <label><input type="radio" data-v="S" name="EstudioPaso3" class="hidden estudios-OI" onclick="checkradio('EstudioPaso3')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">Sirius</label>
+                                   <h5>Estudios</h5>
+                                        <div class="input-control">
+                                            <div class="inputs" id="EstudioPaso3">
+                                                <label ><input type="radio" name="EstudioPaso3" class="hidden" onclick="StudyEventOne('left','EstudioPaso3','lfps3','Pentacam','paso3lf')" select><img src="imagenes/CHECK-BLANCO-CIRCULO-ON.png" select>Pentacam</label>
+                                                <label ><input type="radio" name="EstudioPaso3" class="hidden" onclick="StudyEventOne('left','EstudioPaso3','lfps3','Galile','paso3lf')" ><img src="imagenes/CHECK-CIRCULO-OFF.png">Galilei</label>
+                                                <label ><input type="radio" name="EstudioPaso3" class="hidden" onclick="StudyEventOne('left','EstudioPaso3','lfps3','Sirius','paso3lf')" ><img src="imagenes/CHECK-CIRCULO-OFF.png">Sirius</label>
+                                            </div>
                                         </div>
-
-                                    </div>
                                     <div class="line"></div>
                                     <h5>Topografia</h5>
                                     <div class="input-control cbo-content">
@@ -387,26 +388,107 @@
                                             </label>
                                         </div>
                                     </div>
+
                                     <div class="input-control cbo-content">
                                         <h5>Refracción</h5>
                                         <div class="cbo">
-                                            <label>
-                                                Esf
-                                                <input type="text" name="" id="esf-OI">
+                                           <label>
+                                                    Esf
+                                                    <select id="esf-OI">
+                                                        <option>0.00</option>
+                                                        <option>0.25</option>
+                                                        <option>0.50</option>
+                                                        <option>0.75</option>
+                                                        <option>1.00</option>
+                                                        <option>1.25</option>
+                                                        <option>1.50</option>
+                                                        <option>1.75</option>
+                                                        <option>2.00</option>
+                                                        <option>2.25</option>
+                                                        <option>2.50</option>
+                                                        <option>2.75</option>
+                                                        <option>3.00</option>
+                                                        <option>3.25</option>
+                                                        <option>3.50</option>
+                                                        <option>3.75</option>
+                                                        <option>4.00</option>
+                                                        <option>4.25</option>
+                                                        <option>4.50</option>
+                                                    </select>
+                                                </label>
+                                           <label>
+                                                    Cilindro
+                                                    <select id="cilindro-OI" >
+                                                        <option>-0.00</option>
+                                                        <option>-0.25</option>
+                                                        <option>-0.50</option>
+                                                        <option>-0.75</option>
+                                                        <option>-1.00</option>
+                                                        <option>-1.25</option>
+                                                        <option>-1.50</option>
+                                                        <option>-1.75</option>
+                                                        <option>-2.00</option>
+                                                        <option>-2.25</option>
+                                                        <option>-2.50</option>
+                                                        <option>-2.75</option>
+                                                        <option>-3.00</option>
+                                                        <option>-3.25</option>
+                                                        <option>-3.50</option>
+                                                        <option>-3.75</option>
+                                                        <option>-4.00</option>
+                                                        <option>-4.25</option>
+                                                        <option>-4.50</option>
+                                                    </select>
+
                                             </label>
                                             <label>
-                                                Cilindro
-                                                <input type="text" name="" id="cilindro-OI">
-                                            </label>
-                                            <label>
-                                                Eje
-                                                <input type="text" name="" id="eje-OI">
-                                            </label>
+                                                    Eje
+                                                    <select id="eje-OI" >
+                                                        <option>0</option>
+                                                        <option>5</option>
+                                                        <option>10</option>
+                                                        <option>15</option>
+                                                        <option>20</option>
+                                                        <option>25</option>
+                                                        <option>30</option>
+                                                        <option>35</option>
+                                                        <option>40</option>
+                                                        <option>45</option>
+                                                        <option>50</option>
+                                                        <option>55</option>
+                                                        <option>60</option>
+                                                        <option>65</option>
+                                                        <option>70</option>
+                                                        <option>75</option>
+                                                        <option>80</option>
+                                                        <option>85</option>
+                                                        <option>90</option>
+                                                        <option>95</option>
+                                                        <option>100</option>
+                                                        <option>105</option>
+                                                        <option>110</option>
+                                                        <option>115</option>
+                                                        <option>120</option>
+                                                        <option>125</option>
+                                                        <option>130</option>
+                                                        <option>135</option>
+                                                        <option>140</option>
+                                                        <option>145</option>
+                                                        <option>150</option>
+                                                        <option>155</option>
+                                                        <option>160</option>
+                                                        <option>165</option>
+                                                        <option>170</option>
+                                                        <option>175</option>
+                                                        <option>180</option>
+
+                                                    </select>
+                                                </label>
                                         </div>
                                     </div>
                                     <div class="line"></div>
                                     <h5>Queratometría</h5>
-                                    <div class="input-control cbo-content">
+                                    <div class="input-control cbo-content lfps3">
                                         <h5>Queratometría Anterior</h5>
                                         <div class="cbo">
                                             <label>
@@ -419,7 +501,7 @@
                                             </label>
                                         </div>
                                     </div>
-                                    <div class="input-control cbo-content">
+                                    <div class="input-control cbo-content lfps3">
                                         <div class="cbo">
                                             <label>
                                                 K2(D)
@@ -435,7 +517,7 @@
                                             </label>
                                         </div>
                                     </div>
-                                    <div class="input-control cbo-content">
+                                    <div class="input-control cbo-content lfps3">
                                         <h5>Queratometría posterior</h5>
                                         <div class="cbo">
                                             <label>
@@ -448,7 +530,7 @@
                                             </label>
                                         </div>
                                     </div>
-                                    <div class="input-control cbo-content">
+                                    <div class="input-control cbo-content lfps3">
                                         <div class="cbo">
                                             <label>
                                                 K2(D)
@@ -464,7 +546,7 @@
                                             </label>
                                         </div>
                                     </div>
-                                    <div class="input-control cbo-content">
+                                    <div class="input-control cbo-content lfps3">
                                         <div class="cbo">
                                             <label>
                                                 KMax
@@ -480,7 +562,7 @@
                                             </label>
                                         </div>
                                     </div>
-                                    <div class="input-control cbo-content">
+                                    <div class="input-control cbo-content lfps3">
                                         <div class="cbo" tabindex="1" onkeyup="eventkey(this)">
                                             <label>
                                                 Kmax superior
@@ -495,7 +577,7 @@
                                             </label>
                                         </div>
                                     </div>
-                                    <div class="input-control cbo-content">
+                                    <div class="input-control cbo-content lfps3">
                                         <div class="cbo" tabindex="1" onkeyup="eventkey(this)">
                                             <label>
                                                 Kmax derecha
@@ -510,12 +592,12 @@
                                             </label>
                                         </div>
                                     </div>
-                                    <h5>Paquimetría</h5>
-                                    <div class="input-control cbo-content">
+                                    <h5 class="quera"  >Paquimetría</h5>
+                                    <div class="input-control cbo-content lfps3">
                                         <div class="cbo">
                                             <label>
                                                 Punto más fino
-                                                <input type="text" name="" id="pFino-OI">
+                                                <input type="text" name="" class="fino" id="pFino-OI">
                                             </label>
                                             <label>
                                                 Apex
@@ -523,7 +605,7 @@
                                             </label>
                                         </div>
                                     </div>
-                                    <div class="input-control cbo-content">
+                                    <div class="input-control cbo-content lfps3">
                                         <div class="cbo" tabindex="1" onkeyup="eventkeytwo(this,17)">
                                             <label>
                                                 Elevación BFS anterior
@@ -545,7 +627,7 @@
                                             </label>
                                         </div>
                                     </div>
-                                    <h5>Signos</h5>
+                                    <h5 class="paqui">Signos</h5>
                                     <div class="input-control sig">
                                         <label>Anillo Fleischer</label>
                                         <div class="radio-group" id="SignosPaso3">
@@ -576,6 +658,7 @@
                                             <label><input type="radio" name="NerviosPaso3" data-v="si" class="hidden nervios-OI" onclick="checkradio('NerviosPaso3')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">NO</label>
                                         </div>
                                     </div>
+
                                     <div class="input-control sig">
                                         <label>Leucoma</label>
                                         <div class="radio-group" id="LeucomaPaso3">
@@ -640,307 +723,378 @@
 
 
 
-                                <div class="item-form rg" id="paso3rg">
-                                    <h4 class="rigth" onclick="extend('paso3rg')">OJO DERECHO</h4>
-                                    <h5>Estudios</h5>
-                                    <div class="input-control">
-                                        <div class="inputs" id="EstudioPaso30">
-                                            <label>
-                                                <input type="radio" name="EstudioPaso30" class="hidden estudios-OD" data-v="P" onclick="checkradio('EstudioPaso30')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">Pentacam
-                                            </label>
-                                            <label><input type="radio" name="EstudioPaso30" class="hidden estudios-OD" data-v="G" onclick="checkradio('EstudioPaso30')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">Galilei</label>
-                                            <label><input type="radio" data-v="S" name="EstudioPaso30" class="hidden estudios-OD" onclick="checkradio('EstudioPaso30')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">Sirius</label>
-                                        </div>
-
-                                    </div>
-                                    <div class="line"></div>
-                                    <h5>Topografia</h5>
-                                    <div class="input-control cbo-content">
-                                        <h5>Agudeza visual</h5>
-                                        <div class="cbo">
-                                            <label>
-                                                <p>SC</p>
-                                                <select id="sc-OD">
-                                                    <option>20/15</option>
-                                                    <option>20/20</option>
-                                                    <option>20/25</option>
-                                                    <option>20/30</option>
-                                                    <option>20/40</option>
-                                                    <option>20/50</option>
-                                                    <option>20/60</option>
-                                                    <option>20/70</option>
-                                                    <option>20/80</option>
-                                                    <option>20/100</option>
-                                                    <option>20/125</option>
-                                                    <option>20/150</option>
-                                                    <option>20/150</option>
-                                                    <option>20/160</option>
-                                                    <option>20/200</option>
-                                                    <option>20/400</option>
-                                                    <option>CD</option>
-                                                    <option>MM</option>
-                                                    <option>NPL</option>
-                                                </select>
-                                            </label>
-                                            <label>
-                                                CC
-                                                <select id="cc-OD">
-                                                    <option>20/15</option>
-                                                    <option>20/20</option>
-                                                    <option>20/25</option>
-                                                    <option>20/30</option>
-                                                    <option>20/40</option>
-                                                    <option>20/50</option>
-                                                    <option>20/60</option>
-                                                    <option>20/70</option>
-                                                    <option>20/80</option>
-                                                    <option>20/100</option>
-                                                    <option>20/125</option>
-                                                    <option>20/150</option>
-                                                    <option>20/150</option>
-                                                    <option>20/160</option>
-                                                    <option>20/200</option>
-                                                    <option>20/400</option>
-                                                    <option>CD</option>
-                                                    <option>MM</option>
-                                                    <option>NPL</option>
-                                                </select>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="input-control cbo-content">
-                                        <h5>Refracción</h5>
-                                        <div class="cbo">
-                                            <label>
-                                                Esf
-                                                <input type="text" name="" id="esf-OD">
-                                            </label>
-                                            <label>
-                                                Cilindro
-                                                <input type="text" name="" id="cilindro-OD">
-                                            </label>
-                                            <label>
-                                                Eje
-                                                <input type="text" name="" id="eje-OD">
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="line"></div>
-                                    <h5>Queratometría</h5>
-                                    <div class="input-control cbo-content">
-                                        <h5>Queratometría Anterior</h5>
-                                        <div class="cbo">
-                                            <label>
-                                                K1(D)
-                                                <input type="text" name="" id="k1A-OD">
-                                            </label>
-                                            <label>
-                                                EjeK1
-                                                <input type="text" name="" id="ejek1A-OD">
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="input-control cbo-content">
-                                        <div class="cbo">
-                                            <label>
-                                                K2(D)
-                                                <input type="text" name="" id="k2A-OD">
-                                            </label>
-                                            <label>
-                                                EjeK2
-                                                <input type="text" name="" id="ejek2A-OD">
-                                            </label>
-                                            <label>
-                                                Cilindro topografico
-                                                <input type="text" name="" id="citoA-OD">
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="input-control cbo-content">
-                                        <h5>Queratometría posterior</h5>
-                                        <div class="cbo">
-                                            <label>
-                                                K1(D)
-                                                <input type="text" name="" id="k1P-OD">
-                                            </label>
-                                            <label>
-                                                EjeK1
-                                                <input type="text" name="" id="ejek1P-OD">
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="input-control cbo-content">
-                                        <div class="cbo">
-                                            <label>
-                                                K2(D)
-                                                <input type="text" name="" id="k2P-OD">
-                                            </label>
-                                            <label>
-                                                EjeK2
-                                                <input type="text" name="" id="ejek2P-OD">
-                                            </label>
-                                            <label>
-                                                Cilindro topografico
-                                                <input type="text" name="" id="citoP-OD">
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="input-control cbo-content">
-                                        <div class="cbo">
-                                            <label>
-                                                KMax
-                                                <input type="text" name="" id="kmax-OD" onkeyup="quera(this,0)">
-                                            </label>
-                                            <label>
-                                                IT
-                                                <input type="text" name="" id="it-OD">
-                                            </label>
-                                            <label>
-                                                Q
-                                                <input type="text" name="" id="q-OD">
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="input-control cbo-content">
-                                        <div class="cbo" tabindex="1" onkeyup="eventkey(this)">
-                                            <label>
-                                                Kmax superior
-                                                <input type="text" name="" id="kmaxSuperior-OD" class="nr">
-                                            </label>
-                                            <label>
-                                                Kmax inferior
-                                                <input type="text" name="" id="kmaxInferior-OD" class="nr">
-                                            </label>
-                                            <label>
-                                                <input type="text" class="medidor" name="" id="medidorSI-OD" disabled value="0">
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="input-control cbo-content">
-                                        <div class="cbo" tabindex="1" onkeyup="eventkey(this)">
-                                            <label>
-                                                Kmax derecha
-                                                <input type="text" name="" id="kmaxDerecha-OD" class="nr">
-                                            </label>
-                                            <label>
-                                                Kmax izquierda
-                                                <input type="text" name="" id="kmaxIzquierda-OD" class="nr">
-                                            </label>
-                                            <label>
-                                                <input type="text" class="medidor" id="medidorDI-OD" value="0" name="" disabled>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <h5>Paquimetría</h5>
-                                    <div class="input-control cbo-content">
-                                        <div class="cbo">
-                                            <label>
-                                                Punto más fino
-                                                <input type="text" name="" id="pFino-OD">
-                                            </label>
-                                            <label>
-                                                Apex
-                                                <input type="text" name="" id="apex-OD">
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="input-control cbo-content">
-                                        <div class="cbo" tabindex="1" onkeyup="eventkeytwo(this,17)">
-                                            <label>
-                                                Elevación BFS anterior
-                                                <input type="text" name="" id="bfsA-OD" class="nr">
-                                            </label>
-                                            <label>
-                                                <input type="text" class="medidor" value="Normal" name="" disabled>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="input-control cbo-content">
-                                        <div class="cbo" tabindex="1" onkeyup="eventkeytwo(this,22)">
-                                            <label>
-                                                Elevación BFS  posterior
-                                                <input type="text" name="" id="bfsP-OD" class="nr">
-                                            </label>
-                                            <label>
-                                                <input type="text" class="medidor" value="Normal" name="" disabled>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <h5>Signos</h5>
-                                    <div class="input-control sig">
-                                        <label>Anillo Fleischer</label>
-                                        <div class="radio-group" id="SignosPaso30">
-                                            <label>
-                                                <input type="radio" name="SignosPaso30" class="hidden anilloFlei-OD" data-v="si" onclick="checkradio('SignosPaso30')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">
-                                                SI
-                                            </label>
-                                            <label><input type="radio" name="SignosPaso30" class="hidden anilloFlei-OD" data-v="no" onclick="checkradio('SignosPaso30')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">NO</label>
-                                        </div>
-                                    </div>
-                                    <div class="input-control sig">
-                                        <label>Estrias de Vogt</label>
-                                        <div class="radio-group" id="EstriasPaso30">
-                                            <label>
-                                                <input type="radio" name="EstriasPaso30" class="hidden estriasvogt-OD" data-v="si" onclick="checkradio('EstriasPaso30')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">
-                                                SI
-                                            </label>
-                                            <label><input type="radio" name="EstriasPaso30" data-v="no" class="hidden estriasvogt-OD" onclick="checkradio('EstriasPaso30')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">NO</label>
-                                        </div>
-                                    </div>
-                                    <div class="input-control sig">
-                                        <label>Nervios</label>
-                                        <div class="radio-group" id="NerviosPaso30">
-                                            <label>
-                                                <input type="radio" name="NerviosPaso3" data-v="si" class="hidden nervios-OD" onclick="checkradio('NerviosPaso30')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">
-                                                SI
-                                            </label>
-                                            <label><input type="radio" name="NerviosPaso30" data-v="si" class="hidden nervios-OD" onclick="checkradio('NerviosPaso30')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">NO</label>
-                                        </div>
-                                    </div>
-                                    <div class="input-control sig">
-                                        <label>Leucoma</label>
-                                        <div class="radio-group" id="LeucomaPaso30">
-                                            <label><input type="radio" name="LeucomaPaso30" data-v="no" class="hidden leucoma-OD" onclick="checkradio('LeucomaPaso30')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">NO</label>
-                                            <label><input type="radio" name="LeucomaPaso30" data-v="perif" class="hidden leucoma-OD" onclick="checkradio('LeucomaPaso30')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">PERIF</label>
-                                            <label><input type="radio" name="LeucomaPaso30" class="hidden leucoma-OD" data-v="central" onclick="checkradio('LeucomaPaso30')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">CENTRAL</label>
-                                        </div>
-                                    </div>
-                                    <div class="input-control sig">
-                                        <label>Hidrops</label>
-                                        <div class="radio-group" id="HidropsPaso30">
-                                            <label><input type="radio" data-v="si" name="HidropsPaso30" class="hidden hidrops-OD" onclick="checkradio('HidropsPaso30')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">SI</label>
-                                            <label><input type="radio" data-v="no" name="HidropsPaso30" class="hidden hidrops-OD" onclick="checkradio('HidropsPaso30')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">NO</label>
-                                        </div>
-                                    </div>
-                                    <div class="input-control sig">
-                                        <label>Izquierdo Manis</label>
-                                        <div class="radio-group" id="ManisPaso30">
-                                            <label><input type="radio" name="ManisPaso30" data-v="si" class="hidden manis-OD" onclick="checkradio('ManisPaso30')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">SI</label>
-                                            <label><input type="radio" name="ManisPaso30" data-v="no" class="hidden manis-OD" onclick="checkradio('ManisPaso30')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">NO</label>
-                                        </div>
-                                    </div>
-                                    <div class="line">
-                                    </div>
-                                    <h5>Tipo de cono</h5>
-                                    <div class="input-control form-conjunto">
-                                        <div class="form-content">
-                                            <div class="tipe-eyes">
-                                                <img onclick="presiondos(0)" src="~/imagenes/1.jpg" style="opacity: 1">
-                                                <img onclick="presiondos(1)" src="~/imagenes/2.jpg">
-                                                <img onclick="presiondos(2)" src="~/imagenes/3.jpg">
-                                                <img onclick="presiondos(3)" src="~/imagenes/4.jpg">
-                                                <img onclick="presiondos(4)" src="~/imagenes/5.jpg">
-                                                <img onclick="presiondos(5)" src="~/imagenes/6.jpg">
-                                                <img onclick="presiondos(6)" src="~/imagenes/7.jpg">
-                                                <img onclick="presiondos(7)" src="~/imagenes/8.jpg">
-                                                <img onclick="presiondos(8)" src="~/imagenes/9.jpg">
-                                                <img onclick="presiondos(9)" src="~/imagenes/10.jpg">
-                                                <img onclick="presiondos(10)" src="~/imagenes/11.jpg">
+                                 <div class="item-form rg" id="paso3rg">
+                                        <h4 class="rigth" onclick="extend('paso3rg')">OJO DERECHO</h4>
+                                        <h5>Estudios</h5>
+                                        <div class="input-control">
+                                            <div class="inputs" id="EstudioPaso3RG">
+                                                <label ><input type="radio" name="EstudioPaso3RG" data-v="P" class="hidden estudios-OD" onclick="StudyEventOne('rigth','EstudioPaso3RG','rgps3','Pentacam','paso3rg')" select ><img src="imagenes/CHECK-BLANCO-CIRCULO-ON.png">Pentacam</label>
+                                                <label ><input type="radio" name="EstudioPaso3RG" class="hidden estudios-OD" data-v="G" onclick="StudyEventOne('rigth','EstudioPaso3RG','rgps3','Galile','paso3rg')"><img src="imagenes/CHECK-CIRCULO-OFF.png">Galilei</label>
+                                                <label ><input type="radio" data-v="S" name="EstudioPaso3RG" class="hidden  estudios-OD" onclick="StudyEventOne('rigth','EstudioPaso3RG','rgps3','Sirius','paso3rg')"><img src="imagenes/CHECK-CIRCULO-OFF.png">Sirius</label>
                                             </div>
-                                            <div class="combo">
-                                                <h5>Tipo de queratono</h5>
-                                                <select id="select2" class="tipcono-OD">
-                                                    <option value="1000">Round</option>
+                                        </div>
+                                        <div class="line"></div>
+                                        <h5>Topografia</h5>
+                                        <div class="input-control cbo-content">
+                                            <h5>Agudeza visual</h5>
+                                            <div class="cbo">
+                                                <label>
+                                                    <p>SC</p>
+                                                    <select id="sc-OD">
+                                                        <option>20/15</option>
+                                                        <option>20/20</option>
+                                                        <option>20/25</option>
+                                                        <option>20/30</option>
+                                                        <option>20/40</option>
+                                                        <option>20/50</option>
+                                                        <option>20/60</option>
+                                                        <option>20/70</option>
+                                                        <option>20/80</option>
+                                                        <option>20/100</option>
+                                                        <option>20/125</option>
+                                                        <option>20/150</option>
+                                                        <option>20/150</option>
+                                                        <option>20/160</option>
+                                                        <option>20/200</option>
+                                                        <option>20/400</option>
+                                                        <option>CD</option>
+                                                        <option>MM</option>
+                                                        <option>NPL</option>
+                                                    </select>
+                                                </label>
+                                                <label>
+                                                    CC 
+                                                    <select id="cc-OD">
+                                                        <option>20/15</option>
+                                                        <option>20/20</option>
+                                                        <option>20/25</option>
+                                                        <option>20/30</option>
+                                                        <option>20/40</option>
+                                                        <option>20/50</option>
+                                                        <option>20/60</option>
+                                                        <option>20/70</option>
+                                                        <option>20/80</option>
+                                                        <option>20/100</option>
+                                                        <option>20/125</option>
+                                                        <option>20/150</option>
+                                                        <option>20/150</option>
+                                                        <option>20/160</option>
+                                                        <option>20/200</option>
+                                                        <option>20/400</option>
+                                                        <option>CD</option>
+                                                        <option>MM</option>
+                                                        <option>NPL</option>
+                                                    </select>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="input-control cbo-content">
+                                            <h5>Refracción</h5>
+                                            <div class="cbo">
+                                                <label>
+                                                    Esf
+                                                    <select id="esf-OD">
+                                                        <option>0.00</option>
+                                                        <option>0.25</option>
+                                                        <option>0.50</option>
+                                                        <option>0.75</option>
+                                                        <option>1.00</option>
+                                                        <option>1.25</option>
+                                                        <option>1.50</option>
+                                                        <option>1.75</option>
+                                                        <option>2.00</option>
+                                                        <option>2.25</option>
+                                                        <option>2.50</option>
+                                                        <option>2.75</option>
+                                                        <option>3.00</option>
+                                                        <option>3.25</option>
+                                                        <option>3.50</option>
+                                                        <option>3.75</option>
+                                                        <option>4.00</option>
+                                                        <option>4.25</option>
+                                                        <option>4.50</option>
+                                                    </select>
+
+                                                </label>
+                                                <label>
+                                                    Cilindro
+                                                    <select id="cilindro-OD">
+                                                        <option>-0.00</option>
+                                                        <option>-0.25</option>
+                                                        <option>-0.50</option>
+                                                        <option>-0.75</option>
+                                                        <option>-1.00</option>
+                                                        <option>-1.25</option>
+                                                        <option>-1.50</option>
+                                                        <option>-1.75</option>
+                                                        <option>-2.00</option>
+                                                        <option>-2.25</option>
+                                                        <option>-2.50</option>
+                                                        <option>-2.75</option>
+                                                        <option>-3.00</option>
+                                                        <option>-3.25</option>
+                                                        <option>-3.50</option>
+                                                        <option>-3.75</option>
+                                                        <option>-4.00</option>
+                                                        <option>-4.25</option>
+                                                        <option>-4.50</option>
+                                                    </select>
+                                                </label>
+                                                <label>
+                                                    Eje
+                                                    <select id="eje-OD">
+                                                        <option>0</option>
+                                                        <option>5</option>
+                                                        <option>10</option>
+                                                        <option>15</option>
+                                                        <option>20</option>
+                                                        <option>25</option>
+                                                        <option>30</option>
+                                                        <option>35</option>
+                                                        <option>40</option>
+                                                        <option>45</option>
+                                                        <option>50</option>
+                                                        <option>55</option>
+                                                        <option>60</option>
+                                                        <option>65</option>
+                                                        <option>70</option>
+                                                        <option>75</option>
+                                                        <option>80</option>
+                                                        <option>85</option>
+                                                        <option>90</option>
+                                                        <option>95</option>
+                                                        <option>100</option>
+                                                        <option>105</option>
+                                                        <option>110</option>
+                                                        <option>115</option>
+                                                        <option>120</option>
+                                                        <option>125</option>
+                                                        <option>130</option>
+                                                        <option>135</option>
+                                                        <option>140</option>
+                                                        <option>145</option>
+                                                        <option>150</option>
+                                                        <option>155</option>
+                                                        <option>160</option>
+                                                        <option>165</option>
+                                                        <option>170</option>
+                                                        <option>175</option>
+                                                        <option>180</option>
+
+                                                    </select>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="line"></div>
+                                        <h5>Queratometría</h5>
+                                        <div class="input-control cbo-content rgps3">
+                                            <h5>Queratometría anterior</h5>
+                                            <div class="cbo">
+                                                <label>
+                                                    K1(D)
+                                                    <input type="text" id="k1A-OD" name="">
+                                                </label>
+                                                <label>
+                                                    EjeK1
+                                                    <input type="text" id="ejek1A-OD" name="">
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="input-control cbo-content rgps3">
+                                            <div class="cbo">
+                                                <label>
+                                                    K2(D)
+                                                    <input type="text" id="k2A-OD" name="">
+                                                </label>
+                                                <label>
+                                                    EjeK2
+                                                    <input type="text" id="ejek2A-OD" name="">
+                                                </label>
+                                                <label>
+                                                    Cilindro topografico
+                                                    <input type="text" name="" id="citoA-OD">
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="input-control cbo-content rgps3">
+                                                <h5>Queratometría posterior</h5>
+                                                <div class="cbo">
+                                                    <label>
+                                                        K1(D)
+                                                        <input type="text" name="" id="k1P-OD">
+                                                    </label>
+                                                    <label>
+                                                        EjeK1
+                                                        <input type="text" name=" " id="ejek1P-OD">
+                                                    </label>
+                                                </div>
+                                        </div>
+                                        <div class="input-control cbo-content rgps3">
+                                                <div class="cbo">
+                                                    <label>
+                                                        K2(D)
+                                                        <input type="text" id="k2P-OD" name="">
+                                                    </label>
+                                                    <label>
+                                                        EjeK2
+                                                        <input type="text" id="ejek2P-OD" name="">
+                                                    </label>
+                                                    <label>
+                                                        Cilindro topografico
+                                                        <input type="text" name="" id="citoP-OD">
+                                                    </label>
+                                                </div>
+                                        </div>
+                                        <div class="input-control cbo-content rgps3">
+                                            <div class="cbo">
+                                                <label>
+                                                    KMax
+                                                    <input type="text" id="kmax-OD" name="" onkeyup="quera(this,1)">
+                                                </label>
+                                                <label>
+                                                    IT
+                                                    <input type="text" name="" id="it-OD">
+                                                </label>
+                                                <label>
+                                                    Q
+                                                    <input type="text"  id="q-OD" name="">
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="input-control cbo-content rgps3">
+                                            <div class="cbo" tabindex="1" onkeyup="eventkey(this)">
+                                                <label>
+                                                    Kmax superior
+                                                    <input type="text" id="kmaxSuperior-OD" name="" class="nr">
+                                                </label>
+                                                <label>
+                                                    Kmax inferior
+                                                    <input type="text" id="kmaxInferior-OD" name="" class="nr">
+                                                </label>
+                                                <label>
+                                                    <input type="text" class="medidor" name="" d="medidorSI-OD" disabled value="0">
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="input-control cbo-content rgps3">
+                                            <div class="cbo" tabindex="1" onkeyup="eventkey(this)">
+                                                <label>
+                                                    Kmax derecha
+                                                    <input type="text" name="" class="nr" id="kmaxDerecha-OD">
+                                                </label>
+                                                <label>
+                                                    Kmax izquierda
+                                                    <input type="text" id="kmaxIzquierda-OD" name="" class="nr">
+                                                </label>
+                                                <label>
+                                                    <input type="text" class="medidor" value="0"  id="medidorDI-OD" name="" disabled>
+                                                </label>
+                                          
+                                        </div>
+                                        <h5 class="quera">Paquimetría</h5>
+                                        <div class="input-control cbo-content rgps3">
+                                            <div class="cbo">
+                                                <label>
+                                                    Punto más fino
+                                                    <input type="text" id="pFino-OD" name="" class="fino">
+                                                </label>
+                                                <label>
+                                                  
+                                                    <input type="text" id="apex-OD" name="">
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="input-control cbo-content rgps3">
+                                            <div class="cbo" tabindex="1" onkeyup="eventkeytwo(this,17)">
+                                                <label>
+                                                    Elevación BFS anterior
+                                                    <input type="text" id="bfsA-OD" name="" class="nr">
+                                                </label>
+                                                <label>
+                                                    <input type="text" class="medidor" value="Normal" name="" disabled>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="input-control cbo-content rgps3">
+                                            <div class="cbo" tabindex="1" onkeyup="eventkeytwo(this,22)">
+                                                <label>
+                                                    Elevación BFS  posterior
+                                                    <input type="text" id="bfsP-OD" name="" class="nr">
+                                                </label>
+                                                <label>
+                                                    <input type="text" class="medidor" value="Normal" name="" disabled>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <h5 class="paqui">Signos</h5>
+                                        <div class="input-control sig">
+                                            <label>Anillo Fleischer</label>
+                                            <div class="radio-group" id="SignosPaso3RG">
+                                                <label><input type="radio" name="SignosPaso3RG" class="hidden anilloFlei-OD" data-v="si" onclick="checkradio('SignosPaso3RG')" ><img src="imagenes/CHECK-CIRCULO-OFF.png">
+                                                SI</label>
+                                                <label><input type="radio" name="SignosPaso3RG" class="hidden anilloFlei-OD" data-v="no" onclick="checkradio('SignosPaso3RG')" ><img src="imagenes/CHECK-CIRCULO-OFF.png">NO</label>
+                                            </div>
+                                        </div>
+                                        <div class="input-control sig">
+                                            <label>Estrias de Vogt</label>
+                                            <div class="radio-group" id="EstriasPaso3RG">
+                                                <label><input type="radio" name="EstriasPaso3RG" class="hidden estriasvogt-OD" data-v="si" onclick="checkradio('EstriasPaso3RG')" ><img src="imagenes/CHECK-CIRCULO-OFF.png">
+                                                SI</label>
+                                                <label><input type="radio" data-v="no" name="EstriasPaso3RG" class="hidden estriasvogt-OD" onclick="checkradio('EstriasPaso3RG')" ><img src="imagenes/CHECK-CIRCULO-OFF.png">NO</label>
+                                            </div>
+                                        </div>
+                                        <div class="input-control sig">
+                                            <label>Nervios</label>
+                                            <div class="radio-group" id="NerviosPaso3RG">
+                                                <label><input type="radio" data-v="si" name="NerviosPaso3RG" class="hidden  nervios-OD" onclick="checkradio('NerviosPaso3RG')" ><img src="imagenes/CHECK-CIRCULO-OFF.png">
+                                                SI</label>
+                                                <label><input type="radio" data-v="no" name="NerviosPaso3RG" class="hidden nervios-OD" onclick="checkradio('NerviosPaso3RG')" ><img src="imagenes/CHECK-CIRCULO-OFF.png">NO</label>
+                                            </div>
+                                        </div>
+                                        <div class="input-control sig">
+                                            <label>Leucoma</label>
+                                            <div class="radio-group" id="LeucomaPaso3RG">
+                                                <label><input type="radio" name="LeucomaPaso3RG" data-v="no" class="hidden leucoma-OD" onclick="checkradio('LeucomaPaso3RG')" ><img src="imagenes/CHECK-CIRCULO-OFF.png">NO</label>
+                                                <label><input data-v="perif" type="radio" name="LeucomaPaso3RG" class="hidden leucoma-OD" onclick="checkradio('LeucomaPaso3RG')" ><img src="imagenes/CHECK-CIRCULO-OFF.png">PERIF</label>
+                                                <label><input type="radio" name="LeucomaPaso3RG" class="hidden leucoma-OD" data-v="central" onclick="checkradio('LeucomaPaso3RG')" ><img src="imagenes/CHECK-CIRCULO-OFF.png">CENTRAL</label>
+                                            </div>
+                                        </div>
+                                        <div class="input-control sig">
+                                            <label>Hidrops</label>
+                                            <div class="radio-group" id="HidropsPaso3RG">
+                                                <label><input type="radio" name="HidropsPaso3RG" class="hidden hidrops-OD" data-v="si" onclick="checkradio('HidropsPaso3RG')" ><img src="imagenes/CHECK-CIRCULO-OFF.png">SI</label>
+                                                <label><input type="radio" name="HidropsPaso3RG" data-v="no" class="hidden hidrops-OD" onclick="checkradio('HidropsPaso3RG')" ><img src="imagenes/CHECK-CIRCULO-OFF.png">NO</label>
+                                            </div>
+                                        </div>
+                                        <div class="input-control sig">
+                                            <label>Izquierdo Manis</label>
+                                            <div class="radio-group" id="ManisPaso3RG">
+                                                <label><input type="radio" name="ManisPaso3RG" data-v="si" class="hidden manis-OD" onclick="checkradio('ManisPaso3RG')" ><img src="imagenes/CHECK-CIRCULO-OFF.png">SI</label>
+                                                <label><input type="radio" name="ManisPaso3RG" data-v="no" class="hidden manis-OD" onclick="checkradio('ManisPaso3RG')" ><img src="imagenes/CHECK-CIRCULO-OFF.png">NO</label>
+                                            </div>
+                                        </div>
+                                        <div class="line">
+                                        </div>
+                                        <h5>Tipo de cono</h5>
+                                        <div class="form-conjunto input-control">
+                                            <div class="form-content">
+                                                <div class="tipe-eyes">
+                                                    <img onclick="presiondos(0)" src="/imagenes/Imagen1.png" style="opacity: 1">
+                                                    <img onclick="presiondos(1)" src="/imagenes/Imagen2.png">
+                                                    <img onclick="presiondos(2)" src="/imagenes/Imagen3.png">
+                                                    <img onclick="presiondos(3)" src="/imagenes/Imagen4.png">
+                                                    <img onclick="presiondos(4)" src="/imagenes/Imagen5.png">
+                                                    <img onclick="presiondos(5)" src="/imagenes/Imagen6.png">
+                                                    <img onclick="presiondos(6)" src="/imagenes/Imagen7.png">
+                                                    <img onclick="presiondos(7)" src="/imagenes/Imagen8.png">
+                                                    <img onclick="presiondos(8)" src="/imagenes/Imagen9.png">
+                                                    <img onclick="presiondos(9)" src="/imagenes/Imagen10.png">
+                                                    <img onclick="presiondos(10)" src="/imagenes/Imagen11.png">
+                                                </div>
+                                                <div class="combo">
+                                                    <h5>Tipo de queratocono</h5>
+                                                    <select id="select2" class="tipcono-OD">
+                                                        <option value="1000">Round</option>
                                                     <option value="1001">Oval</option>
                                                     <option value="1002">Superior steep</option>
                                                     <option value="1003">Inferior steep</option>
@@ -951,13 +1105,22 @@
                                                     <option value="1008">AB/SS</option>
                                                     <option value="1009">AB/SRAX</option>
                                                     <option value="1010">Butterfly</option>
-                                                </select>
+                                                    </select>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="line">
-                                    </div>
-                                </div>
+                                        <div class="line">
+                                        </div>
+                                    </div></div>
+
+
+                            
+                            
+
+
+
+
+                                
                             </form>
                             <div class="content-next">
                                 <div class="btn-next back" onclick="eventnext(-1)">Atras</div>
@@ -1430,7 +1593,7 @@
                                             <div class="trata">
                                                 <h5>Tratamiento Medido</h5>
                                                 <label>
-                                                    <select>
+                                                    <select id="tMedico-MOID">
                                                         <option>Lubricantes</option>
                                                         <option>Antialergicos</option>
                                                         <option>Prohibición de frotamiento ocular</option>
@@ -1533,7 +1696,7 @@
                                             <div class="encima input-control">
                                                 <label>
                                                     SC
-                                                    <select>
+                                                    <select id="sc-MOID">
                                                         <
                                                         <option>20/15</option>
                                                         <option>20/20</option>
@@ -1558,7 +1721,7 @@
                                                 </label>
                                                 <label>
                                                     CC
-                                                    <select>
+                                                    <select id="cc-MOID">
                                                         <option>20/15</option>
                                                         <option>20/20</option>
                                                         <option>20/25</option>
@@ -1582,17 +1745,17 @@
                                                 </label>
                                             </div>
                                             <div class="encima input-control">
-                                                <label>Esf <input type="text" name=""></label>
-                                                <label>Cilindro <input type="text" name=""></label>
-                                                <label>Eje <input type="text" name=""></label>
+                                                <label>Esf <input type="text" name="" id="esf-MOID"></label>
+                                                <label>Cilindro <input type="text" name="" id="cilindro-MOID"></label>
+                                                <label>Eje <input type="text" name="" id="eje-MOID"></label>
                                             </div>
                                             <div class="largo input-control">
-                                                <label>Tiempo de Uso <input type="text" name=""></label>
+                                                <label>Tiempo de Uso <input type="text" name="" id="tp-MOID"></label>
                                             </div>
                                             <div class="largo input-control">
                                                 <label>
                                                     Modelo
-                                                    <select>
+                                                    <select id="modelo-MOID">
                                                         <option>LCRGP</option>
                                                         <option>Piggy Back</option>
                                                         <option>Lentes Híbridas</option>
@@ -1609,7 +1772,7 @@
                                             <div class="input-control largo">
                                                 <label>
                                                     Tiempo de Uv
-                                                    <select>
+                                                    <select id="tuv-MOID">
                                                         <option>5 min</option>
                                                         <option>10 min</option>
                                                         <option>15 min</option>
@@ -1621,23 +1784,23 @@
                                             </div>
                                             <div class="input-control radio">
                                                 <h5>Epi Off</h5>
-                                                <div class="radio-group" id="EpiPaso5">
-                                                    <label><input type="radio" name="EpiPaso5" class="hidden" onclick="checkradio('EpiPaso5')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">SI</label>
-                                                    <label><input type="radio" name="EpiPaso5" class="hidden" onclick="checkradio('EpiPaso5')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">NO</label>
+                                                <div class="radio-group" id="EpiPaso5e">
+                                                    <label><input type="radio" name="EpiPaso5" data-v="si" class="hidden epiof-moiD" onclick="checkradio('EpiPaso5e')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">SI</label>
+                                                    <label><input type="radio" name="EpiPaso5" data-v="no" class="hidden epiof-moiD" onclick="checkradio('EpiPaso5e')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">NO</label>
                                                 </div>
                                             </div>
-                                            <div class="input-control radio">
+                                             <div class="input-control radio">
                                                 <h5>Epi On</h5>
-                                                <div class="radio-group" id="EpiPasoOn5">
-                                                    <label><input type="radio" name="EpiPasoOn5" class="hidden" onclick="checkradio('EpiPasoOn5')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">SI</label>
-                                                    <label><input type="radio" name="EpiPasoOn5" class="hidden" onclick="checkradio('EpiPasoOn5')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">NO</label>
+                                                <div class="radio-group" id="EpiPasoOn5e">
+                                                    <label><input type="radio" name="EpiPasoOn5" class="hidden epion-MOID" data-v="si" onclick="checkradio('EpiPasoOn5e')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">SI</label>
+                                                    <label><input type="radio" name="EpiPasoOn5" class="hidden epion-MOID" data-v="no" onclick="checkradio('EpiPasoOn5e')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">NO</label>
                                                 </div>
                                             </div>
                                             <div class="input-control radio">
                                                 <h5>Customizado</h5>
-                                                <div class="radio-group" id="CustoPaso5">
-                                                    <label><input type="radio" name="CustoPaso5" class="hidden" onclick="checkradio('CustoPaso5')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">SI</label>
-                                                    <label><input type="radio" name="CustoPaso5" class="hidden" onclick="checkradio('CustoPaso5')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">NO</label>
+                                                <div class="radio-group" id="CustoPaso5e">
+                                                    <label><input type="radio" name="CustoPaso5" class="hidden cust-MOID" data-v="si" onclick="checkradio('CustoPaso5e')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">SI</label>
+                                                    <label><input type="radio" name="CustoPaso5" class="hidden cust-MOID" data-v="no" onclick="checkradio('CustoPaso5e')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">NO</label>
                                                 </div>
                                             </div>
                                         </div>
@@ -1648,21 +1811,21 @@
                                             <div class="encima input-control">
                                                 <label>
                                                     Micra
-                                                    <input type="text" name="">
+                                                    <input type="text" id="micra-MOID" name="">
                                                 </label>
                                                 <label>
                                                     Eje de insersión
-                                                    <input type="text" name="">
+                                                    <input type="text" id="ejeInser-MOID" name="">
                                                 </label>
                                             </div>
                                             <div class="encima input-control">
                                                 <label>
                                                     Profundidad
-                                                    <input type="text" name="">
+                                                    <input type="text" id="prof-MOID" name="">
                                                 </label>
                                                 <label>
                                                     Modelo de Anillo
-                                                    <select>
+                                                    <select id="modeAni-MOID">
                                                         <option>Ferrara</option>
                                                         <option>Myoring</option>
                                                         <option>Keraring</option>
@@ -1672,15 +1835,15 @@
                                             </div>
                                             <div class="input-control radio">
                                                 <h5>Segmento</h5>
-                                                <div class="radio-group" id="SegmentoPaso5">
-                                                    <label><input type="radio" name="SegmentoPaso5" class="hidden" onclick="checkradio('SegmentoPaso5')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">SI</label>
-                                                    <label><input type="radio" name="SegmentoPaso5" class="hidden" onclick="checkradio('SegmentoPaso5')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">NO</label>
+                                                <div class="radio-group" id="SegmentoPaso5e">
+                                                    <label><input type="radio" name="SegmentoPaso5" class="hidden segmento-MOID" data-v="si" onclick="checkradio('SegmentoPaso5e')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">SI</label>
+                                                    <label><input type="radio" name="SegmentoPaso5" class="hidden segmento-MOID" data-v="no" onclick="checkradio('SegmentoPaso5e')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">NO</label>
                                                 </div>
                                             </div>
                                             <div class="input-control largo">
                                                 <label>
                                                     Cuantos
-                                                    <input type="text" name="">
+                                                    <input type="text" id="cuantos-MOID" name="">
                                                 </label>
                                             </div>
                                         </div>
@@ -1692,7 +1855,7 @@
                                             <div class="encima input-control">
                                                 <label>
                                                     Trasplante de alto Riesgo
-                                                    <select>
+                                                    <select id="trasAR-MOID">
                                                         <option value="s">SI</option>
                                                         <option value="n" selected="selected">NO</option>
                                                     </select>
@@ -1701,7 +1864,7 @@
                                             <div class="encima input-control">
                                                 <label>
                                                     Fecha de Cirugia
-                                                    <input type="date">
+                                                    <input type="date" id="fechCirugia-MOID">
                                                 </label>
                                             </div>
                                         </div>
@@ -1710,13 +1873,13 @@
                                             <div class="encima input-control">
                                                 <label>
                                                     Conteo de células endoteliales
-                                                    <input type="text" name="">
+                                                    <input type="text" id="cceendoMicroEs-MOID" name="">
                                                 </label>
                                             </div>
                                             <div class="encima input-control">
                                                 <label>
                                                     Grosor corneal
-                                                    <input type="text" name="">
+                                                    <input type="text" id="grosorCorneal-MOID" name="">
                                                 </label>
                                             </div>
                                         </div>
@@ -1725,7 +1888,7 @@
                                             <div class="encima input-control">
                                                 <label>
                                                     Diámetro corneal
-                                                    <select>
+                                                    <select id="diaCor-MOID">
 
                                                         <option value="_none">- Ninguno -</option>
                                                         <option value="7" selected="selected">7</option>
@@ -1742,19 +1905,19 @@
                                                 </label>
                                                 <label>
                                                     Edad
-                                                    <input type="text" name="">
+                                                    <input type="text" id="edad-MOID" name="">
                                                 </label>
                                             </div>
                                             <div class="encima input-control">
                                                 <label>
                                                     Fecha de Enucleación
-                                                    <input type="date" name="">
+                                                    <input type="date" id="fechEnu-MOID" name="">
                                                 </label>
                                             </div>
                                             <div class="encima input-control">
                                                 <label>
                                                     Conteo de células endoteliales
-                                                    <input type="text" name="">
+                                                    <input type="text" id="ccendoDon-MOID" name="">
                                                 </label>
                                             </div>
                                         </div>
@@ -1770,7 +1933,7 @@
                                             <div class="encima input-control">
                                                 <label>
                                                     Fecha de Control
-                                                    <input type="date" name="">
+                                                    <input type="date" id="fechCon-MOID"  name="">
                                                 </label>
                                             </div>
                                         </div>
@@ -1880,9 +2043,11 @@
                                     <h4 class="left" onclick="extend2('paso6lf')">Ojo Izquierdo</h4>
                                     <h5>Estudios</h5>
                                     <div class="input-control rds" id="EstudioPaso6">
-                                        <label><input type="radio" name="EstudioPaso6" class="hidden" onclick="checkradio('EstudioPaso6')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">Pentacam</label>
-                                        <label><input type="radio" name="EstudioPaso6" class="hidden" onclick="checkradio('EstudioPaso6')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">Galilei</label>
-                                        <label><input type="radio" name="EstudioPaso6" class="hidden" onclick="checkradio('EstudioPaso6')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">Sirius</label>
+                                        <label><input type="radio" data-v="P" name="EstudioPaso6" class="hidden estudios-IEVO" onclick="checkradio('EstudioPaso6')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">Pentacam</label>
+                                        <label><input type="radio" data-v="G" name="EstudioPaso6" class="hidden estudios-IEVO" onclick="checkradio('EstudioPaso6')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">Galilei</label>
+                                        <label><input type="radio" data-v="S" name="EstudioPaso6" class="hidden estudios-IEVO" onclick="checkradio('EstudioPaso6')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">Sirius</label>
+
+                                        
                                     </div>
                                     <div class="line"></div>
                                     <h5>Topografia</h5>
@@ -1891,7 +2056,7 @@
                                         <div class="encima input-control">
                                             <label>
                                                 SC
-                                                <select>
+                                                <select id="sc-IEVO">
                                                     <
                                                     <option>20/15</option>
                                                     <option>20/20</option>
@@ -1916,7 +2081,7 @@
                                             </label>
                                             <label>
                                                 CC
-                                                <select>
+                                                <select id="cc-IEVO">
                                                     <option>20/15</option>
                                                     <option>20/20</option>
                                                     <option>20/25</option>
@@ -1945,7 +2110,7 @@
                                         <div class="encima input-control">
                                             <label>
                                                 Esf
-                                                <select>
+                                                <select id="esf-IEVO">
                                                     <option>0.00</option>
                                                     <option>0.25</option>
                                                     <option>0.50</option>
@@ -1970,7 +2135,7 @@
                                             </label>
                                             <label>
                                                 Cilindro
-                                                <select>
+                                                <select id="cilindro-IEVO">
                                                     <option>-0.00</option>
                                                     <option>-0.25</option>
                                                     <option>-0.50</option>
@@ -1995,7 +2160,7 @@
                                             </label>
                                             <label>
                                                 Eje
-                                                <select>
+                                                <select id="eje-IEVO">
                                                     <option>0</option>
                                                     <option>5</option>
                                                     <option>10</option>
@@ -2045,11 +2210,11 @@
                                         <div class="encima input-control">
                                             <label>
                                                 K1(D)
-                                                <input type="text" name="">
+                                                <input type="text" name="" id="k1A-IEVO">
                                             </label>
                                             <label>
                                                 EjeK1
-                                                <input type="text" name="">
+                                                <input type="text" name="" id="ejek1A-IEVO">
                                             </label>
                                         </div>
                                     </div>
@@ -2057,15 +2222,15 @@
                                         <div class="encima input-control">
                                             <label>
                                                 K2(D)
-                                                <input type="text" name="">
+                                                <input type="text" id="k2A-IEVO" name="">
                                             </label>
                                             <label>
                                                 EjeK2
-                                                <input type="text" name="">
+                                                <input type="text" id="ejek2A-IEVO" name="">
                                             </label>
                                             <label>
                                                 Cilindro topografico
-                                                <input type="text" name="">
+                                                <input type="text" id="citoA-IEVO" name="">
                                             </label>
                                         </div>
                                     </div>
@@ -2074,11 +2239,11 @@
                                         <div class="encima input-control">
                                             <label>
                                                 K1(D)
-                                                <input type="text" name="">
+                                                <input type="text"  id="k1P-IEVO" name="">
                                             </label>
                                             <label>
                                                 EjeK1
-                                                <input type="text" name="">
+                                                <input type="text" id="ejek1P-IEVO" name="">
                                             </label>
                                         </div>
                                     </div>
@@ -2086,15 +2251,15 @@
                                         <div class="encima input-control">
                                             <label>
                                                 K2(D)
-                                                <input type="text" name="">
+                                                <input type="text" id="k2P-IEVO" name="">
                                             </label>
                                             <label>
                                                 EjeK2
-                                                <input type="text" name="">
+                                                <input type="text" id="ejek2P-IEVO" name="">
                                             </label>
                                             <label>
                                                 Cilindro topografico
-                                                <input type="text" name="">
+                                                <input type="text" id="citoP-IEVO" name="">
                                             </label>
                                         </div>
                                     </div>
@@ -2102,15 +2267,15 @@
                                         <div class="encima input-control">
                                             <label>
                                                 KMax
-                                                <input type="text" name="" onkeyup="quera(this,1)">
+                                                <input type="text" id="kmax-IEVO" name="" onkeyup="quera(this,1)">
                                             </label>
                                             <label>
                                                 IT
-                                                <input type="text" name="">
+                                                <input type="text" id="it-IEVO" name="">
                                             </label>
                                             <label>
                                                 Q
-                                                <input type="text" name="">
+                                                <input type="text" id="q-IEVO" name="">
                                             </label>
                                         </div>
                                     </div>
@@ -2118,14 +2283,14 @@
                                         <div class="encima input-control" tabindex="1" onkeyup="eventkey(this)">
                                             <label>
                                                 Kmax superior
-                                                <input type="text" name="" class="nr">
+                                                <input type="text" id="kmaxSuperior-IEVO" name="" class="nr">
                                             </label>
                                             <label>
                                                 Kmax inferior
-                                                <input type="text" name="" class="nr">
+                                                <input type="text" id="kmaxInferior-IEVO" name="" class="nr">
                                             </label>
                                             <label>
-                                                <input type="text" class="medidor" name="" disabled value="0">
+                                                <input type="text" id="medidorSI-IEVO" class="medidor" name="" disabled value="0">
                                             </label>
                                         </div>
                                     </div>
@@ -2133,14 +2298,14 @@
                                         <div class="encima input-control" tabindex="1" onkeyup="eventkey(this)">
                                             <label>
                                                 Kmax derecha
-                                                <input type="text" name="" class="nr">
+                                                <input type="text" id="kmaxDerecha-IEVO" name="" class="nr">
                                             </label>
                                             <label>
                                                 Kmax izquierda
-                                                <input type="text" name="" class="nr">
+                                                <input type="text" id="kmaxIzquierda-IEVO" name="" class="nr">
                                             </label>
                                             <label>
-                                                <input type="text" class="medidor" value="0" name="" disabled>
+                                                <input type="text" id="medidorDI-IEVO" class="medidor" value="0" name="" disabled>
                                             </label>
                                         </div>
                                     </div>
@@ -2150,11 +2315,11 @@
                                         <div class="encima input-control">
                                             <label>
                                                 Punto más fino
-                                                <input type="text" name="">
+                                                <input type="text" id="pFino-IEVO" name="">
                                             </label>
                                             <label>
                                                 Apex
-                                                <input type="text" name="">
+                                                <input type="text" id="apex-IEVO" name="">
                                             </label>
                                         </div>
                                     </div>
@@ -2162,7 +2327,7 @@
                                         <div class="encima input-control" tabindex="1" onkeyup="eventkeytwo(this,17)">
                                             <label>
                                                 Elevación BFS anterior
-                                                <input type="text" name="" class="nr">
+                                                <input type="text" name="" id="bfsA-IEVO" class="nr">
                                             </label>
                                             <label>
                                                 <input type="text" class="medidor" value="Normal" name="" disabled>
@@ -2173,7 +2338,7 @@
                                         <div class="encima input-control" tabindex="1" onkeyup="eventkeytwo(this,22)">
                                             <label>
                                                 Elevación BFS  posterior
-                                                <input type="text" name="" class="nr">
+                                                <input type="text" name="" id="bfsP-IEVO" class="nr">
                                             </label>
                                             <label>
                                                 <input type="text" class="medidor" value="Normal" name="" disabled>
@@ -2181,6 +2346,12 @@
                                         </div>
                                     </div>
                                 </div>
+
+
+
+
+
+
                                 <div class="item-form rg" id="paso6rg">
                                     <h4 class="rigth" onclick="extend2('paso6rg')">Ojo Derecho</h4>
                                     <h5>Estudios</h5>
@@ -2544,7 +2715,7 @@
                             </div>
                             <div class="content-next">
                                 <div class="btn-next back" onclick="eventnext(-1)">Atras</div>
-                                <div class="btn-next" onclick="eventnext(10)">Guardar</div>
+                                <div class="btn-next" onclick="evaluacion()">Guardar</div>
                             </div>
                         </div>
                     </div>

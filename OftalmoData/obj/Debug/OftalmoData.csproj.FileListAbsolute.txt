@@ -24,3 +24,12 @@ C:\Users\Andy\Desktop\Oftalmo\OftalmoData\obj\Debug\OftalmoData.csproj.CoreCompi
 C:\Users\Andy\Desktop\Oftalmo\OftalmoData\obj\Debug\OftalmoData.csproj.CopyComplete
 C:\Users\Andy\Desktop\Oftalmo\OftalmoData\obj\Debug\OftalmoData.dll
 C:\Users\Andy\Desktop\Oftalmo\OftalmoData\obj\Debug\OftalmoData.pdb
+C:\Users\User\Desktop\Oftalmo\OftalmoData\bin\Debug\OftalmoData.dll
+C:\Users\User\Desktop\Oftalmo\OftalmoData\bin\Debug\OftalmoData.pdb
+C:\Users\User\Desktop\Oftalmo\OftalmoData\bin\Debug\OftalmoModel.dll
+C:\Users\User\Desktop\Oftalmo\OftalmoData\bin\Debug\OftalmoModel.pdb
+C:\Users\User\Desktop\Oftalmo\OftalmoData\obj\Debug\OftalmoData.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\Oftalmo\OftalmoData\obj\Debug\OftalmoData.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Oftalmo\OftalmoData\obj\Debug\OftalmoData.csproj.CopyComplete
+C:\Users\User\Desktop\Oftalmo\OftalmoData\obj\Debug\OftalmoData.dll
+C:\Users\User\Desktop\Oftalmo\OftalmoData\obj\Debug\OftalmoData.pdb

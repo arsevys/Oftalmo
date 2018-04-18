@@ -39,3 +39,17 @@ C:\Users\Andy\Desktop\Oftalmo\OftalmoBussines\obj\Debug\OftalmoBussines.csproj.C
 C:\Users\Andy\Desktop\Oftalmo\OftalmoBussines\obj\Debug\OftalmoBussines.csproj.CopyComplete
 C:\Users\Andy\Desktop\Oftalmo\OftalmoBussines\obj\Debug\OftalmoBussines.dll
 C:\Users\Andy\Desktop\Oftalmo\OftalmoBussines\obj\Debug\OftalmoBussines.pdb
+C:\Users\User\Desktop\Oftalmo\OftalmoBussines\bin\Debug\OftalmoBussines.dll
+C:\Users\User\Desktop\Oftalmo\OftalmoBussines\bin\Debug\OftalmoBussines.pdb
+C:\Users\User\Desktop\Oftalmo\OftalmoBussines\bin\Debug\Newtonsoft.Json.dll
+C:\Users\User\Desktop\Oftalmo\OftalmoBussines\bin\Debug\OftalmoData.dll
+C:\Users\User\Desktop\Oftalmo\OftalmoBussines\bin\Debug\OftalmoModel.dll
+C:\Users\User\Desktop\Oftalmo\OftalmoBussines\bin\Debug\ParseJsonR.dll
+C:\Users\User\Desktop\Oftalmo\OftalmoBussines\bin\Debug\OftalmoData.pdb
+C:\Users\User\Desktop\Oftalmo\OftalmoBussines\bin\Debug\OftalmoModel.pdb
+C:\Users\User\Desktop\Oftalmo\OftalmoBussines\bin\Debug\Newtonsoft.Json.xml
+C:\Users\User\Desktop\Oftalmo\OftalmoBussines\obj\Debug\OftalmoBussines.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\Oftalmo\OftalmoBussines\obj\Debug\OftalmoBussines.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Oftalmo\OftalmoBussines\obj\Debug\OftalmoBussines.csproj.CopyComplete
+C:\Users\User\Desktop\Oftalmo\OftalmoBussines\obj\Debug\OftalmoBussines.dll
+C:\Users\User\Desktop\Oftalmo\OftalmoBussines\obj\Debug\OftalmoBussines.pdb

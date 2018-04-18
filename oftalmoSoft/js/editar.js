@@ -143,9 +143,9 @@ function lugares(val){
            region(regionvar.querySelector("select").value)
 		}
 		else{
-           regionvar.style.display = "none";
-           provincia.style.display = "none";
-           distrito.style.display = "none";
+           // regionvar.style.display = "none";
+           // provincia.style.display = "none";
+           // distrito.style.display = "none";
 		}
 	}
 }
@@ -398,4 +398,126 @@ function checkUno(id,id1){
 				     }
 		}
 	
+}
+
+
+
+
+
+
+var left = {
+    "quera": {
+        "Pentacam": [`<h5>Queratometría Anterior</h5><div class="cbo"><label>K1(D)<input type="text" name=""></label><label>EjeK1<input type="text" name=""></label></div>`,
+            `<div class="cbo"><label>K2(D)<input type="text" name=""></label><label>EjeK2<input type="text" name=""></label><label>Cilindro topografico<input type="text" name=""></label></div>`,
+            `<h5>Queratometría posterior</h5><div class="cbo"><label>		K1(D)<input type="text" name="">	</label>	<label>		EjeK1		<input type="text" name="">	</label></div>`,
+            `<div class="cbo">	<label>		K2(D)		<input type="text" name="">	</label>	<label>		EjeK2		<input type="text" name="">	</label>	<label>		Cilindro topografico		<input type="text" name="">	</label></div>`,
+            `<div class="cbo"><label>	KMax	<input type="text" name="" onkeyup="quera(this,0)"></label><label>	IT	<input type="text" name=""></label><label>	Q	<input type="text" name=""></label></div>`,
+            `<div class="cbo" tabindex="1" onkeyup="eventkey(this)"><label>	Kmax superior	<input type="text" name="" class="nr"></label><label>	Kmax inferior	<input type="text" name="" class="nr"></label><label>	<input type="text" class="medidor" name="" disabled value="0"></label></div>`,
+            `<div class="cbo" tabindex="1" onkeyup="eventkey(this)"><label>	Kmax derecha	<input type="text" name="" class="nr"></label><label>	Kmax izquierda	<input type="text" name="" class="nr"></label><label>	<input type="text" class="medidor" value="0" name="" disabled></label></div>`],
+        "Galile": [`<h5>Queratometría Anterior</h5><div class="cbo">	<label>		Sim K		<input type="text" name="">	</label>	<label>		Flat SimK		<input type="text" name="">	</label></div>`,
+            `<div class="cbo">	<label>		Flat SimK		<input type="text" name="">	</label>	<label>		Eje Flat SimK		<input type="text" name="">	</label>	<label>		Steep SimK		<input type="text" name="">	</label></div>`,
+            `<div class="cbo">	<label>		Eje Steep SimK		<input type="text" name="">	</label>	<label>		Astigmatismo		<input type="text" name="">	</label></div>`,
+            `<h5>Queratometría posterior</h5>	<div class="cbo">	<label>		Sim K		<input type="text" name="">	</label>	<label>		Flat SimK		<input type="text" name="">	</label>	</div>`,
+            `<div class="cbo">	<label>		Flat SimK		<input type="text" name="">	</label>	<label>		Eje Flat SimK		<input type="text" name="">	</label>	<label>		Steep SimK		<input type="text" name="">	</label></div>`,
+            `<div class="cbo">	<label>		Eje Steep SimK		<input type="text" name="">	</label>	<label>		Astigmatismo		<input type="text" name="">	</label></div>`],
+        "Sirius": [`<h5>Queratometría Anterior</h5><div class="cbo">	<label>		K1(D)		<input type="text" name="">	</label>	<label>		EjeK1		<input type="text" name="">	</label></div>`,
+            `<div class="cbo">	<label>		K2(D)		<input type="text" name="">	</label>	<label>		EjeK2		<input type="text" name="">	</label></div>`,
+            `<div class="cbo">	<label>		Atigmatismo		<input type="text" name="">	</label>	<label>		Eje Astigmatismo		<input type="text" name="">	</label></div>`,
+            `<h5>Queratometría posterior</h5>	<div class="cbo">		<label>			Sim K			<input type="text" name="">		</label>		<label>			Flat SimK			<input type="text" name="">		</label>	</div>`,
+            `<div class="cbo">		<label>			Eje Sim K			<input type="text" name="">		</label>		<label>			Steep Sim K			<input type="text" name="">		</label>	</div>`,
+            `<div class="cbo">	<label>		Eje Flat SimK		<input type="text" name="" onkeyup="quera(this,0)">	</label>	<label>		Astigmatismo		<input type="text" name="">	</label>	<label>		Eje Steep Sim K		<input type="text" name="">	</label></div>`]
+    },
+    "paqui": {
+        "Pentacam": [`<div class="cbo"><label>	Punto más fino	<input type="text" name=""></label><label>	Apex	<input type="text" name=""></label></div>`,
+            `<div class="cbo" tabindex="1" onkeyup="eventkeytwo(this,17)"><label>	Elevación BFS anterior	<input type="text" name="" class="nr"></label><label>	<input type="text" class="medidor" value="Normal" name="" disabled></label></div>`,
+            `<div class="cbo" tabindex="1" onkeyup="eventkeytwo(this,22)"><label>	Elevación BFS  posterior	<input type="text" name="" class="nr"></label><label>	<input type="text" class="medidor" value="Normal" name="" disabled></label></div>`],
+        "Galile": [`<div class="cbo"><label>	Punto más fino	<input type="text" name=""></label><label>	Central	<input type="text" name=""></label></div>`,
+            `<div class="cbo" tabindex="1" onkeyup="eventkeytwo(this,17)"><label>	Elevación anterior 3 mm centrales	<input type="text" name="" class="nr"></label><label>	<input type="text" class="medidor" value="Normal" name="" disabled></label></div>`,
+            `<div class="cbo" tabindex="1" onkeyup="eventkeytwo(this,22)"><label>	Elevación posterior 3 mm centrales	<input type="text" name="" class="nr"></label><label>	<input type="text" class="medidor" value="Normal" name="" disabled></label></div>`],
+        "Sirius": [`<div class="cbo"><label>	Punto más delgado	<input type="text" name=""></label><label>	Eje	<input type="text" name=""></label></div>`,
+            `<div class="cbo"><label>	Grosor	<input type="text" name=""></label><label>	Ángulo Kappa	<input type="text" name=""></label></div>`]
+    }
+}
+
+var right = {
+    "quera": {
+        "Pentacam": [`<h5>Queratometría Anterior</h5><div class="cbo"><label>K1(D)<input type="text" name=""></label><label>EjeK1<input type="text" name=""></label></div>`,
+            `<div class="cbo"><label>K2(D)<input type="text" name=""></label><label>EjeK2<input type="text" name=""></label><label>Cilindro topografico<input type="text" name=""></label></div>`,
+            `<h5>Queratometría posterior</h5><div class="cbo"><label>		K1(D)<input type="text" name="">	</label>	<label>		EjeK1		<input type="text" name="">	</label></div>`,
+            `<div class="cbo">	<label>		K2(D)		<input type="text" name="">	</label>	<label>		EjeK2		<input type="text" name="">	</label>	<label>		Cilindro topografico		<input type="text" name="">	</label></div>`,
+            `<div class="cbo"><label>	KMax	<input type="text" name="" onkeyup="quera(this,0)"></label><label>	IT	<input type="text" name=""></label><label>	Q	<input type="text" name=""></label></div>`,
+            `<div class="cbo" tabindex="1" onkeyup="eventkey(this)"><label>	Kmax superior	<input type="text" name="" class="nr"></label><label>	Kmax inferior	<input type="text" name="" class="nr"></label><label>	<input type="text" class="medidor" name="" disabled value="0"></label></div>`,
+            `<div class="cbo" tabindex="1" onkeyup="eventkey(this)"><label>	Kmax derecha	<input type="text" name="" class="nr"></label><label>	Kmax izquierda	<input type="text" name="" class="nr"></label><label>	<input type="text" class="medidor" value="0" name="" disabled></label></div>`],
+        "Galile": [`<h5>Queratometría Anterior</h5><div class="cbo">	<label>		Sim K		<input type="text" name="">	</label>	<label>		Flat SimK		<input type="text" name="">	</label></div>`,
+            `<div class="cbo">	<label>		Flat SimK		<input type="text" name="">	</label>	<label>		Eje Flat SimK		<input type="text" name="">	</label>	<label>		Steep SimK		<input type="text" name="">	</label></div>`,
+            `<div class="cbo">	<label>		Eje Steep SimK		<input type="text" name="">	</label>	<label>		Astigmatismo		<input type="text" name="">	</label></div>`,
+            `<h5>Queratometría posterior</h5>	<div class="cbo">	<label>		Sim K		<input type="text" name="">	</label>	<label>		Flat SimK		<input type="text" name="">	</label>	</div>`,
+            `<div class="cbo">	<label>		Flat SimK		<input type="text" name="">	</label>	<label>		Eje Flat SimK		<input type="text" name="">	</label>	<label>		Steep SimK		<input type="text" name="">	</label></div>`,
+            `<div class="cbo">	<label>		Eje Steep SimK		<input type="text" name="">	</label>	<label>		Astigmatismo		<input type="text" name="">	</label></div>`],
+        "Sirius": [`<h5>Queratometría Anterior</h5><div class="cbo">	<label>		K1(D)		<input type="text" name="">	</label>	<label>		EjeK1		<input type="text" name="">	</label></div>`,
+            `<div class="cbo">	<label>		K2(D)		<input type="text" name="">	</label>	<label>		EjeK2		<input type="text" name="">	</label></div>`,
+            `<div class="cbo">	<label>		Atigmatismo		<input type="text" name="">	</label>	<label>		Eje Astigmatismo		<input type="text" name="">	</label></div>`,
+            `<h5>Queratometría posterior</h5>	<div class="cbo">		<label>			Sim K			<input type="text" name="">		</label>		<label>			Flat SimK			<input type="text" name="">		</label>	</div>`,
+            `<div class="cbo">		<label>			Eje Sim K			<input type="text" name="">		</label>		<label>			Steep Sim K			<input type="text" name="">		</label>	</div>`,
+            `<div class="cbo">	<label>		Eje Flat SimK		<input type="text" name="" onkeyup="quera(this,0)">	</label>	<label>		Astigmatismo		<input type="text" name="">	</label>	<label>		Eje Steep Sim K		<input type="text" name="">	</label></div>`]
+    },
+    "paqui": {
+        "Pentacam": [`<div class="cbo"><label>	Punto más fino	<input type="text" name=""></label><label>	Apex	<input type="text" name=""></label></div>`,
+            `<div class="cbo" tabindex="1" onkeyup="eventkeytwo(this,17)"><label>	Elevación BFS anterior	<input type="text" name="" class="nr"></label><label>	<input type="text" class="medidor" value="Normal" name="" disabled></label></div>`,
+            `<div class="cbo" tabindex="1" onkeyup="eventkeytwo(this,22)"><label>	Elevación BFS  posterior	<input type="text" name="" class="nr"></label><label>	<input type="text" class="medidor" value="Normal" name="" disabled></label></div>`],
+        "Galile": [`<div class="cbo"><label>	Punto más fino	<input type="text" name=""></label><label>	Central	<input type="text" name=""></label></div>`,
+            `<div class="cbo" tabindex="1" onkeyup="eventkeytwo(this,17)"><label>	Elevación anterior 3 mm centrales	<input type="text" name="" class="nr"></label><label>	<input type="text" class="medidor" value="Normal" name="" disabled></label></div>`,
+            `<div class="cbo" tabindex="1" onkeyup="eventkeytwo(this,22)"><label>	Elevación posterior 3 mm centrales	<input type="text" name="" class="nr"></label><label>	<input type="text" class="medidor" value="Normal" name="" disabled></label></div>`],
+        "Sirius": [`<div class="cbo"><label>	Ápice	<input type="text" name=""></label><label>	Eje	<input type="text" name=""></label></div>`,
+            `<div class="cbo"><label>	Curvatura	<input type="text" name=""></label><label>	Ángulo Kappa	<input type="text" name=""></label></div>`]
+    }
+}
+
+
+
+
+function StudyEventOne(direct, id, clas, tipo, ide) {
+    checkradio(id);
+
+    var base = document.getElementById(ide);
+    var item = document.getElementsByClassName(clas);
+    var array = item.length;
+
+
+    for (var i = 0; i < array; i++) {
+        item[0].remove();
+    }
+
+    if ("left" == direct) {
+        var tx = "lfps3";
+        var bsj = left;
+    }
+    else {
+        var tx = "rgps3";
+        var bsj = right;
+    }
+
+    var bs = bsj["quera"][tipo];
+    for (var i = 0; i < bs.length; i++) {
+        var newItem = document.createElement("div");
+        newItem.classList.add("input-control");
+        newItem.classList.add("cbo-content");
+        newItem.classList.add(tx);
+        newItem.innerHTML = bs[i];
+        newItem.style.display = "flex";
+        var list = document.getElementById(ide);
+        list.insertBefore(newItem, list.querySelector('.quera'));
+    }
+    var bs = bsj["paqui"][tipo];
+    for (var i = 0; i < bs.length; i++) {
+        var newItem = document.createElement("div");
+        newItem.classList.add("input-control");
+        newItem.classList.add("cbo-content");
+        newItem.classList.add(tx);
+        newItem.innerHTML = bs[i];
+        newItem.style.display = "flex";
+        var list = document.getElementById(ide);
+        list.insertBefore(newItem, list.querySelector('.paqui'));
+    }
+
 }
