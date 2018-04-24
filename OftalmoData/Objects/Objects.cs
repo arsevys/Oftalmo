@@ -9,5 +9,6 @@ namespace OftalmoData.Objects
     public class Objects
     {
         public static string insertarData = "";
+        public static string listarPaciente= "listarPaciente ";
     }
 }

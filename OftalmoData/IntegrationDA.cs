@@ -8,7 +8,7 @@ using System.Data;
 using System.Data.SqlClient;
 using OftalmoData.Objects;
 using System.IO;
-
+using OftalmoModel.Queratocono;
 namespace OftalmoData
 {
    public  class IntegrationDA
@@ -61,6 +61,39 @@ namespace OftalmoData
                 conn.Close();
             }
             return model;
+        }
+
+
+        public List<Paciente> listarPaciente()
+        {
+
+            List<Paciente> l = new List<Paciente>();
+            using (SqlConnection conn = new SqlConnection(cnxConection))
+            using (SqlCommand cmd = new SqlCommand(Objects.Objects.listarPaciente, conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                //cmd.Parameters.Add("@xml", SqlDbType.Xml).Value = xmlDocument;
+     
+                conn.Open();
+                SqlDataReader s = cmd.ExecuteReader();
+                while (s.Read())
+                {
+                    Paciente p = new Paciente();
+                    p.ID_PACIENTE =Int32.Parse( s[0].ToString());
+                    p.NRO_HISTORIA = s[1].ToString();
+                    p.NOM_PACIENTE = s[2].ToString();
+                    p.apellidos = s[3].ToString();
+                    p.NRO_DOCUM = s[4].ToString();
+                    p.GENERO = s[5].ToString();
+                    p.DATE_BIRTH = s[6].ToString();
+                    p.USER_CREA= s[7].ToString();
+                    p.EVO_FCH_CONSULTA= s[8].ToString();
+
+                    l.Add(p);
+                }
+                conn.Close(); s.Close();
+            }
+            return l;
         }
 
 

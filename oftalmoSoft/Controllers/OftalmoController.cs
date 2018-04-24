@@ -16,6 +16,13 @@ namespace prjOftalmo.Controllers
         }
 
 
+        [HttpPost]
+        public JsonResult listarPaciente()
+        {
+
+            return Json(new OftalmoBL().listarPaciente(), JsonRequestBehavior.AllowGet);
+        
+        }
 
         [HttpPost]
         public bool GrabarCliente(string jsonX)

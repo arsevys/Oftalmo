@@ -171,7 +171,18 @@
 
 
 
-
+       <script type="text/javascript">
+           
+           $.ajax({
+            url:"/Oftalmo/listarPaciente",
+            type:"POST",
+            data:{},
+            success:function(e){
+                console.log(e);
+                    $("#grillaOF").grilla("insertarData",e);
+            }
+           })
+       </script>
 
 
 

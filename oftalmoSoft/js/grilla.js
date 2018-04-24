@@ -38,22 +38,22 @@
         },
 
     cargar:function(data){
-               $.fn.grilla.jDefecto;
+              let o= $.fn.grilla.jDefecto["grillaOF"].head;
                var t="";
                 for (var i = 0 ;data.length>i; i++) {
                     t+=`<tr>
                             <td>
-                                <i class="fa fa-pencil" aria-hidden="true" onclick="location.href ='http://54.233.82.3/oftalmo/?q=editar'"></i>
+                                <i class="fa fa-pencil" data-j="${data[i][o[0]]}" aria-hidden="true" onclick="location.href ='http://54.233.82.3/oftalmo/?q=editar'"></i>
                                 <i class="fa fa-times" aria-hidden="true"></i>
                             </td>
-                            <td>47856845</td>
-                            <td>Yesenia</td>
-                            <td>Campos Macha</td>
-                            <td>4566786</td>
-                            <td>Femenino</td>
-                            <td>08 / 08 / 1989</td>
-                            <td>Anunez</td>
-                            <td>2014-09-18 12:41 2:25</td>
+                            <td style="text-align:center;">${data[i][o[1]]}</td>
+                            <td style="text-align:center;">${data[i][o[2]]}</td>
+                            <td style="text-align:center;">${data[i][o[3]]}</td>
+                            <td style="text-align:center;">${data[i][o[4]]}</td>
+                            <td style="text-align:center;">${data[i][o[5]]}</td>
+                            <td style="text-align:center;">${data[i][o[6]]}</td>
+                            <td style="text-align:center;">${data[i][o[7]]}</td>
+                            <td style="text-align:center;">${data[i][o[8]]}</td>
                         </tr>`;
 
                 }
@@ -219,6 +219,7 @@ cambioPaginado:function(){
 
           $("#grillaOF").grilla({
             tablaId:"grillaOF",
-            paginado:8
+            paginado:8,
+            head:["ID_PACIENTE","NRO_HISTORIA","NOM_PACIENTE","apellidos","NRO_DOCUM","GENERO","DATE_BIRTH","USER_CREA","EVO_FCH_CONSULTA"]
           });
-           $("#grillaOF").grilla("insertarData",data);
+       

@@ -8,6 +8,7 @@ namespace OftalmoModel.Queratocono
 {
    public  class DatosGenerales
     {   
+        /*
         public int id { set; get; }
         public string numHisCli { set; get; }
         public string nombres { set; get; }
@@ -21,5 +22,7 @@ namespace OftalmoModel.Queratocono
         public int id_provincia { set; get; }
         public int id_distrito { set; get; }
         public string genero { set; get; }
+        */
+
     }
 }
