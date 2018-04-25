@@ -105,6 +105,7 @@ function quera(este,nr){
 	var vl = este.value;
 	var rs = document.getElementsByClassName('grado');
 	var total = parseFloat(vl) ;
+	var micra = document.getElementsByClassName("fino");
 	console.log(total);
 	
 	if(!isNaN(total)){
@@ -112,13 +113,18 @@ function quera(este,nr){
 		if(total < 48){
 			rs[nr].innerText="I";
 		}
-		else if(total < 53){
+		else if(total < 53 && parseInt(micra[nr].value) > 400){
 			rs[nr].innerText="II";
 		}
-		else{
+		else if(total < 55 && parseInt(micra[nr].value) > 300){
 			rs[nr].innerText="III";
 		}
-		
+		else if(total >= 55 && parseInt(micra[nr].value) < 200){
+			rs[nr].innerText="IV";
+		}
+		else{
+			rs[nr].innerText="No hay regla para estos valores";
+		}
 	}
 	else{
 		rs.value = "---";
@@ -136,16 +142,7 @@ var jsonunlock = {
 
 function addrc(nr){
 	var sl = document.querySelectorAll(".detalle.agregar select").item(nr);
-	var vl = "";
-	var v2 = sl.value;
-	
-	for(let i=0;sl.options.length>i;i++){
-       if(sl.options[i].selected){
-       	vl=sl.options[i].innerText;
-       }
-	}
-
-
+	var vl = sl.value;
 	if(vl != ""){
 		sl.remove(sl.selectedIndex);
 		if(vl == "Observación"){
@@ -158,11 +155,11 @@ function addrc(nr){
 			jsonunlock[''+nr].push("Anillos"+nr);
 		}
 		else{
-			jsonunlock[''+nr].push(vl+nr);
+			jsonunlock[''+nr].push("Trasplante"+nr);
 		}
 		console.log(jsonunlock[''+nr]);
 		var ht = document.querySelectorAll(".lista").item(nr);
-		var text = ht.innerHTML + "<p data-c='"+v2+"' onclick='clearrc("+nr+",this)'>"+vl+"</p>";
+		var text = ht.innerHTML + "<p onclick='clearrc("+nr+",this)'>"+vl+"</p>";
 		ht.innerHTML = text;
 		elementos();
 	}

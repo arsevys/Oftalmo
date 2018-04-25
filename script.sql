@@ -3134,7 +3134,7 @@ XmlData.x.value('nro_docum[1]','varchar(1)') as nro_docum,
 XmlData.x.value('date_birth[1]','date') as date_birth,
 XmlData.x.value('genero[1]','char(1)') as genero,
 XmlData.x.value('id_pais[1]','int') as id_pais,
-XmlData.x.value('id_region[1]','int') as id_region,
+XmlData.x.value('id_departamento[1]','int') as id_departamento,
 
 XmlData.x.value('id_provincia[1]','int') as id_provincia,
 XmlData.x.value('id_distrito[1]','int') as id_distrito,
@@ -3169,15 +3169,14 @@ GO
 
 select * from  [TB_PACIENTE] 
 go
-select * from  [TB_] 
-CREATE PROCEDURE listarPaciente 
+alter PROCEDURE listarPaciente 
 as
-select ID_PACIENTE,NRO_HISTORIA ,NOM_PACIENTE,CONCAT(APE_PATERNO,APE_MATERNO),
+select ID_PACIENTE,NRO_HISTORIA ,NOM_PACIENTE,CONCAT(APE_PATERNO,' ',APE_MATERNO) as apellidoCompleto,
 NRO_DOCUM,State=(CASE 
  WHEN GENERO = 'M' THEN 'Masculino' 
  WHEN GENERO = 'F' THEN 'Femenino' 
  ELSE NULL 
- END),DATE_BIRTH ,'root' ,EVO_FCH_CONSULTA
+ END),DATE_BIRTH ,'root' as 'usuario',EVO_FCH_CONSULTA
 from [TB_PACIENTE]
 
 go
