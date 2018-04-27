@@ -19,7 +19,7 @@
     <script async type="text/javascript" src="~/js/editar.js">
     </script>
     <script type="text/javascript" src="~/js/cld.js"></script>
-    <script type="text/javascript" src="~/js/validacion.js"></script>
+
 </head>
 
 <body>
@@ -142,7 +142,7 @@
                                 <div class="input-control">
                                     <label>Apellido Paterno</label>
                                     <input type="text" id="apeP-DG">
-                                </div>rh 
+                                </div> 
                                 <div class="input-control">
                                     <label>Apellido Materno</label>
                                     <input type="text" id="apeM-DG">
@@ -328,9 +328,9 @@
                                    <h5>Estudios</h5>
                                         <div class="input-control">
                                             <div class="inputs" id="EstudioPaso3">
-                                                <label ><input type="radio" name="EstudioPaso3" class="hidden" onclick="StudyEventOne('left','EstudioPaso3','lfps3','Pentacam','paso3lf')" select><img src="imagenes/CHECK-BLANCO-CIRCULO-ON.png" select>Pentacam</label>
-                                                <label ><input type="radio" name="EstudioPaso3" class="hidden" onclick="StudyEventOne('left','EstudioPaso3','lfps3','Galile','paso3lf')" ><img src="imagenes/CHECK-CIRCULO-OFF.png">Galilei</label>
-                                                <label ><input type="radio" name="EstudioPaso3" class="hidden" onclick="StudyEventOne('left','EstudioPaso3','lfps3','Sirius','paso3lf')" ><img src="imagenes/CHECK-CIRCULO-OFF.png">Sirius</label>
+                                                <label ><input type="radio" data-v="P" name="EstudioPaso3" class="hidden estudios-OI" checked onclick="StudyEventOne('left','EstudioPaso3','lfps3','Pentacam','paso3lf')" select><img src="/imagenes/CHECK-BLANCO-CIRCULO-ON.png" select>Pentacam</label>
+                                                <label ><input type="radio" data-v="G" name="EstudioPaso3"  class="hidden estudios-OI" onclick="StudyEventOne('left','EstudioPaso3','lfps3','Galile','paso3lf')" ><img src="/imagenes/CHECK-CIRCULO-OFF.png">Galilei</label>
+                                                <label ><input type="radio" data-v="S" name="EstudioPaso3" class="hidden estudios-OI" onclick="StudyEventOne('left','EstudioPaso3','lfps3','Sirius','paso3lf')" ><img src="/imagenes/CHECK-CIRCULO-OFF.png">Sirius</label>
                                             </div>
                                         </div>
                                     <div class="line"></div>
@@ -488,171 +488,332 @@
                                     </div>
                                     <div class="line"></div>
                                     <h5>Queratometría</h5>
-                                    <div class="input-control cbo-content lfps3">
-                                        <h5>Queratometría Anterior</h5>
-                                        <div class="cbo">
-                                            <label>
-                                                K1(D)
-                                                <input type="text" name="" id="k1A-OI">
-                                            </label>
-                                            <label>
-                                                EjeK1
-                                                <input type="text" name="" id="ejek1A-OI">
-                                            </label>
+                                    <!-- Pentacam -->
+                             <div id=p3I-PENTACAM>
+                                                 <div class="input-control cbo-content lfps3">
+                                                    <h5>Queratometría Anterior</h5>
+                                                    <div class="cbo">
+                                                        <label>
+                                                            K1(D)
+                                                            <input type="text" name="" id="k1A-OI">
+                                                        </label>
+                                                        <label>
+                                                            EjeK1
+                                                            <input type="text" name="" id="ejek1A-OI">
+                                                        </label>
+                                                    </div>
+                                                   </div>
+                                                    <div class="input-control cbo-content lfps3">
+                                                    <div class="cbo">
+                                                        <label>
+                                                            K2(D)
+                                                            <input type="text" name="" id="k2A-OI">
+                                                        </label>
+                                                        <label>
+                                                            EjeK2
+                                                            <input type="text" name="" id="ejek2A-OI">
+                                                        </label>
+                                                        <label>
+                                                            Cilindro topografico
+                                                            <input type="text" name="" id="citoA-OI">
+                                                        </label>
+                                                    </div></div>
+                                                  <div class="input-control cbo-content lfps3">
+                                                   <h5>Queratometría posterior</h5>
+                                                   <div class="cbo">
+                                                   <label>
+                                                    K1(D)
+                                                       <input type="text" name="" id="k1P-OI">
+                                                </label>
+                                                <label>
+                                                    EjeK1
+                                                    <input type="text" name="" id="ejek1P-OI">
+                                                </label>
+                                                 </div>
+                                                  </div>
+                                            <div class="input-control cbo-content lfps3">
+                                            <div class="cbo">
+                                                <label>
+                                                    K2(D)
+                                                    <input type="text" name="" id="k2P-OI">
+                                                </label>
+                                                <label>
+                                                    EjeK2
+                                                    <input type="text" name="" id="ejek2P-OI">
+                                                </label>
+                                                <label>
+                                                    Cilindro topografico
+                                                    <input type="text" name="" id="citoP-OI">
+                                                </label>
+                                            </div>
+                                           </div>
+                                           <div class="input-control cbo-content lfps3">
+                                            <div class="cbo">
+                                                <label>
+                                                    KMax
+                                                    <input type="text" name="" id="kmax-OI" onkeyup="quera(this,0)">
+                                                </label>
+                                                <label>
+                                                    IT
+                                                    <input type="text" name="" id="it-OI">
+                                                </label>
+                                                <label>
+                                                    Q
+                                                    <input type="text" name="" id="q-OI">
+                                                </label>
+                                            </div>
+                                          </div>
+                                          <div class="input-control cbo-content lfps3">
+                                            <div class="cbo" tabindex="1" onkeyup="eventkey(this)">
+                                                <label>
+                                                    Kmax superior
+                                                    <input type="text" name="" id="kmaxSuperior-OI" class="nr">
+                                                </label>
+                                                <label>
+                                                    Kmax inferior
+                                                    <input type="text" name="" id="kmaxInferior-OI" class="nr">
+                                                </label>
+                                                <label>
+                                                    <input type="text" class="medidor" name="" id="medidorSI-OI" disabled value="0">
+                                                </label>
+                                            </div>
+                                          </div>
+                                          <div class="input-control cbo-content lfps3">
+                                            <div class="cbo" tabindex="1" onkeyup="eventkey(this)">
+                                                <label>
+                                                    Kmax derecha
+                                                    <input type="text" name="" id="kmaxDerecha-OI" class="nr">
+                                                </label>
+                                                <label>
+                                                    Kmax izquierda
+                                                    <input type="text" name="" id="kmaxIzquierda-OI" class="nr">
+                                                </label>
+                                                <label>
+                                                    <input type="text" class="medidor" id="medidorDI-OI" value="0" name="" disabled>
+                                                </label>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="input-control cbo-content lfps3">
-                                        <div class="cbo">
-                                            <label>
-                                                K2(D)
-                                                <input type="text" name="" id="k2A-OI">
-                                            </label>
-                                            <label>
-                                                EjeK2
-                                                <input type="text" name="" id="ejek2A-OI">
-                                            </label>
-                                            <label>
-                                                Cilindro topografico
-                                                <input type="text" name="" id="citoA-OI">
-                                            </label>
+
+                                              
+                                        <h5 class="quera" style="display: none;" >Paquimetría</h5>
+                                        <div class="input-control cbo-content lfps3">
+                                            <div class="cbo">
+                                                <label>
+                                                    Punto más fino
+                                                    <input type="text" name="" class="fino" id="pFino-OI">
+                                                </label>
+                                                <label>
+                                                    Apex
+                                                    <input type="text" name="" id="apex-OI">
+                                                </label>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="input-control cbo-content lfps3">
-                                        <h5>Queratometría posterior</h5>
-                                        <div class="cbo">
-                                            <label>
-                                                K1(D)
-                                                <input type="text" name="" id="k1P-OI">
-                                            </label>
-                                            <label>
-                                                EjeK1
-                                                <input type="text" name="" id="ejek1P-OI">
-                                            </label>
+                                        <div class="input-control cbo-content lfps3">
+                                            <div class="cbo" tabindex="1" onkeyup="eventkeytwo(this,17)">
+                                                <label>
+                                                    Elevación BFS anterior
+                                                    <input type="text" name="" id="bfsA-OI" class="nr">
+                                                </label>
+                                                <label>
+                                                    <input type="text" class="medidor" value="Normal" name="" disabled>
+                                                </label>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="input-control cbo-content lfps3">
-                                        <div class="cbo">
-                                            <label>
-                                                K2(D)
-                                                <input type="text" name="" id="k2P-OI">
-                                            </label>
-                                            <label>
-                                                EjeK2
-                                                <input type="text" name="" id="ejek2P-OI">
-                                            </label>
-                                            <label>
-                                                Cilindro topografico
-                                                <input type="text" name="" id="citoP-OI">
-                                            </label>
+                                        <div class="input-control cbo-content lfps3">
+                                            <div class="cbo" tabindex="1" onkeyup="eventkeytwo(this,22)">
+                                                <label>
+                                                    Elevación BFS  posterior
+                                                    <input type="text" name="" id="bfsP-OI" class="nr">
+                                                </label>
+                                                <label>
+                                                    <input type="text" class="medidor" value="Normal" name="" disabled>
+                                                </label>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="input-control cbo-content lfps3">
-                                        <div class="cbo">
-                                            <label>
-                                                KMax
-                                                <input type="text" name="" id="kmax-OI" onkeyup="quera(this,0)">
-                                            </label>
-                                            <label>
-                                                IT
-                                                <input type="text" name="" id="it-OI">
-                                            </label>
-                                            <label>
-                                                Q
-                                                <input type="text" name="" id="q-OI">
-                                            </label>
+                                                 
+                          </div>
+                                        <!-- Galillei -->
+
+                            
+                                <div id=p3I-GALILLEI style="display: none;">
+                                           <div class="input-control cbo-content lfps3" style="display: flex;">
+                                                 <h5>Queratometría Anterior</h5>
+                                              <div class="cbo">   
+                                               <label>     Sim K       <input type="text" name=""> </label>  
+                                                <label>     Flat SimK       <input type="text" name=""> </label>
+                                            </div>
+                                         </div>
+                                         <div class="input-control cbo-content lfps3" style="display: flex;">
+                                             <div class="cbo">   
+                                              <label>     Flat SimK       <input type="text" name=""> </label>   
+                                              <label>     Eje Flat SimK       <input type="text" name=""> </label>    
+                                              <label>     Steep SimK      <input type="text" name=""> </label>
+                                            </div>
                                         </div>
+                                    <div class="input-control cbo-content lfps3" style="display: flex;">
+                                       <div class="cbo">  
+                                       <label>     Eje Steep SimK      <input type="text" name=""> </label>   
+                                      <label>     Astigmatismo        <input type="text" name=""> </label>
+                                       </div>
                                     </div>
-                                    <div class="input-control cbo-content lfps3">
-                                        <div class="cbo" tabindex="1" onkeyup="eventkey(this)">
-                                            <label>
-                                                Kmax superior
-                                                <input type="text" name="" id="kmaxSuperior-OI" class="nr">
-                                            </label>
-                                            <label>
-                                                Kmax inferior
-                                                <input type="text" name="" id="kmaxInferior-OI" class="nr">
-                                            </label>
-                                            <label>
-                                                <input type="text" class="medidor" name="" id="medidorSI-OI" disabled value="0">
-                                            </label>
-                                        </div>
+
+                                    <div class="input-control cbo-content lfps3" style="display: flex;">
+                                       <h5>Queratometría posterior</h5>
+                                       <div class="cbo">    <label>     Sim K       <input type="text" name=""> </label>    
+                                        <label>     Flat SimK       <input type="text" name=""> </label>   
+                                         </div>
                                     </div>
-                                    <div class="input-control cbo-content lfps3">
-                                        <div class="cbo" tabindex="1" onkeyup="eventkey(this)">
-                                            <label>
-                                                Kmax derecha
-                                                <input type="text" name="" id="kmaxDerecha-OI" class="nr">
-                                            </label>
-                                            <label>
-                                                Kmax izquierda
-                                                <input type="text" name="" id="kmaxIzquierda-OI" class="nr">
-                                            </label>
-                                            <label>
-                                                <input type="text" class="medidor" id="medidorDI-OI" value="0" name="" disabled>
-                                            </label>
-                                        </div>
+
+                                    <div class="input-control cbo-content lfps3" style="display: flex;">
+                                       <div class="cbo">   
+                                        <label>     Flat SimK       <input type="text" name=""> </label>  
+                                         <label>     Eje Flat SimK       <input type="text" name=""> </label>  
+                                           <label>     Steep SimK      <input type="text" name=""> </label>
+                                       </div>
                                     </div>
-                                    <h5 class="quera"  >Paquimetría</h5>
-                                    <div class="input-control cbo-content lfps3">
-                                        <div class="cbo">
-                                            <label>
-                                                Punto más fino
-                                                <input type="text" name="" class="fino" id="pFino-OI">
-                                            </label>
-                                            <label>
-                                                Apex
-                                                <input type="text" name="" id="apex-OI">
-                                            </label>
-                                        </div>
+
+                                    <div class="input-control cbo-content lfps3" style="display: flex;">
+                                     <div class="cbo">    <label>     Eje Steep SimK      <input type="text" name=""> </label>   
+                                     <label>     Astigmatismo        <input type="text" name=""> </label>
+                                     </div>
                                     </div>
-                                    <div class="input-control cbo-content lfps3">
-                                        <div class="cbo" tabindex="1" onkeyup="eventkeytwo(this,17)">
-                                            <label>
-                                                Elevación BFS anterior
-                                                <input type="text" name="" id="bfsA-OI" class="nr">
-                                            </label>
-                                            <label>
-                                                <input type="text" class="medidor" value="Normal" name="" disabled>
-                                            </label>
-                                        </div>
+
+                                    <h5 class="quera" style="display: flex;">Paquimetría</h5>
+                                     <div class="cbo"><label> Punto más fino  <input type="text" name=""></label>
+                                      <label>  Central <input type="text" name=""></label>
                                     </div>
-                                    <div class="input-control cbo-content">
-                                        <div class="cbo" tabindex="1" onkeyup="eventkeytwo(this,22)">
-                                            <label>
-                                                Elevación BFS  posterior
-                                                <input type="text" name="" id="bfsP-OI" class="nr">
-                                            </label>
-                                            <label>
-                                                <input type="text" class="medidor" value="Normal" name="" disabled>
-                                            </label>
-                                        </div>
+
+                            <div class="input-control cbo-content lfps3" style="display: flex;">
+                             <div class="cbo" tabindex="1" onkeyup="eventkeytwo(this,17)">
+                                <label> Elevación anterior 3 mm centrales   <input type="text" name="" class="nr"></label
+                                    ><label>   <input type="text" class="medidor" value="Normal" name="" disabled=""></label>
+                                </div>
+                                </div>
+
+                                        <div class="input-control cbo-content lfps3" style="display: flex;">
+                                     <div class="cbo" tabindex="1" onkeyup="eventkeytwo(this,22)">
+                                        <label> Elevación posterior 3 mm centrales  <input type="text" name="" class="nr"></label>
+                                        <label>   <input type="text" class="medidor" value="Normal" name="" disabled=""></label></div>
                                     </div>
+
+                            </div>
+
+
+                             
+
+
+
+
+<!-- Sirius -->
+<div id=p3I-SIRIUS style="display: none;">
+    <div class="input-control cbo-content lfps3" style="display: flex;">
+        <h5>Queratometría Anterior</h5>
+        <div class="cbo">
+            <label> K1(D)
+                <input type="text" name=""> </label>
+            <label> EjeK1
+                <input type="text" name=""> </label>
+        </div>
+    </div>
+    <div class="input-control cbo-content lfps3" style="display: flex;">
+        <div class="cbo">
+            <label> K2(D)
+                <input type="text" name=""> </label>
+            <label> EjeK2
+                <input type="text" name=""> </label>
+        </div>
+    </div>
+    <div class="input-control cbo-content lfps3" style="display: flex;">
+        <div class="cbo">
+            <label> Atigmatismo
+                <input type="text" name=""> </label>
+            <label> Eje Astigmatismo
+                <input type="text" name=""> </label>
+        </div>
+    </div>
+    <div class="input-control cbo-content lfps3" style="display: flex;">
+        <h5>Queratometría posterior</h5>
+        <div class="cbo">
+            <label> Sim K
+                <input type="text" name=""> </label>
+            <label> Flat SimK
+                <input type="text" name=""> </label>
+        </div>
+    </div>
+    <div class="input-control cbo-content lfps3" style="display: flex;">
+        <div class="cbo">
+            <label> Eje Sim K
+                <input type="text" name=""> </label>
+            <label> Steep Sim K
+                <input type="text" name=""> </label>
+        </div>
+    </div>
+    <div class="input-control cbo-content lfps3" style="display: flex;">
+        <div class="cbo">
+            <label> Eje Flat SimK
+                <input type="text" name="" onkeyup="quera(this,0)"> </label>
+            <label> Astigmatismo
+                <input type="text" name=""> </label>
+            <label> Eje Steep Sim K
+                <input type="text" name=""> </label>
+        </div>
+    </div>
+    <h5 class="quera" style="display: flex;">Paquimetría</h5>
+
+    <div class="input-control cbo-content lfps3" style="display: flex;">
+        <div class="cbo">
+            <label> Punto más delgado
+                <input type="text" name="">
+            </label>
+            <label> Eje
+                <input type="text" name="">
+            </label>
+        </div>
+    </div>
+    <div class="input-control cbo-content lfps3" style="display: flex;">
+        <div class="cbo">
+            <label> Grosor
+                <input type="text" name="">
+            </label>
+            <label> Ángulo Kappa
+                <input type="text" name="">
+            </label>
+        </div>
+    </div>
+        </div>
+ 
+
+
+
+
+
+
                                     <h5 class="paqui">Signos</h5>
                                     <div class="input-control sig">
                                         <label>Anillo Fleischer</label>
                                         <div class="radio-group" id="SignosPaso3">
                                             <label>
-                                                <input type="radio" name="SignosPaso3" class="hidden anilloFlei-OI" data-v="si" onclick="checkradio('SignosPaso3')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">
+                                                <input type="radio" name="SignosPaso3"  class="hidden anilloFlei-OI" data-v="si" onclick="checkradio('SignosPaso3')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">
                                                 SI
                                             </label>
-                                            <label><input type="radio" name="SignosPaso3" class="hidden anilloFlei-OI" data-v="no" onclick="checkradio('SignosPaso3')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">NO</label>
+                                            <label><input type="radio" name="SignosPaso3" checked class="hidden anilloFlei-OI" data-v="no" onclick="checkradio('SignosPaso3')"><img src="~/imagenes/CHECK-BLANCO-CIRCULO-ON.png">NO</label>
                                         </div>
                                     </div>
                                     <div class="input-control sig">
                                         <label>Estrias de Vogt</label>
                                         <div class="radio-group" id="EstriasPaso3">
                                             <label>
-                                                <input type="radio" name="EstriasPaso3" class="hidden estriasvogt-OI" data-v="si" onclick="checkradio('EstriasPaso3')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">
+                                                <input type="radio" name="EstriasPaso3"  class="hidden estriasvogt-OI" data-v="si" onclick="checkradio('EstriasPaso3')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">
                                                 SI
                                             </label>
-                                            <label><input type="radio" name="EstriasPaso3" data-v="no" class="hidden estriasvogt-OI" onclick="checkradio('EstriasPaso3')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">NO</label>
+                                            <label><input type="radio" name="EstriasPaso3" checked data-v="no" class="hidden estriasvogt-OI" onclick="checkradio('EstriasPaso3')"><img src="~/imagenes/CHECK-BLANCO-CIRCULO-ON.png">NO</label>
                                         </div>
                                     </div>
                                     <div class="input-control sig">
                                         <label>Nervios</label>
                                         <div class="radio-group" id="NerviosPaso3">
                                             <label>
-                                                <input type="radio" name="NerviosPaso3" data-v="si" class="hidden nervios-OI" onclick="checkradio('NerviosPaso3')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">
+                                                <input type="radio" name="NerviosPaso3" checked data-v="si" class="hidden nervios-OI" onclick="checkradio('NerviosPaso3')"><img src="~/imagenes/CHECK-BLANCO-CIRCULO-ON.png">
                                                 SI
                                             </label>
                                             <label><input type="radio" name="NerviosPaso3" data-v="si" class="hidden nervios-OI" onclick="checkradio('NerviosPaso3')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">NO</label>
@@ -662,7 +823,7 @@
                                     <div class="input-control sig">
                                         <label>Leucoma</label>
                                         <div class="radio-group" id="LeucomaPaso3">
-                                            <label><input type="radio" name="LeucomaPaso3" data-v="no" class="hidden leucoma-OI" onclick="checkradio('LeucomaPaso3')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">NO</label>
+                                            <label><input type="radio" name="LeucomaPaso3" data-v="no" checked class="hidden leucoma-OI" onclick="checkradio('LeucomaPaso3')"><img src="~/imagenes/CHECK-BLANCO-CIRCULO-ON.png">NO</label>
                                             <label><input type="radio" name="LeucomaPaso3" data-v="perif" class="hidden leucoma-OI" onclick="checkradio('LeucomaPaso3')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">PERIF</label>
                                             <label><input type="radio" name="LeucomaPaso3" class="hidden leucoma-OI" data-v="central" onclick="checkradio('LeucomaPaso3')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">CENTRAL</label>
                                         </div>
@@ -670,14 +831,14 @@
                                     <div class="input-control sig">
                                         <label>Hidrops</label>
                                         <div class="radio-group" id="HidropsPaso3">
-                                            <label><input type="radio" data-v="si" name="HidropsPaso3" class="hidden hidrops-OI" onclick="checkradio('HidropsPaso3')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">SI</label>
+                                            <label><input type="radio" data-v="si" name="HidropsPaso3" checked class="hidden hidrops-OI" onclick="checkradio('HidropsPaso3')"><img src="~/imagenes/CHECK-BLANCO-CIRCULO-ON.png">SI</label>
                                             <label><input type="radio" data-v="no" name="HidropsPaso3" class="hidden hidrops-OI" onclick="checkradio('HidropsPaso3')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">NO</label>
                                         </div>
                                     </div>
                                     <div class="input-control sig">
                                         <label>Izquierdo Manis</label>
                                         <div class="radio-group" id="ManisPaso3">
-                                            <label><input type="radio" name="ManisPaso3" data-v="si" class="hidden manis-OI" onclick="checkradio('ManisPaso3')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">SI</label>
+                                            <label><input type="radio" name="ManisPaso3" data-v="si" checked class="hidden manis-OI" onclick="checkradio('ManisPaso3')"><img src="~/imagenes/CHECK-BLANCO-CIRCULO-ON.png">SI</label>
                                             <label><input type="radio" name="ManisPaso3" data-v="no" class="hidden manis-OI" onclick="checkradio('ManisPaso3')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">NO</label>
                                         </div>
                                     </div>
@@ -723,14 +884,14 @@
 
 
 
-                                 <div class="item-form rg" id="paso3rg">
+                                    <div class="item-form rg" id="paso3rg">
                                         <h4 class="rigth" onclick="extend('paso3rg')">OJO DERECHO</h4>
                                         <h5>Estudios</h5>
                                         <div class="input-control">
                                             <div class="inputs" id="EstudioPaso3RG">
-                                                <label ><input type="radio" name="EstudioPaso3RG" data-v="P" class="hidden estudios-OD" onclick="StudyEventOne('rigth','EstudioPaso3RG','rgps3','Pentacam','paso3rg')" select ><img src="imagenes/CHECK-BLANCO-CIRCULO-ON.png">Pentacam</label>
-                                                <label ><input type="radio" name="EstudioPaso3RG" class="hidden estudios-OD" data-v="G" onclick="StudyEventOne('rigth','EstudioPaso3RG','rgps3','Galile','paso3rg')"><img src="imagenes/CHECK-CIRCULO-OFF.png">Galilei</label>
-                                                <label ><input type="radio" data-v="S" name="EstudioPaso3RG" class="hidden  estudios-OD" onclick="StudyEventOne('rigth','EstudioPaso3RG','rgps3','Sirius','paso3rg')"><img src="imagenes/CHECK-CIRCULO-OFF.png">Sirius</label>
+                                                <label ><input type="radio" name="EstudioPaso3RG" class="hidden estudios-OD" data-v="P" checked onclick="StudyEventOne('rigth','EstudioPaso3RG','rgps3','Pentacam','paso3rg')" select ><img src="/imagenes/CHECK-BLANCO-CIRCULO-ON.png">Pentacam</label>
+                                                <label ><input type="radio" data-v="G" name="EstudioPaso3RG" class="hidden estudios-OD" onclick="StudyEventOne('rigth','EstudioPaso3RG','rgps3','Galile','paso3rg')"><img src="/imagenes/CHECK-CIRCULO-OFF.png">Galilei</label>
+                                                <label ><input type="radio" data-v="S" name="EstudioPaso3RG" class="hidden estudios-OD" onclick="StudyEventOne('rigth','EstudioPaso3RG','rgps3','Sirius','paso3rg')"><img src="/imagenes/CHECK-CIRCULO-OFF.png">Sirius</label>
                                             </div>
                                         </div>
                                         <div class="line"></div>
@@ -793,7 +954,7 @@
                                             <div class="cbo">
                                                 <label>
                                                     Esf
-                                                    <select id="esf-OD">
+                                                    <select  id="esf-OD">
                                                         <option>0.00</option>
                                                         <option>0.25</option>
                                                         <option>0.50</option>
@@ -887,16 +1048,18 @@
                                         </div>
                                         <div class="line"></div>
                                         <h5>Queratometría</h5>
+
+                                    <div id=p3D-PENTACAM>
                                         <div class="input-control cbo-content rgps3">
                                             <h5>Queratometría anterior</h5>
                                             <div class="cbo">
                                                 <label>
                                                     K1(D)
-                                                    <input type="text" id="k1A-OD" name="">
+                                                    <input type="text" name="" id="k1A-OD">
                                                 </label>
                                                 <label>
                                                     EjeK1
-                                                    <input type="text" id="ejek1A-OD" name="">
+                                                    <input type="text" name="" id="ejek1A-OD">
                                                 </label>
                                             </div>
                                         </div>
@@ -904,11 +1067,11 @@
                                             <div class="cbo">
                                                 <label>
                                                     K2(D)
-                                                    <input type="text" id="k2A-OD" name="">
+                                                    <input type="text" name="" id="k2A-OD">
                                                 </label>
                                                 <label>
                                                     EjeK2
-                                                    <input type="text" id="ejek2A-OD" name="">
+                                                    <input type="text" name="" id="ejek2A-OD">
                                                 </label>
                                                 <label>
                                                     Cilindro topografico
@@ -925,7 +1088,7 @@
                                                     </label>
                                                     <label>
                                                         EjeK1
-                                                        <input type="text" name=" " id="ejek1P-OD">
+                                                        <input type="text" name="" id="ejek1P-OD">
                                                     </label>
                                                 </div>
                                         </div>
@@ -933,11 +1096,11 @@
                                                 <div class="cbo">
                                                     <label>
                                                         K2(D)
-                                                        <input type="text" id="k2P-OD" name="">
+                                                        <input type="text" name="" id="k2P-OD">
                                                     </label>
                                                     <label>
                                                         EjeK2
-                                                        <input type="text" id="ejek2P-OD" name="">
+                                                        <input type="text" name="" id="ejek2P-OD">
                                                     </label>
                                                     <label>
                                                         Cilindro topografico
@@ -949,15 +1112,15 @@
                                             <div class="cbo">
                                                 <label>
                                                     KMax
-                                                    <input type="text" id="kmax-OD" name="" onkeyup="quera(this,1)">
+                                                    <input type="text" name="" id="kmax-OD" onkeyup="quera(this,1)">
                                                 </label>
                                                 <label>
                                                     IT
-                                                    <input type="text" name="" id="it-OD">
+                                                    <input type="text"  id="it-OD" name="">
                                                 </label>
                                                 <label>
                                                     Q
-                                                    <input type="text"  id="q-OD" name="">
+                                                    <input type="text" id="q-OD" name="">
                                                 </label>
                                             </div>
                                         </div>
@@ -965,14 +1128,14 @@
                                             <div class="cbo" tabindex="1" onkeyup="eventkey(this)">
                                                 <label>
                                                     Kmax superior
-                                                    <input type="text" id="kmaxSuperior-OD" name="" class="nr">
+                                                    <input type="text" name="" id="kmaxSuperior-OD" class="nr">
                                                 </label>
                                                 <label>
                                                     Kmax inferior
-                                                    <input type="text" id="kmaxInferior-OD" name="" class="nr">
+                                                    <input type="text" name="" class="nr" id="kmaxInferior-OD">
                                                 </label>
                                                 <label>
-                                                    <input type="text" class="medidor" name="" d="medidorSI-OD" disabled value="0">
+                                                    <input type="text" class="medidor" id="medidorSI-OD" name="" disabled value="0">
                                                 </label>
                                             </div>
                                         </div>
@@ -980,16 +1143,16 @@
                                             <div class="cbo" tabindex="1" onkeyup="eventkey(this)">
                                                 <label>
                                                     Kmax derecha
-                                                    <input type="text" name="" class="nr" id="kmaxDerecha-OD">
+                                                    <input type="text" name="" id="kmaxDerecha-OD" class="nr">
                                                 </label>
                                                 <label>
                                                     Kmax izquierda
-                                                    <input type="text" id="kmaxIzquierda-OD" name="" class="nr">
+                                                    <input type="text" name="" id="kmaxIzquierda-OD" class="nr">
                                                 </label>
                                                 <label>
-                                                    <input type="text" class="medidor" value="0"  id="medidorDI-OD" name="" disabled>
+                                                    <input type="text" id="medidorDI-OD"  class="medidor" value="0" name="" disabled>
                                                 </label>
-                                          
+                                            </div>
                                         </div>
                                         <h5 class="quera">Paquimetría</h5>
                                         <div class="input-control cbo-content rgps3">
@@ -999,7 +1162,7 @@
                                                     <input type="text" id="pFino-OD" name="" class="fino">
                                                 </label>
                                                 <label>
-                                                  
+                                                    Apex
                                                     <input type="text" id="apex-OD" name="">
                                                 </label>
                                             </div>
@@ -1008,7 +1171,7 @@
                                             <div class="cbo" tabindex="1" onkeyup="eventkeytwo(this,17)">
                                                 <label>
                                                     Elevación BFS anterior
-                                                    <input type="text" id="bfsA-OD" name="" class="nr">
+                                                    <input type="text" name=""  id="bfsA-OD" class="nr">
                                                 </label>
                                                 <label>
                                                     <input type="text" class="medidor" value="Normal" name="" disabled>
@@ -1019,58 +1182,213 @@
                                             <div class="cbo" tabindex="1" onkeyup="eventkeytwo(this,22)">
                                                 <label>
                                                     Elevación BFS  posterior
-                                                    <input type="text" id="bfsP-OD" name="" class="nr">
+                                                    <input type="text" name="" id="bfsP-OD"  class="nr">
                                                 </label>
                                                 <label>
                                                     <input type="text" class="medidor" value="Normal" name="" disabled>
                                                 </label>
                                             </div>
                                         </div>
+                                    </div>
+
+
+                                            <!-- Galillei -->
+
+                            
+                                <div id=p3D-GALILLEI style="display: none;">
+                                           <div class="input-control cbo-content lfps3" style="display: flex;">
+                                                 <h5>Queratometría Anterior</h5>
+                                              <div class="cbo">   
+                                               <label>     Sim K       <input type="text" name=""> </label>  
+                                                <label>     Flat SimK       <input type="text" name=""> </label>
+                                            </div>
+                                         </div>
+                                         <div class="input-control cbo-content lfps3" style="display: flex;">
+                                             <div class="cbo">   
+                                              <label>     Flat SimK       <input type="text" name=""> </label>   
+                                              <label>     Eje Flat SimK       <input type="text" name=""> </label>    
+                                              <label>     Steep SimK      <input type="text" name=""> </label>
+                                            </div>
+                                        </div>
+                                    <div class="input-control cbo-content lfps3" style="display: flex;">
+                                       <div class="cbo">  
+                                       <label>     Eje Steep SimK      <input type="text" name=""> </label>   
+                                      <label>     Astigmatismo        <input type="text" name=""> </label>
+                                       </div>
+                                    </div>
+
+                                    <div class="input-control cbo-content lfps3" style="display: flex;">
+                                       <h5>Queratometría posterior</h5>
+                                       <div class="cbo">    <label>     Sim K       <input type="text" name=""> </label>    
+                                        <label>     Flat SimK       <input type="text" name=""> </label>   
+                                         </div>
+                                    </div>
+
+                                    <div class="input-control cbo-content lfps3" style="display: flex;">
+                                       <div class="cbo">   
+                                        <label>     Flat SimK       <input type="text" name=""> </label>  
+                                         <label>     Eje Flat SimK       <input type="text" name=""> </label>  
+                                           <label>     Steep SimK      <input type="text" name=""> </label>
+                                       </div>
+                                    </div>
+
+                                    <div class="input-control cbo-content lfps3" style="display: flex;">
+                                     <div class="cbo">    <label>     Eje Steep SimK      <input type="text" name=""> </label>   
+                                     <label>     Astigmatismo        <input type="text" name=""> </label>
+                                     </div>
+                                    </div>
+
+                                    <h5 class="quera" style="display: flex;">Paquimetría</h5>
+                                     <div class="cbo"><label> Punto más fino  <input type="text" name=""></label>
+                                      <label>  Central <input type="text" name=""></label>
+                                    </div>
+
+                            <div class="input-control cbo-content lfps3" style="display: flex;">
+                             <div class="cbo" tabindex="1" onkeyup="eventkeytwo(this,17)">
+                                <label> Elevación anterior 3 mm centrales   <input type="text" name="" class="nr"></label
+                                    ><label>   <input type="text" class="medidor" value="Normal" name="" disabled=""></label>
+                                </div>
+                                </div>
+
+                                        <div class="input-control cbo-content lfps3" style="display: flex;">
+                                     <div class="cbo" tabindex="1" onkeyup="eventkeytwo(this,22)">
+                                        <label> Elevación posterior 3 mm centrales  <input type="text" name="" class="nr"></label>
+                                        <label>   <input type="text" class="medidor" value="Normal" name="" disabled=""></label></div>
+                                    </div>
+
+                            </div>
+
+
+                             
+
+
+
+
+<!-- Sirius -->
+<div id=p3D-SIRIUS style="display: none;">
+    <div class="input-control cbo-content lfps3" style="display: flex;">
+        <h5>Queratometría Anterior</h5>
+        <div class="cbo">
+            <label> K1(D)
+                <input type="text" name=""> </label>
+            <label> EjeK1
+                <input type="text" name=""> </label>
+        </div>
+    </div>
+    <div class="input-control cbo-content lfps3" style="display: flex;">
+        <div class="cbo">
+            <label> K2(D)
+                <input type="text" name=""> </label>
+            <label> EjeK2
+                <input type="text" name=""> </label>
+        </div>
+    </div>
+    <div class="input-control cbo-content lfps3" style="display: flex;">
+        <div class="cbo">
+            <label> Atigmatismo
+                <input type="text" name=""> </label>
+            <label> Eje Astigmatismo
+                <input type="text" name=""> </label>
+        </div>
+    </div>
+    <div class="input-control cbo-content lfps3" style="display: flex;">
+        <h5>Queratometría posterior</h5>
+        <div class="cbo">
+            <label> Sim K
+                <input type="text" name=""> </label>
+            <label> Flat SimK
+                <input type="text" name=""> </label>
+        </div>
+    </div>
+    <div class="input-control cbo-content lfps3" style="display: flex;">
+        <div class="cbo">
+            <label> Eje Sim K
+                <input type="text" name=""> </label>
+            <label> Steep Sim K
+                <input type="text" name=""> </label>
+        </div>
+    </div>
+    <div class="input-control cbo-content lfps3" style="display: flex;">
+        <div class="cbo">
+            <label> Eje Flat SimK
+                <input type="text" name="" onkeyup="quera(this,0)"> </label>
+            <label> Astigmatismo
+                <input type="text" name=""> </label>
+            <label> Eje Steep Sim K
+                <input type="text" name=""> </label>
+        </div>
+    </div>
+    <h5 class="quera" style="display: flex;">Paquimetría</h5>
+
+    <div class="input-control cbo-content lfps3" style="display: flex;">
+        <div class="cbo">
+            <label> Punto más delgado
+                <input type="text" name="">
+            </label>
+            <label> Eje
+                <input type="text" name="">
+            </label>
+        </div>
+    </div>
+    <div class="input-control cbo-content lfps3" style="display: flex;">
+        <div class="cbo">
+            <label> Grosor
+                <input type="text" name="">
+            </label>
+            <label> Ángulo Kappa
+                <input type="text" name="">
+            </label>
+        </div>
+    </div>
+        </div>
+
+
+
                                         <h5 class="paqui">Signos</h5>
                                         <div class="input-control sig">
                                             <label>Anillo Fleischer</label>
                                             <div class="radio-group" id="SignosPaso3RG">
-                                                <label><input type="radio" name="SignosPaso3RG" class="hidden anilloFlei-OD" data-v="si" onclick="checkradio('SignosPaso3RG')" ><img src="imagenes/CHECK-CIRCULO-OFF.png">
+                                                <label><input type="radio" data-v="si" name="SignosPaso3RG" class="hidden anilloFlei-OD" onclick="checkradio('SignosPaso3RG')" ><img src="/imagenes/CHECK-CIRCULO-OFF.png">
                                                 SI</label>
-                                                <label><input type="radio" name="SignosPaso3RG" class="hidden anilloFlei-OD" data-v="no" onclick="checkradio('SignosPaso3RG')" ><img src="imagenes/CHECK-CIRCULO-OFF.png">NO</label>
+                                                <label><input type="radio" data-v="no" name="SignosPaso3RG" class="hidden" onclick="checkradio('SignosPaso3RG')" ><img src="/imagenes/CHECK-CIRCULO-OFF.png">NO</label>
                                             </div>
                                         </div>
                                         <div class="input-control sig">
                                             <label>Estrias de Vogt</label>
                                             <div class="radio-group" id="EstriasPaso3RG">
-                                                <label><input type="radio" name="EstriasPaso3RG" class="hidden estriasvogt-OD" data-v="si" onclick="checkradio('EstriasPaso3RG')" ><img src="imagenes/CHECK-CIRCULO-OFF.png">
+                                                <label><input type="radio" data-v="si" name="EstriasPaso3RG" class="hidden estriasvogt-OD" onclick="checkradio('EstriasPaso3RG')" ><img src="/imagenes/CHECK-CIRCULO-OFF.png">
                                                 SI</label>
-                                                <label><input type="radio" data-v="no" name="EstriasPaso3RG" class="hidden estriasvogt-OD" onclick="checkradio('EstriasPaso3RG')" ><img src="imagenes/CHECK-CIRCULO-OFF.png">NO</label>
+                                                <label><input type="radio" data-v="no" name="EstriasPaso3RG" class="hidden estriasvogt-OD" onclick="checkradio('EstriasPaso3RG')" ><img src="/imagenes/CHECK-CIRCULO-OFF.png">NO</label>
                                             </div>
                                         </div>
                                         <div class="input-control sig">
                                             <label>Nervios</label>
                                             <div class="radio-group" id="NerviosPaso3RG">
-                                                <label><input type="radio" data-v="si" name="NerviosPaso3RG" class="hidden  nervios-OD" onclick="checkradio('NerviosPaso3RG')" ><img src="imagenes/CHECK-CIRCULO-OFF.png">
+                                                <label><input type="radio" data-v="si" name="NerviosPaso3RG" class="hidden nervios-OD" onclick="checkradio('NerviosPaso3RG')" ><img src="/imagenes/CHECK-CIRCULO-OFF.png">
                                                 SI</label>
-                                                <label><input type="radio" data-v="no" name="NerviosPaso3RG" class="hidden nervios-OD" onclick="checkradio('NerviosPaso3RG')" ><img src="imagenes/CHECK-CIRCULO-OFF.png">NO</label>
+                                                <label><input type="radio" data-v="no"  name="NerviosPaso3RG" class="hidden nervios-OD" onclick="checkradio('NerviosPaso3RG')" ><img src="/imagenes/CHECK-CIRCULO-OFF.png">NO</label>
                                             </div>
                                         </div>
                                         <div class="input-control sig">
                                             <label>Leucoma</label>
                                             <div class="radio-group" id="LeucomaPaso3RG">
-                                                <label><input type="radio" name="LeucomaPaso3RG" data-v="no" class="hidden leucoma-OD" onclick="checkradio('LeucomaPaso3RG')" ><img src="imagenes/CHECK-CIRCULO-OFF.png">NO</label>
-                                                <label><input data-v="perif" type="radio" name="LeucomaPaso3RG" class="hidden leucoma-OD" onclick="checkradio('LeucomaPaso3RG')" ><img src="imagenes/CHECK-CIRCULO-OFF.png">PERIF</label>
-                                                <label><input type="radio" name="LeucomaPaso3RG" class="hidden leucoma-OD" data-v="central" onclick="checkradio('LeucomaPaso3RG')" ><img src="imagenes/CHECK-CIRCULO-OFF.png">CENTRAL</label>
+                                                <label><input type="radio" data-v="no" name="LeucomaPaso3RG" class="hidden" onclick="checkradio('LeucomaPaso3RG')" ><img src="/imagenes/CHECK-CIRCULO-OFF.png">NO</label>
+                                                <label><input data-v="perif" type="radio" name="LeucomaPaso3RG" class="hidden leucoma-OD" onclick="checkradio('LeucomaPaso3RG')" ><img src="/imagenes/CHECK-CIRCULO-OFF.png">PERIF</label>
+                                                <label><input type="radio" data-v="central" name="LeucomaPaso3RG" class="hidden leucoma-OD" onclick="checkradio('LeucomaPaso3RG')" ><img src="/imagenes/CHECK-CIRCULO-OFF.png">CENTRAL</label>
                                             </div>
                                         </div>
                                         <div class="input-control sig">
                                             <label>Hidrops</label>
                                             <div class="radio-group" id="HidropsPaso3RG">
-                                                <label><input type="radio" name="HidropsPaso3RG" class="hidden hidrops-OD" data-v="si" onclick="checkradio('HidropsPaso3RG')" ><img src="imagenes/CHECK-CIRCULO-OFF.png">SI</label>
-                                                <label><input type="radio" name="HidropsPaso3RG" data-v="no" class="hidden hidrops-OD" onclick="checkradio('HidropsPaso3RG')" ><img src="imagenes/CHECK-CIRCULO-OFF.png">NO</label>
+                                                <label><input type="radio" data-v="si" name="HidropsPaso3RG" class="hidden hidrops-OD" onclick="checkradio('HidropsPaso3RG')" ><img src="/imagenes/CHECK-CIRCULO-OFF.png">SI</label>
+                                                <label><input type="radio" data-v="no" name="HidropsPaso3RG" class="hidden hidrops-OD" onclick="checkradio('HidropsPaso3RG')" ><img src="/imagenes/CHECK-CIRCULO-OFF.png">NO</label>
                                             </div>
                                         </div>
                                         <div class="input-control sig">
                                             <label>Izquierdo Manis</label>
                                             <div class="radio-group" id="ManisPaso3RG">
-                                                <label><input type="radio" name="ManisPaso3RG" data-v="si" class="hidden manis-OD" onclick="checkradio('ManisPaso3RG')" ><img src="imagenes/CHECK-CIRCULO-OFF.png">SI</label>
-                                                <label><input type="radio" name="ManisPaso3RG" data-v="no" class="hidden manis-OD" onclick="checkradio('ManisPaso3RG')" ><img src="imagenes/CHECK-CIRCULO-OFF.png">NO</label>
+                                                <label><input type="radio" data-v="si"  name="ManisPaso3RG" class="hidden  manis-OD" onclick="checkradio('ManisPaso3RG')" ><img src="/imagenes/CHECK-CIRCULO-OFF.png">SI</label>
+                                                <label><input type="radio" data-v="no" name="ManisPaso3RG" class="hidden  manis-OD" onclick="checkradio('ManisPaso3RG')" ><img src="/imagenes/CHECK-CIRCULO-OFF.png">NO</label>
                                             </div>
                                         </div>
                                         <div class="line">
@@ -1094,7 +1412,7 @@
                                                 <div class="combo">
                                                     <h5>Tipo de queratocono</h5>
                                                     <select id="select2" class="tipcono-OD">
-                                                        <option value="1000">Round</option>
+                                                    <option value="1000">Round</option>
                                                     <option value="1001">Oval</option>
                                                     <option value="1002">Superior steep</option>
                                                     <option value="1003">Inferior steep</option>
@@ -1111,10 +1429,8 @@
                                         </div>
                                         <div class="line">
                                         </div>
-                                    </div></div>
+                                    </div>
 
-
-                            
                             
 
 
@@ -2039,626 +2355,623 @@
                                 </div>
                             </div>
                             <div class="group-form">
-                                <div class="item-form lf" id="paso6lf">
-                                    <h4 class="left" onclick="extend2('paso6lf')">Ojo Izquierdo</h4>
-                                    <h5>Estudios</h5>
-                                    <div class="input-control rds" id="EstudioPaso6">
-                                        <label><input type="radio" data-v="P" name="EstudioPaso6" class="hidden estudios-IEVO" onclick="checkradio('EstudioPaso6')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">Pentacam</label>
-                                        <label><input type="radio" data-v="G" name="EstudioPaso6" class="hidden estudios-IEVO" onclick="checkradio('EstudioPaso6')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">Galilei</label>
-                                        <label><input type="radio" data-v="S" name="EstudioPaso6" class="hidden estudios-IEVO" onclick="checkradio('EstudioPaso6')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">Sirius</label>
+                           <div class="item-form lf" id="paso6lf">
+                                                <h4 class="left" onclick="extend2('paso6lf')">Ojo Izquierdo</h4>
+                                                <h5>Estudios</h5>
+                                                <div class="input-control rds" id="EstudioPaso6">
+                                                    <label ><input type="radio" name="EstudioPaso6" class="hidden" onclick="StudyEventTwo('left','EstudioPaso6','lfps3','Pentacam','paso6lf')" select><img src="imagenes/CHECK-BLANCO-CIRCULO-ON.png">Pentacam</label>
+                                                    <label ><input type="radio" name="EstudioPaso6" class="hidden" onclick="StudyEventTwo('left','EstudioPaso6','lfps3','Galile','paso6lf')" ><img src="imagenes/CHECK-CIRCULO-OFF.png">Galilei</label>
+                                                    <label ><input type="radio" name="EstudioPaso6" class="hidden" onclick="StudyEventTwo('left','EstudioPaso6','lfps3','Sirius','paso6lf')"><img src="imagenes/CHECK-CIRCULO-OFF.png">Sirius</label>
+                                                </div>
+                                                <div class="line"></div>
+                                                <h5>Topografia</h5>
+                                                <div class="input">
+                                                    <h5>Agudeza visual</h5>
+                                                    <div class="encima input-control">
+                                                        <label>
+                                                            SC
+                                                            <select>
+                                                                <<option>20/15</option>
+                                                                <option>20/20</option>
+                                                                <option>20/25</option>
+                                                                <option>20/30</option>
+                                                                <option>20/40</option>
+                                                                <option>20/50</option>
+                                                                <option>20/60</option>
+                                                                <option>20/70</option>
+                                                                <option>20/80</option>
+                                                                <option>20/100</option>
+                                                                <option>20/125</option>
+                                                                <option>20/150</option>
+                                                                <option>20/150</option>
+                                                                <option>20/160</option>
+                                                                <option>20/200</option>
+                                                                <option>20/400</option>
+                                                                <option>CD</option>
+                                                                <option>MM</option>
+                                                                <option>NPL</option>
+                                                            </select>
+                                                        </label>
+                                                        <label>
+                                                            CC 
+                                                            <select>
+                                                            <option>20/15</option>
+                                                                <option>20/20</option>
+                                                                <option>20/25</option>
+                                                                <option>20/30</option>
+                                                                <option>20/40</option>
+                                                                <option>20/50</option>
+                                                                <option>20/60</option>
+                                                                <option>20/70</option>
+                                                                <option>20/80</option>
+                                                                <option>20/100</option>
+                                                                <option>20/125</option>
+                                                                <option>20/150</option>
+                                                                <option>20/150</option>
+                                                                <option>20/160</option>
+                                                                <option>20/200</option>
+                                                                <option>20/400</option>
+                                                                <option>CD</option>
+                                                                <option>MM</option>
+                                                                <option>NPL</option>
+                                                            </select>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="input">
+                                                    <h5>Refracción</h5>
+                                                    <div class="encima input-control">
+                                                        <label>
+                                                            Esf
+                                                            <select>
+                                                        <option>0.00</option>
+                                                        <option>0.25</option>
+                                                        <option>0.50</option>
+                                                        <option>0.75</option>
+                                                        <option>1.00</option>
+                                                        <option>1.25</option>
+                                                        <option>1.50</option>
+                                                        <option>1.75</option>
+                                                        <option>2.00</option>
+                                                        <option>2.25</option>
+                                                        <option>2.50</option>
+                                                        <option>2.75</option>
+                                                        <option>3.00</option>
+                                                        <option>3.25</option>
+                                                        <option>3.50</option>
+                                                        <option>3.75</option>
+                                                        <option>4.00</option>
+                                                        <option>4.25</option>
+                                                        <option>4.50</option>
+                                                    </select>
 
-                                        
-                                    </div>
-                                    <div class="line"></div>
-                                    <h5>Topografia</h5>
-                                    <div class="input">
-                                        <h5>Agudeza visual</h5>
-                                        <div class="encima input-control">
-                                            <label>
-                                                SC
-                                                <select id="sc-IEVO">
-                                                    <
-                                                    <option>20/15</option>
-                                                    <option>20/20</option>
-                                                    <option>20/25</option>
-                                                    <option>20/30</option>
-                                                    <option>20/40</option>
-                                                    <option>20/50</option>
-                                                    <option>20/60</option>
-                                                    <option>20/70</option>
-                                                    <option>20/80</option>
-                                                    <option>20/100</option>
-                                                    <option>20/125</option>
-                                                    <option>20/150</option>
-                                                    <option>20/150</option>
-                                                    <option>20/160</option>
-                                                    <option>20/200</option>
-                                                    <option>20/400</option>
-                                                    <option>CD</option>
-                                                    <option>MM</option>
-                                                    <option>NPL</option>
-                                                </select>
-                                            </label>
-                                            <label>
-                                                CC
-                                                <select id="cc-IEVO">
-                                                    <option>20/15</option>
-                                                    <option>20/20</option>
-                                                    <option>20/25</option>
-                                                    <option>20/30</option>
-                                                    <option>20/40</option>
-                                                    <option>20/50</option>
-                                                    <option>20/60</option>
-                                                    <option>20/70</option>
-                                                    <option>20/80</option>
-                                                    <option>20/100</option>
-                                                    <option>20/125</option>
-                                                    <option>20/150</option>
-                                                    <option>20/150</option>
-                                                    <option>20/160</option>
-                                                    <option>20/200</option>
-                                                    <option>20/400</option>
-                                                    <option>CD</option>
-                                                    <option>MM</option>
-                                                    <option>NPL</option>
-                                                </select>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="input">
-                                        <h5>Refracción</h5>
-                                        <div class="encima input-control">
-                                            <label>
-                                                Esf
-                                                <select id="esf-IEVO">
-                                                    <option>0.00</option>
-                                                    <option>0.25</option>
-                                                    <option>0.50</option>
-                                                    <option>0.75</option>
-                                                    <option>1.00</option>
-                                                    <option>1.25</option>
-                                                    <option>1.50</option>
-                                                    <option>1.75</option>
-                                                    <option>2.00</option>
-                                                    <option>2.25</option>
-                                                    <option>2.50</option>
-                                                    <option>2.75</option>
-                                                    <option>3.00</option>
-                                                    <option>3.25</option>
-                                                    <option>3.50</option>
-                                                    <option>3.75</option>
-                                                    <option>4.00</option>
-                                                    <option>4.25</option>
-                                                    <option>4.50</option>
-                                                </select>
+                                                        </label>
+                                                        <label>
+                                                            Cilindro
+                                                            <select>
+                                                        <option>-0.00</option>
+                                                        <option>-0.25</option>
+                                                        <option>-0.50</option>
+                                                        <option>-0.75</option>
+                                                        <option>-1.00</option>
+                                                        <option>-1.25</option>
+                                                        <option>-1.50</option>
+                                                        <option>-1.75</option>
+                                                        <option>-2.00</option>
+                                                        <option>-2.25</option>
+                                                        <option>-2.50</option>
+                                                        <option>-2.75</option>
+                                                        <option>-3.00</option>
+                                                        <option>-3.25</option>
+                                                        <option>-3.50</option>
+                                                        <option>-3.75</option>
+                                                        <option>-4.00</option>
+                                                        <option>-4.25</option>
+                                                        <option>-4.50</option>
+                                                    </select>
 
-                                            </label>
-                                            <label>
-                                                Cilindro
-                                                <select id="cilindro-IEVO">
-                                                    <option>-0.00</option>
-                                                    <option>-0.25</option>
-                                                    <option>-0.50</option>
-                                                    <option>-0.75</option>
-                                                    <option>-1.00</option>
-                                                    <option>-1.25</option>
-                                                    <option>-1.50</option>
-                                                    <option>-1.75</option>
-                                                    <option>-2.00</option>
-                                                    <option>-2.25</option>
-                                                    <option>-2.50</option>
-                                                    <option>-2.75</option>
-                                                    <option>-3.00</option>
-                                                    <option>-3.25</option>
-                                                    <option>-3.50</option>
-                                                    <option>-3.75</option>
-                                                    <option>-4.00</option>
-                                                    <option>-4.25</option>
-                                                    <option>-4.50</option>
-                                                </select>
+                                                        </label>
+                                                        <label>
+                                                            Eje
+                                                            <select>
+                                                        <option>0</option>
+                                                        <option>5</option>
+                                                        <option>10</option>
+                                                        <option>15</option>
+                                                        <option>20</option>
+                                                        <option>25</option>
+                                                        <option>30</option>
+                                                        <option>35</option>
+                                                        <option>40</option>
+                                                        <option>45</option>
+                                                        <option>50</option>
+                                                        <option>55</option>
+                                                        <option>60</option>
+                                                        <option>65</option>
+                                                        <option>70</option>
+                                                        <option>75</option>
+                                                        <option>80</option>
+                                                        <option>85</option>
+                                                        <option>90</option>
+                                                        <option>95</option>
+                                                        <option>100</option>
+                                                        <option>105</option>
+                                                        <option>110</option>
+                                                        <option>115</option>
+                                                        <option>120</option>
+                                                        <option>125</option>
+                                                        <option>130</option>
+                                                        <option>135</option>
+                                                        <option>140</option>
+                                                        <option>145</option>
+                                                        <option>150</option>
+                                                        <option>155</option>
+                                                        <option>160</option>
+                                                        <option>165</option>
+                                                        <option>170</option>
+                                                        <option>175</option>
+                                                        <option>180</option>
 
-                                            </label>
-                                            <label>
-                                                Eje
-                                                <select id="eje-IEVO">
-                                                    <option>0</option>
-                                                    <option>5</option>
-                                                    <option>10</option>
-                                                    <option>15</option>
-                                                    <option>20</option>
-                                                    <option>25</option>
-                                                    <option>30</option>
-                                                    <option>35</option>
-                                                    <option>40</option>
-                                                    <option>45</option>
-                                                    <option>50</option>
-                                                    <option>55</option>
-                                                    <option>60</option>
-                                                    <option>65</option>
-                                                    <option>70</option>
-                                                    <option>75</option>
-                                                    <option>80</option>
-                                                    <option>85</option>
-                                                    <option>90</option>
-                                                    <option>95</option>
-                                                    <option>100</option>
-                                                    <option>105</option>
-                                                    <option>110</option>
-                                                    <option>115</option>
-                                                    <option>120</option>
-                                                    <option>125</option>
-                                                    <option>130</option>
-                                                    <option>135</option>
-                                                    <option>140</option>
-                                                    <option>145</option>
-                                                    <option>150</option>
-                                                    <option>155</option>
-                                                    <option>160</option>
-                                                    <option>165</option>
-                                                    <option>170</option>
-                                                    <option>175</option>
-                                                    <option>180</option>
+                                                    </select>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="line"></div>
+                                                <h5 >Queratometría</h5>
+                                                <div class="input lfps3">
+                                                        <h5>Queratometría anterior</h5>
+                                                        <div class="encima input-control">
+                                                            <label>
+                                                                K1(D)
+                                                                <input type="text" name="">
+                                                            </label>
+                                                            <label>
+                                                                EjeK1
+                                                                <input type="text" name="">
+                                                            </label>
+                                                        </div>
+                                                </div>
+                                                <div class="input lfps3">
+                                                        <div class="encima input-control">
+                                                            <label>
+                                                                K2(D)
+                                                                <input type="text" name="">
+                                                            </label>
+                                                            <label>
+                                                                EjeK2
+                                                                <input type="text" name="">
+                                                            </label>
+                                                            <label>
+                                                                Cilindro topografico
+                                                                <input type="text" name="">
+                                                            </label>
+                                                        </div>
+                                                </div>
+                                                <div class="input lfps3">
+                                                            <h5>Queratometría posterior</h5>
+                                                            <div class="encima input-control">
+                                                                <label>
+                                                                    K1(D)
+                                                                    <input type="text" name="">
+                                                                </label>
+                                                                <label>
+                                                                    EjeK1
+                                                                    <input type="text" name="">
+                                                                </label>
+                                                            </div>
+                                                </div>
+                                                <div class="input lfps3">
+                                                            <div class="encima input-control">
+                                                                <label>
+                                                                    K2(D)
+                                                                    <input type="text" name="">
+                                                                </label>
+                                                                <label>
+                                                                    EjeK2
+                                                                    <input type="text" name="">
+                                                                </label>
+                                                                <label>
+                                                                    Cilindro topografico
+                                                                    <input type="text" name="">
+                                                                </label>
+                                                            </div>
+                                                </div>
+                                                <div class="input lfps3">
+                                                        <div class="encima input-control">
+                                                            <label>
+                                                                KMax
+                                                                <input type="text" name="" onkeyup="quera(this,1)">
+                                                            </label>
+                                                            <label>
+                                                                IT
+                                                                <input type="text" name="">
+                                                            </label>
+                                                            <label>
+                                                                Q
+                                                                <input type="text" name="">
+                                                            </label>
+                                                        </div>
+                                                </div>
+                                                <div class="input lfps3">
+                                                        <div class="encima input-control" tabindex="1" onkeyup="eventkey(this)">
+                                                            <label>
+                                                                Kmax superior
+                                                                <input type="text" name="" class="nr">
+                                                            </label>
+                                                            <label>
+                                                                Kmax inferior
+                                                                <input type="text" name="" class="nr">
+                                                            </label>
+                                                            <label>
+                                                                <input type="text" class="medidor" name="" disabled value="0">
+                                                            </label>
+                                                        </div>
+                                                </div>
+                                                <div class="input lfps3">
+                                                        <div class="encima input-control" tabindex="1" onkeyup="eventkey(this)">
+                                                            <label>
+                                                                Kmax derecha
+                                                                <input type="text" name="" class="nr">
+                                                            </label>
+                                                            <label>
+                                                                Kmax izquierda
+                                                                <input type="text" name="" class="nr">
+                                                            </label>
+                                                            <label>
+                                                                <input type="text" class="medidor" value="0" name="" disabled>
+                                                            </label>
+                                                        </div>
+                                                </div>
+                                                <div class="line quera"></div>
+                                                <h5>Paquimetría</h5>
+                                                <div class="input lfps3">
+                                                    <div class="encima input-control">
+                                                        <label>
+                                                            Punto más fino
+                                                            <input type="text" name="">
+                                                        </label>
+                                                        <label>
+                                                            Apex
+                                                            <input type="text" name="">
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="input lfps3">
+                                                    <div class="encima input-control" tabindex="1" onkeyup="eventkeytwo(this,17)">
+                                                        <label>
+                                                            Elevación BFS anterior
+                                                            <input type="text" name="" class="nr">
+                                                        </label>
+                                                        <label>
+                                                            <input type="text" class="medidor" value="Normal" name="" disabled>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="input lfps3">
+                                                    <div class="encima input-control" tabindex="1" onkeyup="eventkeytwo(this,22)">
+                                                        <label>
+                                                            Elevación BFS  posterior
+                                                            <input type="text" name="" class="nr">
+                                                        </label>
+                                                        <label>
+                                                            <input type="text" class="medidor" value="Normal" name="" disabled>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="paqui"></div>
+                                            </div>
+                                            <div class="item-form rg" id="paso6rg">
+                                                <h4 class="rigth" onclick="extend2('paso6rg')">Ojo Derecho</h4>
+                                                <h5>Estudios</h5>
+                                                <div class="input-control rds" id="EstudioPaso6rg">
+            
 
-                                                </select>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="line"></div>
-                                    <h5>Queratometría</h5>
-                                    <div class="input">
-                                        <h5>Queratometría anterior</h5>
-                                        <div class="encima input-control">
-                                            <label>
-                                                K1(D)
-                                                <input type="text" name="" id="k1A-IEVO">
-                                            </label>
-                                            <label>
-                                                EjeK1
-                                                <input type="text" name="" id="ejek1A-IEVO">
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="input">
-                                        <div class="encima input-control">
-                                            <label>
-                                                K2(D)
-                                                <input type="text" id="k2A-IEVO" name="">
-                                            </label>
-                                            <label>
-                                                EjeK2
-                                                <input type="text" id="ejek2A-IEVO" name="">
-                                            </label>
-                                            <label>
-                                                Cilindro topografico
-                                                <input type="text" id="citoA-IEVO" name="">
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="input">
-                                        <h5>Queratometría posterior</h5>
-                                        <div class="encima input-control">
-                                            <label>
-                                                K1(D)
-                                                <input type="text"  id="k1P-IEVO" name="">
-                                            </label>
-                                            <label>
-                                                EjeK1
-                                                <input type="text" id="ejek1P-IEVO" name="">
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="input">
-                                        <div class="encima input-control">
-                                            <label>
-                                                K2(D)
-                                                <input type="text" id="k2P-IEVO" name="">
-                                            </label>
-                                            <label>
-                                                EjeK2
-                                                <input type="text" id="ejek2P-IEVO" name="">
-                                            </label>
-                                            <label>
-                                                Cilindro topografico
-                                                <input type="text" id="citoP-IEVO" name="">
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="input">
-                                        <div class="encima input-control">
-                                            <label>
-                                                KMax
-                                                <input type="text" id="kmax-IEVO" name="" onkeyup="quera(this,1)">
-                                            </label>
-                                            <label>
-                                                IT
-                                                <input type="text" id="it-IEVO" name="">
-                                            </label>
-                                            <label>
-                                                Q
-                                                <input type="text" id="q-IEVO" name="">
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="input">
-                                        <div class="encima input-control" tabindex="1" onkeyup="eventkey(this)">
-                                            <label>
-                                                Kmax superior
-                                                <input type="text" id="kmaxSuperior-IEVO" name="" class="nr">
-                                            </label>
-                                            <label>
-                                                Kmax inferior
-                                                <input type="text" id="kmaxInferior-IEVO" name="" class="nr">
-                                            </label>
-                                            <label>
-                                                <input type="text" id="medidorSI-IEVO" class="medidor" name="" disabled value="0">
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="input">
-                                        <div class="encima input-control" tabindex="1" onkeyup="eventkey(this)">
-                                            <label>
-                                                Kmax derecha
-                                                <input type="text" id="kmaxDerecha-IEVO" name="" class="nr">
-                                            </label>
-                                            <label>
-                                                Kmax izquierda
-                                                <input type="text" id="kmaxIzquierda-IEVO" name="" class="nr">
-                                            </label>
-                                            <label>
-                                                <input type="text" id="medidorDI-IEVO" class="medidor" value="0" name="" disabled>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="line"></div>
-                                    <h5>Paquimetría</h5>
-                                    <div class="input">
-                                        <div class="encima input-control">
-                                            <label>
-                                                Punto más fino
-                                                <input type="text" id="pFino-IEVO" name="">
-                                            </label>
-                                            <label>
-                                                Apex
-                                                <input type="text" id="apex-IEVO" name="">
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="input">
-                                        <div class="encima input-control" tabindex="1" onkeyup="eventkeytwo(this,17)">
-                                            <label>
-                                                Elevación BFS anterior
-                                                <input type="text" name="" id="bfsA-IEVO" class="nr">
-                                            </label>
-                                            <label>
-                                                <input type="text" class="medidor" value="Normal" name="" disabled>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="input">
-                                        <div class="encima input-control" tabindex="1" onkeyup="eventkeytwo(this,22)">
-                                            <label>
-                                                Elevación BFS  posterior
-                                                <input type="text" name="" id="bfsP-IEVO" class="nr">
-                                            </label>
-                                            <label>
-                                                <input type="text" class="medidor" value="Normal" name="" disabled>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
+                                                    <label ><input type="radio" name="EstudioPaso6rg" class="hidden" onclick="StudyEventTwo('right','EstudioPaso6rg','rgps3','Pentacam','paso6rg')" select ><img src="imagenes/CHECK-BLANCO-CIRCULO-ON.png">Pentacam</label>
+                                                    <label ><input type="radio" name="EstudioPaso6rg" class="hidden" onclick="StudyEventTwo('right','EstudioPaso6rg','rgps3','Galile','paso6rg')" ><img src="imagenes/CHECK-CIRCULO-OFF.png">Galilei</label>
+                                                    <label ><input type="radio" name="EstudioPaso6rg" class="hidden" onclick="StudyEventTwo('right','EstudioPaso6rg','rgps3','Sirius','paso6rg')"><img src="imagenes/CHECK-CIRCULO-OFF.png">Sirius</label>
+                                                </div>
+                                                <div class="line"></div>
+                                                <h5>Topografia</h5>
+                                                <div class="input">
+                                                    <h5>Agudeza visual</h5>
+                                                    <div class="encima input-control">
+                                                            <label>
+                                                                SC
+                                                                <select>
+                                                                    <<option>20/15</option>
+                                                                    <option>20/20</option>
+                                                                    <option>20/25</option>
+                                                                    <option>20/30</option>
+                                                                    <option>20/40</option>
+                                                                    <option>20/50</option>
+                                                                    <option>20/60</option>
+                                                                    <option>20/70</option>
+                                                                    <option>20/80</option>
+                                                                    <option>20/100</option>
+                                                                    <option>20/125</option>
+                                                                    <option>20/150</option>
+                                                                    <option>20/150</option>
+                                                                    <option>20/160</option>
+                                                                    <option>20/200</option>
+                                                                    <option>20/400</option>
+                                                                    <option>CD</option>
+                                                                    <option>MM</option>
+                                                                    <option>NPL</option>
+                                                                </select>
+                                                            </label>
+                                                            <label>
+                                                                CC 
+                                                                <select>
+                                                                <option>20/15</option>
+                                                                    <option>20/20</option>
+                                                                    <option>20/25</option>
+                                                                    <option>20/30</option>
+                                                                    <option>20/40</option>
+                                                                    <option>20/50</option>
+                                                                    <option>20/60</option>
+                                                                    <option>20/70</option>
+                                                                    <option>20/80</option>
+                                                                    <option>20/100</option>
+                                                                    <option>20/125</option>
+                                                                    <option>20/150</option>
+                                                                    <option>20/150</option>
+                                                                    <option>20/160</option>
+                                                                    <option>20/200</option>
+                                                                    <option>20/400</option>
+                                                                    <option>CD</option>
+                                                                    <option>MM</option>
+                                                                    <option>NPL</option>
+                                                                </select>
+                                                            </label>
+                                                    </div>
+                                                </div>
+                                                <div class="input">
+                                                    <h5>Refracción</h5>
+                                                    <div class="encima input-control">
+                                                        <label>
+                                                            Esf
+                                                            <select>
+                                                        <option>0.00</option>
+                                                        <option>0.25</option>
+                                                        <option>0.50</option>
+                                                        <option>0.75</option>
+                                                        <option>1.00</option>
+                                                        <option>1.25</option>
+                                                        <option>1.50</option>
+                                                        <option>1.75</option>
+                                                        <option>2.00</option>
+                                                        <option>2.25</option>
+                                                        <option>2.50</option>
+                                                        <option>2.75</option>
+                                                        <option>3.00</option>
+                                                        <option>3.25</option>
+                                                        <option>3.50</option>
+                                                        <option>3.75</option>
+                                                        <option>4.00</option>
+                                                        <option>4.25</option>
+                                                        <option>4.50</option>
+                                                    </select>
+                                                        </label>
+                                                        <label>
+                                                            Cilindro
+                                                            
 
+                                                    <select>
+                                                        <option>-0.00</option>
+                                                        <option>-0.25</option>
+                                                        <option>-0.50</option>
+                                                        <option>-0.75</option>
+                                                        <option>-1.00</option>
+                                                        <option>-1.25</option>
+                                                        <option>-1.50</option>
+                                                        <option>-1.75</option>
+                                                        <option>-2.00</option>
+                                                        <option>-2.25</option>
+                                                        <option>-2.50</option>
+                                                        <option>-2.75</option>
+                                                        <option>-3.00</option>
+                                                        <option>-3.25</option>
+                                                        <option>-3.50</option>
+                                                        <option>-3.75</option>
+                                                        <option>-4.00</option>
+                                                        <option>-4.25</option>
+                                                        <option>-4.50</option>
+                                                    </select>
 
+                                                        </label>
+                                                        <label>
+                                                            Eje
+                                                            <select>
+                                                        <option>0</option>
+                                                        <option>5</option>
+                                                        <option>10</option>
+                                                        <option>15</option>
+                                                        <option>20</option>
+                                                        <option>25</option>
+                                                        <option>30</option>
+                                                        <option>35</option>
+                                                        <option>40</option>
+                                                        <option>45</option>
+                                                        <option>50</option>
+                                                        <option>55</option>
+                                                        <option>60</option>
+                                                        <option>65</option>
+                                                        <option>70</option>
+                                                        <option>75</option>
+                                                        <option>80</option>
+                                                        <option>85</option>
+                                                        <option>90</option>
+                                                        <option>95</option>
+                                                        <option>100</option>
+                                                        <option>105</option>
+                                                        <option>110</option>
+                                                        <option>115</option>
+                                                        <option>120</option>
+                                                        <option>125</option>
+                                                        <option>130</option>
+                                                        <option>135</option>
+                                                        <option>140</option>
+                                                        <option>145</option>
+                                                        <option>150</option>
+                                                        <option>155</option>
+                                                        <option>160</option>
+                                                        <option>165</option>
+                                                        <option>170</option>
+                                                        <option>175</option>
+                                                        <option>180</option>
 
-
-
-
-                                <div class="item-form rg" id="paso6rg">
-                                    <h4 class="rigth" onclick="extend2('paso6rg')">Ojo Derecho</h4>
-                                    <h5>Estudios</h5>
-                                    <div class="input-control rds" id="EstudioPaso6rg">
-                                        <label><input type="radio" name="EstudioPaso6rg" class="hidden" onclick="checkradio('EstudioPaso6rg')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">Pentacam</label>
-                                        <label><input type="radio" name="EstudioPaso6rg" class="hidden" onclick="checkradio('EstudioPaso6rg')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">Galilei</label>
-                                        <label><input type="radio" name="EstudioPaso6rg" class="hidden" onclick="checkradio('EstudioPaso6rg')"><img src="~/imagenes/CHECK-CIRCULO-OFF.png">Sirius</label>
-                                    </div>
-                                    <div class="line"></div>
-                                    <h5>Topografia</h5>
-                                    <div class="input">
-                                        <h5>Agudeza visual</h5>
-                                        <div class="encima input-control">
-                                            <label>
-                                                SC
-                                                <select>
-                                                    <
-                                                    <option>20/15</option>
-                                                    <option>20/20</option>
-                                                    <option>20/25</option>
-                                                    <option>20/30</option>
-                                                    <option>20/40</option>
-                                                    <option>20/50</option>
-                                                    <option>20/60</option>
-                                                    <option>20/70</option>
-                                                    <option>20/80</option>
-                                                    <option>20/100</option>
-                                                    <option>20/125</option>
-                                                    <option>20/150</option>
-                                                    <option>20/150</option>
-                                                    <option>20/160</option>
-                                                    <option>20/200</option>
-                                                    <option>20/400</option>
-                                                    <option>CD</option>
-                                                    <option>MM</option>
-                                                    <option>NPL</option>
-                                                </select>
-                                            </label>
-                                            <label>
-                                                CC
-                                                <select>
-                                                    <option>20/15</option>
-                                                    <option>20/20</option>
-                                                    <option>20/25</option>
-                                                    <option>20/30</option>
-                                                    <option>20/40</option>
-                                                    <option>20/50</option>
-                                                    <option>20/60</option>
-                                                    <option>20/70</option>
-                                                    <option>20/80</option>
-                                                    <option>20/100</option>
-                                                    <option>20/125</option>
-                                                    <option>20/150</option>
-                                                    <option>20/150</option>
-                                                    <option>20/160</option>
-                                                    <option>20/200</option>
-                                                    <option>20/400</option>
-                                                    <option>CD</option>
-                                                    <option>MM</option>
-                                                    <option>NPL</option>
-                                                </select>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="input">
-                                        <h5>Refracción</h5>
-                                        <div class="encima input-control">
-                                            <label>
-                                                Esf
-                                                <select>
-                                                    <option>0.00</option>
-                                                    <option>0.25</option>
-                                                    <option>0.50</option>
-                                                    <option>0.75</option>
-                                                    <option>1.00</option>
-                                                    <option>1.25</option>
-                                                    <option>1.50</option>
-                                                    <option>1.75</option>
-                                                    <option>2.00</option>
-                                                    <option>2.25</option>
-                                                    <option>2.50</option>
-                                                    <option>2.75</option>
-                                                    <option>3.00</option>
-                                                    <option>3.25</option>
-                                                    <option>3.50</option>
-                                                    <option>3.75</option>
-                                                    <option>4.00</option>
-                                                    <option>4.25</option>
-                                                    <option>4.50</option>
-                                                </select>
-                                            </label>
-                                            <label>
-                                                Cilindro
-
-
-                                                <select>
-                                                    <option>-0.00</option>
-                                                    <option>-0.25</option>
-                                                    <option>-0.50</option>
-                                                    <option>-0.75</option>
-                                                    <option>-1.00</option>
-                                                    <option>-1.25</option>
-                                                    <option>-1.50</option>
-                                                    <option>-1.75</option>
-                                                    <option>-2.00</option>
-                                                    <option>-2.25</option>
-                                                    <option>-2.50</option>
-                                                    <option>-2.75</option>
-                                                    <option>-3.00</option>
-                                                    <option>-3.25</option>
-                                                    <option>-3.50</option>
-                                                    <option>-3.75</option>
-                                                    <option>-4.00</option>
-                                                    <option>-4.25</option>
-                                                    <option>-4.50</option>
-                                                </select>
-
-                                            </label>
-                                            <label>
-                                                Eje
-                                                <select>
-                                                    <option>0</option>
-                                                    <option>5</option>
-                                                    <option>10</option>
-                                                    <option>15</option>
-                                                    <option>20</option>
-                                                    <option>25</option>
-                                                    <option>30</option>
-                                                    <option>35</option>
-                                                    <option>40</option>
-                                                    <option>45</option>
-                                                    <option>50</option>
-                                                    <option>55</option>
-                                                    <option>60</option>
-                                                    <option>65</option>
-                                                    <option>70</option>
-                                                    <option>75</option>
-                                                    <option>80</option>
-                                                    <option>85</option>
-                                                    <option>90</option>
-                                                    <option>95</option>
-                                                    <option>100</option>
-                                                    <option>105</option>
-                                                    <option>110</option>
-                                                    <option>115</option>
-                                                    <option>120</option>
-                                                    <option>125</option>
-                                                    <option>130</option>
-                                                    <option>135</option>
-                                                    <option>140</option>
-                                                    <option>145</option>
-                                                    <option>150</option>
-                                                    <option>155</option>
-                                                    <option>160</option>
-                                                    <option>165</option>
-                                                    <option>170</option>
-                                                    <option>175</option>
-                                                    <option>180</option>
-
-                                                </select>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="line"></div>
-                                    <h5>Queratometría</h5>
-                                    <div class="input">
-                                        <h5>Queratometría anterior</h5>
-                                        <div class="encima input-control">
-                                            <label>
-                                                K1(D)
-                                                <input type="text" name="">
-                                            </label>
-                                            <label>
-                                                EjeK1
-                                                <input type="text" name="">
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="input">
-                                        <div class="encima input-control">
-                                            <label>
-                                                K2(D)
-                                                <input type="text" name="">
-                                            </label>
-                                            <label>
-                                                EjeK2
-                                                <input type="text" name="">
-                                            </label>
-                                            <label>
-                                                Cilindro topografico
-                                                <input type="text" name="">
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="input">
-                                        <h5>Queratometría posterior</h5>
-                                        <div class="encima input-control">
-                                            <label>
-                                                K1(D)
-                                                <input type="text" name="">
-                                            </label>
-                                            <label>
-                                                EjeK1
-                                                <input type="text" name="">
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="input">
-                                        <div class="encima input-control">
-                                            <label>
-                                                K2(D)
-                                                <input type="text" name="">
-                                            </label>
-                                            <label>
-                                                EjeK2
-                                                <input type="text" name="">
-                                            </label>
-                                            <label>
-                                                Cilindro topografico
-                                                <input type="text" name="">
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="input">
-                                        <div class="encima input-control">
-                                            <label>
-                                                KMax
-                                                <input type="text" name="" onkeyup="quera(this,1)">
-                                            </label>
-                                            <label>
-                                                IT
-                                                <input type="text" name="">
-                                            </label>
-                                            <label>
-                                                Q
-                                                <input type="text" name="">
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="input">
-                                        <div class="encima input-control" tabindex="1" onkeyup="eventkey(this)">
-                                            <label>
-                                                Kmax superior
-                                                <input type="text" name="" class="nr">
-                                            </label>
-                                            <label>
-                                                Kmax inferior
-                                                <input type="text" name="" class="nr">
-                                            </label>
-                                            <label>
-                                                <input type="text" class="medidor" name="" disabled value="0">
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="input">
-                                        <div class="encima input-control" tabindex="1" onkeyup="eventkey(this)">
-                                            <label>
-                                                Kmax derecha
-                                                <input type="text" name="" class="nr">
-                                            </label>
-                                            <label>
-                                                Kmax izquierda
-                                                <input type="text" name="" class="nr">
-                                            </label>
-                                            <label>
-                                                <input type="text" class="medidor" value="0" name="" disabled>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="line"></div>
-                                    <h5>Paquimetría</h5>
-                                    <div class="input">
-                                        <div class="encima input-control">
-                                            <label>
-                                                Punto más fino
-                                                <input type="text" name="">
-                                            </label>
-                                            <label>
-                                                Apex
-                                                <input type="text" name="">
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="input">
-                                        <div class="encima input-control" tabindex="1" onkeyup="eventkeytwo(this,17)">
-                                            <label>
-                                                Elevación BFS anterior
-                                                <input type="text" name="" class="nr">
-                                            </label>
-                                            <label>
-                                                <input type="text" class="medidor" value="Normal" name="" disabled>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="input">
-                                        <div class="encima input-control" tabindex="1" onkeyup="eventkeytwo(this,22)">
-                                            <label>
-                                                Elevación BFS  posterior
-                                                <input type="text" name="" class="nr">
-                                            </label>
-                                            <label>
-                                                <input type="text" class="medidor" value="Normal" name="" disabled>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
+                                                    </select>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="line"></div>
+                                                <h5>Queratometría</h5>
+                                                <div class="input rgps3">
+                                                        <h5>Queratometría anterior</h5>
+                                                        <div class="encima input-control">
+                                                            <label>
+                                                                K1(D)
+                                                                <input type="text" name="">
+                                                            </label>
+                                                            <label>
+                                                                EjeK1
+                                                                <input type="text" name="">
+                                                            </label>
+                                                        </div>
+                                                </div>
+                                                <div class="input rgps3">
+                                                        <div class="encima input-control">
+                                                            <label>
+                                                                K2(D)
+                                                                <input type="text" name="">
+                                                            </label>
+                                                            <label>
+                                                                EjeK2
+                                                                <input type="text" name="">
+                                                            </label>
+                                                            <label>
+                                                                Cilindro topografico
+                                                                <input type="text" name="">
+                                                            </label>
+                                                        </div>
+                                                </div>
+                                                <div class="input rgps3">
+                                                            <h5>Queratometría posterior</h5>
+                                                            <div class="encima input-control">
+                                                                <label>
+                                                                    K1(D)
+                                                                    <input type="text" name="">
+                                                                </label>
+                                                                <label>
+                                                                    EjeK1
+                                                                    <input type="text" name="">
+                                                                </label>
+                                                            </div>
+                                                </div>
+                                                <div class="input rgps3">
+                                                            <div class="encima input-control">
+                                                                <label>
+                                                                    K2(D)
+                                                                    <input type="text" name="">
+                                                                </label>
+                                                                <label>
+                                                                    EjeK2
+                                                                    <input type="text" name="">
+                                                                </label>
+                                                                <label>
+                                                                    Cilindro topografico
+                                                                    <input type="text" name="">
+                                                                </label>
+                                                            </div>
+                                                </div>
+                                                <div class="input rgps3">
+                                                        <div class="encima input-control">
+                                                            <label>
+                                                                KMax
+                                                                <input type="text" name="" onkeyup="quera(this,1)">
+                                                            </label>
+                                                            <label>
+                                                                IT
+                                                                <input type="text" name="">
+                                                            </label>
+                                                            <label>
+                                                                Q
+                                                                <input type="text" name="">
+                                                            </label>
+                                                        </div>
+                                                </div>
+                                                <div class="input rgps3">
+                                                        <div class="encima input-control" tabindex="1" onkeyup="eventkey(this)">
+                                                            <label>
+                                                                Kmax superior
+                                                                <input type="text" name="" class="nr">
+                                                            </label>
+                                                            <label>
+                                                                Kmax inferior
+                                                                <input type="text" name="" class="nr">
+                                                            </label>
+                                                            <label>
+                                                                <input type="text" class="medidor" name="" disabled value="0">
+                                                            </label>
+                                                        </div>
+                                                </div>
+                                                <div class="input rgps3">
+                                                        <div class="encima input-control" tabindex="1" onkeyup="eventkey(this)">
+                                                            <label>
+                                                                Kmax derecha
+                                                                <input type="text" name="" class="nr">
+                                                            </label>
+                                                            <label>
+                                                                Kmax izquierda
+                                                                <input type="text" name="" class="nr">
+                                                            </label>
+                                                            <label>
+                                                                <input type="text" class="medidor" value="0" name="" disabled>
+                                                            </label>
+                                                        </div>
+                                                </div>
+                                                <div class="quera line"></div>
+                                                <h5 >Paquimetría</h5>
+                                                <div class="input rgps3">
+                                                    <div class="encima input-control">
+                                                        <label>
+                                                            Punto más fino
+                                                            <input type="text" name="">
+                                                        </label>
+                                                        <label>
+                                                            Apex
+                                                            <input type="text" name="">
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="input rgps3">
+                                                    <div class="encima input-control" tabindex="1" onkeyup="eventkeytwo(this,17)">
+                                                        <label>
+                                                            Elevación BFS anterior
+                                                            <input type="text" name="" class="nr">
+                                                        </label>
+                                                        <label>
+                                                            <input type="text" class="medidor" value="Normal" name="" disabled>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="input rgps3">
+                                                    <div class="encima input-control" tabindex="1" onkeyup="eventkeytwo(this,22)">
+                                                        <label>
+                                                            Elevación BFS  posterior
+                                                            <input type="text" name="" class="nr">
+                                                        </label>
+                                                        <label>
+                                                            <input type="text" class="medidor" value="Normal" name="" disabled>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="paqui"></div>
+                                            </div>
                             </div>
+
+
+
                             <div class="extra">
                                 <h5>Tipo de Intervecion</h5>
                                 <div class="input">
@@ -2727,4 +3040,5 @@
         
         </div>
         </body>
+            <script type="text/javascript" src="~/js/validacion.js"></script>
 </html>

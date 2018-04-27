@@ -85,8 +85,156 @@ function antecedentes(){
 //----------------------***********************************------------------------//
 
 
+//tercer paso ************************************************
+function evaluacion(){
 
-//Tercer paso ************************************************
+let Pentacam={
+    // Queratometria Anterior
+   "k1Anterior":valD("k1A-OI"),
+     "ejek1Anterior":valD("ejek1A-OI"),
+     "k2Anterior":valD("k2A-OI"),
+     "ejek2Anterior":valD("ejek2A-OI"),
+     "cilindroTopoAnterior":valD("citoA-OI"),
+     //Queratometria Posterior
+     "k1Posterior":valD("k1P-OI"),
+     "ejek1Posterior":valD("ejek1P-OI"),
+     "k2Posterior":valD("k2P-OI"),
+     "ejek2Posterior":valD("ejek2P-OI"),
+     "cilindroTopoPosterior":valD("citoP-OI"),
+     "kmax":valD("kmax-OI"),
+     "it":valD("it-OI"),
+     "q":valD("q-OI"),    
+     "kmaxSuperior":valD("kmaxSuperior-OI"),
+     "kmaxInferior":valD("kmaxInferior-OI"),
+     "medidorSI":valD("medidorSI-OI"),
+      "kmaxDerecha":valD("kmaxDerecha-OI"),
+     "kmaxIzquierda":valD("kmaxIzquierda-OI"),
+
+      "medidorDI":valD("medidorDI-OI"),
+      // Paquimetria
+     "puntoFino":valD("pFino-OI"),
+     "apex":valD("apex-OI"),
+     "bfsAnterior":valD("bfsA-OI"),
+     "bfsPosterior":valD("bfsP-OI") 
+}
+console.log(Pentacam);
+
+let gali={
+    // Queratometria Anterior
+    "slimkAnterior":valD("sc-OI"),
+    "flatslimkAnterior":valD("sc-OI"),
+    "1flatslimkAnterior":valD("sc-OI"),
+    "ejeflatslimkAnterior":valD("sc-OI"),
+    "steepslimkAnterior":valD("sc-OI"),
+    "ejesteepslimkAnterior":valD("sc-OI"),
+    "asignatismoAnterior":valD("sc-OI"),
+    // Queratometria Posterior
+    "simkPosterior":valD("sc-OI"),
+    "flatsimkPosterior":valD("sc-OI"),
+    "1flatsimkPosterior":valD("sc-OI"),
+    "ejeflatsimkPosterior":valD("sc-OI"),
+    "steepsimkPosterior":valD("sc-OI"),
+    "ejesteepsimkPosterior":valD("sc-OI"),
+    "asignatismoPosterior":valD("sc-OI"),
+    // Paquimetria
+    "puntoFino":valD("sc-OI"),
+    "central":valD("sc-OI"),
+    "eleA3centrales":valD("sc-OI"),
+    "eleP3centrales":valD("sc-OI")
+}
+console.log(gali);
+
+let sirius={
+    //Queratometria Anterior
+   "k1Anterior":valD("k1A-OI"),
+     "ejek1Anterior":valD("ejek1A-OI"),
+     "k2Anterior":valD("k2A-OI"),
+     "ejek2Anterior":valD("ejek2A-OI"),
+     "ejek2Anterior":valD("ejek2A-OI"),
+     "asignatismoAnterior":valD("sc-OI"),
+     "ejeasignatismoAnterior":valD("sc-OI"),
+       // Queratometria Posterior
+         "simkPosterior":valD("sc-OI"),
+    "flatsimkPosterior":valD("sc-OI"),
+     "ejesimkPosterior":valD("sc-OI"),
+    
+    "steepsimkPosterior":valD("sc-OI"),
+    "ejeflatsimkPosterior":valD("sc-OI"),
+     "asignatismoPosterior":valD("sc-OI"),
+    "ejesteepsimkPosterior":valD("sc-OI")
+   //Paquimetria
+
+
+}
+
+console.log(sirius);
+let c={
+    "ojoIzquierdo":{
+     "estudios":valC("estudios-OI"),
+     "sc":valD("sc-OI"),
+     "cc":valD("cc-OI"),
+     "esf":valD("esf-OI"),
+     "cilindro":valD("cilindro-OI"),
+     "eje":valD("eje-OI"),
+  
+     "estriasVogt":valC("estriasvogt-OI"),
+     "nervios":valC("nervios-OI"),
+     "leucoma":valC("leucoma-OI"),
+     "hidrops":valC("hidrops-OI"),
+     "manis":valC("manis-OI"),
+     "anilloFleisher":valC("anilloFlei-OI"),
+     "tipoQueratono":$(".tipcono-OI").val()},
+
+    "ojoDerecho":{
+        
+     "estudios":valC("estudios-OD"),
+     "sc":valD("sc-OD"),
+     "cc":valD("cc-OD"),
+     "esf":valD("esf-OD"),
+     "cilindro":valD("cilindro-OD"),
+     "eje":valD("eje-OD"),
+     "k1Anterior":valD("k1A-OD"),
+     "ejek1Anterior":valD("ejek1A-OD"),
+     "k2Anterior":valD("k2A-OD"),
+     "ejek2Anterior":valD("ejek2A-OD"),
+     "cilindroTopoAnterior":valD("citoA-OD"),
+     "k1Posterior":valD("k1P-OD"),
+     "ejek1Posterior":valD("ejek1P-OD"),
+     "k2Posterior":valD("k2P-OD"),
+     "ejek2Posterior":valD("ejek2P-OD"),
+     "cilindroTopoPosterior":valD("citoP-OD"),
+     "kmax":valD("kmax-OD"),
+     "it":valD("it-OD"),
+     "q":valD("q-OD"),
+     "kmaxSuperior":valD("kmaxSuperior-OD"),
+     "kmaxInferior":valD("kmaxInferior-OD"),
+     "medidorSI":valD("medidorSI-OD"),
+      "kmaxDerecha":valD("kmaxDerecha-OD"),
+     "kmaxIzquierda":valD("kmaxIzquierda-OD"),
+      "medidorDI":valD("medidorDI-OD"),
+     "puntoFino":valD("pFino-OD"),
+     "apex":valD("apex-OD"),
+     "bfsAnterior":valD("bfsA-OD"),
+     "bfsPosterior":valD("bfsP-OD"),
+     "anilloFleisher":valC("anilloFlei-OD"),
+     "estriasVogt":valC("estriasvogt-OD"),
+     "nervios":valC("nervios-OD"),
+     "leucoma":valC("leucoma-OD"),
+     "hidrops":valC("hidrops-OD"),
+     "manis":valC("manis-OD"),
+     "tipoQueratono":$(".tipcono-OD").val()
+    }
+}
+switch(valC("estudios-OI")){
+    case "P":console.log("Eligio Pentacam");break;
+     case "G":console.log("Eligio Galilei");break;
+      case "S":console.log("Eligio Sirius");break;
+}
+console.log(c);
+}
+
+
+//Cuarta paso ************************************************
 
 function graduacion(){
     var f1 = document.querySelectorAll(".lista").item(0);
@@ -102,7 +250,7 @@ function graduacion(){
 
 
 
-//Cuarto paso ************************************************
+//Quinto paso ************************************************
 function manejo(){
 
     var man={
@@ -167,87 +315,12 @@ function manejo(){
         "fechaEnucleaManejo":valD("fechEnu-MOID"),
         "conCeluEndoManejo":valD("ccendoDon-MOID"),
         "proxFechaConsulta":null,//aqui hay que sacar el valor del calendario
-        "fechaControlManejo":valD("fechCon-MOID") },
+        "fechaControlManejo":valD("fechCon-MOID") }
         }
     
     console.log(man);
-}
-//----------------------***********************************------------------------//
 
-//Cuarto paso ************************************************
-function evaluacion(){
-let c={
-	"ojoIzquierdo":{
-     "estudios":valC("estudios-IEVO"),
-     "sc":valD("sc-IEVO"),
-     "cc":valD("cc-IEVO"),
-     "esf":valD("esf-IEVO"),
-     "cilindro":valD("cilindro-IEVO"),
-     "eje":valD("eje-IEVO"),
-     "k1Anterior":valD("k1A-IEVO"),
-     "ejek1Anterior":valD("ejek1A-IEVO"),
-     "k2Anterior":valD("k2A-IEVO"),
-     "ejek2Anterior":valD("ejek2A-IEVO"),
-     "cilindroTopoAnterior":valD("citoA-IEVO"),
-     "k1Posterior":valD("k1P-IEVO"),
-     "ejek1Posterior":valD("ejek1P-IEVO"),
-     "k2Posterior":valD("k2P-IEVO"),
-     "ejek2Posterior":valD("ejek2P-IEVO"),
-     "cilindroTopoPosterior":valD("citoP-IEVO"),
-     "kmax":valD("kmax-IEVO"),
-     "it":valD("it-IEVO"),
-     "q":valD("q-IEVO"),
-     "kmaxSuperior":valD("kmaxSuperior-IEVO"),
-     "kmaxInferior":valD("kmaxInferior-IEVO"),
-     "medidorSI":valD("medidorSI-IEVO"),
-      "kmaxDerecha":valD("kmaxDerecha-IEVO"),
-     "kmaxIzquierda":valD("kmaxIzquierda-IEVO"),
-      "medidorDI":valD("medidorDI-IEVO"),
-     "puntoFino":valD("pFino-IEVO"),
-     "apex":valD("apex-IEVO"),
-     "bfsAnterior":valD("bfsA-IEVO"),
-     "bfsPosterior":valD("bfsP-IEVO") }
-	// },
-	// "ojoDerecho":{
-    	
- //     "estudios":valC("estudios-OD"),
- //     "sc":valD("sc-OD"),
- //     "cc":valD("cc-OD"),
- //     "esf":valD("esf-OD"),
- //     "cilindro":valD("cilindro-OD"),
- //     "eje":valD("eje-OD"),
- //     "k1Anterior":valD("k1A-OD"),
- //     "ejek1Anterior":valD("ejek1A-OD"),
- //     "k2Anterior":valD("k2A-OD"),
- //     "ejek2Anterior":valD("ejek2A-OD"),
- //     "cilindroTopoAnterior":valD("citoA-OD"),
- //     "k1Posterior":valD("k1P-OD"),
- //     "ejek1Posterior":valD("ejek1P-OD"),
- //     "k2Posterior":valD("k2P-OD"),
- //     "ejek2Posterior":valD("ejek2P-OD"),
- //     "cilindroTopoPosterior":valD("citoP-OD"),
- //     "kmax":valD("kmax-OD"),
- //     "it":valD("it-OD"),
- //     "q":valD("q-OD"),
- //     "kmaxSuperior":valD("kmaxSuperior-OD"),
- //     "kmaxInferior":valD("kmaxInferior-OD"),
- //     "medidorSI":valD("medidorSI-OD"),
- //      "kmaxDerecha":valD("kmaxDerecha-OD"),
- //     "kmaxIzquierda":valD("kmaxIzquierda-OD"),
- //      "medidorDI":valD("medidorDI-OD"),
- //     "puntoFino":valD("pFino-OD"),
- //     "apex":valD("apex-OD"),
- //     "bfsAnterior":valD("bfsA-OD"),
- //     "bfsPosterior":valD("bfsP-OD"),
- //     "anilloFleisher":valC("anilloFlei-OD"),
- //     "estriasVogt":valC("estriasvogt-OD"),
- //     "nervios":valC("nervios-OD"),
- //     "leucoma":valC("leucoma-OD"),
- //     "hidrops":valC("hidrops-OD"),
- //     "manis":valC("manis-OD"),
- //     "tipoQueratono":$(".tipcono-OD").val()
-	// }
-}
+//----------------------***********************************------------------------//
 
 // eventnext(1);
 // eventnext(10);

@@ -201,10 +201,10 @@ function checkradio(id){
 	var imagen = form.querySelectorAll("label img")
 	for(var i = 0;i<radius.length;i++){
 		if(radius[i].checked){
-			imagen.item(i).src = "imagenes/CHECK-BLANCO-CIRCULO-ON.png";
+			imagen.item(i).src = "/imagenes/CHECK-BLANCO-CIRCULO-ON.png";
 		}
 		else{
-			imagen.item(i).src = "imagenes/CHECK-CIRCULO-OFF.png";
+			imagen.item(i).src = "/imagenes/CHECK-CIRCULO-OFF.png";
 		}
 	}
 }
@@ -215,10 +215,10 @@ function checkradio2(id){
 	var imagen = form.querySelectorAll("label img")
 	for(var i = 0;i<radius.length;i++){
 		if(radius[i].checked){
-			imagen.item(i).src = "imagenes/captura.png";
+			imagen.item(i).src = "/imagenes/captura.png";
 		}
 		else{
-			imagen.item(i).src = "imagenes/CHECK-CIRCULO-OFF.png";
+			imagen.item(i).src = "/imagenes/CHECK-CIRCULO-OFF.png";
 		}
 	}
 }
@@ -252,7 +252,7 @@ var stados2 = {
 
 
 function extend2(id){
-    debugger;
+    
 	var base = document.getElementById(id);
 	var itemsAll = [base.querySelectorAll(".line"),base.querySelectorAll(".input-control"),base.querySelectorAll("h5"),base.querySelectorAll(".input")]
 	for (var i = 0; i < itemsAll.length; i++) {
@@ -285,7 +285,7 @@ function switchs(id){
 	itemsAll.item(jsonswitch[id]).checked = false;
 	jsonswitch[id] = jsonswitch[id] == 0? 1:0;
     itemsAll.item(jsonswitch[id]).checked = true;
-    base.querySelector("img").src = jsonswitch[id] == 0? "imagenes/switch-NO-rojo.png":"imagenes/switch-SI-rojo.png";
+    base.querySelector("img").src = jsonswitch[id] == 0? "/imagenes/switch-NO-rojo.png":"imagenes/switch-SI-rojo.png";
 }
 
 
@@ -295,10 +295,10 @@ function checkqueare(id){
 	var imagen = form.querySelectorAll("label img")
 	for(var i = 0;i<radius.length;i++){
 		if(radius[i].checked){
-			imagen.item(i).src = "imagenes/CHECK-CUADRADO-ON.png";
+			imagen.item(i).src = "/imagenes/CHECK-CUADRADO-ON.png";
 		}
 		else{
-			imagen.item(i).src = "imagenes/CHECK-CUADRADO-OFF.png";
+			imagen.item(i).src = "/imagenes/CHECK-CUADRADO-OFF.png";
 		}
 	}
 }
@@ -425,9 +425,9 @@ function StudyEventOne(direct,id,clas,tipo,ide){
 	var array = item.length;
 
 		
-	for(var i = 0;i<array;i++){
-		item[0].remove();
-	}
+	// for(var i = 0;i<array;i++){
+	// 	item[0].remove();
+	// }
 
 	if("left"==direct){
 		var tx = "lfps3";
@@ -438,29 +438,76 @@ function StudyEventOne(direct,id,clas,tipo,ide){
 		var bsj = right;
 	}
 
-		var bs = bsj["quera"][tipo];
-		for (var i = 0; i < bs.length; i++) {
-			var newItem = document.createElement("div");
-    		newItem.classList.add("input-control");
-    		newItem.classList.add("cbo-content");
-    		newItem.classList.add(tx);
-    		newItem.innerHTML = bs[i];
-    		newItem.style.display="flex";
-    		var list = document.getElementById(ide);
-   			list.insertBefore(newItem, list.querySelector('.quera'));
+
+
+	if(direct=="left"){
+		let p1=document.getElementById("p3I-PENTACAM");
+			let g1=document.getElementById("p3I-GALILLEI");
+				let s1=document.getElementById("p3I-SIRIUS");
+		switch(tipo){
+			case "Pentacam":
+           p1.style.display="block";
+			s1.style.display="none";
+			g1.style.display="none";
+			break;
+			case "Galile":
+			p1.style.display="none";
+			s1.style.display="none";
+			g1.style.display="block";
+			break;
+			case "Sirius":
+			p1.style.display="none";
+			s1.style.display="block";
+			g1.style.display="none";
+			break;
 		}
+	}
+	else {
+		let p1=document.getElementById("p3D-PENTACAM");
+			let g1=document.getElementById("p3D-GALILLEI");
+				let s1=document.getElementById("p3D-SIRIUS");
+		switch(tipo){
+			case "Pentacam":
+           p1.style.display="block";
+			s1.style.display="none";
+			g1.style.display="none";
+			break;
+			case "Galile":
+			p1.style.display="none";
+			s1.style.display="none";
+			g1.style.display="block";
+			break;
+			case "Sirius":
+			p1.style.display="none";
+			s1.style.display="block";
+			g1.style.display="none";
+			break;
+		}
+	}
+
+		// var bs = bsj["quera"][tipo];
+		// for (var i = 0; i < bs.length; i++) {
+		// 	var newItem = document.createElement("div");
+  //   		newItem.classList.add("input-control");
+  //   		newItem.classList.add("cbo-content");
+  //   		newItem.classList.add(tx);
+  //   		newItem.innerHTML = bs[i];
+  //   		newItem.style.display="flex";
+  //   		var list = document.getElementById(ide);
+  //  			list.insertBefore(newItem, list.querySelector('.quera'));
+		// }
 		
-		var bs = bsj["paqui"][tipo];
-		for (var i = 0; i < bs.length; i++) {
-			var newItem = document.createElement("div");
-    		newItem.classList.add("input-control");
-    		newItem.classList.add("cbo-content");
-    		newItem.classList.add(tx);
-    		newItem.innerHTML = bs[i];
-    		newItem.style.display="flex";
-    		var list = document.getElementById(ide);
-   			list.insertBefore(newItem, list.querySelector('.paqui'));
-		}
+		// var bs = bsj["paqui"][tipo];
+		// for (var i = 0; i < bs.length; i++) {
+		// 	var newItem = document.createElement("div");
+  //   		newItem.classList.add("input-control");
+  //   		newItem.classList.add("cbo-content");
+  //   		newItem.classList.add(tx);
+  //   		newItem.innerHTML = bs[i];
+  //   		newItem.style.display="flex";
+  //   		var list = document.getElementById(ide);
+  //  			list.insertBefore(newItem, list.querySelector('.paqui'));
+		// }
 
 }
 
@@ -536,12 +583,12 @@ var right2 = {
 
 function StudyEventTwo(direct,id,clas,tipo,ide){
 	checkradio(id);
-	debugger;
+	
 	var base = document.getElementById(ide);
 	var item = document.getElementsByClassName(clas);
 	var array = item.length;
 
-		debugger;
+	
 	for(var i = 0;i<array;i++){
 		item[0].remove();
 	}
