@@ -639,60 +639,61 @@
                                            <div class="input-control cbo-content lfps3" style="display: flex;">
                                                  <h5>Queratometría Anterior</h5>
                                               <div class="cbo">   
-                                               <label>     Sim K       <input type="text" name=""> </label>  
-                                                <label>     Flat SimK       <input type="text" name=""> </label>
+                                               <label>     Sim K       <input type="text" name="" id="gsimkA-OI"> </label>  
+                                                <label>     Flat SimK       <input type="text" id="gflatsimkA-OI" name=""> </label>
                                             </div>
                                          </div>
                                          <div class="input-control cbo-content lfps3" style="display: flex;">
                                              <div class="cbo">   
-                                              <label>     Flat SimK       <input type="text" name=""> </label>   
-                                              <label>     Eje Flat SimK       <input type="text" name=""> </label>    
-                                              <label>     Steep SimK      <input type="text" name=""> </label>
+                                              <label>     Flat SimK       <input type="text" id="gflat1simkA-OI" name=""> </label>   
+                                              <label>     Eje Flat SimK       <input type="text" id="gejeflatsimkA-OI" name=""> </label>    
+                                              <label>     Steep SimK      <input type="text" id="gsteepsimkA-OI" name=""> </label>
                                             </div>
                                         </div>
                                     <div class="input-control cbo-content lfps3" style="display: flex;">
                                        <div class="cbo">  
-                                       <label>     Eje Steep SimK      <input type="text" name=""> </label>   
-                                      <label>     Astigmatismo        <input type="text" name=""> </label>
+                                       <label>     Eje Steep SimK      <input type="text" id="gejesteepsimkA-OI" name=""> </label>   
+                                      <label>     Astigmatismo        <input type="text" id="gastimagtismoA-OI" name=""> </label>
                                        </div>
                                     </div>
 
                                     <div class="input-control cbo-content lfps3" style="display: flex;">
                                        <h5>Queratometría posterior</h5>
-                                       <div class="cbo">    <label>     Sim K       <input type="text" name=""> </label>    
-                                        <label>     Flat SimK       <input type="text" name=""> </label>   
+                                       <div class="cbo">    <label>     Sim K       <input type="text" id="gsimkP-OI" name=""> </label>    
+                                        <label>     Flat SimK       <input type="text" id="gflatsimkP-OI" name=""> </label>   
                                          </div>
                                     </div>
 
                                     <div class="input-control cbo-content lfps3" style="display: flex;">
                                        <div class="cbo">   
-                                        <label>     Flat SimK       <input type="text" name=""> </label>  
-                                         <label>     Eje Flat SimK       <input type="text" name=""> </label>  
-                                           <label>     Steep SimK      <input type="text" name=""> </label>
+                               
+                                        <label>     Flat SimK       <input type="text" id="gflat1simkP-OI" name=""> </label>  
+                                         <label>     Eje Flat SimK       <input type="text" id="gejeflatsimkP-OI" name=""> </label>  
+                                           <label>     Steep SimK      <input type="text" id="gsteepsimkP-OI" name=""> </label>
                                        </div>
                                     </div>
 
                                     <div class="input-control cbo-content lfps3" style="display: flex;">
-                                     <div class="cbo">    <label>     Eje Steep SimK      <input type="text" name=""> </label>   
-                                     <label>     Astigmatismo        <input type="text" name=""> </label>
+                                     <div class="cbo">    <label>     Eje Steep SimK      <input type="text"  id="gejesteepsimkP-OI" name=""> </label>   
+                                     <label>     Astigmatismo        <input type="text" id="gastimagtismoP-OI" name=""> </label>
                                      </div>
                                     </div>
 
                                     <h5 class="quera" style="display: flex;">Paquimetría</h5>
-                                     <div class="cbo"><label> Punto más fino  <input type="text" name=""></label>
-                                      <label>  Central <input type="text" name=""></label>
+                                     <div class="cbo"><label> Punto más fino  <input type="text" id="gpuntoFino-OI"  name=""></label>
+                                      <label>  Central <input type="text" id="gcentral-OI"  name=""></label>
                                     </div>
 
                             <div class="input-control cbo-content lfps3" style="display: flex;">
                              <div class="cbo" tabindex="1" onkeyup="eventkeytwo(this,17)">
-                                <label> Elevación anterior 3 mm centrales   <input type="text" name="" class="nr"></label
+                                <label> Elevación anterior 3 mm centrales   <input type="text" id="geleA3centrales-OI"  name="" class="nr"></label
                                     ><label>   <input type="text" class="medidor" value="Normal" name="" disabled=""></label>
                                 </div>
                                 </div>
 
                                         <div class="input-control cbo-content lfps3" style="display: flex;">
                                      <div class="cbo" tabindex="1" onkeyup="eventkeytwo(this,22)">
-                                        <label> Elevación posterior 3 mm centrales  <input type="text" name="" class="nr"></label>
+                                        <label> Elevación posterior 3 mm centrales  <input type="text"  id="geleP3centrales-OI"    name="" class="nr"></label>
                                         <label>   <input type="text" class="medidor" value="Normal" name="" disabled=""></label></div>
                                     </div>
 
@@ -710,73 +711,73 @@
         <h5>Queratometría Anterior</h5>
         <div class="cbo">
             <label> K1(D)
-                <input type="text" name=""> </label>
+                <input type="text" id="sk1A-OI" name=""> </label>
             <label> EjeK1
-                <input type="text" name=""> </label>
+                <input type="text" id="sejek1A-OI" name=""> </label>
         </div>
     </div>
     <div class="input-control cbo-content lfps3" style="display: flex;">
         <div class="cbo">
             <label> K2(D)
-                <input type="text" name=""> </label>
+                <input type="text" id="sk2A-OI" name=""> </label>
             <label> EjeK2
-                <input type="text" name=""> </label>
+                <input type="text" id="sejek2A-OI" name=""> </label>
         </div>
     </div>
     <div class="input-control cbo-content lfps3" style="display: flex;">
         <div class="cbo">
             <label> Atigmatismo
-                <input type="text" name=""> </label>
+                <input type="text" id="satigmatismoA-OI" name=""> </label>
             <label> Eje Astigmatismo
-                <input type="text" name=""> </label>
+                <input type="text" id="sejeatigmatismoA-OI" name=""> </label>
         </div>
     </div>
     <div class="input-control cbo-content lfps3" style="display: flex;">
         <h5>Queratometría posterior</h5>
         <div class="cbo">
             <label> Sim K
-                <input type="text" name=""> </label>
+                <input type="text" id="ssimkP-OI"   name=""> </label>
             <label> Flat SimK
-                <input type="text" name=""> </label>
+                <input type="text" id="sflatsimkP-OI" name=""> </label>
         </div>
     </div>
     <div class="input-control cbo-content lfps3" style="display: flex;">
         <div class="cbo">
             <label> Eje Sim K
-                <input type="text" name=""> </label>
+                <input type="text" id="sejesimkP-OI" name=""> </label>
             <label> Steep Sim K
-                <input type="text" name=""> </label>
+                <input type="text" id="ssteepsimkP-OI" name=""> </label>
         </div>
     </div>
     <div class="input-control cbo-content lfps3" style="display: flex;">
         <div class="cbo">
             <label> Eje Flat SimK
-                <input type="text" name="" onkeyup="quera(this,0)"> </label>
+                <input type="text" id="sejeflatsimkP-OI" name="" onkeyup="quera(this,0)"> </label>
             <label> Astigmatismo
-                <input type="text" name=""> </label>
+                <input type="text" id="sastimagtismoP-OI" name=""> </label>
             <label> Eje Steep Sim K
-                <input type="text" name=""> </label>
+                <input type="text" id="sejesteepsimkP-OI" name=""> </label>
         </div>
     </div>
-    <h5 class="quera" style="display: flex;">Paquimetría</h5>
+    <h5 class="quera" style="display: flex;color:red;">Paquimetría</h5>
 
     <div class="input-control cbo-content lfps3" style="display: flex;">
         <div class="cbo">
             <label> Punto más delgado
-                <input type="text" name="">
+                <input type="text" id="spuntodelgado-OI" name="">
             </label>
             <label> Eje
-                <input type="text" name="">
+                <input type="text" id="seje-OI" name="">
             </label>
         </div>
     </div>
     <div class="input-control cbo-content lfps3" style="display: flex;">
         <div class="cbo">
             <label> Grosor
-                <input type="text" name="">
+                <input type="text" id="sgrosor-OI" name="">
             </label>
             <label> Ángulo Kappa
-                <input type="text" name="">
+                <input type="text" id="sangulokappa-OI" name="">
             </label>
         </div>
     </div>
@@ -848,17 +849,18 @@
                                     <div class="input-control form-conjunto">
                                         <div class="form-content">
                                             <div class="tipe-eyes">
-                                                <img onclick="presion(0)" src="~/imagenes/1.jpg" style="opacity: 1">
-                                                <img onclick="presion(1)" src="~/imagenes/2.jpg">
-                                                <img onclick="presion(2)" src="~/imagenes/3.jpg">
-                                                <img onclick="presion(3)" src="~/imagenes/4.jpg">
-                                                <img onclick="presion(4)" src="~/imagenes/5.jpg">
-                                                <img onclick="presion(5)" src="~/imagenes/6.jpg">
-                                                <img onclick="presion(6)" src="~/imagenes/7.jpg">
-                                                <img onclick="presion(7)" src="~/imagenes/8.jpg">
-                                                <img onclick="presion(8)" src="~/imagenes/9.jpg">
-                                                <img onclick="presion(9)" src="~/imagenes/10.jpg">
-                                                <img onclick="presion(10)" src="~/imagenes/11.jpg">
+                                              
+                                                <img onclick="presiondos(0)" src="/imagenes/Imagen1.png" style="opacity: 1">
+                                                    <img onclick="presion(1)" src="/imagenes/Imagen2.png">
+                                                    <img onclick="presion(2)" src="/imagenes/Imagen3.png">
+                                                    <img onclick="presion(3)" src="/imagenes/Imagen4.png">
+                                                    <img onclick="presion(4)" src="/imagenes/Imagen5.png">
+                                                    <img onclick="presion(5)" src="/imagenes/Imagen6.png">
+                                                    <img onclick="presion(6)" src="/imagenes/Imagen7.png">
+                                                    <img onclick="presion(7)" src="/imagenes/Imagen8.png">
+                                                    <img onclick="presion(8)" src="/imagenes/Imagen9.png">
+                                                    <img onclick="presion(9)" src="/imagenes/Imagen10.png">
+                                                    <img onclick="presion(10)" src="/imagenes/Imagen11.png">
                                             </div>
                                             <div class="combo">
                                                 <h5>Tipo de queratono</h5>
@@ -1154,7 +1156,7 @@
                                                 </label>
                                             </div>
                                         </div>
-                                        <h5 class="quera">Paquimetría</h5>
+                                        <h5 class="quera" style="display: none;">Paquimetría</h5>
                                         <div class="input-control cbo-content rgps3">
                                             <div class="cbo">
                                                 <label>
@@ -1195,69 +1197,70 @@
                                             <!-- Galillei -->
 
                             
+                                
                                 <div id=p3D-GALILLEI style="display: none;">
                                            <div class="input-control cbo-content lfps3" style="display: flex;">
                                                  <h5>Queratometría Anterior</h5>
                                               <div class="cbo">   
-                                               <label>     Sim K       <input type="text" name=""> </label>  
-                                                <label>     Flat SimK       <input type="text" name=""> </label>
+                                               <label>     Sim K       <input type="text" name="" id="gsimkA-OD"> </label>  
+                                                <label>     Flat SimK       <input type="text" id="gflatsimkA-OD" name=""> </label>
                                             </div>
                                          </div>
                                          <div class="input-control cbo-content lfps3" style="display: flex;">
                                              <div class="cbo">   
-                                              <label>     Flat SimK       <input type="text" name=""> </label>   
-                                              <label>     Eje Flat SimK       <input type="text" name=""> </label>    
-                                              <label>     Steep SimK      <input type="text" name=""> </label>
+                                              <label>     Flat SimK       <input type="text" id="gflat1simkA-OD" name=""> </label>   
+                                              <label>     Eje Flat SimK       <input type="text" id="gejeflatsimkA-OD" name=""> </label>    
+                                              <label>     Steep SimK      <input type="text" id="gsteepsimkA-OD" name=""> </label>
                                             </div>
                                         </div>
                                     <div class="input-control cbo-content lfps3" style="display: flex;">
                                        <div class="cbo">  
-                                       <label>     Eje Steep SimK      <input type="text" name=""> </label>   
-                                      <label>     Astigmatismo        <input type="text" name=""> </label>
+                                       <label>     Eje Steep SimK      <input type="text" id="gejesteepsimkA-OD" name=""> </label>   
+                                      <label>     Astigmatismo        <input type="text" id="gastimagtismoA-OD" name=""> </label>
                                        </div>
                                     </div>
 
                                     <div class="input-control cbo-content lfps3" style="display: flex;">
                                        <h5>Queratometría posterior</h5>
-                                       <div class="cbo">    <label>     Sim K       <input type="text" name=""> </label>    
-                                        <label>     Flat SimK       <input type="text" name=""> </label>   
+                                       <div class="cbo">    <label>     Sim K       <input type="text" id="gsimkP-OD" name=""> </label>    
+                                        <label>     Flat SimK       <input type="text" id="gflatsimkP-OD" name=""> </label>   
                                          </div>
                                     </div>
 
                                     <div class="input-control cbo-content lfps3" style="display: flex;">
                                        <div class="cbo">   
-                                        <label>     Flat SimK       <input type="text" name=""> </label>  
-                                         <label>     Eje Flat SimK       <input type="text" name=""> </label>  
-                                           <label>     Steep SimK      <input type="text" name=""> </label>
+                               
+                                        <label>     Flat SimK       <input type="text" id="gflat1simkP-OD" name=""> </label>  
+                                         <label>     Eje Flat SimK       <input type="text" id="gejeflatsimkP-OD" name=""> </label>  
+                                           <label>     Steep SimK      <input type="text" id="gsteepsimkP-OD" name=""> </label>
                                        </div>
                                     </div>
 
                                     <div class="input-control cbo-content lfps3" style="display: flex;">
-                                     <div class="cbo">    <label>     Eje Steep SimK      <input type="text" name=""> </label>   
-                                     <label>     Astigmatismo        <input type="text" name=""> </label>
+                                     <div class="cbo">    <label>     Eje Steep SimK      <input type="text"  id="gejesteepsimkP-OD" name=""> </label>   
+                                     <label>     Astigmatismo        <input type="text" id="gastimagtismoP-OD" name=""> </label>
                                      </div>
                                     </div>
 
                                     <h5 class="quera" style="display: flex;">Paquimetría</h5>
-                                     <div class="cbo"><label> Punto más fino  <input type="text" name=""></label>
-                                      <label>  Central <input type="text" name=""></label>
+                                     <div class="cbo"><label> Punto más fino  <input type="text" id="gpuntoFino-OD"  name=""></label>
+                                      <label>  Central <input type="text" id="gcentral-OD"  name=""></label>
                                     </div>
 
                             <div class="input-control cbo-content lfps3" style="display: flex;">
                              <div class="cbo" tabindex="1" onkeyup="eventkeytwo(this,17)">
-                                <label> Elevación anterior 3 mm centrales   <input type="text" name="" class="nr"></label
+                                <label> Elevación anterior 3 mm centrales   <input type="text" id="geleA3centrales-OD"  name="" class="nr"></label
                                     ><label>   <input type="text" class="medidor" value="Normal" name="" disabled=""></label>
                                 </div>
                                 </div>
 
                                         <div class="input-control cbo-content lfps3" style="display: flex;">
                                      <div class="cbo" tabindex="1" onkeyup="eventkeytwo(this,22)">
-                                        <label> Elevación posterior 3 mm centrales  <input type="text" name="" class="nr"></label>
+                                        <label> Elevación posterior 3 mm centrales  <input type="text"  id="geleP3centrales-OD"    name="" class="nr"></label>
                                         <label>   <input type="text" class="medidor" value="Normal" name="" disabled=""></label></div>
                                     </div>
 
                             </div>
-
 
                              
 
@@ -1265,57 +1268,58 @@
 
 
 <!-- Sirius -->
+<!-- Sirius -->
 <div id=p3D-SIRIUS style="display: none;">
     <div class="input-control cbo-content lfps3" style="display: flex;">
         <h5>Queratometría Anterior</h5>
         <div class="cbo">
             <label> K1(D)
-                <input type="text" name=""> </label>
+                <input type="text" id="sk1A-OD" name=""> </label>
             <label> EjeK1
-                <input type="text" name=""> </label>
+                <input type="text" id="sejek1A-OD" name=""> </label>
         </div>
     </div>
     <div class="input-control cbo-content lfps3" style="display: flex;">
         <div class="cbo">
             <label> K2(D)
-                <input type="text" name=""> </label>
+                <input type="text" id="sk2A-OD" name=""> </label>
             <label> EjeK2
-                <input type="text" name=""> </label>
+                <input type="text" id="sejek2A-OD" name=""> </label>
         </div>
     </div>
     <div class="input-control cbo-content lfps3" style="display: flex;">
         <div class="cbo">
             <label> Atigmatismo
-                <input type="text" name=""> </label>
+                <input type="text" id="satigmatismoA-OD" name=""> </label>
             <label> Eje Astigmatismo
-                <input type="text" name=""> </label>
+                <input type="text" id="sejeatigmatismoA-OD" name=""> </label>
         </div>
     </div>
     <div class="input-control cbo-content lfps3" style="display: flex;">
         <h5>Queratometría posterior</h5>
         <div class="cbo">
             <label> Sim K
-                <input type="text" name=""> </label>
+                <input type="text" id="ssimkP-OD"   name=""> </label>
             <label> Flat SimK
-                <input type="text" name=""> </label>
+                <input type="text" id="sflatsimkP-OD" name=""> </label>
         </div>
     </div>
     <div class="input-control cbo-content lfps3" style="display: flex;">
         <div class="cbo">
             <label> Eje Sim K
-                <input type="text" name=""> </label>
+                <input type="text" id="sejesimkP-OD" name=""> </label>
             <label> Steep Sim K
-                <input type="text" name=""> </label>
+                <input type="text" id="ssteepsimkP-OD" name=""> </label>
         </div>
     </div>
     <div class="input-control cbo-content lfps3" style="display: flex;">
         <div class="cbo">
             <label> Eje Flat SimK
-                <input type="text" name="" onkeyup="quera(this,0)"> </label>
+                <input type="text" id="sejeflatsimkP-OD" name="" onkeyup="quera(this,0)"> </label>
             <label> Astigmatismo
-                <input type="text" name=""> </label>
+                <input type="text" id="sastimagtismoP-OD" name=""> </label>
             <label> Eje Steep Sim K
-                <input type="text" name=""> </label>
+                <input type="text" id="sejesteepsimkP-OD" name=""> </label>
         </div>
     </div>
     <h5 class="quera" style="display: flex;">Paquimetría</h5>
@@ -1323,20 +1327,20 @@
     <div class="input-control cbo-content lfps3" style="display: flex;">
         <div class="cbo">
             <label> Punto más delgado
-                <input type="text" name="">
+                <input type="text" id="spuntodelgado-OD" name="">
             </label>
             <label> Eje
-                <input type="text" name="">
+                <input type="text" id="seje-OD" name="">
             </label>
         </div>
     </div>
     <div class="input-control cbo-content lfps3" style="display: flex;">
         <div class="cbo">
             <label> Grosor
-                <input type="text" name="">
+                <input type="text" id="sgrosor-OD" name="">
             </label>
             <label> Ángulo Kappa
-                <input type="text" name="">
+                <input type="text" id="sangulokappa-OD" name="">
             </label>
         </div>
     </div>
@@ -1348,7 +1352,7 @@
                                         <div class="input-control sig">
                                             <label>Anillo Fleischer</label>
                                             <div class="radio-group" id="SignosPaso3RG">
-                                                <label><input type="radio" data-v="si" name="SignosPaso3RG" class="hidden anilloFlei-OD" onclick="checkradio('SignosPaso3RG')" ><img src="/imagenes/CHECK-CIRCULO-OFF.png">
+                                                <label><input type="radio" checked  data-v="si" name="SignosPaso3RG" class="hidden anilloFlei-OD" onclick="checkradio('SignosPaso3RG')" ><img src="/imagenes/CHECK-BLANCO-CIRCULO-ON.png">
                                                 SI</label>
                                                 <label><input type="radio" data-v="no" name="SignosPaso3RG" class="hidden" onclick="checkradio('SignosPaso3RG')" ><img src="/imagenes/CHECK-CIRCULO-OFF.png">NO</label>
                                             </div>
@@ -1356,15 +1360,15 @@
                                         <div class="input-control sig">
                                             <label>Estrias de Vogt</label>
                                             <div class="radio-group" id="EstriasPaso3RG">
-                                                <label><input type="radio" data-v="si" name="EstriasPaso3RG" class="hidden estriasvogt-OD" onclick="checkradio('EstriasPaso3RG')" ><img src="/imagenes/CHECK-CIRCULO-OFF.png">
+                                                <label><input type="radio"  data-v="si" name="EstriasPaso3RG" class="hidden estriasvogt-OD" onclick="checkradio('EstriasPaso3RG')" ><img src="/imagenes/CHECK-CIRCULO-OFF.png">
                                                 SI</label>
-                                                <label><input type="radio" data-v="no" name="EstriasPaso3RG" class="hidden estriasvogt-OD" onclick="checkradio('EstriasPaso3RG')" ><img src="/imagenes/CHECK-CIRCULO-OFF.png">NO</label>
+                                                <label><input type="radio" checked data-v="no" name="EstriasPaso3RG"  class="hidden estriasvogt-OD" onclick="checkradio('EstriasPaso3RG')" ><img src="/imagenes/CHECK-BLANCO-CIRCULO-ON.png">NO</label>
                                             </div>
                                         </div>
                                         <div class="input-control sig">
                                             <label>Nervios</label>
                                             <div class="radio-group" id="NerviosPaso3RG">
-                                                <label><input type="radio" data-v="si" name="NerviosPaso3RG" class="hidden nervios-OD" onclick="checkradio('NerviosPaso3RG')" ><img src="/imagenes/CHECK-CIRCULO-OFF.png">
+                                                <label><input type="radio" checked data-v="si" name="NerviosPaso3RG" class="hidden nervios-OD" onclick="checkradio('NerviosPaso3RG')" ><img src="/imagenes/CHECK-BLANCO-CIRCULO-ON.png">
                                                 SI</label>
                                                 <label><input type="radio" data-v="no"  name="NerviosPaso3RG" class="hidden nervios-OD" onclick="checkradio('NerviosPaso3RG')" ><img src="/imagenes/CHECK-CIRCULO-OFF.png">NO</label>
                                             </div>
@@ -1372,7 +1376,7 @@
                                         <div class="input-control sig">
                                             <label>Leucoma</label>
                                             <div class="radio-group" id="LeucomaPaso3RG">
-                                                <label><input type="radio" data-v="no" name="LeucomaPaso3RG" class="hidden" onclick="checkradio('LeucomaPaso3RG')" ><img src="/imagenes/CHECK-CIRCULO-OFF.png">NO</label>
+                                                <label><input type="radio" data-v="no" checked name="LeucomaPaso3RG" class="hidden" onclick="checkradio('LeucomaPaso3RG')" ><img src="/imagenes/CHECK-BLANCO-CIRCULO-ON.png">NO</label>
                                                 <label><input data-v="perif" type="radio" name="LeucomaPaso3RG" class="hidden leucoma-OD" onclick="checkradio('LeucomaPaso3RG')" ><img src="/imagenes/CHECK-CIRCULO-OFF.png">PERIF</label>
                                                 <label><input type="radio" data-v="central" name="LeucomaPaso3RG" class="hidden leucoma-OD" onclick="checkradio('LeucomaPaso3RG')" ><img src="/imagenes/CHECK-CIRCULO-OFF.png">CENTRAL</label>
                                             </div>
@@ -1381,14 +1385,14 @@
                                             <label>Hidrops</label>
                                             <div class="radio-group" id="HidropsPaso3RG">
                                                 <label><input type="radio" data-v="si" name="HidropsPaso3RG" class="hidden hidrops-OD" onclick="checkradio('HidropsPaso3RG')" ><img src="/imagenes/CHECK-CIRCULO-OFF.png">SI</label>
-                                                <label><input type="radio" data-v="no" name="HidropsPaso3RG" class="hidden hidrops-OD" onclick="checkradio('HidropsPaso3RG')" ><img src="/imagenes/CHECK-CIRCULO-OFF.png">NO</label>
+                                                <label><input type="radio" data-v="no" checked name="HidropsPaso3RG" class="hidden hidrops-OD" onclick="checkradio('HidropsPaso3RG')" ><img src="/imagenes/CHECK-BLANCO-CIRCULO-ON.png">NO</label>
                                             </div>
                                         </div>
                                         <div class="input-control sig">
                                             <label>Izquierdo Manis</label>
                                             <div class="radio-group" id="ManisPaso3RG">
                                                 <label><input type="radio" data-v="si"  name="ManisPaso3RG" class="hidden  manis-OD" onclick="checkradio('ManisPaso3RG')" ><img src="/imagenes/CHECK-CIRCULO-OFF.png">SI</label>
-                                                <label><input type="radio" data-v="no" name="ManisPaso3RG" class="hidden  manis-OD" onclick="checkradio('ManisPaso3RG')" ><img src="/imagenes/CHECK-CIRCULO-OFF.png">NO</label>
+                                                <label><input type="radio" data-v="no" checked name="ManisPaso3RG" class="hidden  manis-OD" onclick="checkradio('ManisPaso3RG')" ><img src="/imagenes/CHECK-BLANCO-CIRCULO-ON.png">NO</label>
                                             </div>
                                         </div>
                                         <div class="line">
@@ -2623,7 +2627,7 @@
                                                         </div>
                                                 </div>
                                                 <div class="line quera"></div>
-                                                <h5>Paquimetría</h5>
+                                                <h5 style="display: flex;    font-size: 1.1em;color: white;font-weight: 60;">Paquimetría</h5>
                                                 <div class="input lfps3">
                                                     <div class="encima input-control">
                                                         <label>
@@ -2931,7 +2935,7 @@
                                                         </div>
                                                 </div>
                                                 <div class="quera line"></div>
-                                                <h5 >Paquimetría</h5>
+                                                <h5  >Paquimetría</h5>
                                                 <div class="input rgps3">
                                                     <div class="encima input-control">
                                                         <label>

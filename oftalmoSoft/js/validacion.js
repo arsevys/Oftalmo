@@ -88,86 +88,8 @@ function antecedentes(){
 //tercer paso ************************************************
 function evaluacion(){
 
-let Pentacam={
-    // Queratometria Anterior
-   "k1Anterior":valD("k1A-OI"),
-     "ejek1Anterior":valD("ejek1A-OI"),
-     "k2Anterior":valD("k2A-OI"),
-     "ejek2Anterior":valD("ejek2A-OI"),
-     "cilindroTopoAnterior":valD("citoA-OI"),
-     //Queratometria Posterior
-     "k1Posterior":valD("k1P-OI"),
-     "ejek1Posterior":valD("ejek1P-OI"),
-     "k2Posterior":valD("k2P-OI"),
-     "ejek2Posterior":valD("ejek2P-OI"),
-     "cilindroTopoPosterior":valD("citoP-OI"),
-     "kmax":valD("kmax-OI"),
-     "it":valD("it-OI"),
-     "q":valD("q-OI"),    
-     "kmaxSuperior":valD("kmaxSuperior-OI"),
-     "kmaxInferior":valD("kmaxInferior-OI"),
-     "medidorSI":valD("medidorSI-OI"),
-      "kmaxDerecha":valD("kmaxDerecha-OI"),
-     "kmaxIzquierda":valD("kmaxIzquierda-OI"),
-
-      "medidorDI":valD("medidorDI-OI"),
-      // Paquimetria
-     "puntoFino":valD("pFino-OI"),
-     "apex":valD("apex-OI"),
-     "bfsAnterior":valD("bfsA-OI"),
-     "bfsPosterior":valD("bfsP-OI") 
-}
-console.log(Pentacam);
-
-let gali={
-    // Queratometria Anterior
-    "slimkAnterior":valD("sc-OI"),
-    "flatslimkAnterior":valD("sc-OI"),
-    "1flatslimkAnterior":valD("sc-OI"),
-    "ejeflatslimkAnterior":valD("sc-OI"),
-    "steepslimkAnterior":valD("sc-OI"),
-    "ejesteepslimkAnterior":valD("sc-OI"),
-    "asignatismoAnterior":valD("sc-OI"),
-    // Queratometria Posterior
-    "simkPosterior":valD("sc-OI"),
-    "flatsimkPosterior":valD("sc-OI"),
-    "1flatsimkPosterior":valD("sc-OI"),
-    "ejeflatsimkPosterior":valD("sc-OI"),
-    "steepsimkPosterior":valD("sc-OI"),
-    "ejesteepsimkPosterior":valD("sc-OI"),
-    "asignatismoPosterior":valD("sc-OI"),
-    // Paquimetria
-    "puntoFino":valD("sc-OI"),
-    "central":valD("sc-OI"),
-    "eleA3centrales":valD("sc-OI"),
-    "eleP3centrales":valD("sc-OI")
-}
-console.log(gali);
-
-let sirius={
-    //Queratometria Anterior
-   "k1Anterior":valD("k1A-OI"),
-     "ejek1Anterior":valD("ejek1A-OI"),
-     "k2Anterior":valD("k2A-OI"),
-     "ejek2Anterior":valD("ejek2A-OI"),
-     "ejek2Anterior":valD("ejek2A-OI"),
-     "asignatismoAnterior":valD("sc-OI"),
-     "ejeasignatismoAnterior":valD("sc-OI"),
-       // Queratometria Posterior
-         "simkPosterior":valD("sc-OI"),
-    "flatsimkPosterior":valD("sc-OI"),
-     "ejesimkPosterior":valD("sc-OI"),
-    
-    "steepsimkPosterior":valD("sc-OI"),
-    "ejeflatsimkPosterior":valD("sc-OI"),
-     "asignatismoPosterior":valD("sc-OI"),
-    "ejesteepsimkPosterior":valD("sc-OI")
-   //Paquimetria
 
 
-}
-
-console.log(sirius);
 let c={
     "ojoIzquierdo":{
      "estudios":valC("estudios-OI"),
@@ -193,29 +115,7 @@ let c={
      "esf":valD("esf-OD"),
      "cilindro":valD("cilindro-OD"),
      "eje":valD("eje-OD"),
-     "k1Anterior":valD("k1A-OD"),
-     "ejek1Anterior":valD("ejek1A-OD"),
-     "k2Anterior":valD("k2A-OD"),
-     "ejek2Anterior":valD("ejek2A-OD"),
-     "cilindroTopoAnterior":valD("citoA-OD"),
-     "k1Posterior":valD("k1P-OD"),
-     "ejek1Posterior":valD("ejek1P-OD"),
-     "k2Posterior":valD("k2P-OD"),
-     "ejek2Posterior":valD("ejek2P-OD"),
-     "cilindroTopoPosterior":valD("citoP-OD"),
-     "kmax":valD("kmax-OD"),
-     "it":valD("it-OD"),
-     "q":valD("q-OD"),
-     "kmaxSuperior":valD("kmaxSuperior-OD"),
-     "kmaxInferior":valD("kmaxInferior-OD"),
-     "medidorSI":valD("medidorSI-OD"),
-      "kmaxDerecha":valD("kmaxDerecha-OD"),
-     "kmaxIzquierda":valD("kmaxIzquierda-OD"),
-      "medidorDI":valD("medidorDI-OD"),
-     "puntoFino":valD("pFino-OD"),
-     "apex":valD("apex-OD"),
-     "bfsAnterior":valD("bfsA-OD"),
-     "bfsPosterior":valD("bfsP-OD"),
+     
      "anilloFleisher":valC("anilloFlei-OD"),
      "estriasVogt":valC("estriasvogt-OD"),
      "nervios":valC("nervios-OD"),
@@ -225,12 +125,222 @@ let c={
      "tipoQueratono":$(".tipcono-OD").val()
     }
 }
+
+
+
+//Ojo Derecho 
 switch(valC("estudios-OI")){
-    case "P":console.log("Eligio Pentacam");break;
-     case "G":console.log("Eligio Galilei");break;
-      case "S":console.log("Eligio Sirius");break;
+    case "P":console.log("Eligio Pentacam");
+
+   let Pentacam={
+     // Queratometria Anterior
+     "k1Anterior":valD("k1A-OI"),
+     "ejek1Anterior":valD("ejek1A-OI"),
+     "k2Anterior":valD("k2A-OI"),
+     "ejek2Anterior":valD("ejek2A-OI"),
+     "cilindroTopoAnterior":valD("citoA-OI"),
+     //Queratometria Posterior
+     "k1Posterior":valD("k1P-OI"),
+     "ejek1Posterior":valD("ejek1P-OI"),
+     "k2Posterior":valD("k2P-OI"),
+     "ejek2Posterior":valD("ejek2P-OI"),
+     "cilindroTopoPosterior":valD("citoP-OI"),
+     "kmax":valD("kmax-OI"),
+     "it":valD("it-OI"),
+     "q":valD("q-OI"),    
+     "kmaxSuperior":valD("kmaxSuperior-OI"),
+     "kmaxInferior":valD("kmaxInferior-OI"),
+     "medidorSI":valD("medidorSI-OI"), //campo colores
+      "kmaxDerecha":valD("kmaxDerecha-OI"),
+     "kmaxIzquierda":valD("kmaxIzquierda-OI"),
+
+      "medidorDI":valD("medidorDI-OI"),//campo colores
+      // Paquimetria
+     "puntoFino":valD("pFino-OI"),
+     "apex":valD("apex-OI"),
+     "bfsAnterior":valD("bfsA-OI"),
+     "bfsPosterior":valD("bfsP-OI") 
+    }
+    console.log("Pentacam",Pentacam);
+    c.ojoIzquierdo.estudiosData=Pentacam;
+
+    break;
+     case "G":console.log("Eligio Galilei");
+let gali={
+    // Queratometria Anterior
+    "simkAnterior":valD("gsimkA-OI"),
+    "flatsimkAnterior":valD("gflatsimkA-OI"),
+    "1flatsimkAnterior":valD("gflat1simkA-OI"),
+    "ejeflatsimkAnterior":valD("gejeflatsimkA-OI"),
+    "steepsimkAnterior":valD("gsteepsimkA-OI"),
+    "ejesteepsimkAnterior":valD("gejesteepsimkA-OI"),
+    "asignatismoAnterior":valD("gastimagtismoA-OI"),
+    // Queratometria Posterior
+    "simkPosterior":valD("gsimkP-OI"),
+    "flatsimkPosterior":valD("gflatsimkP-OI"),
+    "1flatsimkPosterior":valD("gflat1simkP-OI"),
+    "ejeflatsimkPosterior":valD("gejeflatsimkP-OI"),
+    "steepsimkPosterior":valD("gsteepsimkP-OI"),
+    "ejesteepsimkPosterior":valD("gejesteepsimkP-OI"),
+    "asignatismoPosterior":valD("gastimagtismoP-OI"),
+    // Paquimetria
+    "puntoFino":valD("gpuntoFino-OI"),
+    "central":valD("gcentral-OI"),
+    "eleA3centrales":valD("geleA3centrales-OI"),
+    "eleP3centrales":valD("geleP3centrales-OI")
+  }
+console.log("Galillei",gali);
+     c.ojoIzquierdo.estudiosData=Gali;
+     break;
+      case "S":console.log("Eligio Sirius");
+ let sirius={
+     //Queratometria Anterior
+     "k1Anterior":valD("sk1A-OI"),
+     "ejek1Anterior":valD("sejek1A-OI"),
+     "k2Anterior":valD("sk2A-OI"),
+     "ejek2Anterior":valD("sejek2A-OI"),
+  
+     "asignatismoAnterior":valD("satigmatismoA-OI"),
+     "ejeasignatismoAnterior":valD("sejeatigmatismoA-OI"),
+       // Queratometria Posterior
+         "simkPosterior":valD("ssimkP-OI"),
+     "flatsimkPosterior":valD("sflatsimkP-OI"),
+     "ejesimkPosterior":valD("sejesimkP-OI"),
+    
+     "steepsimkPosterior":valD("ssteepsimkP-OI"),
+     "ejeflatsimkPosterior":valD("sejeflatsimkP-OI"),
+     "asignatismoPosterior":valD("sastimagtismoP-OI"),
+     "ejesteepsimkPosterior":valD("sejesteepsimkP-OI"),
+     //Paquimetria
+     "puntodelgado":valD("spuntodelgado-OI"),
+     "eje":valD("seje-OI"),
+     "grosor":valD("sgrosor-OI"),
+     "anguloKappa":valD("sangulokappa-OI")
+  }
+
+console.log("Sirius",sirius);
+
+ c.ojoIzquierdo.estudiosData=sirius;
+
+      break;
 }
+
+
+
+
+
+switch(valC("estudios-OD")){
+     case "P":console.log("Eligio Pentacam"); 
+ let Pentacam1={
+     // Queratometria Anterior
+     "k1Anterior":valD("k1A-OD"),
+     "ejek1Anterior":valD("ejek1A-OD"),
+     "k2Anterior":valD("k2A-OD"),
+     "ejek2Anterior":valD("ejek2A-OD"),
+     "cilindroTopoAnterior":valD("citoA-OD"),
+     //Queratometria Posterior
+     "k1Posterior":valD("k1P-OD"),
+     "ejek1Posterior":valD("ejek1P-OD"),
+     "k2Posterior":valD("k2P-OD"),
+     "ejek2Posterior":valD("ejek2P-OD"),
+     "cilindroTopoPosterior":valD("citoP-OD"),
+     "kmax":valD("kmax-OD"),
+     "it":valD("it-OD"),
+     "q":valD("q-OD"),    
+     "kmaxSuperior":valD("kmaxSuperior-OD"),
+     "kmaxInferior":valD("kmaxInferior-OD"),
+     "medidorSI":valD("medidorSI-OD"), //campo colores
+      "kmaxDerecha":valD("kmaxDerecha-OD"),
+     "kmaxIzquierda":valD("kmaxIzquierda-OD"),
+
+      "medidorDI":valD("medidorDI-OD"),//campo colores
+      // Paquimetria
+     "puntoFino":valD("pFino-OD"),
+     "apex":valD("apex-OD"),
+     "bfsAnterior":valD("bfsA-OD"),
+     "bfsPosterior":valD("bfsP-OD") 
+   }
+console.log("Pentacam Derecho",Pentacam1);
+  c.ojoDerecho.estudiosData=Pentacam1;
+     break;
+      case "G":console.log("Eligio Galilei");
+ let gali1={
+    // Queratometria Anterior
+    "simkAnterior":valD("gsimkA-OD"),
+    "flatsimkAnterior":valD("gflatsimkA-OD"),
+    "1flatsimkAnterior":valD("gflat1simkA-OD"),
+    "ejeflatsimkAnterior":valD("gejeflatsimkA-OD"),
+    "steepsimkAnterior":valD("gsteepsimkA-OD"),
+    "ejesteepsimkAnterior":valD("gejesteepsimkA-OD"),
+    "asignatismoAnterior":valD("gastimagtismoA-OD"),
+    // Queratometria Posterior
+    "simkPosterior":valD("gsimkP-OD"),
+    "flatsimkPosterior":valD("gflatsimkP-OD"),
+    "1flatsimkPosterior":valD("gflat1simkP-OD"),
+    "ejeflatsimkPosterior":valD("gejeflatsimkP-OD"),
+    "steepsimkPosterior":valD("gsteepsimkP-OD"),
+    "ejesteepsimkPosterior":valD("gejesteepsimkP-OD"),
+    "asignatismoPosterior":valD("gastimagtismoP-OD"),
+    // Paquimetria
+    "puntoFino":valD("gpuntoFino-OD"),
+    "central":valD("gcentral-OD"),
+    "eleA3centrales":valD("geleA3centrales-OD"),
+    "eleP3centrales":valD("geleP3centrales-OD")
+  }
+    console.log("Galillei Derecho",gali1);
+     c.ojoDerecho.estudiosData=gali1;
+      break;
+
+
+      case "S":console.log("Eligio Sirius");
+    let sirius1={
+     //Queratometria Anterior
+     "k1Anterior":valD("sk1A-OD"),
+     "ejek1Anterior":valD("sejek1A-OD"),
+     "k2Anterior":valD("sk2A-OD"),
+     "ejek2Anterior":valD("sejek2A-OD"),
+  
+     "asignatismoAnterior":valD("satigmatismoA-OD"),
+     "ejeasignatismoAnterior":valD("sejeatigmatismoA-OD"),
+       // Queratometria Posterior
+         "simkPosterior":valD("ssimkP-OD"),
+      "flatsimkPosterior":valD("sflatsimkP-OD"),
+      "ejesimkPosterior":valD("sejesimkP-OD"),
+    
+      "steepsimkPosterior":valD("ssteepsimkP-OD"),
+      "ejeflatsimkPosterior":valD("sejeflatsimkP-OD"),
+     "asignatismoPosterior":valD("sastimagtismoP-OD"),
+     "ejesteepsimkPosterior":valD("sejesteepsimkP-OD"),
+     //Paquimetria
+     "puntodelgado":valD("spuntodelgado-OD"),
+     "eje":valD("seje-OD"),
+     "grosor":valD("sgrosor-OD"),
+     "anguloKappa":valD("sangulokappa-OD")
+
+
+     }
+      console.log("Sirius Derecho",sirius1);
+        c.ojoDerecho.estudiosData=sirius1;
+         break;
+}
+
 console.log(c);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 

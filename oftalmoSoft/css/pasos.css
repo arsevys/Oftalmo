@@ -647,6 +647,10 @@ select:focus {
 
 .paso3 h5 {
 	font-size: 1em;
+   display: flex;    
+   font-size: 1.1em;
+   color: white;
+   font-weight: 60;
 }
 
 .paso3 .item-form > h5{
