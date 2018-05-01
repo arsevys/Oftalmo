@@ -45,6 +45,8 @@ namespace OftalmoData
 
         public bool Insert(XmlDocument xmlDocument)
         {
+
+           
             var model = false;
             using (SqlConnection conn = new SqlConnection(cnxConection))
             using (SqlCommand cmd = new SqlCommand(Objects.Objects.insertarData, conn))
@@ -95,6 +97,161 @@ namespace OftalmoData
             }
             return l;
         }
+
+
+        public List<cboBox> cboAgudezaVisual()
+        {
+
+            List<cboBox> l = new List<cboBox>();
+            using (SqlConnection conn = new SqlConnection(cnxConection))
+            using (SqlCommand cmd = new SqlCommand("cbo_AgudezaVisual", conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                //cmd.Parameters.Add("@xml", SqlDbType.Xml).Value = xmlDocument;
+
+                conn.Open();
+                SqlDataReader s = cmd.ExecuteReader();
+                while (s.Read())
+                {
+                    cboBox p = new cboBox();
+                    p.value =s[0].ToString();
+                    p.display = s[1].ToString();
+                   
+
+                    l.Add(p);
+                }
+                conn.Close(); s.Close();
+            }
+            return l;
+        }
+        public List<cboBox> cboValEsfera()
+        {
+
+            List<cboBox> l = new List<cboBox>();
+            using (SqlConnection conn = new SqlConnection(cnxConection))
+            using (SqlCommand cmd = new SqlCommand("cbo_ValEsfera", conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                //cmd.Parameters.Add("@xml", SqlDbType.Xml).Value = xmlDocument;
+
+                conn.Open();
+                SqlDataReader s = cmd.ExecuteReader();
+                while (s.Read())
+                {
+                    cboBox p = new cboBox();
+                    p.value = s[0].ToString();
+                    p.display = s[1].ToString();
+
+
+                    l.Add(p);
+                }
+                conn.Close(); s.Close();
+            }
+            return l;
+        }
+        public List<cboBox> cboDepartamento()
+        {
+
+            List<cboBox> l = new List<cboBox>();
+            using (SqlConnection conn = new SqlConnection(cnxConection))
+            using (SqlCommand cmd = new SqlCommand("cbo_Departamento", conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                //cmd.Parameters.Add("@xml", SqlDbType.Xml).Value = xmlDocument;
+
+                conn.Open();
+                SqlDataReader s = cmd.ExecuteReader();
+                while (s.Read())
+                {
+                    cboBox p = new cboBox();
+                    p.value = s[0].ToString();
+                    p.display = s[1].ToString();
+
+
+                    l.Add(p);
+                }
+                conn.Close(); s.Close();
+            }
+            return l;
+        }
+        public List<cboBox> cboValEje()
+        {
+
+            List<cboBox> l = new List<cboBox>();
+            using (SqlConnection conn = new SqlConnection(cnxConection))
+            using (SqlCommand cmd = new SqlCommand("cbo_ValEje", conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                //cmd.Parameters.Add("@xml", SqlDbType.Xml).Value = xmlDocument;
+
+                conn.Open();
+                SqlDataReader s = cmd.ExecuteReader();
+                while (s.Read())
+                {
+                    cboBox p = new cboBox();
+                    p.value = s[0].ToString();
+                    p.display = s[1].ToString();
+
+
+                    l.Add(p);
+                }
+                conn.Close(); s.Close();
+            }
+            return l;
+        }
+  
+        public List<cboBox> cboValCilindro()
+        {
+
+            List<cboBox> l = new List<cboBox>();
+            using (SqlConnection conn = new SqlConnection(cnxConection))
+            using (SqlCommand cmd = new SqlCommand("cbo_ValCilindro", conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                //cmd.Parameters.Add("@xml", SqlDbType.Xml).Value = xmlDocument;
+
+                conn.Open();
+                SqlDataReader s = cmd.ExecuteReader();
+                while (s.Read())
+                {
+                    cboBox p = new cboBox();
+                    p.value = s[0].ToString();
+                    p.display = s[1].ToString();
+
+
+                    l.Add(p);
+                }
+                conn.Close(); s.Close();
+            }
+            return l;
+        }
+        public List<cboBox> cboProvincia(string t)
+        {
+
+            List<cboBox> l = new List<cboBox>();
+            using (SqlConnection conn = new SqlConnection(cnxConection))
+            using (SqlCommand cmd = new SqlCommand("cbo_Provincia", conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@t", t);
+                //cmd.Parameters.Add("@xml", SqlDbType.Xml).Value = xmlDocument;
+
+                conn.Open();
+                SqlDataReader s = cmd.ExecuteReader();
+                while (s.Read())
+                {
+                    cboBox p = new cboBox();
+                    p.value = s[0].ToString();
+                    p.display = s[1].ToString();
+
+
+                    l.Add(p);
+                }
+                conn.Close(); s.Close();
+            }
+            return l;
+        }
+
 
 
         public string GetXMLAsString(XmlDocument myxml)

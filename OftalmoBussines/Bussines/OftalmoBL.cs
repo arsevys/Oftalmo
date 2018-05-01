@@ -23,5 +23,16 @@ namespace OftalmoBussines.Bussines
             return new IntegrationDA().listarPaciente();
 
         }
+        public Listacbo cargarCombos()
+        {
+            var model = new Listacbo();
+            model.cboAgudezaVisual = new IntegrationDA().cboAgudezaVisual();
+            model.cboValEsfera = new IntegrationDA().cboValEsfera();
+            model.cboValEje = new IntegrationDA().cboValEje();
+            model.cboValCilindro = new IntegrationDA().cboValCilindro();
+            model.cboProvincia = new IntegrationDA().cboProvincia("1");
+            model.cboDepartamento = new IntegrationDA().cboDepartamento();
+            return model;
+        }
     }
 }

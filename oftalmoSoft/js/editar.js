@@ -278,6 +278,71 @@ var jsonswitch = {
 	"AHFPaso2":0
 }
 
+function checkOne(id){
+
+	var form = document.getElementById(id);
+	var radius = form.querySelectorAll("label input[type='radio']");
+	var imagen = form.querySelectorAll("label img");
+	
+    //los checkbox hijos
+
+		if(radius[0].dataset.ch== "si"){
+			imagen.item(0).src = "/imagenes/CHECK-CIRCULO-OFF.png";
+			
+			radius[0].dataset.ch= "no"
+			
+		}
+		else{
+		
+			imagen.item(0).src = "/imagenes/captura.png";
+			radius[0].dataset.ch= "si";
+			
+		}
+	
+}
+
+function checkUno(id,id1){
+
+	var form = document.getElementById(id);
+	var radius = form.querySelectorAll("label input[type='radio']");
+	var imagen = form.querySelectorAll("label img");
+	console.log(radius);
+    //los checkbox hijos
+
+    var form1 = document.getElementById(id1);
+	var radius1 = form.querySelectorAll("label input[type='checkbox']");
+	var imagen1 = form.querySelectorAll("label img")
+	console.log(radius1);
+
+
+
+		if(radius[0].dataset.ch== "si"){
+			imagen.item(0).src = "/imagenes/CHECK-CIRCULO-OFF.png";
+			
+			radius[0].dataset.ch= "no"
+			for(var i = 0;i<radius1.length;i++){
+
+				
+					radius1[i].disabled=false;
+					
+				
+				     }
+		}
+		else{
+		
+			imagen.item(0).src = "/imagenes/captura.png";
+			radius[0].dataset.ch= "si";
+				for(var i = 0;i<radius1.length;i++){
+
+					radius1[i].checked=false;
+					radius1[i].disabled=true;
+					imagen1.item(i+1).src = "/imagenes/CHECK-CUADRADO-OFF.png";
+				
+				     }
+		}
+	
+}
+
 function switchs(id){
 
 	var base = document.getElementById(id);
@@ -285,11 +350,21 @@ function switchs(id){
 	itemsAll.item(jsonswitch[id]).checked = false;
 	jsonswitch[id] = jsonswitch[id] == 0? 1:0;
     itemsAll.item(jsonswitch[id]).checked = true;
-    base.querySelector("img").src = jsonswitch[id] == 0? "/imagenes/switch-NO-rojo.png":"imagenes/switch-SI-rojo.png";
+    base.querySelector("img").src = jsonswitch[id] == 0? "/imagenes/switch-NO-rojo.png":"/imagenes/switch-SI-rojo.png";
 }
 
 
-function checkqueare(id){
+function checkqueare(id,t){
+
+	console.log($("#enferTopico-A")[0].checked);
+	if($("#enferTopico-A")[0].dataset.ch=="si"){
+		console.log("Entroo",$("#enferTopico-A"));
+		console.log(t);
+		t.checked=false;
+      
+		return;
+
+	}
 	var form = document.getElementById(id);
 	var radius = form.querySelectorAll("label input[type='checkbox']");
 	var imagen = form.querySelectorAll("label img")
@@ -336,8 +411,6 @@ function fncbom(thi){
 		document.getElementById("detalle").style.display="none";
 	}
 }
-
-
 
 
 
@@ -589,36 +662,84 @@ function StudyEventTwo(direct,id,clas,tipo,ide){
 	var array = item.length;
 
 	
-	for(var i = 0;i<array;i++){
-		item[0].remove();
+	// for(var i = 0;i<array;i++){
+	// 	item[0].remove();
+	// }
+
+	// if("left"==direct){
+	// 	var tx = "lfps3";
+	// 	var bsj = left2;
+	// }
+	// else{
+	// 	var tx = "rgps3";
+	// 	var bsj = right2;
+	// }
+
+
+
+
+	if(direct=="left"){
+		let p1=document.getElementById("p6I-PENTACAM");
+			let g1=document.getElementById("p6I-GALILLEI");
+				let s1=document.getElementById("p6I-SIRIUS");
+		switch(tipo){
+			case "Pentacam":
+           p1.style.display="block";
+			s1.style.display="none";
+			g1.style.display="none";
+			break;
+			case "Galile":
+			p1.style.display="none";
+			s1.style.display="none";
+			g1.style.display="block";
+			break;
+			case "Sirius":
+			p1.style.display="none";
+			s1.style.display="block";
+			g1.style.display="none";
+			break;
+		}
+	}
+	else {
+		let p1=document.getElementById("p6D-PENTACAM");
+			let g1=document.getElementById("p6D-GALILLEI");
+				let s1=document.getElementById("p6D-SIRIUS");
+		switch(tipo){
+			case "Pentacam":
+           p1.style.display="block";
+			s1.style.display="none";
+			g1.style.display="none";
+			break;
+			case "Galile":
+			p1.style.display="none";
+			s1.style.display="none";
+			g1.style.display="block";
+			break;
+			case "Sirius":
+			p1.style.display="none";
+			s1.style.display="block";
+			g1.style.display="none";
+			break;
+		}
 	}
 
-	if("left"==direct){
-		var tx = "lfps3";
-		var bsj = left2;
-	}
-	else{
-		var tx = "rgps3";
-		var bsj = right2;
-	}
-
-		var bs = bsj["quera"][tipo];
-		for (var i = 0; i < bs.length; i++) {
-			var newItem = document.createElement("div");
-    		newItem.classList.add("input");
-    		newItem.classList.add(tx);
-    		newItem.innerHTML = bs[i];
-    		var list = document.getElementById(ide);
-   			list.insertBefore(newItem, list.querySelector('.quera'));
-		}
-		var bs = bsj["paqui"][tipo];
-		for (var i = 0; i < bs.length; i++) {
-			var newItem = document.createElement("div");
-    		newItem.classList.add("input");
-    		newItem.classList.add(tx);
-    		newItem.innerHTML = bs[i];
-    		var list = document.getElementById(ide);
-   			list.insertBefore(newItem, list.querySelector('.paqui'));
-		}
+		// var bs = bsj["quera"][tipo];
+		// for (var i = 0; i < bs.length; i++) {
+		// 	var newItem = document.createElement("div");
+  //   		newItem.classList.add("input");
+  //   		newItem.classList.add(tx);
+  //   		newItem.innerHTML = bs[i];
+  //   		var list = document.getElementById(ide);
+  //  			list.insertBefore(newItem, list.querySelector('.quera'));
+		// }
+		// var bs = bsj["paqui"][tipo];
+		// for (var i = 0; i < bs.length; i++) {
+		// 	var newItem = document.createElement("div");
+  //   		newItem.classList.add("input");
+  //   		newItem.classList.add(tx);
+  //   		newItem.innerHTML = bs[i];
+  //   		var list = document.getElementById(ide);
+  //  			list.insertBefore(newItem, list.querySelector('.paqui'));
+		// }
 
 }

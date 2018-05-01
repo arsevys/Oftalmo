@@ -9,7 +9,7 @@ function datosGenerales(){
 
 
 
-        var d={ "fila":{
+        var d={ 
         	"numHisCli":valD("numHC-DG"),
         	"nombres":valD("nom-DG"),
         	"apaterno":valD("apeP-DG"),
@@ -23,11 +23,11 @@ function datosGenerales(){
         	"distrito":valD("distrito-DG"),
         	"genero":valC("genSex")
 
-        }}
+        }
         valC("genSex");
-        console.log(d);
-
-
+   
+datos["paso1"]=d;
+     console.log(datos);
             // $.ajax({
             //   url:"/Oftalmo/GrabarCliente",
             //   data:{jsonX:JSON.stringify(d)},
@@ -45,7 +45,7 @@ function datosGenerales(){
 //Segundo paso ************************************************
 function antecedentes(){
 
-	eventnext(1)
+	// eventnext(1)
 
         function Multi(x,y){
             var form = document.getElementById(x);
@@ -73,12 +73,13 @@ function antecedentes(){
         		"refraccion":valC("refraccion-A"),
         		"unilateral":valC("unilateral-A"),
         		"bilateral":($("#bilateral-A")[0].checked)?"si":"no",
-        		"lentesRGP":Multi('APPPaso3p','APPcheakPaso2'),
+        		"listaEnfermedades":Multi('APPPaso3p','APPcheakPaso2'),
+                    "lentesRGP":valC("lentesRGP-A"),
                 "aniosRGP":valD("anios-A"),
-        		"emfermedadesTopico":"no"
+        		"emfermedadesTopico":($("#enferTopico-A")[0].checked)?"si":"no",
 
         	}
-
+   datos["paso2"]=d;
         	console.log(d);
 }
 
@@ -325,18 +326,7 @@ console.log("Pentacam Derecho",Pentacam1);
 }
 
 console.log(c);
-
-
-
-
-
-
-
-
-
-
-
-
+datos["paso3"]=c;
 
 
 
@@ -354,6 +344,8 @@ function graduacion(){
     "graduacionOI":"1,5,6,7",
     "graduacionOD":"25,75,52"
    }
+
+   datos["paso4"]=graduacion;
 }
 //----------------------***********************************------------------------//
 
@@ -373,7 +365,7 @@ function manejo(){
         "ejeManejo":valD("eje-MOI"),
         "tUsoManejo":valD("tp-MOI"),
         "modeloManejo":valD("modelo-MOI"),
-        "tUsoManejo":valD("tp-MOI"),
+       
         "tiempoUVManejo":valD("tuv-MOI"),
         "epiOffManejo":valC("epiof-moi"),
         "epiOnManejo":valC("epion-MOI"),
@@ -430,12 +422,280 @@ function manejo(){
     
     console.log(man);
 
+    datos["paso5"]=man;
+
 //----------------------***********************************------------------------//
 
 // eventnext(1);
 // eventnext(10);
-console.log(c);
+console.log(man);
 }
+
+
+
+// Sexto Paso 
+
+function evolucion(){
+
+let op={
+    "fechaIntervencion":valD("fechaInterven-6"),
+    "fechaConsulta":valD("fechaConsulta-6"),
+    "tiempoTranscurrido":valD("tiempoTranscurrido-6"),
+
+}
+
+let c={
+     "fechaIntervencion":valD("fechaInterven-6"),
+    "fechaConsulta":valD("fechaConsulta-6"),
+    "tiempoTranscurrido":valD("tiempoTranscurrido-6"),
+      "tipoIntervencion":valD("tIntervencion-6"),
+    "complicaciones":valD("llenado"),
+    "ojoIzquierdo":{
+     "estudios":valC("estudios-OI1"),
+     "sc":valD("sc-OI1"),
+     "cc":valD("cc-OI1"),
+     "esf":valD("esf-OI1"),
+     "cilindro":valD("cilindro-OI1"),
+     "eje":valD("eje-OI1")
+  
+    },
+
+    "ojoDerecho":{
+        
+     "estudios":valC("estudios-OD1"),
+     "sc":valD("sc-OD1"),
+     "cc":valD("cc-OD1"),
+     "esf":valD("esf-OD1"),
+     "cilindro":valD("cilindro-OD1"),
+     "eje":valD("eje-OD1")
+     
+     
+    }
+}
+
+
+
+//Ojo Derecho 
+switch(valC("estudios-OI1")){
+    case "P":console.log("Eligio Pentacam");
+
+   let Pentacam={
+     // Queratometria Anterior
+     "k1Anterior":valD("k1A-OI1"),
+     "ejek1Anterior":valD("ejek1A-OI1"),
+     "k2Anterior":valD("k2A-OI1"),
+     "ejek2Anterior":valD("ejek2A-OI1"),
+     "cilindroTopoAnterior":valD("citoA-OI1"),
+     //Queratometria Posterior
+     "k1Posterior":valD("k1P-OI1"),
+     "ejek1Posterior":valD("ejek1P-OI1"),
+     "k2Posterior":valD("k2P-OI1"),
+     "ejek2Posterior":valD("ejek2P-OI1"),
+     "cilindroTopoPosterior":valD("citoP-OI1"),
+     "kmax":valD("kmax-OI1"),
+     "it":valD("it-OI1"),
+     "q":valD("q-OI1"),    
+     "kmaxSuperior":valD("kmaxSuperior-OI1"),
+     "kmaxInferior":valD("kmaxInferior-OI1"),
+     "medidorSI":valD("medidorSI-OI1"), //campo colores
+      "kmaxDerecha":valD("kmaxDerecha-OI1"),
+     "kmaxIzquierda":valD("kmaxIzquierda-OI1"),
+
+      "medidorDI":valD("medidorDI-OI1"),//campo colores
+      // Paquimetria
+     "puntoFino":valD("pFino-OI1"),
+     "apex":valD("apex-OI1"),
+     "bfsAnterior":valD("bfsA-OI1"),
+     "bfsPosterior":valD("bfsP-OI1") 
+    }
+    console.log("Pentacam",Pentacam);
+    c.ojoIzquierdo.estudiosData=Pentacam;
+
+    break;
+     case "G":console.log("Eligio Galilei");
+let gali={
+    // Queratometria Anterior
+    "simkAnterior":valD("gsimkA-OI1"),
+    "flatsimkAnterior":valD("gflatsimkA-OI1"),
+    "1flatsimkAnterior":valD("gflat1simkA-OI1"),
+    "ejeflatsimkAnterior":valD("gejeflatsimkA-OI1"),
+    "steepsimkAnterior":valD("gsteepsimkA-OI1"),
+    "ejesteepsimkAnterior":valD("gejesteepsimkA-OI1"),
+    "asignatismoAnterior":valD("gastimagtismoA-OI1"),
+    // Queratometria Posterior
+    "simkPosterior":valD("gsimkP-OI1"),
+    "flatsimkPosterior":valD("gflatsimkP-OI1"),
+    "1flatsimkPosterior":valD("gflat1simkP-OI1"),
+    "ejeflatsimkPosterior":valD("gejeflatsimkP-OI1"),
+    "steepsimkPosterior":valD("gsteepsimkP-OI1"),
+    "ejesteepsimkPosterior":valD("gejesteepsimkP-OI1"),
+    "asignatismoPosterior":valD("gastimagtismoP-OI1"),
+    // Paquimetria
+    "puntoFino":valD("gpuntoFino-OI1"),
+    "central":valD("gcentral-OI1"),
+    "eleA3centrales":valD("geleA3centrales-OI1"),
+    "eleP3centrales":valD("geleP3centrales-OI1")
+  }
+console.log("Galillei",gali);
+     c.ojoIzquierdo.estudiosData=gali;
+     break;
+      case "S":console.log("Eligio Sirius");
+ let sirius={
+     //Queratometria Anterior
+     "k1Anterior":valD("sk1A-OI1"),
+     "ejek1Anterior":valD("sejek1A-OI1"),
+     "k2Anterior":valD("sk2A-OI1"),
+     "ejek2Anterior":valD("sejek2A-OI1"),
+  
+     "asignatismoAnterior":valD("satigmatismoA-OI1"),
+     "ejeasignatismoAnterior":valD("sejeatigmatismoA-OI1"),
+       // Queratometria Posterior
+         "simkPosterior":valD("ssimkP-OI1"),
+     "flatsimkPosterior":valD("sflatsimkP-OI1"),
+     "ejesimkPosterior":valD("sejesimkP-OI1"),
+    
+     "steepsimkPosterior":valD("ssteepsimkP-OI1"),
+     "ejeflatsimkPosterior":valD("sejeflatsimkP-OI1"),
+     "asignatismoPosterior":valD("sastimagtismoP-OI1"),
+     "ejesteepsimkPosterior":valD("sejesteepsimkP-OI1"),
+     //Paquimetria
+     "puntodelgado":valD("spuntodelgado-OI1"),
+     "eje":valD("seje-OI1"),
+     "grosor":valD("sgrosor-OI1"),
+     "anguloKappa":valD("sangulokappa-OI1")
+  }
+
+console.log("Sirius",sirius);
+
+ c.ojoIzquierdo.estudiosData=sirius;
+
+      break;
+}
+
+
+
+
+
+switch(valC("estudios-OD1")){
+     case "P":console.log("Eligio Pentacam"); 
+ let Pentacam1={
+     // Queratometria Anterior
+     "k1Anterior":valD("k1A-OD1"),
+     "ejek1Anterior":valD("ejek1A-OD1"),
+     "k2Anterior":valD("k2A-OD1"),
+     "ejek2Anterior":valD("ejek2A-OD1"),
+     "cilindroTopoAnterior":valD("citoA-OD1"),
+     //Queratometria Posterior
+     "k1Posterior":valD("k1P-OD1"),
+     "ejek1Posterior":valD("ejek1P-OD1"),
+     "k2Posterior":valD("k2P-OD1"),
+     "ejek2Posterior":valD("ejek2P-OD1"),
+     "cilindroTopoPosterior":valD("citoP-OD1"),
+     "kmax":valD("kmax-OD1"),
+     "it":valD("it-OD1"),
+     "q":valD("q-OD1"),    
+     "kmaxSuperior":valD("kmaxSuperior-OD1"),
+     "kmaxInferior":valD("kmaxInferior-OD1"),
+     "medidorSI":valD("medidorSI-OD1"), //campo colores
+      "kmaxDerecha":valD("kmaxDerecha-OD1"),
+     "kmaxIzquierda":valD("kmaxIzquierda-OD1"),
+
+      "medidorDI":valD("medidorDI-OD1"),//campo colores
+      // Paquimetria
+     "puntoFino":valD("pFino-OD1"),
+     "apex":valD("apex-OD1"),
+     "bfsAnterior":valD("bfsA-OD1"),
+     "bfsPosterior":valD("bfsP-OD1") 
+   }
+console.log("Pentacam Derecho",Pentacam1);
+  c.ojoDerecho.estudiosData=Pentacam1;
+     break;
+      case "G":console.log("Eligio Galilei");
+ let gali1={
+    // Queratometria Anterior
+    "simkAnterior":valD("gsimkA-OD1"),
+    "flatsimkAnterior":valD("gflatsimkA-OD1"),
+    "1flatsimkAnterior":valD("gflat1simkA-OD1"),
+    "ejeflatsimkAnterior":valD("gejeflatsimkA-OD1"),
+    "steepsimkAnterior":valD("gsteepsimkA-OD1"),
+    "ejesteepsimkAnterior":valD("gejesteepsimkA-OD1"),
+    "asignatismoAnterior":valD("gastimagtismoA-OD1"),
+    // Queratometria Posterior
+    "simkPosterior":valD("gsimkP-OD1"),
+    "flatsimkPosterior":valD("gflatsimkP-OD1"),
+    "1flatsimkPosterior":valD("gflat1simkP-OD1"),
+    "ejeflatsimkPosterior":valD("gejeflatsimkP-OD1"),
+    "steepsimkPosterior":valD("gsteepsimkP-OD1"),
+    "ejesteepsimkPosterior":valD("gejesteepsimkP-OD1"),
+    "asignatismoPosterior":valD("gastimagtismoP-OD1"),
+    // Paquimetria
+    "puntoFino":valD("gpuntoFino-OD1"),
+    "central":valD("gcentral-OD1"),
+    "eleA3centrales":valD("geleA3centrales-OD1"),
+    "eleP3centrales":valD("geleP3centrales-OD1")
+  }
+    console.log("Galillei Derecho",gali1);
+     c.ojoDerecho.estudiosData=gali1;
+      break;
+
+
+      case "S":console.log("Eligio Sirius");
+    let sirius1={
+     //Queratometria Anterior
+     "k1Anterior":valD("sk1A-OD1"),
+     "ejek1Anterior":valD("sejek1A-OD1"),
+     "k2Anterior":valD("sk2A-OD1"),
+     "ejek2Anterior":valD("sejek2A-OD1"),
+  
+     "asignatismoAnterior":valD("satigmatismoA-OD1"),
+     "ejeasignatismoAnterior":valD("sejeatigmatismoA-OD1"),
+       // Queratometria Posterior
+         "simkPosterior":valD("ssimkP-OD1"),
+      "flatsimkPosterior":valD("sflatsimkP-OD1"),
+      "ejesimkPosterior":valD("sejesimkP-OD1"),
+    
+      "steepsimkPosterior":valD("ssteepsimkP-OD1"),
+      "ejeflatsimkPosterior":valD("sejeflatsimkP-OD1"),
+     "asignatismoPosterior":valD("sastimagtismoP-OD1"),
+     "ejesteepsimkPosterior":valD("sejesteepsimkP-OD1"),
+     //Paquimetria
+     "puntodelgado":valD("spuntodelgado-OD1"),
+     "eje":valD("seje-OD1"),
+     "grosor":valD("sgrosor-OD1"),
+     "anguloKappa":valD("sangulokappa-OD1")
+
+
+     }
+      console.log("Sirius Derecho",sirius1);
+        c.ojoDerecho.estudiosData=sirius1;
+         break;
+}
+
+console.log(c);
+
+datos["paso6"]=c;
+
+
+
+console.log("----------------------------------------------");
+
+
+console.log(datos);
+
+  $.ajax({
+        url: "/Oftalmo/GrabarCliente",
+        type: "POST",
+        data: { jsonX: JSON.stringify({data:datos })},
+        //contentType: "application/json; charset=utf-8",
+        success:  function (result){
+          console.log(result);
+        }
+    });
+    
+}
+
+
+
 
 function valC(x){
 	let h;

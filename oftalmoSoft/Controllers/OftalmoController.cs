@@ -12,6 +12,7 @@ namespace prjOftalmo.Controllers
         // GET: Oftalmo
         public ActionResult Index()
         {
+            ViewBag.op=Request["p"].ToString();
             return View();
         }
 
@@ -53,7 +54,7 @@ namespace prjOftalmo.Controllers
 
         public ActionResult registrar()
         {
-            return View();
+            return View(new OftalmoBL().cargarCombos());
         }
         // GET: Oftalmo/Details/5
         public ActionResult Details(int id)
@@ -67,64 +68,14 @@ namespace prjOftalmo.Controllers
             return View();
         }
 
-        // POST: Oftalmo/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public JsonResult Registrarc(string jsonX)
         {
-            try
-            {
-                // TODO: Add insert logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            return Json(new OftalmoBL().GrabarDatosGenerales(jsonX), JsonRequestBehavior.AllowGet);
         }
 
-        // GET: Oftalmo/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
 
-        // POST: Oftalmo/Edit/5
-        [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add update logic here
 
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
 
-        // GET: Oftalmo/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: Oftalmo/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
     }
 }

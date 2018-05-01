@@ -295,6 +295,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_PADDING ON
 GO
+SELECT * FROM TB_VAL_ESFERA
 CREATE TABLE [dbo].[TB_VAL_ESFERA](
 	[ID_ESFERA] [int] IDENTITY(3100,1) NOT NULL,
 	[DES_VALOR] [numeric](18, 2) NULL,
@@ -748,6 +749,16 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_PADDING ON
 GO
+
+
+
+select * 
+from TB_AGUDEZA_VISUAL;
+
+select * 
+from TB_DEPARTAMENTO
+
+
 CREATE TABLE [dbo].[TB_TIPO_CONO](
 	[ID_TIPO_CONO] [int] NOT NULL,
 	[DES_CONO] [varchar](50) NULL,
@@ -1040,6 +1051,9 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_PADDING ON
 GO
+
+SELECT *
+FROM TB_PACIENTE
 CREATE TABLE [dbo].[TB_GRADUACION](
 	[ID_GRADUACION] [int] IDENTITY(1,1) NOT NULL,
 	[ID_PACIENTE] [int] NOT NULL,
@@ -3130,7 +3144,7 @@ XmlData.x.value('ape_paterno[1]','nvarchar(50)') as ape_paterno,
 XmlData.x.value('ape_materno[1]','nvarchar(50)') as ape_materno,
 XmlData.x.value('tipo_docum[1]','char(1)') as tipo_docum,
 
-XmlData.x.value('nro_docum[1]','varchar(1)') as nro_docum,
+XmlData.x.value('nro_docum[1]','varchar(10)') as nro_docum,
 XmlData.x.value('date_birth[1]','date') as date_birth,
 XmlData.x.value('genero[1]','char(1)') as genero,
 XmlData.x.value('id_pais[1]','int') as id_pais,
@@ -3138,6 +3152,7 @@ XmlData.x.value('id_departamento[1]','int') as id_departamento,
 
 XmlData.x.value('id_provincia[1]','int') as id_provincia,
 XmlData.x.value('id_distrito[1]','int') as id_distrito,
+
 XmlData.x.value('man_sugerido_d[1]','varchar(50)') as man_sugerido_d,
 XmlData.x.value('man_sugerido_i[1]','varchar(50)') as man_sugerido_i,
 
@@ -3159,6 +3174,33 @@ begin catch
 		rollback 
 end catch
 GO
+alter procedure er @xml xml
+AS
+begin try
+	begin transaction
+set dateformat dmy
+
+
+
+
+select 
+XmlData.x.value('user_crea[1]','varchar(20)') as user_crea,
+XmlData.x.value('user_creax[1]','varchar(20)') as user_cread
+from @xml.nodes('//data') as XmlData(x)
+commit 
+end try
+begin catch
+	if @@trancount > 0
+		--Insertar log de errores
+		rollback 
+end catch
+GO
+
+
+exec er '   <data>
+       <paso1>
+      <user_crea>78</user_crea><user_creax>78s</user_creax></paso1>
+   </data>'
 /****** Object:  ForeignKey [FK_TB_DISTRITO_TB_PROVINCIA]    Script Date: 04/22/2018 14:04:33 ******/
 ALTER TABLE [dbo].[TB_DISTRITO]  WITH CHECK ADD  CONSTRAINT [FK_TB_DISTRITO_TB_PROVINCIA] FOREIGN KEY([ID_PROVINCIA])
 REFERENCES [dbo].[TB_PROVINCIA] ([ID_PROVINCIA])
@@ -3181,5 +3223,28 @@ from [TB_PACIENTE]
 
 go
 
-execute listarPaciente
+--proc Combobox
+create proc cbo_ValEsfera
+as
+select *
+from TB_VAL_ESFERA
+where ESTADO='A'
+go
+
+create proc cbo_AgudezaVisual
+as
+select *
+from TB_AGUDEZA_VISUAL
+where ESTADO='A'
+go
+
+create proc cbo_e
+as
+select *
+from TB_DEPARTAMENTO
+where ESTADO='A'
+go
+
+
+execute listarPaciente  
 go
