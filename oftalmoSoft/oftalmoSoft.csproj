@@ -271,6 +271,7 @@
     <Content Include="Views\Oftalmo\registrar.cshtml" />
     <Content Include="Views\Oftalmo\login.cshtml" />
     <Content Include="Views\Login\index.cshtml" />
+    <Content Include="Views\Oftalmo\editar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

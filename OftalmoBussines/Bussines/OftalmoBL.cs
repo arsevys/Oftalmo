@@ -9,7 +9,7 @@ using ParseJsonR;
 using OftalmoModel.Queratocono;
 namespace OftalmoBussines.Bussines
 {
-   public class OftalmoBL
+    public class OftalmoBL
     {
         public bool GrabarDatosGenerales(string json)
         {
@@ -33,6 +33,12 @@ namespace OftalmoBussines.Bussines
             model.cboProvincia = new IntegrationDA().cboProvincia("1");
             model.cboDepartamento = new IntegrationDA().cboDepartamento();
             return model;
+        }
+        public Editar CargarDatos(string id) {
+            var carga = new Editar();
+            carga.paciente = new IntegrationDA().editar_paciente(id);
+            carga.cargarCombo = cargarCombos();
+            return carga;
         }
     }
 }

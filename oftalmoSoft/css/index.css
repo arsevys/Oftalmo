@@ -288,3 +288,7 @@ body {
      }
 
 }
+#grillaOFBody tr {
+	color:black;
+	background: white;
+}

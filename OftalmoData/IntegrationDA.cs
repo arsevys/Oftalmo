@@ -252,6 +252,54 @@ namespace OftalmoData
             return l;
         }
 
+        //Editarrrr
+        public Paciente editar_paciente(string id)
+        {
+
+            Paciente p = new Paciente();
+            using (SqlConnection conn = new SqlConnection(cnxConection))
+            using (SqlCommand cmd = new SqlCommand("editarRegistroPersona", conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                //cmd.Parameters.Add("@xml", SqlDbType.Xml).Value = xmlDocument;
+                cmd.Parameters.AddWithValue("@id",id);
+                conn.Open();
+                SqlDataReader s = cmd.ExecuteReader();
+                while (s.Read())
+                {
+                    p.ID_PACIENTE = s.GetInt32(0);
+                    p.NRO_HISTORIA = s[1].ToString();
+                    p.NOM_PACIENTE = s[2].ToString();
+                    p.APE_PATERNO = s[3].ToString();
+                    p.APE_MATERNO = s[4].ToString();
+                    p.TIPO_DOCUM = s[5].ToString();
+                    p.NRO_DOCUM = s[6].ToString();
+                    p.DATE_BIRTH = s[7].ToString();
+                    p.GENERO = s[8].ToString();
+                    p.ID_PAIS = s.GetInt32(9);
+                    p.ID_DEPARTAMENTO = s.GetInt32(10);
+                    p.ID_PROVINCIA = s.GetInt32(11);
+                    p.ID_DISTRITO = s.GetInt32(12);
+                    p.MAN_SUGRIDO_D = s[13].ToString();
+                    p.MAN_SUGRIDO_I = s[14].ToString();
+                    p.EVO_FCH_INTERVENCION = s[15].ToString();
+                    p.EVO_TIME_TRANQRIDO = s[16].ToString();
+                    p.EVO_FCH_CONSULTA = s[17].ToString();
+                    p.EVO_COD_INTERVECION = s[18].ToString();
+                    p.EVO_COD_COMPLICACION = s[19].ToString();
+                    p.USER_CREA = s[20].ToString();
+                    p.FCH_CREA = s[21].ToString();
+                    p.USER_MOD = s[22].ToString();
+                    p.FCH_MOD = s[23].ToString();
+                    
+
+
+
+                }
+                conn.Close(); s.Close();
+            }
+            return p;
+        }
 
 
         public string GetXMLAsString(XmlDocument myxml)

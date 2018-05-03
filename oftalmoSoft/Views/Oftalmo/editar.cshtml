@@ -1,4 +1,4 @@
-﻿@model  OftalmoModel.Queratocono.Listacbo
+﻿@model  OftalmoModel.Queratocono.Editar
 
 <!DOCTYPE html>
 <html>
@@ -25,7 +25,7 @@
 </head>
 
 <body>
-    
+
     <div class="menu">
         <div class="logo-menu">
             <img src="~/imagenes/LOGO-OFTALMOSALUD.png" ">
@@ -135,19 +135,19 @@
                             <form class="form">
                                 <div class="input-control">
                                     <label>Número de Historia Clínica</label>
-                                    <input type="text" id="numHC-DG">
+                                    <input value="@Model.paciente.NRO_HISTORIA" type="text" id="numHC-DG">
                                 </div>
                                 <div class="input-control">
                                     <label>Nombres</label>
-                                    <input type="text" id="nom-DG">
+                                    <input value="@Model.paciente.NOM_PACIENTE" type="text" id="nom-DG">
                                 </div>
                                 <div class="input-control">
                                     <label>Apellido Paterno</label>
-                                    <input type="text" id="apeP-DG">
+                                    <input value="@Model.paciente.APE_PATERNO"  type="text" id="apeP-DG">
                                 </div>
                                 <div class="input-control">
                                     <label>Apellido Materno</label>
-                                    <input type="text" id="apeM-DG">
+                                    <input type="text" value="@Model.paciente.APE_MATERNO"  id="apeM-DG">
                                 </div>
                                 <div class="input-control">
                                     <label>Tipo Documento</label>
@@ -160,11 +160,11 @@
                                 </div>
                                 <div class="input-control">
                                     <label>Número de Documento</label>
-                                    <input type="text" id="nd-DG">
+                                    <input type="text" value="@Model.paciente.NRO_DOCUM"  id="nd-DG">
                                 </div>
                                 <div class="input-control">
                                     <label>Fecha Nacimiento</label>
-                                    <input type="date" id="fn-DG">
+                                    <input type="date"value="@Model.paciente.DATE_BIRTH"  id="fn-DG">
                                 </div>
                                 <div class="input-control">
                                     <label>Género</label>
@@ -343,21 +343,21 @@
                                             <label>
                                                 <p>SC</p>
                                                 <select id="sc-OI">
-                                              @foreach (var it in Model.cboAgudezaVisual)
-                                                   {
-                                                    
-                                                    <option value="@it.value">@it.display</option>
-                                                }
+                                                    @foreach (var it in Model.cargarCombo.cboAgudezaVisual)
+                                                    {
+
+                                                        <option value="@it.value">@it.display</option>
+                                                    }
                                                 </select>
                                             </label>
                                             <label>
                                                 CC
                                                 <select id="cc-OI">
-                                                   @foreach (var it in Model.cboAgudezaVisual)
-                                                   {
-                                                    
-                                                    <option value="@it.value">@it.display</option>
-                                                }
+                                                    @foreach (var it in Model.cargarCombo.cboAgudezaVisual)
+                                                    {
+
+                                                        <option value="@it.value">@it.display</option>
+                                                    }
                                                 </select>
                                             </label>
                                         </div>
@@ -369,32 +369,32 @@
                                             <label>
                                                 Esf
                                                 <select id="esf-OI">
-                                                      @foreach (var it in Model.cboValEsfera)
-                                                   {
-                                                    
-                                                    <option value="@it.value">@it.display</option>
-                                                }
+                                                    @foreach (var it in Model.cargarCombo.cboValEsfera)
+                                                    {
+
+                                                        <option value="@it.value">@it.display</option>
+                                                    }
                                                 </select>
                                             </label>
                                             <label>
                                                 Cilindro
                                                 <select id="cilindro-OI">
-                                        @foreach (var it in Model.cboValCilindro)
-                                                   {
-                                                    
-                                                    <option value="@it.value">@it.display</option>
-                                                }
+                                                    @foreach (var it in Model.cargarCombo.cboValCilindro)
+                                                    {
+
+                                                        <option value="@it.value">@it.display</option>
+                                                    }
                                                 </select>
 
                                             </label>
                                             <label>
                                                 Eje
                                                 <select id="eje-OI">
-                                                    @foreach (var it in Model.cboValEje)
-                                                   {
-                                                    
-                                                    <option value="@it.value">@it.display</option>
-                                                }
+                                                    @foreach (var it in Model.cargarCombo.cboValEje)
+                                                    {
+
+                                                        <option value="@it.value">@it.display</option>
+                                                    }
 
                                                 </select>
                                             </label>
@@ -852,21 +852,21 @@
                                             <label>
                                                 <p>SC</p>
                                                 <select id="sc-OD">
-                                                     @foreach (var it in Model.cboAgudezaVisual)
-                                                   {
-                                                    
-                                                    <option value="@it.value">@it.display</option>
-                                                }
+                                                    @foreach (var it in Model.cargarCombo.cboAgudezaVisual)
+                                                    {
+
+                                                        <option value="@it.value">@it.display</option>
+                                                    }
                                                 </select>
                                             </label>
                                             <label>
                                                 CC
                                                 <select id="cc-OD">
-                                                     @foreach (var it in Model.cboAgudezaVisual)
-                                                   {
-                                                    
-                                                    <option value="@it.value">@it.display</option>
-                                                }
+                                                    @foreach (var it in Model.cargarCombo.cboAgudezaVisual)
+                                                    {
+
+                                                        <option value="@it.value">@it.display</option>
+                                                    }
                                                 </select>
                                             </label>
                                         </div>
@@ -877,32 +877,32 @@
                                             <label>
                                                 Esf
                                                 <select id="esf-OD">
-                                                  @foreach (var it in Model.cboValEsfera)
-                                                   {
-                                                    
-                                                    <option value="@it.value">@it.display</option>
-                                                }
+                                                    @foreach (var it in Model.cargarCombo.cboValEsfera)
+                                                    {
+
+                                                        <option value="@it.value">@it.display</option>
+                                                    }
                                                 </select>
 
                                             </label>
                                             <label>
                                                 Cilindro
                                                 <select id="cilindro-OD">
-                                                  @foreach (var it in Model.cboValCilindro)
-                                                   {
-                                                    
-                                                    <option value="@it.value">@it.display</option>
-                                                }
+                                                    @foreach (var it in Model.cargarCombo.cboValCilindro)
+                                                    {
+
+                                                        <option value="@it.value">@it.display</option>
+                                                    }
                                                 </select>
                                             </label>
                                             <label>
                                                 Eje
                                                 <select id="eje-OD">
-                                                     @foreach (var it in Model.cboValEje)
-                                                   {
-                                                    
-                                                    <option value="@it.value">@it.display</option>
-                                                }
+                                                    @foreach (var it in Model.cargarCombo.cboValEje)
+                                                    {
+
+                                                        <option value="@it.value">@it.display</option>
+                                                    }
                                                 </select>
                                             </label>
                                         </div>
@@ -1555,21 +1555,21 @@
                                                 <label>
                                                     SC
                                                     <select id="sc-MOI">
-                                                          @foreach (var it in Model.cboAgudezaVisual)
-                                                   {
-                                                    
-                                                    <option value="@it.value">@it.display</option>
-                                                }
+                                                        @foreach (var it in Model.cargarCombo.cboAgudezaVisual)
+                                                        {
+
+                                                            <option value="@it.value">@it.display</option>
+                                                        }
                                                     </select>
                                                 </label>
                                                 <label>
                                                     CC
                                                     <select id="cc-MOI">
-                                                         @foreach (var it in Model.cboAgudezaVisual)
-                                                   {
-                                                    
-                                                    <option value="@it.value">@it.display</option>
-                                                }
+                                                        @foreach (var it in Model.cargarCombo.cboAgudezaVisual)
+                                                        {
+
+                                                            <option value="@it.value">@it.display</option>
+                                                        }
                                                     </select>
                                                 </label>
                                             </div>
@@ -1886,22 +1886,22 @@
                                                 <label>
                                                     SC
                                                     <select id="sc-MOID">
-                                                        
-                                                      @foreach (var it in Model.cboAgudezaVisual)
-                                                   {
-                                                    
-                                                    <option value="@it.value">@it.display</option>
-                                                }
+
+                                                        @foreach (var it in Model.cargarCombo.cboAgudezaVisual)
+                                                        {
+
+                                                            <option value="@it.value">@it.display</option>
+                                                        }
                                                     </select>
                                                 </label>
                                                 <label>
                                                     CC
                                                     <select id="cc-MOID">
-                                                         @foreach (var it in Model.cboAgudezaVisual)
-                                                   {
-                                                    
-                                                    <option value="@it.value">@it.display</option>
-                                                }
+                                                        @foreach (var it in Model.cargarCombo.cboAgudezaVisual)
+                                                        {
+
+                                                            <option value="@it.value">@it.display</option>
+                                                        }
                                                     </select>
                                                 </label>
                                             </div>
@@ -2216,20 +2216,20 @@
                                             <label>
                                                 SC
                                                 <select id="sc-OI1">
-                                                      @foreach (var it in Model.cboAgudezaVisual)
-                                                   {
-                                                    
-                                                    <option value="@it.value">@it.display</option>
-                                                }
+                                                    @foreach (var it in Model.cargarCombo.cboAgudezaVisual)
+                                                    {
+
+                                                        <option value="@it.value">@it.display</option>
+                                                    }
                                                 </select>
                                             </label>
                                             <label>
                                                 CC
                                                 <select id="cc-OI1">
-                                                    @foreach (var it in Model.cboAgudezaVisual)
-                                                 {
+                                                    @foreach (var it in Model.cargarCombo.cboAgudezaVisual)
+                                                    {
 
-                                                <option value="@it.value">@it.display</option>
+                                                        <option value="@it.value">@it.display</option>
                                                     }
                                                 </select>
                                             </label>
@@ -2241,33 +2241,33 @@
                                             <label>
                                                 Esf
                                                 <select id="esf-OI1">
-                                                   @foreach (var it in Model.cboValEsfera)
-                                                   {
-                                                    
-                                                    <option value="@it.value">@it.display</option>
-                                                }
+                                                    @foreach (var it in Model.cargarCombo.cboValEsfera)
+                                                    {
+
+                                                        <option value="@it.value">@it.display</option>
+                                                    }
                                                 </select>
 
                                             </label>
                                             <label>
                                                 Cilindro
                                                 <select id="cilindro-OI1">
-                                              @foreach (var it in Model.cboValCilindro)
-                                                   {
-                                                    
-                                                    <option value="@it.value">@it.display</option>
-                                                }
+                                                    @foreach (var it in Model.cargarCombo.cboValCilindro)
+                                                    {
+
+                                                        <option value="@it.value">@it.display</option>
+                                                    }
                                                 </select>
 
                                             </label>
                                             <label>
                                                 Eje
                                                 <select id="eje-OI1">
-                                                       @foreach (var it in Model.cboValEje)
-                                                   {
-                                                    
-                                                    <option value="@it.value">@it.display</option>
-                                                }
+                                                    @foreach (var it in Model.cargarCombo.cboValEje)
+                                                    {
+
+                                                        <option value="@it.value">@it.display</option>
+                                                    }
                                                 </select>
                                             </label>
                                         </div>
@@ -2774,21 +2774,21 @@
                                             <label>
                                                 SC
                                                 <select id="sc-OD1">
-                                                     @foreach (var it in Model.cboAgudezaVisual)
-                                                   {
-                                                    
-                                                    <option value="@it.value">@it.display</option>
-                                                }
+                                                    @foreach (var it in Model.cargarCombo.cboAgudezaVisual)
+                                                    {
+
+                                                        <option value="@it.value">@it.display</option>
+                                                    }
                                                 </select>
                                             </label>
                                             <label>
                                                 CC
                                                 <select id="cc-OD1">
-                                                      @foreach (var it in Model.cboAgudezaVisual)
-                                                   {
-                                                    
-                                                    <option value="@it.value">@it.display</option>
-                                                }
+                                                    @foreach (var it in Model.cargarCombo.cboAgudezaVisual)
+                                                    {
+
+                                                        <option value="@it.value">@it.display</option>
+                                                    }
                                                 </select>
                                             </label>
                                         </div>
@@ -2799,11 +2799,11 @@
                                             <label>
                                                 Esf
                                                 <select id="esf-OD1">
-                                                      @foreach (var it in Model.cboValEsfera)
-                                                   {
-                                                    
-                                                    <option value="@it.value">@it.display</option>
-                                                }
+                                                    @foreach (var it in Model.cargarCombo.cboValEsfera)
+                                                    {
+
+                                                        <option value="@it.value">@it.display</option>
+                                                    }
                                                 </select>
                                             </label>
                                             <label>
@@ -2811,22 +2811,22 @@
 
 
                                                 <select id="cilindro-OD1">
-                                                  @foreach (var it in Model.cboValCilindro)
-                                                   {
-                                                    
-                                                    <option value="@it.value">@it.display</option>
-                                                }
+                                                    @foreach (var it in Model.cargarCombo.cboValCilindro)
+                                                    {
+
+                                                        <option value="@it.value">@it.display</option>
+                                                    }
                                                 </select>
 
                                             </label>
                                             <label>
                                                 Eje
                                                 <select id="eje-OD1">
-                                                     @foreach (var it in Model.cboValEje)
-                                                   {
-                                                    
-                                                    <option value="@it.value">@it.display</option>
-                                                }
+                                                    @foreach (var it in Model.cargarCombo.cboValEje)
+                                                    {
+
+                                                        <option value="@it.value">@it.display</option>
+                                                    }
                                                 </select>
                                             </label>
                                         </div>

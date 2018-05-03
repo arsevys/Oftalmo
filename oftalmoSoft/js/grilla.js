@@ -41,9 +41,9 @@
               let o= $.fn.grilla.jDefecto["grillaOF"].head;
                var t="";
                 for (var i = 0 ;data.length>i; i++) {
-                    t+=`<tr>
+                    t+=`<tr style="color:black;background:white;">
                             <td>
-                                <i class="fa fa-pencil" data-j="${data[i][o[0]]}" aria-hidden="true" onclick="location.href ='http://54.233.82.3/oftalmo/?q=editar'"></i>
+                                <i class="fa fa-pencil" data-j="${data[i][o[0]]}" aria-hidden="true" onclick="location.href ='/oftalmo/registrar?op=1&id=${data[i][o[0]]}'"></i>
                                 <i class="fa fa-times" aria-hidden="true"></i>
                             </td>
                             <td style="text-align:center;">${data[i][o[1]]}</td>

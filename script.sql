@@ -3108,6 +3108,9 @@ SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
+
+select *from
+TB_PROVINCIA
 CREATE procedure [dbo].[insert_Paciente] @xml xml
 AS
 begin try
@@ -3231,6 +3234,21 @@ from TB_VAL_ESFERA
 where ESTADO='A'
 go
 
+create proc cbo_ValEje
+as
+select *
+from TB_VAL_EJE
+where ESTADO='A'
+go
+
+create proc cbo_ValCilindro
+as
+select *
+from TB_VAL_CILINDRO
+where ESTADO='A'
+go
+
+
 create proc cbo_AgudezaVisual
 as
 select *
@@ -3238,13 +3256,39 @@ from TB_AGUDEZA_VISUAL
 where ESTADO='A'
 go
 
-create proc cbo_e
+create proc cbo_Departamento
 as
 select *
 from TB_DEPARTAMENTO
 where ESTADO='A'
 go
 
+create proc cbo_Provincia
+@t varchar(5)
+as
+select *
+from TB_PROVINCIA
+where ESTADO='A' and ID_DEPARTAMENTO=@t
+go
 
+create proc cbo_e
+as
+select *
+from TB_VAL_ESFERA
+where ESTADO='A'
+go
+
+
+
+
+create proc editarRegistroPersona
+@id varchar(15)
+as
+select
+from 
+
+
+
+exec cbo_Listado 'TB_DEPARTAMENTO'
 execute listarPaciente  
 go

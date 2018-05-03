@@ -10,16 +10,16 @@ function datosGenerales(){
 
 
         var d={ 
-        	"numHisCli":valD("numHC-DG"),
-        	"nombres":valD("nom-DG"),
-        	"apaterno":valD("apeP-DG"),
-        	"amaterno":valD("apeM-DG"),
-        	"tipodoc":valD("td-DG"),
-        	"n_doc":valD("nd-DG"),
-        	"f_nac":valD("fn-DG"),
-        	"pais":valD("pais-DG"),
-        	"region":valD("region-DG"),
-        	"provincia":valD("provincia-DG"),
+        	"nro_historia":parseInt(valD("numHC-DG")),
+        	"nom_paciente":valD("nom-DG"),
+        	"ape_paterno":valD("apeP-DG"),
+        	"ape_materno":valD("apeM-DG"),
+        	"tipo_docum":valD("td-DG"),
+        	"nro_docum":valD("nd-DG"),
+        	"date_birth":valD("fn-DG"),
+        	"id_pais":valD("pais-DG"),
+        	"id_departamento":parseInt(valD("region-DG")),
+        	"id_provincia":valD("provincia-DG"),
         	"distrito":valD("distrito-DG"),
         	"genero":valC("genSex")
 

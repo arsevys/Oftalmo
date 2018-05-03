@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using OftalmoBussines.Bussines;
 using System.Web.Mvc;
-
+using OftalmoModel.Queratocono;
 namespace prjOftalmo.Controllers
 {
     public class OftalmoController : Controller
@@ -12,7 +12,7 @@ namespace prjOftalmo.Controllers
         // GET: Oftalmo
         public ActionResult Index()
         {
-            ViewBag.op=Request["p"].ToString();
+           
             return View();
         }
 
@@ -54,7 +54,17 @@ namespace prjOftalmo.Controllers
 
         public ActionResult registrar()
         {
-            return View(new OftalmoBL().cargarCombos());
+            ViewBag.op = Request["op"].ToString();
+            if (ViewBag.op == "1")
+            {
+                ViewBag.id = Request["id"].ToString();
+                ViewBag.listar = new OftalmoBL().CargarDatos(ViewBag.id);
+                return View("~/Views/Oftalmo/editar.cshtml", new OftalmoBL().CargarDatos(ViewBag.id));
+            }
+            else {
+                return View(new OftalmoBL().cargarCombos());
+            }
+           
         }
         // GET: Oftalmo/Details/5
         public ActionResult Details(int id)

@@ -50,6 +50,7 @@
     <Compile Include="Queratocono\DetalleEvaluacion.cs" />
     <Compile Include="Queratocono\DetalleEvolucion.cs" />
     <Compile Include="Queratocono\DetalleManejo.cs" />
+    <Compile Include="Queratocono\Editar.cs" />
     <Compile Include="Queratocono\Listacbo.cs" />
     <Compile Include="Queratocono\Paciente.cs" />
   </ItemGroup>
